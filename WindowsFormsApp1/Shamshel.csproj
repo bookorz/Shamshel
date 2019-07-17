@@ -1,0 +1,690 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7FC15FD2-3D40-4F29-AF25-B5C6110F8A55}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Adam</RootNamespace>
+    <AssemblyName>Shamshel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\ethan_huang\Desktop\test\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Adam.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.QGACTIVEXLib">
+      <HintPath>..\..\SECSInterface\SECSInterface\lib\AxInterop.QGACTIVEXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.QSACTIVEXLib">
+      <HintPath>..\..\SECSInterface\SECSInterface\lib\AxInterop.QSACTIVEXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.QGACTIVEXLib">
+      <HintPath>..\..\SECSInterface\SECSInterface\lib\Interop.QGACTIVEXLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.QSACTIVEXLib">
+      <HintPath>..\..\SECSInterface\SECSInterface\lib\Interop.QSACTIVEXLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>lib\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>lib\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="nmodbuspc">
+      <HintPath>..\..\SANWAFunction\packages\nmodbuspc.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI">
+      <HintPath>lib\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="SplitButton">
+      <HintPath>lib\SplitButton.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ToggleSwitch">
+      <HintPath>..\packages\ToggleSwitch\ToggleSwitch\bin\Debug\ToggleSwitch.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormConfirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConfirm.designer.cs">
+      <DependentUpon>FormConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOCRKeyIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOCRKeyIn.Designer.cs">
+      <DependentUpon>FormOCRKeyIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormReconnect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReconnect.Designer.cs">
+      <DependentUpon>FormReconnect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSelectRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSelectRecipe.Designer.cs">
+      <DependentUpon>FormSelectRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChgPwd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChgPwd.Designer.cs">
+      <DependentUpon>FormChgPwd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFoupID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFoupID.Designer.cs">
+      <DependentUpon>FormFoupID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManual.designer.cs">
+      <DependentUpon>FormManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNotify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNotify.Designer.cs">
+      <DependentUpon>FormNotify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQuery.designer.cs">
+      <DependentUpon>FormQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSystemLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSystemLog.Designer.cs">
+      <DependentUpon>FormSystemLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FoupInfo.cs" />
+    <Compile Include="Log4NetAppender\TextBoxAppender.cs" />
+    <Compile Include="Menu\DifferentialMonitor\FormDifferentialMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\DifferentialMonitor\FormDifferentialMonitor.Designer.cs">
+      <DependentUpon>FormDifferentialMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\FormEndOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\FormEndOption.Designer.cs">
+      <DependentUpon>FormEndOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\FormOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\FormOption.Designer.cs">
+      <DependentUpon>FormOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\RunningScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\RunningScreen\RunningScreen.Designer.cs">
+      <DependentUpon>RunningScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDIOSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDIOSetting.Designer.cs">
+      <DependentUpon>FormDIOSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting2P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting2P.designer.cs">
+      <DependentUpon>FormRecipeSetting2P.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSysConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSysConfig.designer.cs">
+      <DependentUpon>FormSysConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting.designer.cs">
+      <DependentUpon>FormRecipeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSECSSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSECSSet.designer.cs">
+      <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSetting.designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSignalTower.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSignalTower.Designer.cs">
+      <DependentUpon>FormSignalTower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSimpleSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSimpleSetting.Designer.cs">
+      <DependentUpon>FormSimpleSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Wafer\FormWafer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Wafer\FormWafer.Designer.cs">
+      <DependentUpon>FormWafer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OCRResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OCRResult.Designer.cs">
+      <DependentUpon>OCRResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Update\Alarm\AlarmUpdate.cs" />
+    <Compile Include="Menu\SystemSetting\FormSettingFram.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSettingFram.Designer.cs">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlarm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlarm.designer.cs">
+      <DependentUpon>FormAlarm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUnitCtrlData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUnitCtrlData.Designer.cs">
+      <DependentUpon>FormUnitCtrlData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTransTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTransTest.Designer.cs">
+      <DependentUpon>FormTransTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlarmHis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlarmHis.Designer.cs">
+      <DependentUpon>FormAlarmHis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogSave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogSave.designer.cs">
+      <DependentUpon>FormLogSave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVersion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVersion.designer.cs">
+      <DependentUpon>FormVersion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\IO\FormIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\IO\FormIO.designer.cs">
+      <DependentUpon>FormIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLLSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLLSetting.designer.cs">
+      <DependentUpon>FormLLSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\AbnormalRecovery\FormAbnormalRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\AbnormalRecovery\FormAbnormalRecovery.Designer.cs">
+      <DependentUpon>FormAbnormalRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\FormFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\FormFrame.Designer.cs">
+      <DependentUpon>FormFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Monitoring\FormMonitoring.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Monitoring\FormMonitoring.Designer.cs">
+      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\OCR\FormOCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\OCR\FormOCR.Designer.cs">
+      <DependentUpon>FormOCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Status\FormStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\Status\FormStatus.Designer.cs">
+      <DependentUpon>FormStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAccountSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAccountSetting.Designer.cs">
+      <DependentUpon>FormAccountSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAlarmEventSet .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormAlarmEventSet .Designer.cs">
+      <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormCommandScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormCommandScript.Designer.cs">
+      <DependentUpon>FormCommandScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDeviceManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormDeviceManager.Designer.cs">
+      <DependentUpon>FormDeviceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormOnlineSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormOnlineSettings.Designer.cs">
+      <DependentUpon>FormOnlineSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSystemSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormSystemSetting.Designer.cs">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\WaferMapping\FormWaferMapping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\WaferMapping\FormWaferMapping.Designer.cs">
+      <DependentUpon>FormWaferMapping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="FormSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSetting.designer.cs">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTeaching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTeaching.designer.cs">
+      <DependentUpon>FormTeaching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI_Update\Aauthority\AuthorityUpdate.cs" />
+    <Compile Include="UI_Update\Barcode\Barcodeupdate.cs" />
+    <Compile Include="UI_Update\DifferentialMonitor\DifferentialMonitorUpdate.cs" />
+    <Compile Include="UI_Update\IO\IOUpdate.cs" />
+    <Compile Include="UI_Update\Layout\DIOUpdate.cs" />
+    <Compile Include="UI_Update\Layout\FormMainUpdate.cs" />
+    <Compile Include="UI_Update\Manual\AlignerStatusUpdate.cs" />
+    <Compile Include="UI_Update\Manual\OCRStatusUpdate.cs" />
+    <Compile Include="UI_Update\Manual\PortStatusUpdate.cs" />
+    <Compile Include="UI_Update\Manual\RobotStatusUpdate.cs" />
+    <Compile Include="UI_Update\Monitoring\ConnectionStatusUpdate.cs" />
+    <Compile Include="UI_Update\Monitoring\MonitoringUpdate.cs" />
+    <Compile Include="UI_Update\Monitoring\NodeStatusUpdate.cs" />
+    <Compile Include="UI_Update\OCR\OCRUpdate.cs" />
+    <Compile Include="UI_Update\Running\RunningUpdate.cs" />
+    <Compile Include="UI_Update\Terminal\TerminalUpdate.cs" />
+    <Compile Include="UI_Update\WaferMapping\WaferAssignUpdate.cs" />
+    <Compile Include="Util\UIHandle.cs" />
+    <Compile Include="Util\OCRResult.cs" />
+    <Compile Include="Util\SanwaUtil.cs" />
+    <Compile Include="Util\StateUtil.cs" />
+    <Compile Include="Util\Tools.cs" />
+    <Compile Include="Util\XmlObjectSerializer.cs" />
+    <EmbeddedResource Include="FormAlarm.resx">
+      <DependentUpon>FormAlarm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConfirm.resx">
+      <DependentUpon>FormConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOCRKeyIn.resx">
+      <DependentUpon>FormOCRKeyIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReconnect.resx">
+      <DependentUpon>FormReconnect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSelectRecipe.resx">
+      <DependentUpon>FormSelectRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChgPwd.resx">
+      <DependentUpon>FormChgPwd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFoupID.resx">
+      <DependentUpon>FormFoupID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.ja-JP.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManual.resx">
+      <DependentUpon>FormManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNotify.resx">
+      <DependentUpon>FormNotify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQuery.resx">
+      <DependentUpon>FormQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSystemLog.resx">
+      <DependentUpon>FormSystemLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUnitCtrlData.resx">
+      <DependentUpon>FormUnitCtrlData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTransTest.resx">
+      <DependentUpon>FormTransTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlarmHis.resx">
+      <DependentUpon>FormAlarmHis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogSave.resx">
+      <DependentUpon>FormLogSave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVersion.resx">
+      <DependentUpon>FormVersion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\IO\FormIO.resx">
+      <DependentUpon>FormIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLLSetting.resx">
+      <DependentUpon>FormLLSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\AbnormalRecovery\FormAbnormalRecovery.resx">
+      <DependentUpon>FormAbnormalRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\FormFrame.resx">
+      <DependentUpon>FormFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Monitoring\FormMonitoring.resx">
+      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\OCR\FormOCR.resx">
+      <DependentUpon>FormOCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RunningScreen\FormEndOption.resx">
+      <DependentUpon>FormEndOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RunningScreen\FormOption.resx">
+      <DependentUpon>FormOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\RunningScreen\RunningScreen.resx">
+      <DependentUpon>RunningScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Status\FormStatus.resx">
+      <DependentUpon>FormStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormAccountSetting.resx">
+      <DependentUpon>FormAccountSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormAlarmEventSet .resx">
+      <DependentUpon>FormAlarmEventSet .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormCommandScript.resx">
+      <DependentUpon>FormCommandScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormDeviceManager.resx">
+      <DependentUpon>FormDeviceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormDIOSetting.resx">
+      <DependentUpon>FormDIOSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormOnlineSettings.resx">
+      <DependentUpon>FormOnlineSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormRecipeSetting2P.resx">
+      <DependentUpon>FormRecipeSetting2P.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSysConfig.resx">
+      <DependentUpon>FormSysConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormRecipeSetting.resx">
+      <DependentUpon>FormRecipeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSECSSet.resx">
+      <DependentUpon>FormSECSSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSettingFram.resx">
+      <DependentUpon>FormSettingFram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSignalTower.resx">
+      <DependentUpon>FormSignalTower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSimpleSetting.resx">
+      <DependentUpon>FormSimpleSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormSystemSetting.resx">
+      <DependentUpon>FormSystemSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\DifferentialMonitor\FormDifferentialMonitor.resx">
+      <DependentUpon>FormDifferentialMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\WaferMapping\FormWaferMapping.resx">
+      <DependentUpon>FormWaferMapping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu\Wafer\FormWafer.resx">
+      <DependentUpon>FormWafer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OCRResult.resx">
+      <DependentUpon>OCRResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="FormSetting.resx">
+      <DependentUpon>FormSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTeaching.resx">
+      <DependentUpon>FormTeaching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="config\Script\Normal.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="config\SystemConfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="recipe\default.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="recipe\test 12O 34F.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\like.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TransferControl\TransferControl\TransferControl.csproj">
+      <Project>{316ccd27-c53f-42f2-ad5e-5ca897dd9ab8}</Project>
+      <Name>TransferControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanwa_robot_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\21736064411375_205.jpg" />
+    <None Include="Resources\21736064411375_2051.jpg" />
+    <Content Include="sql\Alarm Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Command Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\DIO Change Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Process Job Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\Process Wafer Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sql\User Action Log.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\SplashScreen.JPG" />
+    <None Include="Resources\SplashScreen.bmp" />
+    <None Include="Resources\arrowleft.png" />
+    <None Include="Resources\check.png" />
+    <None Include="Resources\cross.png" />
+    <None Include="Resources\handle.png" />
+    <None Include="Resources\Image70.png" />
+    <None Include="Resources\123.gif" />
+    <None Include="Resources\index.jpg" />
+    <Content Include="Resources\sanwa_aligner_status.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 與 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
