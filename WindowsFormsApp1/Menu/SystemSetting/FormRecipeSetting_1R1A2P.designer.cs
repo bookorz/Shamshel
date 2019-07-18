@@ -41,6 +41,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.gbRecipeBody = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
@@ -71,6 +72,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.lblMode = new System.Windows.Forms.Label();
             this.cbUseBurnIn = new System.Windows.Forms.CheckBox();
+            this.cbWaferSize = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -94,8 +96,6 @@
             this.btnDeleteRecipe = new System.Windows.Forms.Button();
             this.palContainer = new System.Windows.Forms.Panel();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
-            this.cbWaferSize = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.gbAccountCondition.SuspendLayout();
             this.tlpAccountCreate.SuspendLayout();
             this.gbRecipe.SuspendLayout();
@@ -265,6 +265,17 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "目前模式:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(572, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Wafer Size";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox9
             // 
@@ -607,7 +618,7 @@
             this.cbP1CstType.Items.AddRange(new object[] {
             "FOUP",
             "FOSB",
-            "ADAPT_8"});
+            "ADAPT"});
             this.cbP1CstType.Location = new System.Drawing.Point(142, 57);
             this.cbP1CstType.Name = "cbP1CstType";
             this.cbP1CstType.Size = new System.Drawing.Size(115, 32);
@@ -662,6 +673,20 @@
             this.cbUseBurnIn.Text = "Burn-In";
             this.cbUseBurnIn.UseVisualStyleBackColor = true;
             this.cbUseBurnIn.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbWaferSize
+            // 
+            this.cbWaferSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbWaferSize.FormattingEnabled = true;
+            this.cbWaferSize.Items.AddRange(new object[] {
+            "300",
+            "200"});
+            this.cbWaferSize.Location = new System.Drawing.Point(682, 75);
+            this.cbWaferSize.Name = "cbWaferSize";
+            this.cbWaferSize.Size = new System.Drawing.Size(160, 32);
+            this.cbWaferSize.TabIndex = 2;
+            this.cbWaferSize.TextChanged += new System.EventHandler(this.modeCheck);
+            this.cbWaferSize.Click += new System.EventHandler(this.modeCheck);
             // 
             // groupBox3
             // 
@@ -757,7 +782,6 @@
             // cbUserBothArm
             // 
             this.cbUserBothArm.AutoSize = true;
-            this.cbUserBothArm.Enabled = false;
             this.cbUserBothArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUserBothArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUserBothArm.Location = new System.Drawing.Point(193, 66);
@@ -773,7 +797,6 @@
             // cbUseLArm
             // 
             this.cbUseLArm.AutoSize = true;
-            this.cbUseLArm.Enabled = false;
             this.cbUseLArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseLArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseLArm.Location = new System.Drawing.Point(102, 66);
@@ -791,7 +814,6 @@
             this.cbUseRArm.AutoSize = true;
             this.cbUseRArm.Checked = true;
             this.cbUseRArm.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbUseRArm.Enabled = false;
             this.cbUseRArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseRArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseRArm.Location = new System.Drawing.Point(5, 66);
@@ -980,31 +1002,6 @@
             this.tlpAccount.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.20801F));
             this.tlpAccount.Size = new System.Drawing.Size(1432, 752);
             this.tlpAccount.TabIndex = 23;
-            // 
-            // cbWaferSize
-            // 
-            this.cbWaferSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbWaferSize.FormattingEnabled = true;
-            this.cbWaferSize.Items.AddRange(new object[] {
-            "300",
-            "200"});
-            this.cbWaferSize.Location = new System.Drawing.Point(682, 75);
-            this.cbWaferSize.Name = "cbWaferSize";
-            this.cbWaferSize.Size = new System.Drawing.Size(160, 32);
-            this.cbWaferSize.TabIndex = 2;
-            this.cbWaferSize.TextChanged += new System.EventHandler(this.modeCheck);
-            this.cbWaferSize.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(572, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 24);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Wafer Size";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FormRecipeSetting_1R1A2P
             // 

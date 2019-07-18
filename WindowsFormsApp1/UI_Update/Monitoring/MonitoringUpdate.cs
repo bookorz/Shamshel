@@ -25,7 +25,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 Button W;
                 if (form == null)
                     return;
@@ -54,7 +54,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 CheckBox W;
                 if (form == null)
                     return;
@@ -84,7 +84,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 TextBox W;
                 if (form == null)
                     return;
@@ -144,7 +144,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 TextBox Used;
                 if (form == null)
                     return;
@@ -182,7 +182,7 @@ namespace Adam.UI_Update.Monitoring
         }
         private static void UpdateSlot(Node Port, string Slot)
         {
-            Form form = Application.OpenForms["FormMonitoring"];
+            Form form = Application.OpenForms["FormMonitoring4P"];
             if (form == null)
                 return;
 
@@ -232,7 +232,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
           
 
                 if (form == null)
@@ -258,7 +258,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 Label tb;
 
                 if (form == null)
