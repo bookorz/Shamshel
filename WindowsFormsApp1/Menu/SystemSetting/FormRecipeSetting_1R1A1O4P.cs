@@ -253,6 +253,7 @@ namespace Adam.Menu.SystemSetting
                 MessageBox.Show("Please select a recipe first.", "Notice");
                 return;
             }
+            lblMode.Text = "編輯模式";//往前移避免 stack overflow
             updateInfo(trvRecipe.SelectedNode.Text);
             //gbRecipe.Enabled = true;
             //gbRecipeBody.Enabled = true;
@@ -266,7 +267,6 @@ namespace Adam.Menu.SystemSetting
             tbRecipeID.ReadOnly = true;
             //trvRecipe.Enabled = false;20190708 取消
 
-            lblMode.Text = "編輯模式";
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -346,28 +346,40 @@ namespace Adam.Menu.SystemSetting
                 //recipe.auto_fin_unclamp = "Y";//固定Y 無UI
 
                 cbAutoGetRule.SelectedItem = recipe.auto_get_constrict;
-                cbAutoFin1.SelectedItem = recipe.auto_proc_fin.Substring(0, 1);
-                cbAutoFin2.SelectedItem = recipe.auto_proc_fin.Substring(1, 1);
+                if(recipe.auto_proc_fin != null && recipe.auto_proc_fin.Length == 2)
+                {
+                    cbAutoFin1.SelectedItem = recipe.auto_proc_fin.Substring(0, 1);
+                    cbAutoFin2.SelectedItem = recipe.auto_proc_fin.Substring(1, 1);
+                }
                 cbAutoPutRule.SelectedItem = recipe.auto_put_constrict;
                 //tbEqpID.Text = recipe.equip_id;
 
                
                 tbFFUCloseRpm.Text = recipe.ffu_rpm_close;
                 tbFFUOpenRpm.Text = recipe.ffu_rpm_open;
-                cbInputFin1.SelectedItem = recipe.input_proc_fin.Substring(0, 1);
-                cbInputFin2.SelectedItem = recipe.input_proc_fin.Substring(1, 1);
-                cbInputFin3.SelectedItem = recipe.input_proc_fin.Substring(2, 1);
+                if (recipe.input_proc_fin != null && recipe.input_proc_fin.Length == 3)
+                {
+                    cbInputFin1.SelectedItem = recipe.input_proc_fin.Substring(0, 1);
+                    cbInputFin2.SelectedItem = recipe.input_proc_fin.Substring(1, 1);
+                    cbInputFin3.SelectedItem = recipe.input_proc_fin.Substring(2, 1);
+                }
 
                 //recipe.manual_fin_unclamp = "Y";//固定Y 無UI
 
                 cbManualGetRule.SelectedItem = recipe.manual_get_constrict;
-                cbManualFin1.SelectedItem = recipe.manual_proc_fin.Substring(0, 1);
-                cbManualFin2.SelectedItem = recipe.manual_proc_fin.Substring(1, 1);
+                if (recipe.manual_proc_fin != null && recipe.manual_proc_fin.Length == 2)
+                {
+                    cbManualFin1.SelectedItem = recipe.manual_proc_fin.Substring(0, 1);
+                    cbManualFin2.SelectedItem = recipe.manual_proc_fin.Substring(1, 1);
+                }
 
                 cbManualPutRule.SelectedItem = recipe.manual_put_constrict;
-                cbOutputFin1.SelectedItem = recipe.output_proc_fin.Substring(0, 1);
-                cbOutputFin2.SelectedItem = recipe.output_proc_fin.Substring(1, 1);
-                cbOutputFin3.SelectedItem = recipe.output_proc_fin.Substring(2, 1);
+                if (recipe.output_proc_fin != null && recipe.output_proc_fin.Length == 3)
+                {
+                    cbOutputFin1.SelectedItem = recipe.output_proc_fin.Substring(0, 1);
+                    cbOutputFin2.SelectedItem = recipe.output_proc_fin.Substring(1, 1);
+                    cbOutputFin3.SelectedItem = recipe.output_proc_fin.Substring(2, 1);
+                }
 
                 cbP1CstType.SelectedItem = recipe.port1_carrier_type;
                 cbP1Seq.SelectedItem = recipe.port1_priority.ToString();

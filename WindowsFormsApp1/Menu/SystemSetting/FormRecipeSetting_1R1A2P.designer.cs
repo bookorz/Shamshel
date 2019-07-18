@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblMode = new System.Windows.Forms.Label();
             this.trvRecipe = new System.Windows.Forms.TreeView();
             this.gbAccountCondition = new System.Windows.Forms.GroupBox();
             this.tlpAccountCreate = new System.Windows.Forms.TableLayoutPanel();
@@ -70,7 +71,6 @@
             this.cbP1CstType = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.lblMode = new System.Windows.Forms.Label();
             this.cbUseBurnIn = new System.Windows.Forms.CheckBox();
             this.cbWaferSize = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
