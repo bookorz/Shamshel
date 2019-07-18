@@ -177,6 +177,12 @@
     <Compile Include="FormSystemLog.Designer.cs">
       <DependentUpon>FormSystemLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormWaferAssign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWaferAssign.Designer.cs">
+      <DependentUpon>FormWaferAssign.cs</DependentUpon>
+    </Compile>
     <Compile Include="FoupInfo.cs" />
     <Compile Include="Log4NetAppender\TextBoxAppender.cs" />
     <Compile Include="Menu\DifferentialMonitor\FormDifferentialMonitor.cs">
@@ -348,11 +354,11 @@
     <Compile Include="Menu\FormFrame.Designer.cs">
       <DependentUpon>FormFrame.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\Monitoring\FormMonitoring.cs">
+    <Compile Include="Menu\Monitoring\FormMonitoring4P.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\Monitoring\FormMonitoring.Designer.cs">
-      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    <Compile Include="Menu\Monitoring\FormMonitoring4P.Designer.cs">
+      <DependentUpon>FormMonitoring4P.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\OCR\FormOCR.cs">
       <SubType>Form</SubType>
@@ -402,11 +408,11 @@
     <Compile Include="Menu\SystemSetting\FormSystemSetting.Designer.cs">
       <DependentUpon>FormSystemSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\WaferMapping\FormWaferMapping.cs">
+    <Compile Include="Menu\WaferMapping\FormWaferMapping4P.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\WaferMapping\FormWaferMapping.Designer.cs">
-      <DependentUpon>FormWaferMapping.cs</DependentUpon>
+    <Compile Include="Menu\WaferMapping\FormWaferMapping4P.Designer.cs">
+      <DependentUpon>FormWaferMapping4P.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -502,6 +508,9 @@
     <EmbeddedResource Include="FormVersion.resx">
       <DependentUpon>FormVersion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormWaferAssign.resx">
+      <DependentUpon>FormWaferAssign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\IO\FormIO.resx">
       <DependentUpon>FormIO.cs</DependentUpon>
     </EmbeddedResource>
@@ -514,8 +523,8 @@
     <EmbeddedResource Include="Menu\FormFrame.resx">
       <DependentUpon>FormFrame.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\Monitoring\FormMonitoring.resx">
-      <DependentUpon>FormMonitoring.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\Monitoring\FormMonitoring4P.resx">
+      <DependentUpon>FormMonitoring4P.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\OCR\FormOCR.resx">
       <DependentUpon>FormOCR.cs</DependentUpon>
@@ -584,8 +593,8 @@
     <EmbeddedResource Include="Menu\DifferentialMonitor\FormDifferentialMonitor.resx">
       <DependentUpon>FormDifferentialMonitor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\WaferMapping\FormWaferMapping.resx">
-      <DependentUpon>FormWaferMapping.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\WaferMapping\FormWaferMapping4P.resx">
+      <DependentUpon>FormWaferMapping4P.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\Wafer\FormWafer.resx">
       <DependentUpon>FormWafer.cs</DependentUpon>

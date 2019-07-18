@@ -112,19 +112,19 @@ namespace Adam.Menu.SystemSetting
             recipe.auto_fin_unclamp = "Y";//固定Y
 
             recipe.auto_get_constrict = "0";//此機型不支援取放片限制
-            recipe.auto_proc_fin = cbAutoFin1.Text + cbAutoFin2.Text;
+            recipe.auto_proc_fin = "";// cbAutoFin1.Text + cbAutoFin2.Text;
             recipe.auto_put_constrict = //此機型不支援取放片限制;
             //recipe.equip_id = tbEqpID.Text;
             recipe.ffu_rpm_close = "";//此機型不支援FFU
             recipe.ffu_rpm_open = "";
-            recipe.input_proc_fin = "";// cbInputFin1.Text + cbInputFin2.Text + cbInputFin3.Text;
+            recipe.input_proc_fin =  cbInputFin1.Text + cbInputFin2.Text + cbInputFin3.Text;
 
             recipe.manual_fin_unclamp = "Y";//固定Y
 
             recipe.manual_get_constrict = "";//此機型不支援取放片限制;
-            recipe.manual_proc_fin = cbManualFin1.Text + cbManualFin2.Text;
+            recipe.manual_proc_fin = "";// cbManualFin1.Text + cbManualFin2.Text;
             recipe.manual_put_constrict = "";//此機型不支援取放片限制;
-            recipe.output_proc_fin = "";// cbOutputFin1.Text + cbOutputFin2.Text + cbOutputFin3.Text;
+            recipe.output_proc_fin =  cbOutputFin1.Text + cbOutputFin2.Text + cbOutputFin3.Text;
 
             recipe.port1_carrier_type = cbP1CstType.Text;
             recipe.port1_priority = 1;
@@ -302,22 +302,24 @@ namespace Adam.Menu.SystemSetting
 
                 //recipe.auto_fin_unclamp = "Y";//固定Y 無UI
 
-                cbAutoFin1.SelectedItem = recipe.auto_proc_fin.Substring(0, 1);
-                cbAutoFin2.SelectedItem = recipe.auto_proc_fin.Substring(1, 1);
                 //tbEqpID.Text = recipe.equip_id;
+
+                cbInputFin1.SelectedItem = recipe.input_proc_fin.Substring(0, 1);
+                cbInputFin2.SelectedItem = recipe.input_proc_fin.Substring(1, 1);
+                cbInputFin3.SelectedItem = recipe.input_proc_fin.Substring(2, 1);
 
                 //recipe.manual_fin_unclamp = "Y";//固定Y 無UI
 
-                cbManualFin1.SelectedItem = recipe.manual_proc_fin.Substring(0, 1);
-                cbManualFin2.SelectedItem = recipe.manual_proc_fin.Substring(1, 1);
-
+                cbOutputFin1.SelectedItem = recipe.output_proc_fin.Substring(0, 1);
+                cbOutputFin2.SelectedItem = recipe.output_proc_fin.Substring(1, 1);
+                cbOutputFin3.SelectedItem = recipe.output_proc_fin.Substring(2, 1);
 
                 cbP1CstType.SelectedItem = recipe.port1_carrier_type;
                 cbP1LoadType.SelectedItem = recipe.port1_type;
 
                 cbP2CstType.SelectedItem = recipe.port2_carrier_type;
                 cbP2LoadType.SelectedItem = recipe.port2_type;
-                
+
                 cbGetSlotOrder.SelectedItem = recipe.get_slot_order;
                 cbPutSlotOrder.SelectedItem = recipe.put_slot_order;
 

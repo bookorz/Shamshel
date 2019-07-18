@@ -11,7 +11,7 @@ using TransferControl.Engine;
 using TransferControl.Management;
 using TransferControl.Operation;
 
-namespace Adam.Menu.WaferMapping
+namespace Adam.Menu.WaferMapping4P
 {
     public partial class FormWaferMapping : Adam.Menu.FormFrame
     {
@@ -54,13 +54,16 @@ namespace Adam.Menu.WaferMapping
                 }
 
             }
-            Node al2 = NodeManagement.Get("ALIGNER02");
-            if (al2 != null)
-            {
-                OCR02_pl.Visible = true;
-                Aligner02_pl.Visible = true;
-            }
 
+            gbA1.Visible = NodeManagement.Get("ALIGNER01") != null ? true : false;
+            gbA2.Visible = NodeManagement.Get("ALIGNER01") != null ? true : false;
+            gbOCR1.Visible = NodeManagement.Get("OCR01") != null ? true : false;
+            gbOCR2.Visible = NodeManagement.Get("OCR02") != null ? true : false;
+            gbPort1.Visible = NodeManagement.Get("LOADPORT01") != null ? true : false;
+            gbPort2.Visible = NodeManagement.Get("LOADPORT02") != null ? true : false;
+            gbPort3.Visible = NodeManagement.Get("LOADPORT03") != null ? true : false;
+            gbPort4.Visible = NodeManagement.Get("LOADPORT04") != null ? true : false;
+            
         }
         private void RefreshMap()
         {

@@ -22,7 +22,7 @@ using TransferControl.Operation;
 using Adam.UI_Update.DifferentialMonitor;
 using Adam.UI_Update.Barcode;
 using Adam.UI_Update.IO;
-using Adam.Menu.WaferMapping;
+using Adam.Menu.WaferMapping4P;
 using System.Diagnostics;
 using TransferControl.CommandConvert;
 using TransferControl.Comm;
@@ -44,7 +44,7 @@ namespace Adam
         FormFoupID BarcodeForm = new FormFoupID();
         private Menu.Monitoring.FormMonitoring4P formMonitoring = new Menu.Monitoring.FormMonitoring4P();
         private Menu.IO.FormIO formIO = new Menu.IO.FormIO();
-        private Menu.WaferMapping.FormWaferMapping formWaferAssign = new Menu.WaferMapping.FormWaferMapping();
+        private Menu.WaferMapping4P.FormWaferMapping formWaferAssign = new Menu.WaferMapping4P.FormWaferMapping();
         //private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();//20190529 取消
         //private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         //private Menu.SystemSetting.FormSECSSet formSecs = new Menu.SystemSetting.FormSECSSet();
@@ -2563,14 +2563,16 @@ namespace Adam
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fakeData("LOADPORT01", "1111111111111000000000000");
-            //fakeData("LOADPORT02");
-            //fakeData("LOADPORT03");
-            fakeData("LOADPORT04", "0000000000000000000000000");
-            WaferAssignUpdate.UpdateNodesJob("LOADPORT01");
-            WaferAssignUpdate.UpdateNodesJob("LOADPORT02");
-            WaferAssignUpdate.UpdateNodesJob("LOADPORT03");
-            WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
+            //fakeData("LOADPORT01", "1111111111111000000000000");
+            ////fakeData("LOADPORT02");
+            ////fakeData("LOADPORT03");
+            //fakeData("LOADPORT04", "0000000000000000000000000");
+            //WaferAssignUpdate.UpdateNodesJob("LOADPORT01");
+            //WaferAssignUpdate.UpdateNodesJob("LOADPORT02");
+            //WaferAssignUpdate.UpdateNodesJob("LOADPORT03");
+            //WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
+            FormWaferAssign form = new FormWaferAssign();
+            form.Show();
         }
 
         private void fakeData(string name, string Mapping)

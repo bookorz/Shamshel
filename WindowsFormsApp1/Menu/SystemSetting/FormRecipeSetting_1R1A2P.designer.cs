@@ -43,15 +43,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.cbManualFin1 = new System.Windows.Forms.ComboBox();
-            this.cbAutoFin1 = new System.Windows.Forms.ComboBox();
-            this.cbManualFin2 = new System.Windows.Forms.ComboBox();
-            this.cbAutoFin2 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -89,13 +80,26 @@
             this.btnDeleteRecipe = new System.Windows.Forms.Button();
             this.palContainer = new System.Windows.Forms.Panel();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.cbOutputFin1 = new System.Windows.Forms.ComboBox();
+            this.cbOutputFin2 = new System.Windows.Forms.ComboBox();
+            this.cbOutputFin3 = new System.Windows.Forms.ComboBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.cbInputFin1 = new System.Windows.Forms.ComboBox();
+            this.cbInputFin2 = new System.Windows.Forms.ComboBox();
+            this.cbInputFin3 = new System.Windows.Forms.ComboBox();
             this.gbAccountCondition.SuspendLayout();
             this.tlpAccountCreate.SuspendLayout();
             this.gbRecipe.SuspendLayout();
             this.gbRecipeHeader.SuspendLayout();
             this.gbRecipeBody.SuspendLayout();
             this.groupBox9.SuspendLayout();
-            this.groupBox8.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -104,6 +108,8 @@
             this.tlpAccountMenu.SuspendLayout();
             this.palContainer.SuspendLayout();
             this.tlpAccount.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // trvRecipe
@@ -258,8 +264,9 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.groupBox6);
             this.groupBox9.Controls.Add(this.label11);
-            this.groupBox9.Controls.Add(this.groupBox8);
+            this.groupBox9.Controls.Add(this.groupBox7);
             this.groupBox9.Location = new System.Drawing.Point(310, 249);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(494, 244);
@@ -279,134 +286,6 @@
             this.label11.Text = "0: Red light\r\n1: Orange light\r\n2: Green light\r\n3: Blue light\r\n4: Buzzer 1\r\n5: Buz" +
     "zer 2\r\nN: 無動作";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox8
-            // 
-            this.groupBox8.Controls.Add(this.label10);
-            this.groupBox8.Controls.Add(this.label22);
-            this.groupBox8.Controls.Add(this.label34);
-            this.groupBox8.Controls.Add(this.label24);
-            this.groupBox8.Controls.Add(this.cbManualFin1);
-            this.groupBox8.Controls.Add(this.cbAutoFin1);
-            this.groupBox8.Controls.Add(this.cbManualFin2);
-            this.groupBox8.Controls.Add(this.cbAutoFin2);
-            this.groupBox8.Location = new System.Drawing.Point(6, 34);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(277, 204);
-            this.groupBox8.TabIndex = 4;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "整機完工";
-            this.groupBox8.Visible = false;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label10.ForeColor = System.Drawing.Color.Chocolate;
-            this.label10.Location = new System.Drawing.Point(199, 29);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(70, 24);
-            this.label10.TabIndex = 0;
-            this.label10.Text = "Buzzer";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label22.ForeColor = System.Drawing.Color.Chocolate;
-            this.label22.Location = new System.Drawing.Point(138, 29);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(56, 24);
-            this.label22.TabIndex = 0;
-            this.label22.Text = "Light";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label34.Location = new System.Drawing.Point(2, 99);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(135, 24);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Manual Mode";
-            this.label34.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label24.Location = new System.Drawing.Point(25, 61);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(112, 24);
-            this.label24.TabIndex = 0;
-            this.label24.Text = "Auto Mode";
-            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbManualFin1
-            // 
-            this.cbManualFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbManualFin1.FormattingEnabled = true;
-            this.cbManualFin1.Items.AddRange(new object[] {
-            "N",
-            "0",
-            "1",
-            "2",
-            "3"});
-            this.cbManualFin1.Location = new System.Drawing.Point(143, 96);
-            this.cbManualFin1.Name = "cbManualFin1";
-            this.cbManualFin1.Size = new System.Drawing.Size(43, 32);
-            this.cbManualFin1.TabIndex = 2;
-            this.cbManualFin1.TextChanged += new System.EventHandler(this.modeCheck);
-            this.cbManualFin1.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbAutoFin1
-            // 
-            this.cbAutoFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAutoFin1.FormattingEnabled = true;
-            this.cbAutoFin1.Items.AddRange(new object[] {
-            "N",
-            "0",
-            "1",
-            "2",
-            "3"});
-            this.cbAutoFin1.Location = new System.Drawing.Point(143, 61);
-            this.cbAutoFin1.Name = "cbAutoFin1";
-            this.cbAutoFin1.Size = new System.Drawing.Size(43, 32);
-            this.cbAutoFin1.TabIndex = 2;
-            this.cbAutoFin1.TextChanged += new System.EventHandler(this.modeCheck);
-            this.cbAutoFin1.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbManualFin2
-            // 
-            this.cbManualFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbManualFin2.FormattingEnabled = true;
-            this.cbManualFin2.Items.AddRange(new object[] {
-            "N",
-            "4",
-            "5"});
-            this.cbManualFin2.Location = new System.Drawing.Point(213, 96);
-            this.cbManualFin2.Name = "cbManualFin2";
-            this.cbManualFin2.Size = new System.Drawing.Size(43, 32);
-            this.cbManualFin2.TabIndex = 2;
-            this.cbManualFin2.TextChanged += new System.EventHandler(this.modeCheck);
-            this.cbManualFin2.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbAutoFin2
-            // 
-            this.cbAutoFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbAutoFin2.FormattingEnabled = true;
-            this.cbAutoFin2.Items.AddRange(new object[] {
-            "N",
-            "4",
-            "5"});
-            this.cbAutoFin2.Location = new System.Drawing.Point(213, 61);
-            this.cbAutoFin2.Name = "cbAutoFin2";
-            this.cbAutoFin2.Size = new System.Drawing.Size(43, 32);
-            this.cbAutoFin2.TabIndex = 2;
-            this.cbAutoFin2.TextChanged += new System.EventHandler(this.modeCheck);
-            this.cbAutoFin2.Click += new System.EventHandler(this.modeCheck);
             // 
             // groupBox2
             // 
@@ -767,7 +646,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(99, 27);
+            this.label9.Location = new System.Drawing.Point(107, 27);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 24);
             this.label9.TabIndex = 0;
@@ -778,7 +657,7 @@
             // 
             this.tbA1_speed.Location = new System.Drawing.Point(111, 54);
             this.tbA1_speed.Name = "tbA1_speed";
-            this.tbA1_speed.Size = new System.Drawing.Size(46, 33);
+            this.tbA1_speed.Size = new System.Drawing.Size(55, 33);
             this.tbA1_speed.TabIndex = 1;
             this.tbA1_speed.Text = "100";
             this.tbA1_speed.Click += new System.EventHandler(this.modeCheck);
@@ -914,6 +793,190 @@
             this.tlpAccount.Size = new System.Drawing.Size(1432, 752);
             this.tlpAccount.TabIndex = 23;
             // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.label21);
+            this.groupBox6.Controls.Add(this.cbOutputFin1);
+            this.groupBox6.Controls.Add(this.cbOutputFin2);
+            this.groupBox6.Controls.Add(this.cbOutputFin3);
+            this.groupBox6.Location = new System.Drawing.Point(13, 140);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(209, 102);
+            this.groupBox6.TabIndex = 8;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "單一出料口完工";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label19.ForeColor = System.Drawing.Color.Chocolate;
+            this.label19.Location = new System.Drawing.Point(5, 29);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 24);
+            this.label19.TabIndex = 0;
+            this.label19.Text = "Action";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label20.ForeColor = System.Drawing.Color.Chocolate;
+            this.label20.Location = new System.Drawing.Point(78, 29);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(56, 24);
+            this.label20.TabIndex = 0;
+            this.label20.Text = "Light";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label21.ForeColor = System.Drawing.Color.Chocolate;
+            this.label21.Location = new System.Drawing.Point(135, 29);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(70, 24);
+            this.label21.TabIndex = 0;
+            this.label21.Text = "Buzzer";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbOutputFin1
+            // 
+            this.cbOutputFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputFin1.FormattingEnabled = true;
+            this.cbOutputFin1.Items.AddRange(new object[] {
+            "N",
+            "M",
+            "P"});
+            this.cbOutputFin1.Location = new System.Drawing.Point(18, 58);
+            this.cbOutputFin1.Name = "cbOutputFin1";
+            this.cbOutputFin1.Size = new System.Drawing.Size(42, 32);
+            this.cbOutputFin1.TabIndex = 2;
+            // 
+            // cbOutputFin2
+            // 
+            this.cbOutputFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputFin2.FormattingEnabled = true;
+            this.cbOutputFin2.Items.AddRange(new object[] {
+            "N",
+            "0",
+            "1",
+            "2",
+            "3"});
+            this.cbOutputFin2.Location = new System.Drawing.Point(82, 58);
+            this.cbOutputFin2.Name = "cbOutputFin2";
+            this.cbOutputFin2.Size = new System.Drawing.Size(43, 32);
+            this.cbOutputFin2.TabIndex = 2;
+            // 
+            // cbOutputFin3
+            // 
+            this.cbOutputFin3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOutputFin3.FormattingEnabled = true;
+            this.cbOutputFin3.Items.AddRange(new object[] {
+            "N",
+            "4",
+            "5"});
+            this.cbOutputFin3.Location = new System.Drawing.Point(148, 58);
+            this.cbOutputFin3.Name = "cbOutputFin3";
+            this.cbOutputFin3.Size = new System.Drawing.Size(43, 32);
+            this.cbOutputFin3.TabIndex = 2;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.label16);
+            this.groupBox7.Controls.Add(this.label17);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Controls.Add(this.cbInputFin1);
+            this.groupBox7.Controls.Add(this.cbInputFin2);
+            this.groupBox7.Controls.Add(this.cbInputFin3);
+            this.groupBox7.Location = new System.Drawing.Point(13, 32);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(209, 102);
+            this.groupBox7.TabIndex = 9;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "單一進料口完工";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label16.ForeColor = System.Drawing.Color.Chocolate;
+            this.label16.Location = new System.Drawing.Point(5, 29);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(68, 24);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Action";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label17.ForeColor = System.Drawing.Color.Chocolate;
+            this.label17.Location = new System.Drawing.Point(78, 29);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(56, 24);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Light";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label18.ForeColor = System.Drawing.Color.Chocolate;
+            this.label18.Location = new System.Drawing.Point(135, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(70, 24);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Buzzer";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbInputFin1
+            // 
+            this.cbInputFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputFin1.FormattingEnabled = true;
+            this.cbInputFin1.Items.AddRange(new object[] {
+            "N",
+            "M",
+            "P"});
+            this.cbInputFin1.Location = new System.Drawing.Point(18, 58);
+            this.cbInputFin1.Name = "cbInputFin1";
+            this.cbInputFin1.Size = new System.Drawing.Size(42, 32);
+            this.cbInputFin1.TabIndex = 2;
+            // 
+            // cbInputFin2
+            // 
+            this.cbInputFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputFin2.FormattingEnabled = true;
+            this.cbInputFin2.Items.AddRange(new object[] {
+            "N",
+            "0",
+            "1",
+            "2",
+            "3"});
+            this.cbInputFin2.Location = new System.Drawing.Point(82, 58);
+            this.cbInputFin2.Name = "cbInputFin2";
+            this.cbInputFin2.Size = new System.Drawing.Size(43, 32);
+            this.cbInputFin2.TabIndex = 2;
+            // 
+            // cbInputFin3
+            // 
+            this.cbInputFin3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbInputFin3.FormattingEnabled = true;
+            this.cbInputFin3.Items.AddRange(new object[] {
+            "N",
+            "4",
+            "5"});
+            this.cbInputFin3.Location = new System.Drawing.Point(148, 58);
+            this.cbInputFin3.Name = "cbInputFin3";
+            this.cbInputFin3.Size = new System.Drawing.Size(43, 32);
+            this.cbInputFin3.TabIndex = 2;
+            // 
             // FormRecipeSetting_1R1A2P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -935,8 +998,6 @@
             this.gbRecipeBody.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -948,6 +1009,10 @@
             this.tlpAccountMenu.ResumeLayout(false);
             this.palContainer.ResumeLayout(false);
             this.tlpAccount.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -976,15 +1041,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox cbManualFin1;
-        private System.Windows.Forms.ComboBox cbAutoFin1;
-        private System.Windows.Forms.ComboBox cbManualFin2;
-        private System.Windows.Forms.ComboBox cbAutoFin2;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label29;
@@ -1014,5 +1070,19 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbA1_speed;
         private System.Windows.Forms.CheckBox cbUseA1;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox cbOutputFin1;
+        private System.Windows.Forms.ComboBox cbOutputFin2;
+        private System.Windows.Forms.ComboBox cbOutputFin3;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox cbInputFin1;
+        private System.Windows.Forms.ComboBox cbInputFin2;
+        private System.Windows.Forms.ComboBox cbInputFin3;
     }
 }
