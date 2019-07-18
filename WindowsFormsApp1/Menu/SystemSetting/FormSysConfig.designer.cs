@@ -156,7 +156,7 @@
             "Comport"});
             this.cbRecipe.Location = new System.Drawing.Point(250, 135);
             this.cbRecipe.Name = "cbRecipe";
-            this.cbRecipe.Size = new System.Drawing.Size(121, 32);
+            this.cbRecipe.Size = new System.Drawing.Size(368, 32);
             this.cbRecipe.TabIndex = 9;
             // 
             // tbEqpId

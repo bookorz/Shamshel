@@ -109,16 +109,6 @@ namespace Adam
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaintence = new System.Controls.SplitButton();
-            this.menuMaintenace = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.initToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.orgToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.llSetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.unitdatatoolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.terminalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
@@ -141,7 +131,6 @@ namespace Adam
             this.panel3.SuspendLayout();
             this.contextMenuStrip3.SuspendLayout();
             this.contextMenuStrip2.SuspendLayout();
-            this.menuMaintenace.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer13
@@ -796,87 +785,13 @@ namespace Adam
             // 
             resources.ApplyResources(this.btnMaintence, "btnMaintence");
             this.btnMaintence.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnMaintence.ContextMenuStrip = this.menuMaintenace;
             this.btnMaintence.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnMaintence.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnMaintence.MenuStripShowShowMode = true;
             this.btnMaintence.Name = "btnMaintence";
-            this.btnMaintence.SplitMenuStrip = this.menuMaintenace;
             this.btnMaintence.SplitMenuStripShowUp = false;
             this.btnMaintence.UseVisualStyleBackColor = false;
-            // 
-            // menuMaintenace
-            // 
-            resources.ApplyResources(this.menuMaintenace, "menuMaintenace");
-            this.menuMaintenace.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.menuMaintenace.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.initToolStripMenuItem,
-            this.orgToolStripMenuItem,
-            this.manualToolStripMenuItem,
-            this.ioToolStripMenuItem,
-            this.settingToolStripMenuItem,
-            this.llSetToolStripMenuItem,
-            this.unitdatatoolStripMenuItem,
-            this.transTestToolStripMenuItem,
-            this.terminalToolStripMenuItem});
-            this.menuMaintenace.Name = "contextMenuStrip1";
-            this.menuMaintenace.ShowCheckMargin = true;
-            this.menuMaintenace.Opening += new System.ComponentModel.CancelEventHandler(this.menuMaintenace_Opening);
-            // 
-            // initToolStripMenuItem
-            // 
-            this.initToolStripMenuItem.Name = "initToolStripMenuItem";
-            resources.ApplyResources(this.initToolStripMenuItem, "initToolStripMenuItem");
-            this.initToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem4_Click);
-            // 
-            // orgToolStripMenuItem
-            // 
-            this.orgToolStripMenuItem.Name = "orgToolStripMenuItem";
-            resources.ApplyResources(this.orgToolStripMenuItem, "orgToolStripMenuItem");
-            this.orgToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
-            // 
-            // manualToolStripMenuItem
-            // 
-            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
-            resources.ApplyResources(this.manualToolStripMenuItem, "manualToolStripMenuItem");
-            this.manualToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
-            // 
-            // ioToolStripMenuItem
-            // 
-            resources.ApplyResources(this.ioToolStripMenuItem, "ioToolStripMenuItem");
-            this.ioToolStripMenuItem.Name = "ioToolStripMenuItem";
-            this.ioToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
-            // 
-            // settingToolStripMenuItem
-            // 
-            resources.ApplyResources(this.settingToolStripMenuItem, "settingToolStripMenuItem");
-            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
-            this.settingToolStripMenuItem.Click += new System.EventHandler(this.settingToolStripMenuItem_Click);
-            // 
-            // llSetToolStripMenuItem
-            // 
-            resources.ApplyResources(this.llSetToolStripMenuItem, "llSetToolStripMenuItem");
-            this.llSetToolStripMenuItem.Name = "llSetToolStripMenuItem";
-            this.llSetToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
-            // 
-            // unitdatatoolStripMenuItem
-            // 
-            resources.ApplyResources(this.unitdatatoolStripMenuItem, "unitdatatoolStripMenuItem");
-            this.unitdatatoolStripMenuItem.Name = "unitdatatoolStripMenuItem";
-            this.unitdatatoolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
-            // 
-            // transTestToolStripMenuItem
-            // 
-            resources.ApplyResources(this.transTestToolStripMenuItem, "transTestToolStripMenuItem");
-            this.transTestToolStripMenuItem.Name = "transTestToolStripMenuItem";
-            this.transTestToolStripMenuItem.Click += new System.EventHandler(this.toolStripMenuItem10_Click);
-            // 
-            // terminalToolStripMenuItem
-            // 
-            this.terminalToolStripMenuItem.Name = "terminalToolStripMenuItem";
-            resources.ApplyResources(this.terminalToolStripMenuItem, "terminalToolStripMenuItem");
-            this.terminalToolStripMenuItem.Click += new System.EventHandler(this.terminalToolStripMenuItem_Click_1);
             // 
             // directorySearcher1
             // 
@@ -919,7 +834,6 @@ namespace Adam
             this.panel3.ResumeLayout(false);
             this.contextMenuStrip3.ResumeLayout(false);
             this.contextMenuStrip2.ResumeLayout(false);
-            this.menuMaintenace.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -968,16 +882,6 @@ namespace Adam
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
         private System.Controls.SplitButton btnMaintence;
-        private System.Windows.Forms.ContextMenuStrip menuMaintenace;
-        private System.Windows.Forms.ToolStripMenuItem initToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem orgToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ioToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem llSetToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem unitdatatoolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transTestToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem terminalToolStripMenuItem;
         private System.Windows.Forms.Button btnTeach;
         private System.Windows.Forms.GroupBox groupBox54;
         private System.DirectoryServices.DirectorySearcher directorySearcher1;

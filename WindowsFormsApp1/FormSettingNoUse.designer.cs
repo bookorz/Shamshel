@@ -1,6 +1,6 @@
 ﻿namespace UI_TEST
 {
-    partial class Setting
+    partial class Setting_NOUSE
     {
         /// <summary>
         /// 設計工具所需的變數。

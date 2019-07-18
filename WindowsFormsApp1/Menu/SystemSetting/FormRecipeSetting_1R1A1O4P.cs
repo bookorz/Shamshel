@@ -15,10 +15,10 @@ using TransferControl.Management;
 
 namespace Adam.Menu.SystemSetting
 {
-    public partial class FormRecipeSetting : Form
+    public partial class FormRecipeSetting_1R1A1O4P : Form
     {
         public TreeNode previousSelectedNode = null;
-        public FormRecipeSetting()
+        public FormRecipeSetting_1R1A1O4P()
         {
             InitializeComponent();
         }

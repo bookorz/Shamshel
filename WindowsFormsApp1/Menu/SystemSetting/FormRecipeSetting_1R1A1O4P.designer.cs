@@ -1,6 +1,6 @@
 ﻿namespace Adam.Menu.SystemSetting
 {
-    partial class FormRecipeSetting
+    partial class FormRecipeSetting_1R1A1O4P
     {
         /// <summary>
         /// Required designer variable.

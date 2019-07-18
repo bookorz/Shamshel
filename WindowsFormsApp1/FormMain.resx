@@ -843,9 +843,6 @@
   <data name="button1.Text" xml:space="preserve">
     <value>button1</value>
   </data>
-  <data name="button1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
   <data name="&gt;&gt;button1.Name" xml:space="preserve">
     <value>button1</value>
   </data>
@@ -1685,7 +1682,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="tabMonitor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>None</value>
@@ -2279,7 +2276,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="btnTeach.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -2428,90 +2425,6 @@
   <data name="btnMaintence.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <metadata name="menuMaintenace.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>667, 17</value>
-  </metadata>
-  <data name="menuMaintenace.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 15.75pt</value>
-  </data>
-  <data name="initToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="initToolStripMenuItem.Text" xml:space="preserve">
-    <value>Initialize</value>
-  </data>
-  <data name="orgToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="orgToolStripMenuItem.Text" xml:space="preserve">
-    <value>Org. Back</value>
-  </data>
-  <data name="manualToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="manualToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manual</value>
-  </data>
-  <data name="ioToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="ioToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="ioToolStripMenuItem.Text" xml:space="preserve">
-    <value>I/O</value>
-  </data>
-  <data name="settingToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="settingToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="settingToolStripMenuItem.Text" xml:space="preserve">
-    <value>Setting</value>
-  </data>
-  <data name="llSetToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="llSetToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="llSetToolStripMenuItem.Text" xml:space="preserve">
-    <value>L/L Setting </value>
-  </data>
-  <data name="unitdatatoolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="unitdatatoolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="unitdatatoolStripMenuItem.Text" xml:space="preserve">
-    <value>Unit Controller Data</value>
-  </data>
-  <data name="transTestToolStripMenuItem.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="transTestToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="transTestToolStripMenuItem.Text" xml:space="preserve">
-    <value>Trans. Test</value>
-  </data>
-  <data name="terminalToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>305, 32</value>
-  </data>
-  <data name="terminalToolStripMenuItem.Text" xml:space="preserve">
-    <value>Terminal</value>
-  </data>
-  <data name="menuMaintenace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>306, 292</value>
-  </data>
-  <data name="&gt;&gt;menuMaintenace.Name" xml:space="preserve">
-    <value>menuMaintenace</value>
-  </data>
-  <data name="&gt;&gt;menuMaintenace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ContextMenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="btnMaintence.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -2597,60 +2510,6 @@
     <value>toolStripMenuItem2</value>
   </data>
   <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;initToolStripMenuItem.Name" xml:space="preserve">
-    <value>initToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;initToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;orgToolStripMenuItem.Name" xml:space="preserve">
-    <value>orgToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;orgToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;manualToolStripMenuItem.Name" xml:space="preserve">
-    <value>manualToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;manualToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;ioToolStripMenuItem.Name" xml:space="preserve">
-    <value>ioToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;ioToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;settingToolStripMenuItem.Name" xml:space="preserve">
-    <value>settingToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;settingToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;llSetToolStripMenuItem.Name" xml:space="preserve">
-    <value>llSetToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;llSetToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;unitdatatoolStripMenuItem.Name" xml:space="preserve">
-    <value>unitdatatoolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;unitdatatoolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;transTestToolStripMenuItem.Name" xml:space="preserve">
-    <value>transTestToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;transTestToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;terminalToolStripMenuItem.Name" xml:space="preserve">
-    <value>terminalToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;terminalToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;directorySearcher1.Name" xml:space="preserve">
