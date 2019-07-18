@@ -103,7 +103,7 @@ namespace Adam.Menu.SystemSetting
 
             recipe.is_use_aligner1 = cbUseA1.Checked;
             recipe.is_use_burnin = cbUseBurnIn.Checked;
-            
+            recipe.wafer_size = cbWaferSize.Text;
 
             recipe.ocr_ttl_config = "";//此機型不支援
             recipe.ocr_t7_config = "";//此機型不支援
@@ -314,6 +314,7 @@ namespace Adam.Menu.SystemSetting
                 cbOutputFin2.SelectedItem = recipe.output_proc_fin.Substring(1, 1);
                 cbOutputFin3.SelectedItem = recipe.output_proc_fin.Substring(2, 1);
 
+                cbWaferSize.Text = recipe.wafer_size;
                 cbP1CstType.SelectedItem = recipe.port1_carrier_type;
                 cbP1LoadType.SelectedItem = recipe.port1_type;
 
