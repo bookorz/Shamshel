@@ -562,6 +562,9 @@ namespace Adam
                                 case Transaction.Command.RobotType.GetCombineStatus:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
                                     break;
+                                case Transaction.Command.RobotType.GetMapping:
+                                    ManualPortStatusUpdate.UpdateMapping(Node.CurrentPosition, Msg.Value);
+                                    break;
                             }
                             break;
                         case "ALIGNER":
