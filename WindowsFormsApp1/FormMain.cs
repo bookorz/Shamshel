@@ -42,7 +42,7 @@ namespace Adam
         FormSystemLog sysLog = new FormSystemLog();
         FormAlarm alarmFrom = new FormAlarm();
         FormFoupID BarcodeForm = new FormFoupID();
-        private Menu.Monitoring.FormMonitoring formMonitoring = new Menu.Monitoring.FormMonitoring();
+        private Menu.Monitoring.FormMonitoring4P formMonitoring = new Menu.Monitoring.FormMonitoring4P();
         private Menu.IO.FormIO formIO = new Menu.IO.FormIO();
         private Menu.WaferMapping.FormWaferMapping formWaferAssign = new Menu.WaferMapping.FormWaferMapping();
         //private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();//20190529 取消
@@ -336,12 +336,6 @@ namespace Adam
         {
             UI_TEST.LLSetting lLSetting = new UI_TEST.LLSetting();
             lLSetting.ShowDialog();
-        }
-
-        private void settingToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            UI_TEST.Setting setting = new UI_TEST.Setting();
-            setting.ShowDialog();
         }
 
         private void terminalToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -1658,17 +1652,6 @@ namespace Adam
 
         }
 
-        private void menuMaintenace_Opening(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            foreach (ToolStripMenuItem item in menuMaintenace.Items)
-            {
-                string user_group = lbl_login_group.Text;
-                string fun_form = "FormMain";
-                string fun_ref = item.Name;
-                Boolean enable = AuthorityUpdate.getFuncEnable(user_group, fun_form, fun_ref);
-                item.Enabled = enable;
-            }
-        }
 
         private void Conn_gv_RowEnter(object sender, DataGridViewCellEventArgs e)
         {

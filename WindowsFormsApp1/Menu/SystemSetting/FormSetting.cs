@@ -91,8 +91,26 @@ namespace Adam.Menu.SystemSetting
 
         private void btnRecipeSetting_Click(object sender, EventArgs e)
         {
-            FormRecipeSetting form = new FormRecipeSetting();
-            AddForm(form);
+            Form form = null;
+            string sysMode = SystemConfig.Get().SystemMode;
+            string eqpType = sysMode.LastIndexOf("-") > 0 ? sysMode.Substring(sysMode.LastIndexOf("-") + 1) : "";
+            switch (eqpType)
+            {
+                case "1R1A1O4P":
+                    form = new FormRecipeSetting_1R1A1O4P();
+                    break;
+                case "1R1A2P":
+                    form = new FormRecipeSetting_1R1A2P();
+                    break;
+            }
+            if(form != null)
+            {
+                AddForm(form);
+            }
+            else
+            {
+                MessageBox.Show(sysMode + " Recipe 設定不支援");
+            }
         }
 
         private void btnDIOSetting_Click(object sender, EventArgs e)

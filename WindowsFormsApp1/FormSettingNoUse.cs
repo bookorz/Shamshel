@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_TEST
 {
-    public partial class Setting : Form
+    public partial class Setting_NOUSE : Form
     {
-        public Setting()
+        public Setting_NOUSE()
         {
             InitializeComponent();
             List<test> ttt = new List<test>();

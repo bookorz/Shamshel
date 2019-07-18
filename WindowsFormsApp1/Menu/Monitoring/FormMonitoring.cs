@@ -13,9 +13,9 @@ using TransferControl.Management;
 
 namespace Adam.Menu.Monitoring
 {
-    public partial class FormMonitoring : Adam.Menu.FormFrame
+    public partial class FormMonitoring4P : Adam.Menu.FormFrame
     {
-        public FormMonitoring()
+        public FormMonitoring4P()
         {
             InitializeComponent();
         }

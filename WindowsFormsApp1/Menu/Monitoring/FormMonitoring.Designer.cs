@@ -1,6 +1,6 @@
 ﻿namespace Adam.Menu.Monitoring
 {
-    partial class FormMonitoring
+    partial class FormMonitoring4P
     {
         /// <summary>
         /// 設計工具所需的變數。

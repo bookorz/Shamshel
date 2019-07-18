@@ -215,17 +215,23 @@
     <Compile Include="Menu\SystemSetting\FormRecipeSetting2P.designer.cs">
       <DependentUpon>FormRecipeSetting2P.cs</DependentUpon>
     </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting_1R1A2P.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting_1R1A2P.designer.cs">
+      <DependentUpon>FormRecipeSetting_1R1A2P.cs</DependentUpon>
+    </Compile>
     <Compile Include="Menu\SystemSetting\FormSysConfig.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Menu\SystemSetting\FormSysConfig.designer.cs">
       <DependentUpon>FormSysConfig.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormRecipeSetting.cs">
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting_1R1A1O4P.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu\SystemSetting\FormRecipeSetting.designer.cs">
-      <DependentUpon>FormRecipeSetting.cs</DependentUpon>
+    <Compile Include="Menu\SystemSetting\FormRecipeSetting_1R1A1O4P.designer.cs">
+      <DependentUpon>FormRecipeSetting_1R1A1O4P.cs</DependentUpon>
     </Compile>
     <Compile Include="Menu\SystemSetting\FormSECSSet.cs">
       <SubType>Form</SubType>
@@ -404,11 +410,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FormSetting.cs">
+    <Compile Include="FormSettingNoUse.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSetting.designer.cs">
-      <DependentUpon>FormSetting.cs</DependentUpon>
+    <Compile Include="FormSettingNoUse.designer.cs">
+      <DependentUpon>FormSettingNoUse.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTeaching.cs">
       <SubType>Form</SubType>
@@ -548,11 +554,14 @@
       <DependentUpon>FormRecipeSetting2P.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Menu\SystemSetting\FormRecipeSetting_1R1A2P.resx">
+      <DependentUpon>FormRecipeSetting_1R1A2P.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSysConfig.resx">
       <DependentUpon>FormSysConfig.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu\SystemSetting\FormRecipeSetting.resx">
-      <DependentUpon>FormRecipeSetting.cs</DependentUpon>
+    <EmbeddedResource Include="Menu\SystemSetting\FormRecipeSetting_1R1A1O4P.resx">
+      <DependentUpon>FormRecipeSetting_1R1A1O4P.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu\SystemSetting\FormSECSSet.resx">
       <DependentUpon>FormSECSSet.cs</DependentUpon>
@@ -594,8 +603,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="FormSetting.resx">
-      <DependentUpon>FormSetting.cs</DependentUpon>
+    <EmbeddedResource Include="FormSettingNoUse.resx">
+      <DependentUpon>FormSettingNoUse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTeaching.resx">
       <DependentUpon>FormTeaching.cs</DependentUpon>

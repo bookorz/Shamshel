@@ -15,10 +15,10 @@ using TransferControl.Management;
 
 namespace Adam.Menu.SystemSetting
 {
-    public partial class FormRecipeSetting : Form
+    public partial class FormRecipeSetting_1R1A2P : Form
     {
         public TreeNode previousSelectedNode = null;
-        public FormRecipeSetting()
+        public FormRecipeSetting_1R1A2P()
         {
             InitializeComponent();
         }
@@ -77,24 +77,6 @@ namespace Adam.Menu.SystemSetting
                 MessageBox.Show("Recipe Name or recipe id should not be empty.", "Data check error");
                 return;
             }
-            if (!checkOCRConfig(cbUseOcrTTL.Checked, tbOcrTTL.Text))
-            {
-                MessageBox.Show("OCR config format error.", "Data check error");
-                tbOcrTTL.Focus();
-                return;
-            }
-            if (!checkOCRConfig(cbUseOcrT7.Checked, tbOcrT7.Text))
-            {
-                MessageBox.Show("OCR T7 config format error.", "Error");
-                tbOcrT7.Focus();
-                return;
-            }
-            if (!checkOCRConfig(cbUseOcrM12.Checked, tbOcrM12.Text))
-            {
-                MessageBox.Show("OCR M12 config format error.", "Error");
-                tbOcrM12.Focus();
-                return;
-            }
             //權限檢查
             using (var form = new FormConfirm("確認是否儲存 Recipe:" + tbRecipeID.Text))
             {
@@ -117,57 +99,42 @@ namespace Adam.Menu.SystemSetting
             trvRecipe.Enabled = true;
             //Recipe 存檔
             Recipe recipe = new Recipe();
-            recipe.aligner1_angle = tbA1_angle.Text.Equals("") ? "0" : Int32.Parse(tbA1_angle.Text).ToString();
             recipe.aligner1_speed = tbA1_speed.Text.Equals("") ? "20" : Int32.Parse(tbA1_speed.Text).ToString();
-            recipe.aligner2_angle = tbA2_speed.Text.Equals("") ? "0" : Int32.Parse(tbA2_angle.Text).ToString();
-            recipe.aligner2_speed = tbA2_angle.Text.Equals("") ? "20" : Int32.Parse(tbA2_speed.Text).ToString();
 
             recipe.is_use_aligner1 = cbUseA1.Checked;
-            recipe.is_use_aligner2 = cbUseA2.Checked;
-            recipe.is_use_ocr_ttl = cbUseOcrTTL.Checked;
-            recipe.is_use_ocr_t7 = cbUseOcrT7.Checked;
-            recipe.is_use_ocr_m12 = cbUseOcrM12.Checked;
-            recipe.is_use_exchange = cbUseExchange.Checked;
             recipe.is_use_burnin = cbUseBurnIn.Checked;
             
 
-            recipe.ocr_ttl_config = tbOcrTTL.Text;
-            recipe.ocr_t7_config = tbOcrT7.Text;
-            recipe.ocr_m12_config = tbOcrM12.Text;
+            recipe.ocr_ttl_config = "";//此機型不支援
+            recipe.ocr_t7_config = "";//此機型不支援
+            recipe.ocr_m12_config = "";//此機型不支援
 
             recipe.auto_fin_unclamp = "Y";//固定Y
 
-            recipe.auto_get_constrict = cbAutoGetRule.Text;
+            recipe.auto_get_constrict = "0";//此機型不支援取放片限制
             recipe.auto_proc_fin = cbAutoFin1.Text + cbAutoFin2.Text;
-            recipe.auto_put_constrict = cbAutoPutRule.Text;
+            recipe.auto_put_constrict = //此機型不支援取放片限制;
             //recipe.equip_id = tbEqpID.Text;
-            recipe.ffu_rpm_close = tbFFUCloseRpm.Text;
-            recipe.ffu_rpm_open = tbFFUOpenRpm.Text;
-            recipe.input_proc_fin = cbInputFin1.Text + cbInputFin2.Text + cbInputFin3.Text;
+            recipe.ffu_rpm_close = "";//此機型不支援FFU
+            recipe.ffu_rpm_open = "";
+            recipe.input_proc_fin = "";// cbInputFin1.Text + cbInputFin2.Text + cbInputFin3.Text;
 
             recipe.manual_fin_unclamp = "Y";//固定Y
 
-            recipe.manual_get_constrict = cbManualGetRule.Text;
+            recipe.manual_get_constrict = "";//此機型不支援取放片限制;
             recipe.manual_proc_fin = cbManualFin1.Text + cbManualFin2.Text;
-            recipe.manual_put_constrict = cbManualPutRule.Text;
-            recipe.output_proc_fin = cbOutputFin1.Text + cbOutputFin2.Text + cbOutputFin3.Text;
+            recipe.manual_put_constrict = "";//此機型不支援取放片限制;
+            recipe.output_proc_fin = "";// cbOutputFin1.Text + cbOutputFin2.Text + cbOutputFin3.Text;
 
             recipe.port1_carrier_type = cbP1CstType.Text;
-            recipe.port1_priority = Int32.Parse(cbP1Seq.Text);
+            recipe.port1_priority = 1;
             recipe.port1_type = cbP1LoadType.Text;
 
             recipe.port2_carrier_type = cbP2CstType.Text;
-            recipe.port2_priority = Int32.Parse(cbP2Seq.Text);
+            recipe.port2_priority = 1;
             recipe.port2_type = cbP2LoadType.Text;
 
-            recipe.port3_carrier_type = cbP3CstType.Text;
-            recipe.port3_priority = Int32.Parse(cbP3Seq.Text);
-            recipe.port3_type = cbP3LoadType.Text;
-
-            recipe.port4_carrier_type = cbP4CstType.Text;
-            recipe.port4_priority = Int32.Parse(cbP4Seq.Text);
-            recipe.port4_type = cbP4LoadType.Text;
-
+            
             recipe.recipe_id = tbRecipeID.Text.Trim();
             recipe.recipe_name = tbRecipeName.Text;
             recipe.robot1_speed = tbR1Speed.Text.Equals("") ? "20" : Int32.Parse(tbR1Speed.Text).ToString();
@@ -179,7 +146,7 @@ namespace Adam.Menu.SystemSetting
             recipe.is_use_l_arm = cbUseLArm.Checked;
             recipe.is_use_r_arm = cbUseRArm.Checked;
             recipe.is_use_double_arm = cbUserBothArm.Checked;
-            recipe.ocr_check_Rule = cbOcrCheckRule.Text;
+            //recipe.ocr_check_Rule = cbOcrCheckRule.Text; 不支援OCR
             recipe.get_slot_order = cbGetSlotOrder.Text;
             recipe.put_slot_order = cbPutSlotOrder.Text;
 
@@ -285,13 +252,6 @@ namespace Adam.Menu.SystemSetting
 
         private void FormRecipeSetting_Load(object sender, EventArgs e)
         {
-            Node al = NodeManagement.Get("ALIGNER02");
-            if (al != null)
-            {
-                cbUseA2.Visible = true;
-                tbA2_speed.Visible = true;
-                tbA2_angle.Visible = true;
-            }
             refreshList();
             lblMode.Text = "瀏覽模式";
             if (Global.currentUser.Equals("SANWA"))
@@ -338,54 +298,26 @@ namespace Adam.Menu.SystemSetting
             {
                 //gbRecipe.Enabled = true;
                 Recipe recipe = Recipe.Get(recipeID);
-                tbA1_angle.Text = recipe.aligner1_angle;
                 tbA1_speed.Text = recipe.aligner1_speed;
-                tbA2_speed.Text = recipe.aligner2_speed;
-                tbA2_angle.Text = recipe.aligner2_angle;
 
                 //recipe.auto_fin_unclamp = "Y";//固定Y 無UI
 
-                cbAutoGetRule.SelectedItem = recipe.auto_get_constrict;
                 cbAutoFin1.SelectedItem = recipe.auto_proc_fin.Substring(0, 1);
                 cbAutoFin2.SelectedItem = recipe.auto_proc_fin.Substring(1, 1);
-                cbAutoPutRule.SelectedItem = recipe.auto_put_constrict;
                 //tbEqpID.Text = recipe.equip_id;
-
-               
-                tbFFUCloseRpm.Text = recipe.ffu_rpm_close;
-                tbFFUOpenRpm.Text = recipe.ffu_rpm_open;
-                cbInputFin1.SelectedItem = recipe.input_proc_fin.Substring(0, 1);
-                cbInputFin2.SelectedItem = recipe.input_proc_fin.Substring(1, 1);
-                cbInputFin3.SelectedItem = recipe.input_proc_fin.Substring(2, 1);
 
                 //recipe.manual_fin_unclamp = "Y";//固定Y 無UI
 
-                cbManualGetRule.SelectedItem = recipe.manual_get_constrict;
                 cbManualFin1.SelectedItem = recipe.manual_proc_fin.Substring(0, 1);
                 cbManualFin2.SelectedItem = recipe.manual_proc_fin.Substring(1, 1);
 
-                cbManualPutRule.SelectedItem = recipe.manual_put_constrict;
-                cbOutputFin1.SelectedItem = recipe.output_proc_fin.Substring(0, 1);
-                cbOutputFin2.SelectedItem = recipe.output_proc_fin.Substring(1, 1);
-                cbOutputFin3.SelectedItem = recipe.output_proc_fin.Substring(2, 1);
 
                 cbP1CstType.SelectedItem = recipe.port1_carrier_type;
-                cbP1Seq.SelectedItem = recipe.port1_priority.ToString();
                 cbP1LoadType.SelectedItem = recipe.port1_type;
 
                 cbP2CstType.SelectedItem = recipe.port2_carrier_type;
-                cbP2Seq.SelectedItem = recipe.port2_priority.ToString();
                 cbP2LoadType.SelectedItem = recipe.port2_type;
-
-                cbP3CstType.SelectedItem = recipe.port3_carrier_type;
-                cbP3Seq.SelectedItem = recipe.port3_priority.ToString();
-                cbP3LoadType.SelectedItem = recipe.port3_type;
-
-                cbP4CstType.SelectedItem = recipe.port4_carrier_type;
-                cbP4Seq.SelectedItem = recipe.port4_priority.ToString();
-                cbP4LoadType.SelectedItem = recipe.port4_type;
-
-                cbOcrCheckRule.SelectedItem = recipe.ocr_check_Rule;
+                
                 cbGetSlotOrder.SelectedItem = recipe.get_slot_order;
                 cbPutSlotOrder.SelectedItem = recipe.put_slot_order;
 
@@ -397,19 +329,11 @@ namespace Adam.Menu.SystemSetting
                 tbNotch_angle.Text = recipe.notch_angle;
 
                 cbUseA1.Checked = recipe.is_use_aligner1;
-                cbUseA2.Checked = recipe.is_use_aligner2;
-                cbUseOcrTTL.Checked = recipe.is_use_ocr_ttl;
-                cbUseOcrT7.Checked = recipe.is_use_ocr_t7;
-                cbUseOcrM12.Checked = recipe.is_use_ocr_m12;
 
                 cbUseLArm.Checked = recipe.is_use_l_arm;
                 cbUseRArm.Checked = recipe.is_use_r_arm;
                 cbUserBothArm.Checked = recipe.is_use_double_arm;
 
-                tbOcrTTL.Text = recipe.ocr_ttl_config;
-                tbOcrT7.Text = recipe.ocr_t7_config;
-                tbOcrM12.Text = recipe.ocr_m12_config;
-                cbUseExchange.Checked = recipe.is_use_exchange;
                 cbUseBurnIn.Checked = recipe.is_use_burnin;
 
                 //gbRecipe.Enabled = false;
@@ -545,41 +469,10 @@ namespace Adam.Menu.SystemSetting
             }
         }
 
-        private void cbUseExchange_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbUseExchange.Checked)
-            {
-                cbUseRArm.Checked = true;
-                cbUseLArm.Checked = true;
-                cbUserBothArm.Checked = false;
-                cbUseRArm.Enabled = false;
-                cbUseLArm.Enabled = false;
-                cbUserBothArm.Enabled = false;
-            }
-            else
-            {
-                cbUseRArm.Enabled = true;
-                cbUseLArm.Enabled = true;
-                cbUserBothArm.Enabled = true;
-            }
-        }
 
         private void modeCheck(object sender, PreviewKeyDownEventArgs e)
         {
             modeCheck(sender, new EventArgs());
-        }
-
-        private void cbPutSlotOrder_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (((ComboBox)sender).Text.Equals("BOTTOM_UP"))
-            {
-                cbAutoPutRule.Text = "0";
-                cbAutoPutRule.Enabled = false;
-            }
-            else
-            {
-                cbAutoPutRule.Enabled = true;
-            }
         }
     }
 }
