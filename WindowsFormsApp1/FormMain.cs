@@ -1513,7 +1513,7 @@ namespace Adam
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                     DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
                 }
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 foreach (Node port in NodeManagement.GetLoadPortList())
                 {
                     Label present = form.Controls.Find(port.Name + "_Mode", true).FirstOrDefault() as Label;
@@ -1805,17 +1805,17 @@ namespace Adam
                     {
                         if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                         {
-                            var Slots = from slot in currentPort.JobList.Values
-                                        where slot.MapFlag && !slot.ErrPosition
-                                        select slot;
-                            if (Slots.Count() != 0)
-                            {
+                            //var Slots = from slot in currentPort.JobList.Values
+                            //            where slot.MapFlag && !slot.ErrPosition
+                            //            select slot;
+                            //if (Slots.Count() != 0)
+                            //{
                                 Node ld = SearchLoadport();
                                 if (ld != null)
                                 {
                                     AssignWafer(ld);
                                 }
-                            }
+                            //}
                         }
                         else
                         {
@@ -2212,7 +2212,8 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-                    string TaskName = "LOADPORT_REOPEN";
+                    //string TaskName = "LOADPORT_REOPEN";
+                    string TaskName = "LOADPORT_CLOSE_NOMAP";
                     string Message = "";
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
@@ -2395,12 +2396,29 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-                    string TaskName = "LOADPORT_REOPEN";
+                    string TaskName = "LOADPORT_CLOSE_NOMAP";
                     string Message = "";
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
                     TaskJobManagment.CurrentProceedTask tmpTask;
                     RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+
+                    SpinWait.SpinUntil(() => tmpTask.Finished , 99999999);
+
+                    foreach(Node port in NodeManagement.GetLoadPortList())
+                    {
+                        if(port.Enable && !port.IsMapping)
+                        {
+                             TaskName = "LOADPORT_OPEN";
+                             Message = "";
+                            param1 = new Dictionary<string, string>();
+                            param1.Add("@Target", port.Name);
+                          
+                            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+
+                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                        }
+                    }
                     return;
                 }
                 var Available = from each in Port.JobList.Values
