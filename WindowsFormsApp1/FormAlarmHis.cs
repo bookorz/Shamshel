@@ -27,5 +27,10 @@ namespace Adam
             To.Value = DateTime.Now;
             AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory(From.Value, To.Value));
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory(From.Value, To.Value));
+        }
     }
 }
