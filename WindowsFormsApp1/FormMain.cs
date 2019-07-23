@@ -44,7 +44,7 @@ namespace Adam
         FormFoupID BarcodeForm = new FormFoupID();
         private Menu.Monitoring.FormMonitoring4P formMonitoring = new Menu.Monitoring.FormMonitoring4P();
         private Menu.IO.FormIO formIO = new Menu.IO.FormIO();
-        private Menu.WaferMapping4P.FormWaferMapping formWaferAssign = new Menu.WaferMapping4P.FormWaferMapping();
+        private Menu.WaferMapping4P.FormWaferMapping4P formWaferAssign = new Menu.WaferMapping4P.FormWaferMapping4P();
         //private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();//20190529 取消
         //private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         //private Menu.SystemSetting.FormSECSSet formSecs = new Menu.SystemSetting.FormSECSSet();
@@ -289,7 +289,7 @@ namespace Adam
             }
         }
 
-       
+
         private void toolStripMenuItem5_Click(object sender, EventArgs e)
         {
             string strMsg = "Move to Home position. OK?";
@@ -416,6 +416,7 @@ namespace Adam
                         case Transaction.Command.RobotType.GetMapping:
                             // WaferAssignUpdate.RefreshMapping(Node.CurrentPosition);
                             MonitoringUpdate.UpdateNodesJob(Node.CurrentPosition);
+                            WaferAssignUpdate.UpdateNodesJob(Node.CurrentPosition);
                             break;
                     }
                     break;
@@ -557,7 +558,7 @@ namespace Adam
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
                                     break;
                                 case Transaction.Command.RobotType.GetMapping:
-                                    ManualPortStatusUpdate.UpdateMapping(Node.CurrentPosition, Msg.Value);
+                                    ManualPortStatusUpdate.UpdateMapping(Node.CurrentPosition, Msg.Value.Replace(",", "").Substring(1));
                                     break;
                             }
                             break;
@@ -658,6 +659,7 @@ namespace Adam
                             {
                                 case Transaction.Command.AlignerType.AlignOffset:
                                     Job wafer = Node.JobList["1"];
+
                                     if ((!wafer.OCR_M12_Pass && !wafer.OCR_T7_Pass) && (Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule.Equals("EITHER")))
                                     {
                                         RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
@@ -673,10 +675,10 @@ namespace Adam
                                     }
                                     break;
                                 case Transaction.Command.AlignerType.Home:
-                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "M12", "FormMonitoring");
-                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "T7", "FormMonitoring");
-                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "M12", "FormWaferMapping");
-                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "T7", "FormWaferMapping");
+                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "M12", "FormMonitoring4P");
+                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "T7", "FormMonitoring4P");
+                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "M12", "FormWaferMapping4P");
+                                    OCRUpdate.ClearOCRInfo(Node.Associated_Node, "T7", "FormWaferMapping4P");
                                     break;
                             }
                             break;
@@ -698,14 +700,14 @@ namespace Adam
                             {
                                 case Transaction.Command.OCRType.Read:
                                     OCR_ImageHandle(Node, NodeManagement.Get(Node.Associated_Node).JobList["1"], "ALL", Msg.Value);
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "ALL", "FormMonitoring");
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "ALL", "FormWaferMapping");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "ALL", "FormMonitoring4P");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "ALL", "FormWaferMapping4P");
                                     //OCRStatusUpdate.UpdateOCRRead(Node.Name, Msg.Value);
                                     break;
                                 case Transaction.Command.OCRType.ReadM12:
                                     OCR_ImageHandle(Node, NodeManagement.Get(Node.Associated_Node).JobList["1"], "M12", Msg.Value);
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "M12", "FormMonitoring");
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "M12", "FormWaferMapping");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "M12", "FormMonitoring4P");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "M12", "FormWaferMapping4P");
                                     if (!NodeManagement.Get(Node.Associated_Node).JobList["1"].OCR_M12_Pass && (Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule.Equals("BOTH") || Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule.Equals("M12")))
                                     {
                                         RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
@@ -722,8 +724,8 @@ namespace Adam
                                     break;
                                 case Transaction.Command.OCRType.ReadT7:
                                     OCR_ImageHandle(Node, NodeManagement.Get(Node.Associated_Node).JobList["1"], "T7", Msg.Value);
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "T7", "FormMonitoring");
-                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "T7", "FormWaferMapping");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "T7", "FormMonitoring4P");
+                                    OCRUpdate.UpdateOCRRead(Node.Name, Msg.Value, NodeManagement.Get(Node.Associated_Node).JobList["1"], "T7", "FormWaferMapping4P");
                                     if (!NodeManagement.Get(Node.Associated_Node).JobList["1"].OCR_T7_Pass && (Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule.Equals("BOTH") || Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule.Equals("T7")))
                                     {
                                         RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
@@ -926,7 +928,7 @@ namespace Adam
                             case "MANSW":
                                 if (Node.OPACCESS)
                                 {
-                                    Barcodeupdate.UpdateLoadport(Node.Name, false);
+                                    Barcodeupdate.UpdateLoadport(Node.Name, true);
                                     //Node.OPACCESS = false;
                                     //TaskName = "LOADPORT_OPEN";
                                     //Message = "";
@@ -1563,11 +1565,11 @@ namespace Adam
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                     DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
                 }
-                FormWaferMapping.fromPort = "";
-                FormWaferMapping.fromSlot = "";
-                FormWaferMapping.toPort = "";
-                FormWaferMapping.toSlot = "";
-                Form form = Application.OpenForms["FormWaferMapping"];
+                FormWaferMapping4P.fromPort = "";
+                FormWaferMapping4P.fromSlot = "";
+                FormWaferMapping4P.toPort = "";
+                FormWaferMapping4P.toSlot = "";
+                Form form = Application.OpenForms["FormWaferMapping4P"];
                 foreach (Node p in NodeManagement.GetLoadPortList())//更新所有目的地slot被選的狀態
                 {
                     if (p.Enable && p.IsMapping)
@@ -1712,34 +1714,50 @@ namespace Adam
                     Initializing = false;
                     break;
             }
-            DIOUpdate.UpdateControlButton("Start_btn", false);
-            DIOUpdate.UpdateControlButton("Stop_btn", false);
-            if (Mode_btn.Text.Equals("Auto-Mode"))
+            ManualPortStatusUpdate.LockUI(false);
+            if (ReportType.ToUpper().Equals("CAN"))
             {
-                DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
+                try
+                {
+                    AlarmMessage Detail = AlmMapping.Get("SYSTEM", Message);
+                    MessageBox.Show(Detail.Code_Cause, "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                catch
+                {
+                    MessageBox.Show("Error code:" + Message, "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
             else
             {
-                DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
-            }
-            DIOUpdate.UpdateControlButton("Mode_btn", true);
-            Start = false;
-            RunMode = "";
-            WaferAssignUpdate.UpdateEnabled("FORM", true);
-            //XfeCrossZone.Stop();
-            //if (Task.Id.IndexOf("FormManual") != -1)
-            //{
-            ManualPortStatusUpdate.LockUI(false);
-            //}
-            if (!ReportType.Equals("On_Command_Error"))
-            {
-                ShowAlarm("SYSTEM", Message, NodeName);
+                DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("Stop_btn", false);
+                if (Mode_btn.Text.Equals("Auto-Mode"))
+                {
+                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
+                }
+                else
+                {
+                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
+                }
+                DIOUpdate.UpdateControlButton("Mode_btn", true);
+                Start = false;
+                RunMode = "";
+                WaferAssignUpdate.UpdateEnabled("FORM", true);
+                //XfeCrossZone.Stop();
+                //if (Task.Id.IndexOf("FormManual") != -1)
+                //{
+                
+                //}
+                if (!ReportType.Equals("On_Command_Error"))
+                {
+                    ShowAlarm("SYSTEM", Message, NodeName);
+                }
             }
         }
 
         public void On_TaskJob_Finished(TaskJobManagment.CurrentProceedTask Task)
         {
-            
+
             //if (Task.Id.IndexOf("FormManual") != -1)
             //{
             ManualPortStatusUpdate.LockUI(false);
@@ -1759,7 +1777,7 @@ namespace Adam
                     DIOUpdate.UpdateControlButton("Mode_btn", true);
                     MonitoringUpdate.UpdateWPH("0");
                     xfe.Initial();
-
+                    //NodeManagement.Get("ALIGNER01").PoolStart("GET_ALIGNER_STATUS");
                     //foreach (Node port in NodeManagement.GetLoadPortList())
                     //{
                     //    if (port.Enable && port.Foup_Placement)
@@ -1797,6 +1815,7 @@ namespace Adam
                     RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
                     MessageBox.Show("Initial finished!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     RouteControl.Instance.DIO.SetIO("BUZZER1", "False");
+
                     break;
                 case "LOADPORT_OPEN":
                 case "LOADPORT_REOPEN":
@@ -1810,11 +1829,11 @@ namespace Adam
                             //            select slot;
                             //if (Slots.Count() != 0)
                             //{
-                                Node ld = SearchLoadport();
-                                if (ld != null)
-                                {
-                                    AssignWafer(ld);
-                                }
+                            Node ld = SearchLoadport();
+                            if (ld != null)
+                            {
+                                AssignWafer(ld);
+                            }
                             //}
                         }
                         else
@@ -2403,17 +2422,17 @@ namespace Adam
                     TaskJobManagment.CurrentProceedTask tmpTask;
                     RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
 
-                    SpinWait.SpinUntil(() => tmpTask.Finished , 99999999);
+                    SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
 
-                    foreach(Node port in NodeManagement.GetLoadPortList())
+                    foreach (Node port in NodeManagement.GetLoadPortList())
                     {
-                        if(port.Enable && !port.IsMapping)
+                        if (port.Enable && !port.IsMapping)
                         {
-                             TaskName = "LOADPORT_OPEN";
-                             Message = "";
+                            TaskName = "LOADPORT_OPEN";
+                            Message = "";
                             param1 = new Dictionary<string, string>();
                             param1.Add("@Target", port.Name);
-                          
+
                             RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
 
                             SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);

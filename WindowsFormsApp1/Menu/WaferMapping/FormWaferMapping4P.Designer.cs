@@ -1,6 +1,6 @@
 ﻿namespace Adam.Menu.WaferMapping4P
 {
-    partial class FormWaferMapping
+    partial class FormWaferMapping4P
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -4733,7 +4733,7 @@
             // 
             this.ClientSize = new System.Drawing.Size(1620, 760);
             this.Controls.Add(this.groupBox11);
-            this.Name = "FormWaferMapping";
+            this.Name = "FormWaferMapping4P";
             this.Load += new System.EventHandler(this.FormWaferMapping_Load);
             this.groupBox11.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

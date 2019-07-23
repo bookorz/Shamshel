@@ -98,7 +98,11 @@ namespace Adam.Menu.SystemSetting
             tbRecipeID.ReadOnly = true;
             trvRecipe.Enabled = true;
             //Recipe 存檔
-            Recipe recipe = new Recipe();
+            Recipe recipe = Recipe.Get(tbRecipeID.Text);
+            if (recipe == null)
+            {
+                recipe = Recipe.Get("template");
+            }
             recipe.aligner1_speed = tbA1_speed.Text.Equals("") ? "20" : Int32.Parse(tbA1_speed.Text).ToString();
 
             recipe.is_use_aligner1 = cbUseA1.Checked;
