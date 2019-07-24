@@ -131,6 +131,7 @@ namespace Adam
 
             //Control[] ctrlForm = new Control[] { formMonitoring, formIO, formWafer, formStatus, formTestMode, WaferForm, formSystem, formSystemNew };
             //20190529 取消 formStatus, formStatus          Control[] ctrlForm = new Control[] { formMonitoring, formWaferAssign, formIO,  formSystemNew, formTestMode }; //WaferForm 和 壓差監控之後再開放  , formTestMode
+            //tbcMain 的各 tab page 由下方程式法塞FORM(tabRunning,tabDIO,tabNewSetting,tbDiffMonitor)
             Control[] ctrlForm = new Control[] { formMonitoring, formWaferAssign, formRun, formIO, formSystemNew, formTestMode }; //WaferForm 和 壓差監控之後再開放  , formTestMode
 
 
