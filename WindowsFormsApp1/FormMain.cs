@@ -240,6 +240,7 @@ namespace Adam
 
 
                     DIOUpdate.UpdateControlButton("Start_btn", Initial);
+                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", Initial);
                     Global.currentUser = "";
                     DIOUpdate.UpdateControlButton("Stop_btn", false);
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
@@ -405,7 +406,7 @@ namespace Adam
                         case Transaction.Command.LoadPortType.ForceInitialPos:
                             //WaferAssignUpdate.RefreshMapping(Node.Name);
                             MonitoringUpdate.UpdateNodesJob(Node.Name);
-                            WaferAssignUpdate.UpdateNodesJob(Node.Name);
+                            //WaferAssignUpdate.UpdateNodesJob(Node.Name);
                             RunningUpdate.UpdateNodesJob(Node.Name);
                             break;
                     }
@@ -416,7 +417,7 @@ namespace Adam
                         case Transaction.Command.RobotType.GetMapping:
                             // WaferAssignUpdate.RefreshMapping(Node.CurrentPosition);
                             MonitoringUpdate.UpdateNodesJob(Node.CurrentPosition);
-                            WaferAssignUpdate.UpdateNodesJob(Node.CurrentPosition);
+                            //WaferAssignUpdate.UpdateNodesJob(Node.CurrentPosition);
                             break;
                     }
                     break;
@@ -1317,6 +1318,7 @@ namespace Adam
             {
                 Initial = false;
                 DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
                 DIOUpdate.UpdateControlButton("Stop_btn", false);
                 if (tbcMain.SelectedTab.Text.Equals("Monitoring") || tbcMain.SelectedTab.Text.Equals("Wafer Assign"))
                 {
@@ -1358,6 +1360,7 @@ namespace Adam
                 //if (md5_result.Equals(config_password))
                 //{
                 DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
                 DIOUpdate.UpdateControlButton("Stop_btn", false);
                 DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
                 Mode_btn.Text = "Manual-Mode";
@@ -1514,6 +1517,7 @@ namespace Adam
                 {
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                     DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
+                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", Initial && !Start);
                 }
                 Form form = Application.OpenForms["FormMonitoring4P"];
                 foreach (Node port in NodeManagement.GetLoadPortList())
@@ -1564,6 +1568,7 @@ namespace Adam
                 {
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                     DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
+                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", Initial && !Start);
                 }
                 FormWaferMapping4P.fromPort = "";
                 FormWaferMapping4P.fromSlot = "";
@@ -1652,6 +1657,7 @@ namespace Adam
 
                 DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
                 DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             }
 
 
@@ -1730,6 +1736,7 @@ namespace Adam
             else
             {
                 DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
                 DIOUpdate.UpdateControlButton("Stop_btn", false);
                 if (Mode_btn.Text.Equals("Auto-Mode"))
                 {
@@ -1771,6 +1778,7 @@ namespace Adam
                     {
                         //啟用Start按鈕
                         DIOUpdate.UpdateControlButton("Start_btn", true);
+                        DIOUpdate.UpdateControlButton("ManualTranfer_btn", true);
                     }
                     //讓INIT按鈕由黃變綠色
                     DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
@@ -1803,7 +1811,7 @@ namespace Adam
                             if (pos != null)
                             {
                                 MonitoringUpdate.UpdateNodesJob(pos.Name);
-                                WaferAssignUpdate.UpdateNodesJob(pos.Name);
+                                //WaferAssignUpdate.UpdateNodesJob(pos.Name);
                                 RunningUpdate.UpdateNodesJob(pos.Name);
                             }
                         }
@@ -1923,6 +1931,7 @@ namespace Adam
             if (result == null)
             {
                 DIOUpdate.UpdateControlButton("Start_btn", true);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", true);
                 DIOUpdate.UpdateControlButton("Stop_btn", false);
                 DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                 DIOUpdate.UpdateControlButton("Mode_btn", true);
@@ -2603,16 +2612,17 @@ namespace Adam
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //fakeData("LOADPORT01", "1111111111111000000000000");
+            fakeData("LOADPORT01", "1111111111111000000000000");
+            fakeData("LOADPORT02", "0000100000000000000000000");
             ////fakeData("LOADPORT02");
             ////fakeData("LOADPORT03");
             //fakeData("LOADPORT04", "0000000000000000000000000");
-            //WaferAssignUpdate.UpdateNodesJob("LOADPORT01");
-            //WaferAssignUpdate.UpdateNodesJob("LOADPORT02");
+
+            MonitoringUpdate.UpdateNodesJob("LOADPORT01");
+            MonitoringUpdate.UpdateNodesJob("LOADPORT02");
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT03");
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
-            FormWaferAssign form = new FormWaferAssign();
-            form.Show();
+
         }
 
         private void fakeData(string name, string Mapping)
@@ -2716,6 +2726,7 @@ namespace Adam
                 return;
             }
             DIOUpdate.UpdateControlButton("Start_btn", false);
+            DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             Recipe recipe = Recipe.Get(SystemConfig.Get().CurrentRecipe);
             string TaskName = "SORTER_INIT";
             string Message = "";
@@ -2740,6 +2751,7 @@ namespace Adam
         private void Start_btn_Click(object sender, EventArgs e)
         {
             DIOUpdate.UpdateControlButton("Start_btn", false);
+            DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             DIOUpdate.UpdateControlButton("Stop_btn", true);
             DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
             DIOUpdate.UpdateControlButton("Mode_btn", false);
@@ -2818,6 +2830,7 @@ namespace Adam
                 }
             }
             DIOUpdate.UpdateControlButton("Start_btn", true);
+            DIOUpdate.UpdateControlButton("ManualTranfer_btn", true);
             DIOUpdate.UpdateControlButton("Stop_btn", false);
             DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
             DIOUpdate.UpdateControlButton("Mode_btn", true);
@@ -2863,9 +2876,7 @@ namespace Adam
                     {
                         MonitoringUpdate.ButtonEnabled(port.Name.ToUpper() + "_Unload_btn", true);
                         WaferAssignUpdate.ButtonEnabled(port.Name.ToUpper() + "_Unload_btn", true);
-
                         isFound = true;
-
                     }
                 }
                 if (isFound)
@@ -2896,6 +2907,15 @@ namespace Adam
         private void SystemLog_btn_Click(object sender, EventArgs e)
         {
             sysLog.Show();
+        }
+
+        private void ManualTranfer_btn_Click(object sender, EventArgs e)
+        {
+            using (var form = new FormWaferAssign())
+            {
+                var result = form.ShowDialog();
+                
+            }
         }
     }
 }

@@ -114,7 +114,7 @@ namespace Adam.UI_Update.Monitoring
         {
             try
             {
-                Form form = Application.OpenForms["FormMonitoring"];
+                Form form = Application.OpenForms["FormMonitoring4P"];
                 Label W;
                 if (form == null)
                     return;

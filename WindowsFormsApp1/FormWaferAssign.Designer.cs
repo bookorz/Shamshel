@@ -82,6 +82,7 @@
             this.From_Slot_25 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.Excute_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.gbPort3 = new System.Windows.Forms.GroupBox();
             this.TO_FOUPID = new System.Windows.Forms.TextBox();
@@ -144,7 +145,6 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -159,7 +159,7 @@
             this.gbPort1.Controls.Add(this.TblPanel_A);
             this.gbPort1.Location = new System.Drawing.Point(218, 12);
             this.gbPort1.Name = "gbPort1";
-            this.gbPort1.Size = new System.Drawing.Size(240, 742);
+            this.gbPort1.Size = new System.Drawing.Size(240, 836);
             this.gbPort1.TabIndex = 187;
             this.gbPort1.TabStop = false;
             // 
@@ -262,7 +262,7 @@
             this.TblPanel_A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.TblPanel_A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.TblPanel_A.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.TblPanel_A.Size = new System.Drawing.Size(227, 681);
+            this.TblPanel_A.Size = new System.Drawing.Size(227, 778);
             this.TblPanel_A.TabIndex = 170;
             this.TblPanel_A.Tag = "1";
             // 
@@ -274,13 +274,14 @@
             this.From_Slot_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_1.Location = new System.Drawing.Point(72, 652);
+            this.From_Slot_1.Location = new System.Drawing.Point(72, 748);
             this.From_Slot_1.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_1.Name = "From_Slot_1";
-            this.From_Slot_1.Size = new System.Drawing.Size(151, 25);
+            this.From_Slot_1.Size = new System.Drawing.Size(151, 26);
             this.From_Slot_1.TabIndex = 82;
             this.From_Slot_1.Tag = "1";
             this.From_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_1.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label82
             // 
@@ -290,10 +291,10 @@
             this.label82.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.ForeColor = System.Drawing.Color.White;
             this.label82.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label82.Location = new System.Drawing.Point(4, 652);
+            this.label82.Location = new System.Drawing.Point(4, 748);
             this.label82.Margin = new System.Windows.Forms.Padding(3);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(61, 25);
+            this.label82.Size = new System.Drawing.Size(61, 26);
             this.label82.TabIndex = 81;
             this.label82.Tag = "1";
             this.label82.Text = "01";
@@ -307,13 +308,14 @@
             this.From_Slot_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_2.Location = new System.Drawing.Point(72, 625);
+            this.From_Slot_2.Location = new System.Drawing.Point(72, 717);
             this.From_Slot_2.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_2.Name = "From_Slot_2";
-            this.From_Slot_2.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_2.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_2.TabIndex = 79;
             this.From_Slot_2.Tag = "1";
             this.From_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_2.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label83
             // 
@@ -323,10 +325,10 @@
             this.label83.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.ForeColor = System.Drawing.Color.White;
             this.label83.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label83.Location = new System.Drawing.Point(4, 625);
+            this.label83.Location = new System.Drawing.Point(4, 717);
             this.label83.Margin = new System.Windows.Forms.Padding(3);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(61, 20);
+            this.label83.Size = new System.Drawing.Size(61, 24);
             this.label83.TabIndex = 78;
             this.label83.Tag = "1";
             this.label83.Text = "02";
@@ -340,13 +342,14 @@
             this.From_Slot_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_3.Location = new System.Drawing.Point(72, 598);
+            this.From_Slot_3.Location = new System.Drawing.Point(72, 686);
             this.From_Slot_3.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_3.Name = "From_Slot_3";
-            this.From_Slot_3.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_3.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_3.TabIndex = 76;
             this.From_Slot_3.Tag = "1";
             this.From_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_3.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label84
             // 
@@ -356,10 +359,10 @@
             this.label84.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.ForeColor = System.Drawing.Color.White;
             this.label84.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label84.Location = new System.Drawing.Point(4, 598);
+            this.label84.Location = new System.Drawing.Point(4, 686);
             this.label84.Margin = new System.Windows.Forms.Padding(3);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(61, 20);
+            this.label84.Size = new System.Drawing.Size(61, 24);
             this.label84.TabIndex = 75;
             this.label84.Tag = "1";
             this.label84.Text = "03";
@@ -373,13 +376,14 @@
             this.From_Slot_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_4.Location = new System.Drawing.Point(72, 571);
+            this.From_Slot_4.Location = new System.Drawing.Point(72, 655);
             this.From_Slot_4.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_4.Name = "From_Slot_4";
-            this.From_Slot_4.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_4.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_4.TabIndex = 73;
             this.From_Slot_4.Tag = "1";
             this.From_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_4.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label85
             // 
@@ -389,10 +393,10 @@
             this.label85.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.ForeColor = System.Drawing.Color.White;
             this.label85.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label85.Location = new System.Drawing.Point(4, 571);
+            this.label85.Location = new System.Drawing.Point(4, 655);
             this.label85.Margin = new System.Windows.Forms.Padding(3);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(61, 20);
+            this.label85.Size = new System.Drawing.Size(61, 24);
             this.label85.TabIndex = 72;
             this.label85.Tag = "1";
             this.label85.Text = "04";
@@ -406,13 +410,14 @@
             this.From_Slot_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_5.Location = new System.Drawing.Point(72, 544);
+            this.From_Slot_5.Location = new System.Drawing.Point(72, 624);
             this.From_Slot_5.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_5.Name = "From_Slot_5";
-            this.From_Slot_5.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_5.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_5.TabIndex = 70;
             this.From_Slot_5.Tag = "1";
             this.From_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_5.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label86
             // 
@@ -422,10 +427,10 @@
             this.label86.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.ForeColor = System.Drawing.Color.White;
             this.label86.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label86.Location = new System.Drawing.Point(4, 544);
+            this.label86.Location = new System.Drawing.Point(4, 624);
             this.label86.Margin = new System.Windows.Forms.Padding(3);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(61, 20);
+            this.label86.Size = new System.Drawing.Size(61, 24);
             this.label86.TabIndex = 69;
             this.label86.Tag = "1";
             this.label86.Text = "05";
@@ -439,13 +444,14 @@
             this.From_Slot_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_6.Location = new System.Drawing.Point(72, 517);
+            this.From_Slot_6.Location = new System.Drawing.Point(72, 593);
             this.From_Slot_6.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_6.Name = "From_Slot_6";
-            this.From_Slot_6.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_6.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_6.TabIndex = 67;
             this.From_Slot_6.Tag = "1";
             this.From_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_6.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label87
             // 
@@ -455,10 +461,10 @@
             this.label87.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.ForeColor = System.Drawing.Color.White;
             this.label87.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label87.Location = new System.Drawing.Point(4, 517);
+            this.label87.Location = new System.Drawing.Point(4, 593);
             this.label87.Margin = new System.Windows.Forms.Padding(3);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(61, 20);
+            this.label87.Size = new System.Drawing.Size(61, 24);
             this.label87.TabIndex = 66;
             this.label87.Tag = "1";
             this.label87.Text = "06";
@@ -472,13 +478,14 @@
             this.From_Slot_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_7.Location = new System.Drawing.Point(72, 490);
+            this.From_Slot_7.Location = new System.Drawing.Point(72, 562);
             this.From_Slot_7.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_7.Name = "From_Slot_7";
-            this.From_Slot_7.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_7.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_7.TabIndex = 64;
             this.From_Slot_7.Tag = "1";
             this.From_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_7.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label88
             // 
@@ -488,10 +495,10 @@
             this.label88.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label88.ForeColor = System.Drawing.Color.White;
             this.label88.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label88.Location = new System.Drawing.Point(4, 490);
+            this.label88.Location = new System.Drawing.Point(4, 562);
             this.label88.Margin = new System.Windows.Forms.Padding(3);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(61, 20);
+            this.label88.Size = new System.Drawing.Size(61, 24);
             this.label88.TabIndex = 63;
             this.label88.Tag = "1";
             this.label88.Text = "07";
@@ -505,13 +512,14 @@
             this.From_Slot_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_8.Location = new System.Drawing.Point(72, 463);
+            this.From_Slot_8.Location = new System.Drawing.Point(72, 531);
             this.From_Slot_8.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_8.Name = "From_Slot_8";
-            this.From_Slot_8.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_8.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_8.TabIndex = 61;
             this.From_Slot_8.Tag = "1";
             this.From_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_8.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label89
             // 
@@ -521,10 +529,10 @@
             this.label89.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.ForeColor = System.Drawing.Color.White;
             this.label89.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label89.Location = new System.Drawing.Point(4, 463);
+            this.label89.Location = new System.Drawing.Point(4, 531);
             this.label89.Margin = new System.Windows.Forms.Padding(3);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(61, 20);
+            this.label89.Size = new System.Drawing.Size(61, 24);
             this.label89.TabIndex = 60;
             this.label89.Tag = "1";
             this.label89.Text = "08";
@@ -538,13 +546,14 @@
             this.From_Slot_9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_9.Location = new System.Drawing.Point(72, 436);
+            this.From_Slot_9.Location = new System.Drawing.Point(72, 500);
             this.From_Slot_9.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_9.Name = "From_Slot_9";
-            this.From_Slot_9.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_9.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_9.TabIndex = 58;
             this.From_Slot_9.Tag = "1";
             this.From_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_9.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label90
             // 
@@ -554,10 +563,10 @@
             this.label90.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.ForeColor = System.Drawing.Color.White;
             this.label90.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label90.Location = new System.Drawing.Point(4, 436);
+            this.label90.Location = new System.Drawing.Point(4, 500);
             this.label90.Margin = new System.Windows.Forms.Padding(3);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(61, 20);
+            this.label90.Size = new System.Drawing.Size(61, 24);
             this.label90.TabIndex = 57;
             this.label90.Tag = "1";
             this.label90.Text = "09";
@@ -571,13 +580,14 @@
             this.From_Slot_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_10.Location = new System.Drawing.Point(72, 409);
+            this.From_Slot_10.Location = new System.Drawing.Point(72, 469);
             this.From_Slot_10.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_10.Name = "From_Slot_10";
-            this.From_Slot_10.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_10.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_10.TabIndex = 55;
             this.From_Slot_10.Tag = "1";
             this.From_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_10.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label91
             // 
@@ -587,10 +597,10 @@
             this.label91.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.ForeColor = System.Drawing.Color.White;
             this.label91.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label91.Location = new System.Drawing.Point(4, 409);
+            this.label91.Location = new System.Drawing.Point(4, 469);
             this.label91.Margin = new System.Windows.Forms.Padding(3);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(61, 20);
+            this.label91.Size = new System.Drawing.Size(61, 24);
             this.label91.TabIndex = 54;
             this.label91.Tag = "1";
             this.label91.Text = "10";
@@ -604,13 +614,14 @@
             this.From_Slot_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_11.Location = new System.Drawing.Point(72, 382);
+            this.From_Slot_11.Location = new System.Drawing.Point(72, 438);
             this.From_Slot_11.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_11.Name = "From_Slot_11";
-            this.From_Slot_11.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_11.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_11.TabIndex = 52;
             this.From_Slot_11.Tag = "1";
             this.From_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_11.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label92
             // 
@@ -620,10 +631,10 @@
             this.label92.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.ForeColor = System.Drawing.Color.White;
             this.label92.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label92.Location = new System.Drawing.Point(4, 382);
+            this.label92.Location = new System.Drawing.Point(4, 438);
             this.label92.Margin = new System.Windows.Forms.Padding(3);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(61, 20);
+            this.label92.Size = new System.Drawing.Size(61, 24);
             this.label92.TabIndex = 51;
             this.label92.Tag = "1";
             this.label92.Text = "11";
@@ -637,13 +648,14 @@
             this.From_Slot_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_12.Location = new System.Drawing.Point(72, 355);
+            this.From_Slot_12.Location = new System.Drawing.Point(72, 407);
             this.From_Slot_12.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_12.Name = "From_Slot_12";
-            this.From_Slot_12.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_12.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_12.TabIndex = 49;
             this.From_Slot_12.Tag = "1";
             this.From_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_12.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label93
             // 
@@ -653,10 +665,10 @@
             this.label93.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.ForeColor = System.Drawing.Color.White;
             this.label93.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label93.Location = new System.Drawing.Point(4, 355);
+            this.label93.Location = new System.Drawing.Point(4, 407);
             this.label93.Margin = new System.Windows.Forms.Padding(3);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(61, 20);
+            this.label93.Size = new System.Drawing.Size(61, 24);
             this.label93.TabIndex = 48;
             this.label93.Tag = "1";
             this.label93.Text = "12";
@@ -670,13 +682,14 @@
             this.From_Slot_13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_13.Location = new System.Drawing.Point(72, 328);
+            this.From_Slot_13.Location = new System.Drawing.Point(72, 376);
             this.From_Slot_13.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_13.Name = "From_Slot_13";
-            this.From_Slot_13.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_13.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_13.TabIndex = 46;
             this.From_Slot_13.Tag = "1";
             this.From_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_13.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label94
             // 
@@ -686,10 +699,10 @@
             this.label94.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.ForeColor = System.Drawing.Color.White;
             this.label94.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label94.Location = new System.Drawing.Point(4, 328);
+            this.label94.Location = new System.Drawing.Point(4, 376);
             this.label94.Margin = new System.Windows.Forms.Padding(3);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(61, 20);
+            this.label94.Size = new System.Drawing.Size(61, 24);
             this.label94.TabIndex = 45;
             this.label94.Tag = "1";
             this.label94.Text = "13";
@@ -703,13 +716,14 @@
             this.From_Slot_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_14.Location = new System.Drawing.Point(72, 301);
+            this.From_Slot_14.Location = new System.Drawing.Point(72, 345);
             this.From_Slot_14.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_14.Name = "From_Slot_14";
-            this.From_Slot_14.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_14.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_14.TabIndex = 43;
             this.From_Slot_14.Tag = "1";
             this.From_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_14.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label95
             // 
@@ -719,10 +733,10 @@
             this.label95.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.ForeColor = System.Drawing.Color.White;
             this.label95.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label95.Location = new System.Drawing.Point(4, 301);
+            this.label95.Location = new System.Drawing.Point(4, 345);
             this.label95.Margin = new System.Windows.Forms.Padding(3);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(61, 20);
+            this.label95.Size = new System.Drawing.Size(61, 24);
             this.label95.TabIndex = 42;
             this.label95.Tag = "1";
             this.label95.Text = "14";
@@ -736,13 +750,14 @@
             this.From_Slot_15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_15.Location = new System.Drawing.Point(72, 274);
+            this.From_Slot_15.Location = new System.Drawing.Point(72, 314);
             this.From_Slot_15.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_15.Name = "From_Slot_15";
-            this.From_Slot_15.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_15.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_15.TabIndex = 40;
             this.From_Slot_15.Tag = "1";
             this.From_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_15.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label96
             // 
@@ -752,10 +767,10 @@
             this.label96.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.ForeColor = System.Drawing.Color.White;
             this.label96.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label96.Location = new System.Drawing.Point(4, 274);
+            this.label96.Location = new System.Drawing.Point(4, 314);
             this.label96.Margin = new System.Windows.Forms.Padding(3);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(61, 20);
+            this.label96.Size = new System.Drawing.Size(61, 24);
             this.label96.TabIndex = 39;
             this.label96.Tag = "1";
             this.label96.Text = "15";
@@ -769,13 +784,14 @@
             this.From_Slot_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_16.Location = new System.Drawing.Point(72, 247);
+            this.From_Slot_16.Location = new System.Drawing.Point(72, 283);
             this.From_Slot_16.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_16.Name = "From_Slot_16";
-            this.From_Slot_16.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_16.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_16.TabIndex = 37;
             this.From_Slot_16.Tag = "1";
             this.From_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_16.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label97
             // 
@@ -785,10 +801,10 @@
             this.label97.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.ForeColor = System.Drawing.Color.White;
             this.label97.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label97.Location = new System.Drawing.Point(4, 247);
+            this.label97.Location = new System.Drawing.Point(4, 283);
             this.label97.Margin = new System.Windows.Forms.Padding(3);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(61, 20);
+            this.label97.Size = new System.Drawing.Size(61, 24);
             this.label97.TabIndex = 36;
             this.label97.Tag = "1";
             this.label97.Text = "16";
@@ -802,13 +818,14 @@
             this.From_Slot_17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_17.Location = new System.Drawing.Point(72, 220);
+            this.From_Slot_17.Location = new System.Drawing.Point(72, 252);
             this.From_Slot_17.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_17.Name = "From_Slot_17";
-            this.From_Slot_17.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_17.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_17.TabIndex = 34;
             this.From_Slot_17.Tag = "1";
             this.From_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_17.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label98
             // 
@@ -818,10 +835,10 @@
             this.label98.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.ForeColor = System.Drawing.Color.White;
             this.label98.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label98.Location = new System.Drawing.Point(4, 220);
+            this.label98.Location = new System.Drawing.Point(4, 252);
             this.label98.Margin = new System.Windows.Forms.Padding(3);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(61, 20);
+            this.label98.Size = new System.Drawing.Size(61, 24);
             this.label98.TabIndex = 33;
             this.label98.Tag = "1";
             this.label98.Text = "17";
@@ -835,13 +852,14 @@
             this.From_Slot_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_18.Location = new System.Drawing.Point(72, 193);
+            this.From_Slot_18.Location = new System.Drawing.Point(72, 221);
             this.From_Slot_18.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_18.Name = "From_Slot_18";
-            this.From_Slot_18.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_18.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_18.TabIndex = 31;
             this.From_Slot_18.Tag = "1";
             this.From_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_18.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label99
             // 
@@ -851,10 +869,10 @@
             this.label99.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.ForeColor = System.Drawing.Color.White;
             this.label99.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label99.Location = new System.Drawing.Point(4, 193);
+            this.label99.Location = new System.Drawing.Point(4, 221);
             this.label99.Margin = new System.Windows.Forms.Padding(3);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(61, 20);
+            this.label99.Size = new System.Drawing.Size(61, 24);
             this.label99.TabIndex = 30;
             this.label99.Tag = "1";
             this.label99.Text = "18";
@@ -868,13 +886,14 @@
             this.From_Slot_19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_19.Location = new System.Drawing.Point(72, 166);
+            this.From_Slot_19.Location = new System.Drawing.Point(72, 190);
             this.From_Slot_19.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_19.Name = "From_Slot_19";
-            this.From_Slot_19.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_19.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_19.TabIndex = 28;
             this.From_Slot_19.Tag = "1";
             this.From_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_19.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label100
             // 
@@ -884,10 +903,10 @@
             this.label100.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label100.ForeColor = System.Drawing.Color.White;
             this.label100.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label100.Location = new System.Drawing.Point(4, 166);
+            this.label100.Location = new System.Drawing.Point(4, 190);
             this.label100.Margin = new System.Windows.Forms.Padding(3);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(61, 20);
+            this.label100.Size = new System.Drawing.Size(61, 24);
             this.label100.TabIndex = 27;
             this.label100.Tag = "1";
             this.label100.Text = "19";
@@ -901,13 +920,14 @@
             this.From_Slot_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_20.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_20.Location = new System.Drawing.Point(72, 139);
+            this.From_Slot_20.Location = new System.Drawing.Point(72, 159);
             this.From_Slot_20.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_20.Name = "From_Slot_20";
-            this.From_Slot_20.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_20.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_20.TabIndex = 25;
             this.From_Slot_20.Tag = "1";
             this.From_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_20.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label101
             // 
@@ -917,10 +937,10 @@
             this.label101.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.ForeColor = System.Drawing.Color.White;
             this.label101.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label101.Location = new System.Drawing.Point(4, 139);
+            this.label101.Location = new System.Drawing.Point(4, 159);
             this.label101.Margin = new System.Windows.Forms.Padding(3);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(61, 20);
+            this.label101.Size = new System.Drawing.Size(61, 24);
             this.label101.TabIndex = 24;
             this.label101.Tag = "1";
             this.label101.Text = "20";
@@ -934,13 +954,14 @@
             this.From_Slot_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_21.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_21.Location = new System.Drawing.Point(72, 112);
+            this.From_Slot_21.Location = new System.Drawing.Point(72, 128);
             this.From_Slot_21.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_21.Name = "From_Slot_21";
-            this.From_Slot_21.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_21.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_21.TabIndex = 22;
             this.From_Slot_21.Tag = "1";
             this.From_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_21.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label102
             // 
@@ -950,10 +971,10 @@
             this.label102.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label102.ForeColor = System.Drawing.Color.White;
             this.label102.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label102.Location = new System.Drawing.Point(4, 112);
+            this.label102.Location = new System.Drawing.Point(4, 128);
             this.label102.Margin = new System.Windows.Forms.Padding(3);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(61, 20);
+            this.label102.Size = new System.Drawing.Size(61, 24);
             this.label102.TabIndex = 21;
             this.label102.Tag = "1";
             this.label102.Text = "21";
@@ -967,13 +988,14 @@
             this.From_Slot_22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_22.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_22.Location = new System.Drawing.Point(72, 85);
+            this.From_Slot_22.Location = new System.Drawing.Point(72, 97);
             this.From_Slot_22.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_22.Name = "From_Slot_22";
-            this.From_Slot_22.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_22.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_22.TabIndex = 19;
             this.From_Slot_22.Tag = "1";
             this.From_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_22.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label103
             // 
@@ -983,10 +1005,10 @@
             this.label103.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.ForeColor = System.Drawing.Color.White;
             this.label103.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label103.Location = new System.Drawing.Point(4, 85);
+            this.label103.Location = new System.Drawing.Point(4, 97);
             this.label103.Margin = new System.Windows.Forms.Padding(3);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(61, 20);
+            this.label103.Size = new System.Drawing.Size(61, 24);
             this.label103.TabIndex = 18;
             this.label103.Tag = "1";
             this.label103.Text = "22";
@@ -1000,13 +1022,14 @@
             this.From_Slot_23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_23.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_23.Location = new System.Drawing.Point(72, 58);
+            this.From_Slot_23.Location = new System.Drawing.Point(72, 66);
             this.From_Slot_23.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_23.Name = "From_Slot_23";
-            this.From_Slot_23.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_23.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_23.TabIndex = 16;
             this.From_Slot_23.Tag = "1";
             this.From_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_23.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label104
             // 
@@ -1016,10 +1039,10 @@
             this.label104.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.ForeColor = System.Drawing.Color.White;
             this.label104.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label104.Location = new System.Drawing.Point(4, 58);
+            this.label104.Location = new System.Drawing.Point(4, 66);
             this.label104.Margin = new System.Windows.Forms.Padding(3);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(61, 20);
+            this.label104.Size = new System.Drawing.Size(61, 24);
             this.label104.TabIndex = 15;
             this.label104.Tag = "1";
             this.label104.Text = "23";
@@ -1033,13 +1056,14 @@
             this.From_Slot_24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.From_Slot_24.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.From_Slot_24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.From_Slot_24.Location = new System.Drawing.Point(72, 31);
+            this.From_Slot_24.Location = new System.Drawing.Point(72, 35);
             this.From_Slot_24.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_24.Name = "From_Slot_24";
-            this.From_Slot_24.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_24.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_24.TabIndex = 13;
             this.From_Slot_24.Tag = "1";
             this.From_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_24.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label105
             // 
@@ -1049,10 +1073,10 @@
             this.label105.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.ForeColor = System.Drawing.Color.White;
             this.label105.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label105.Location = new System.Drawing.Point(4, 31);
+            this.label105.Location = new System.Drawing.Point(4, 35);
             this.label105.Margin = new System.Windows.Forms.Padding(3);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(61, 20);
+            this.label105.Size = new System.Drawing.Size(61, 24);
             this.label105.TabIndex = 12;
             this.label105.Tag = "1";
             this.label105.Text = "24";
@@ -1069,10 +1093,11 @@
             this.From_Slot_25.Location = new System.Drawing.Point(72, 4);
             this.From_Slot_25.Margin = new System.Windows.Forms.Padding(3);
             this.From_Slot_25.Name = "From_Slot_25";
-            this.From_Slot_25.Size = new System.Drawing.Size(151, 20);
+            this.From_Slot_25.Size = new System.Drawing.Size(151, 24);
             this.From_Slot_25.TabIndex = 10;
             this.From_Slot_25.Tag = "1";
             this.From_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.From_Slot_25.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label106
             // 
@@ -1085,7 +1110,7 @@
             this.label106.Location = new System.Drawing.Point(4, 4);
             this.label106.Margin = new System.Windows.Forms.Padding(3);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(61, 20);
+            this.label106.Size = new System.Drawing.Size(61, 24);
             this.label106.TabIndex = 9;
             this.label106.Tag = "1";
             this.label106.Text = "25";
@@ -1093,7 +1118,7 @@
             // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.button1);
+            this.groupBox11.Controls.Add(this.Excute_btn);
             this.groupBox11.Controls.Add(this.label1);
             this.groupBox11.Controls.Add(this.gbPort3);
             this.groupBox11.Controls.Add(this.gbPort1);
@@ -1105,9 +1130,19 @@
             this.groupBox11.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox11.Location = new System.Drawing.Point(0, 0);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(1620, 760);
+            this.groupBox11.Size = new System.Drawing.Size(1190, 852);
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
+            // 
+            // Excute_btn
+            // 
+            this.Excute_btn.Location = new System.Drawing.Point(1001, 630);
+            this.Excute_btn.Name = "Excute_btn";
+            this.Excute_btn.Size = new System.Drawing.Size(141, 74);
+            this.Excute_btn.TabIndex = 190;
+            this.Excute_btn.Text = "Excute";
+            this.Excute_btn.UseVisualStyleBackColor = true;
+            this.Excute_btn.Click += new System.EventHandler(this.Excute_btn_Click);
             // 
             // label1
             // 
@@ -1124,7 +1159,7 @@
             this.gbPort3.Controls.Add(this.tableLayoutPanel2);
             this.gbPort3.Location = new System.Drawing.Point(700, 12);
             this.gbPort3.Name = "gbPort3";
-            this.gbPort3.Size = new System.Drawing.Size(240, 742);
+            this.gbPort3.Size = new System.Drawing.Size(240, 836);
             this.gbPort3.TabIndex = 189;
             this.gbPort3.TabStop = false;
             // 
@@ -1228,7 +1263,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(227, 681);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(227, 778);
             this.tableLayoutPanel2.TabIndex = 172;
             this.tableLayoutPanel2.Tag = "1";
             // 
@@ -1240,13 +1275,14 @@
             this.To_Slot_1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_1.Location = new System.Drawing.Point(72, 652);
+            this.To_Slot_1.Location = new System.Drawing.Point(72, 748);
             this.To_Slot_1.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_1.Name = "To_Slot_1";
-            this.To_Slot_1.Size = new System.Drawing.Size(151, 25);
+            this.To_Slot_1.Size = new System.Drawing.Size(151, 26);
             this.To_Slot_1.TabIndex = 82;
             this.To_Slot_1.Tag = "1";
             this.To_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_1.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label69
             // 
@@ -1256,10 +1292,10 @@
             this.label69.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.ForeColor = System.Drawing.Color.White;
             this.label69.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label69.Location = new System.Drawing.Point(4, 652);
+            this.label69.Location = new System.Drawing.Point(4, 748);
             this.label69.Margin = new System.Windows.Forms.Padding(3);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(61, 25);
+            this.label69.Size = new System.Drawing.Size(61, 26);
             this.label69.TabIndex = 81;
             this.label69.Tag = "1";
             this.label69.Text = "01";
@@ -1273,13 +1309,14 @@
             this.To_Slot_2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_2.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_2.Location = new System.Drawing.Point(72, 625);
+            this.To_Slot_2.Location = new System.Drawing.Point(72, 717);
             this.To_Slot_2.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_2.Name = "To_Slot_2";
-            this.To_Slot_2.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_2.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_2.TabIndex = 79;
             this.To_Slot_2.Tag = "1";
             this.To_Slot_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_2.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label71
             // 
@@ -1289,10 +1326,10 @@
             this.label71.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.ForeColor = System.Drawing.Color.White;
             this.label71.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label71.Location = new System.Drawing.Point(4, 625);
+            this.label71.Location = new System.Drawing.Point(4, 717);
             this.label71.Margin = new System.Windows.Forms.Padding(3);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(61, 20);
+            this.label71.Size = new System.Drawing.Size(61, 24);
             this.label71.TabIndex = 78;
             this.label71.Tag = "1";
             this.label71.Text = "02";
@@ -1306,13 +1343,14 @@
             this.To_Slot_3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_3.Location = new System.Drawing.Point(72, 598);
+            this.To_Slot_3.Location = new System.Drawing.Point(72, 686);
             this.To_Slot_3.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_3.Name = "To_Slot_3";
-            this.To_Slot_3.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_3.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_3.TabIndex = 76;
             this.To_Slot_3.Tag = "1";
             this.To_Slot_3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_3.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label73
             // 
@@ -1322,10 +1360,10 @@
             this.label73.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.ForeColor = System.Drawing.Color.White;
             this.label73.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label73.Location = new System.Drawing.Point(4, 598);
+            this.label73.Location = new System.Drawing.Point(4, 686);
             this.label73.Margin = new System.Windows.Forms.Padding(3);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(61, 20);
+            this.label73.Size = new System.Drawing.Size(61, 24);
             this.label73.TabIndex = 75;
             this.label73.Tag = "1";
             this.label73.Text = "03";
@@ -1339,13 +1377,14 @@
             this.To_Slot_4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_4.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_4.Location = new System.Drawing.Point(72, 571);
+            this.To_Slot_4.Location = new System.Drawing.Point(72, 655);
             this.To_Slot_4.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_4.Name = "To_Slot_4";
-            this.To_Slot_4.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_4.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_4.TabIndex = 73;
             this.To_Slot_4.Tag = "1";
             this.To_Slot_4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_4.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label75
             // 
@@ -1355,10 +1394,10 @@
             this.label75.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.ForeColor = System.Drawing.Color.White;
             this.label75.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label75.Location = new System.Drawing.Point(4, 571);
+            this.label75.Location = new System.Drawing.Point(4, 655);
             this.label75.Margin = new System.Windows.Forms.Padding(3);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(61, 20);
+            this.label75.Size = new System.Drawing.Size(61, 24);
             this.label75.TabIndex = 72;
             this.label75.Tag = "1";
             this.label75.Text = "04";
@@ -1372,13 +1411,14 @@
             this.To_Slot_5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_5.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_5.Location = new System.Drawing.Point(72, 544);
+            this.To_Slot_5.Location = new System.Drawing.Point(72, 624);
             this.To_Slot_5.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_5.Name = "To_Slot_5";
-            this.To_Slot_5.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_5.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_5.TabIndex = 70;
             this.To_Slot_5.Tag = "1";
             this.To_Slot_5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_5.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label77
             // 
@@ -1388,10 +1428,10 @@
             this.label77.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.ForeColor = System.Drawing.Color.White;
             this.label77.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label77.Location = new System.Drawing.Point(4, 544);
+            this.label77.Location = new System.Drawing.Point(4, 624);
             this.label77.Margin = new System.Windows.Forms.Padding(3);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(61, 20);
+            this.label77.Size = new System.Drawing.Size(61, 24);
             this.label77.TabIndex = 69;
             this.label77.Tag = "1";
             this.label77.Text = "05";
@@ -1405,13 +1445,14 @@
             this.To_Slot_6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_6.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_6.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_6.Location = new System.Drawing.Point(72, 517);
+            this.To_Slot_6.Location = new System.Drawing.Point(72, 593);
             this.To_Slot_6.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_6.Name = "To_Slot_6";
-            this.To_Slot_6.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_6.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_6.TabIndex = 67;
             this.To_Slot_6.Tag = "1";
             this.To_Slot_6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_6.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label79
             // 
@@ -1421,10 +1462,10 @@
             this.label79.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.ForeColor = System.Drawing.Color.White;
             this.label79.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label79.Location = new System.Drawing.Point(4, 517);
+            this.label79.Location = new System.Drawing.Point(4, 593);
             this.label79.Margin = new System.Windows.Forms.Padding(3);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(61, 20);
+            this.label79.Size = new System.Drawing.Size(61, 24);
             this.label79.TabIndex = 66;
             this.label79.Tag = "1";
             this.label79.Text = "06";
@@ -1438,13 +1479,14 @@
             this.To_Slot_7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_7.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_7.Location = new System.Drawing.Point(72, 490);
+            this.To_Slot_7.Location = new System.Drawing.Point(72, 562);
             this.To_Slot_7.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_7.Name = "To_Slot_7";
-            this.To_Slot_7.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_7.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_7.TabIndex = 64;
             this.To_Slot_7.Tag = "1";
             this.To_Slot_7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_7.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label81
             // 
@@ -1454,10 +1496,10 @@
             this.label81.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.ForeColor = System.Drawing.Color.White;
             this.label81.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label81.Location = new System.Drawing.Point(4, 490);
+            this.label81.Location = new System.Drawing.Point(4, 562);
             this.label81.Margin = new System.Windows.Forms.Padding(3);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(61, 20);
+            this.label81.Size = new System.Drawing.Size(61, 24);
             this.label81.TabIndex = 63;
             this.label81.Tag = "1";
             this.label81.Text = "07";
@@ -1471,13 +1513,14 @@
             this.To_Slot_8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_8.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_8.Location = new System.Drawing.Point(72, 463);
+            this.To_Slot_8.Location = new System.Drawing.Point(72, 531);
             this.To_Slot_8.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_8.Name = "To_Slot_8";
-            this.To_Slot_8.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_8.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_8.TabIndex = 61;
             this.To_Slot_8.Tag = "1";
             this.To_Slot_8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_8.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label108
             // 
@@ -1487,10 +1530,10 @@
             this.label108.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label108.ForeColor = System.Drawing.Color.White;
             this.label108.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label108.Location = new System.Drawing.Point(4, 463);
+            this.label108.Location = new System.Drawing.Point(4, 531);
             this.label108.Margin = new System.Windows.Forms.Padding(3);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(61, 20);
+            this.label108.Size = new System.Drawing.Size(61, 24);
             this.label108.TabIndex = 60;
             this.label108.Tag = "1";
             this.label108.Text = "08";
@@ -1504,13 +1547,14 @@
             this.To_Slot_9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_9.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_9.Location = new System.Drawing.Point(72, 436);
+            this.To_Slot_9.Location = new System.Drawing.Point(72, 500);
             this.To_Slot_9.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_9.Name = "To_Slot_9";
-            this.To_Slot_9.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_9.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_9.TabIndex = 58;
             this.To_Slot_9.Tag = "1";
             this.To_Slot_9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_9.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label110
             // 
@@ -1520,10 +1564,10 @@
             this.label110.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.ForeColor = System.Drawing.Color.White;
             this.label110.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label110.Location = new System.Drawing.Point(4, 436);
+            this.label110.Location = new System.Drawing.Point(4, 500);
             this.label110.Margin = new System.Windows.Forms.Padding(3);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(61, 20);
+            this.label110.Size = new System.Drawing.Size(61, 24);
             this.label110.TabIndex = 57;
             this.label110.Tag = "1";
             this.label110.Text = "09";
@@ -1537,13 +1581,14 @@
             this.To_Slot_10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_10.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_10.Location = new System.Drawing.Point(72, 409);
+            this.To_Slot_10.Location = new System.Drawing.Point(72, 469);
             this.To_Slot_10.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_10.Name = "To_Slot_10";
-            this.To_Slot_10.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_10.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_10.TabIndex = 55;
             this.To_Slot_10.Tag = "1";
             this.To_Slot_10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_10.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label112
             // 
@@ -1553,10 +1598,10 @@
             this.label112.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label112.ForeColor = System.Drawing.Color.White;
             this.label112.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label112.Location = new System.Drawing.Point(4, 409);
+            this.label112.Location = new System.Drawing.Point(4, 469);
             this.label112.Margin = new System.Windows.Forms.Padding(3);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(61, 20);
+            this.label112.Size = new System.Drawing.Size(61, 24);
             this.label112.TabIndex = 54;
             this.label112.Tag = "1";
             this.label112.Text = "10";
@@ -1570,13 +1615,14 @@
             this.To_Slot_11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_11.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_11.Location = new System.Drawing.Point(72, 382);
+            this.To_Slot_11.Location = new System.Drawing.Point(72, 438);
             this.To_Slot_11.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_11.Name = "To_Slot_11";
-            this.To_Slot_11.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_11.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_11.TabIndex = 52;
             this.To_Slot_11.Tag = "1";
             this.To_Slot_11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_11.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label114
             // 
@@ -1586,10 +1632,10 @@
             this.label114.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label114.ForeColor = System.Drawing.Color.White;
             this.label114.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label114.Location = new System.Drawing.Point(4, 382);
+            this.label114.Location = new System.Drawing.Point(4, 438);
             this.label114.Margin = new System.Windows.Forms.Padding(3);
             this.label114.Name = "label114";
-            this.label114.Size = new System.Drawing.Size(61, 20);
+            this.label114.Size = new System.Drawing.Size(61, 24);
             this.label114.TabIndex = 51;
             this.label114.Tag = "1";
             this.label114.Text = "11";
@@ -1603,13 +1649,14 @@
             this.To_Slot_12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_12.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_12.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_12.Location = new System.Drawing.Point(72, 355);
+            this.To_Slot_12.Location = new System.Drawing.Point(72, 407);
             this.To_Slot_12.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_12.Name = "To_Slot_12";
-            this.To_Slot_12.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_12.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_12.TabIndex = 49;
             this.To_Slot_12.Tag = "1";
             this.To_Slot_12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_12.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label116
             // 
@@ -1619,10 +1666,10 @@
             this.label116.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label116.ForeColor = System.Drawing.Color.White;
             this.label116.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label116.Location = new System.Drawing.Point(4, 355);
+            this.label116.Location = new System.Drawing.Point(4, 407);
             this.label116.Margin = new System.Windows.Forms.Padding(3);
             this.label116.Name = "label116";
-            this.label116.Size = new System.Drawing.Size(61, 20);
+            this.label116.Size = new System.Drawing.Size(61, 24);
             this.label116.TabIndex = 48;
             this.label116.Tag = "1";
             this.label116.Text = "12";
@@ -1636,13 +1683,14 @@
             this.To_Slot_13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_13.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_13.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_13.Location = new System.Drawing.Point(72, 328);
+            this.To_Slot_13.Location = new System.Drawing.Point(72, 376);
             this.To_Slot_13.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_13.Name = "To_Slot_13";
-            this.To_Slot_13.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_13.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_13.TabIndex = 46;
             this.To_Slot_13.Tag = "1";
             this.To_Slot_13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_13.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label118
             // 
@@ -1652,10 +1700,10 @@
             this.label118.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label118.ForeColor = System.Drawing.Color.White;
             this.label118.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label118.Location = new System.Drawing.Point(4, 328);
+            this.label118.Location = new System.Drawing.Point(4, 376);
             this.label118.Margin = new System.Windows.Forms.Padding(3);
             this.label118.Name = "label118";
-            this.label118.Size = new System.Drawing.Size(61, 20);
+            this.label118.Size = new System.Drawing.Size(61, 24);
             this.label118.TabIndex = 45;
             this.label118.Tag = "1";
             this.label118.Text = "13";
@@ -1669,13 +1717,14 @@
             this.To_Slot_14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_14.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_14.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_14.Location = new System.Drawing.Point(72, 301);
+            this.To_Slot_14.Location = new System.Drawing.Point(72, 345);
             this.To_Slot_14.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_14.Name = "To_Slot_14";
-            this.To_Slot_14.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_14.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_14.TabIndex = 43;
             this.To_Slot_14.Tag = "1";
             this.To_Slot_14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_14.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label120
             // 
@@ -1685,10 +1734,10 @@
             this.label120.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label120.ForeColor = System.Drawing.Color.White;
             this.label120.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label120.Location = new System.Drawing.Point(4, 301);
+            this.label120.Location = new System.Drawing.Point(4, 345);
             this.label120.Margin = new System.Windows.Forms.Padding(3);
             this.label120.Name = "label120";
-            this.label120.Size = new System.Drawing.Size(61, 20);
+            this.label120.Size = new System.Drawing.Size(61, 24);
             this.label120.TabIndex = 42;
             this.label120.Tag = "1";
             this.label120.Text = "14";
@@ -1702,13 +1751,14 @@
             this.To_Slot_15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_15.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_15.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_15.Location = new System.Drawing.Point(72, 274);
+            this.To_Slot_15.Location = new System.Drawing.Point(72, 314);
             this.To_Slot_15.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_15.Name = "To_Slot_15";
-            this.To_Slot_15.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_15.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_15.TabIndex = 40;
             this.To_Slot_15.Tag = "1";
             this.To_Slot_15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_15.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label122
             // 
@@ -1718,10 +1768,10 @@
             this.label122.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label122.ForeColor = System.Drawing.Color.White;
             this.label122.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label122.Location = new System.Drawing.Point(4, 274);
+            this.label122.Location = new System.Drawing.Point(4, 314);
             this.label122.Margin = new System.Windows.Forms.Padding(3);
             this.label122.Name = "label122";
-            this.label122.Size = new System.Drawing.Size(61, 20);
+            this.label122.Size = new System.Drawing.Size(61, 24);
             this.label122.TabIndex = 39;
             this.label122.Tag = "1";
             this.label122.Text = "15";
@@ -1735,13 +1785,14 @@
             this.To_Slot_16.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_16.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_16.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_16.Location = new System.Drawing.Point(72, 247);
+            this.To_Slot_16.Location = new System.Drawing.Point(72, 283);
             this.To_Slot_16.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_16.Name = "To_Slot_16";
-            this.To_Slot_16.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_16.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_16.TabIndex = 37;
             this.To_Slot_16.Tag = "1";
             this.To_Slot_16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_16.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label124
             // 
@@ -1751,10 +1802,10 @@
             this.label124.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label124.ForeColor = System.Drawing.Color.White;
             this.label124.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label124.Location = new System.Drawing.Point(4, 247);
+            this.label124.Location = new System.Drawing.Point(4, 283);
             this.label124.Margin = new System.Windows.Forms.Padding(3);
             this.label124.Name = "label124";
-            this.label124.Size = new System.Drawing.Size(61, 20);
+            this.label124.Size = new System.Drawing.Size(61, 24);
             this.label124.TabIndex = 36;
             this.label124.Tag = "1";
             this.label124.Text = "16";
@@ -1768,13 +1819,14 @@
             this.To_Slot_17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_17.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_17.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_17.Location = new System.Drawing.Point(72, 220);
+            this.To_Slot_17.Location = new System.Drawing.Point(72, 252);
             this.To_Slot_17.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_17.Name = "To_Slot_17";
-            this.To_Slot_17.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_17.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_17.TabIndex = 34;
             this.To_Slot_17.Tag = "1";
             this.To_Slot_17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_17.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label126
             // 
@@ -1784,10 +1836,10 @@
             this.label126.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label126.ForeColor = System.Drawing.Color.White;
             this.label126.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label126.Location = new System.Drawing.Point(4, 220);
+            this.label126.Location = new System.Drawing.Point(4, 252);
             this.label126.Margin = new System.Windows.Forms.Padding(3);
             this.label126.Name = "label126";
-            this.label126.Size = new System.Drawing.Size(61, 20);
+            this.label126.Size = new System.Drawing.Size(61, 24);
             this.label126.TabIndex = 33;
             this.label126.Tag = "1";
             this.label126.Text = "17";
@@ -1801,13 +1853,14 @@
             this.To_Slot_18.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_18.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_18.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_18.Location = new System.Drawing.Point(72, 193);
+            this.To_Slot_18.Location = new System.Drawing.Point(72, 221);
             this.To_Slot_18.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_18.Name = "To_Slot_18";
-            this.To_Slot_18.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_18.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_18.TabIndex = 31;
             this.To_Slot_18.Tag = "1";
             this.To_Slot_18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_18.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label128
             // 
@@ -1817,10 +1870,10 @@
             this.label128.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label128.ForeColor = System.Drawing.Color.White;
             this.label128.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label128.Location = new System.Drawing.Point(4, 193);
+            this.label128.Location = new System.Drawing.Point(4, 221);
             this.label128.Margin = new System.Windows.Forms.Padding(3);
             this.label128.Name = "label128";
-            this.label128.Size = new System.Drawing.Size(61, 20);
+            this.label128.Size = new System.Drawing.Size(61, 24);
             this.label128.TabIndex = 30;
             this.label128.Tag = "1";
             this.label128.Text = "18";
@@ -1834,13 +1887,14 @@
             this.To_Slot_19.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_19.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_19.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_19.Location = new System.Drawing.Point(72, 166);
+            this.To_Slot_19.Location = new System.Drawing.Point(72, 190);
             this.To_Slot_19.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_19.Name = "To_Slot_19";
-            this.To_Slot_19.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_19.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_19.TabIndex = 28;
             this.To_Slot_19.Tag = "1";
             this.To_Slot_19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_19.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label130
             // 
@@ -1850,10 +1904,10 @@
             this.label130.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label130.ForeColor = System.Drawing.Color.White;
             this.label130.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label130.Location = new System.Drawing.Point(4, 166);
+            this.label130.Location = new System.Drawing.Point(4, 190);
             this.label130.Margin = new System.Windows.Forms.Padding(3);
             this.label130.Name = "label130";
-            this.label130.Size = new System.Drawing.Size(61, 20);
+            this.label130.Size = new System.Drawing.Size(61, 24);
             this.label130.TabIndex = 27;
             this.label130.Tag = "1";
             this.label130.Text = "19";
@@ -1867,13 +1921,14 @@
             this.To_Slot_20.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_20.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_20.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_20.Location = new System.Drawing.Point(72, 139);
+            this.To_Slot_20.Location = new System.Drawing.Point(72, 159);
             this.To_Slot_20.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_20.Name = "To_Slot_20";
-            this.To_Slot_20.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_20.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_20.TabIndex = 25;
             this.To_Slot_20.Tag = "1";
             this.To_Slot_20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_20.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label132
             // 
@@ -1883,10 +1938,10 @@
             this.label132.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label132.ForeColor = System.Drawing.Color.White;
             this.label132.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label132.Location = new System.Drawing.Point(4, 139);
+            this.label132.Location = new System.Drawing.Point(4, 159);
             this.label132.Margin = new System.Windows.Forms.Padding(3);
             this.label132.Name = "label132";
-            this.label132.Size = new System.Drawing.Size(61, 20);
+            this.label132.Size = new System.Drawing.Size(61, 24);
             this.label132.TabIndex = 24;
             this.label132.Tag = "1";
             this.label132.Text = "20";
@@ -1900,13 +1955,14 @@
             this.To_Slot_21.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_21.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_21.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_21.Location = new System.Drawing.Point(72, 112);
+            this.To_Slot_21.Location = new System.Drawing.Point(72, 128);
             this.To_Slot_21.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_21.Name = "To_Slot_21";
-            this.To_Slot_21.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_21.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_21.TabIndex = 22;
             this.To_Slot_21.Tag = "1";
             this.To_Slot_21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_21.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label134
             // 
@@ -1916,10 +1972,10 @@
             this.label134.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label134.ForeColor = System.Drawing.Color.White;
             this.label134.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label134.Location = new System.Drawing.Point(4, 112);
+            this.label134.Location = new System.Drawing.Point(4, 128);
             this.label134.Margin = new System.Windows.Forms.Padding(3);
             this.label134.Name = "label134";
-            this.label134.Size = new System.Drawing.Size(61, 20);
+            this.label134.Size = new System.Drawing.Size(61, 24);
             this.label134.TabIndex = 21;
             this.label134.Tag = "1";
             this.label134.Text = "21";
@@ -1933,13 +1989,14 @@
             this.To_Slot_22.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_22.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_22.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_22.Location = new System.Drawing.Point(72, 85);
+            this.To_Slot_22.Location = new System.Drawing.Point(72, 97);
             this.To_Slot_22.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_22.Name = "To_Slot_22";
-            this.To_Slot_22.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_22.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_22.TabIndex = 19;
             this.To_Slot_22.Tag = "1";
             this.To_Slot_22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_22.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label136
             // 
@@ -1949,10 +2006,10 @@
             this.label136.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label136.ForeColor = System.Drawing.Color.White;
             this.label136.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label136.Location = new System.Drawing.Point(4, 85);
+            this.label136.Location = new System.Drawing.Point(4, 97);
             this.label136.Margin = new System.Windows.Forms.Padding(3);
             this.label136.Name = "label136";
-            this.label136.Size = new System.Drawing.Size(61, 20);
+            this.label136.Size = new System.Drawing.Size(61, 24);
             this.label136.TabIndex = 18;
             this.label136.Tag = "1";
             this.label136.Text = "22";
@@ -1966,13 +2023,14 @@
             this.To_Slot_23.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_23.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_23.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_23.Location = new System.Drawing.Point(72, 58);
+            this.To_Slot_23.Location = new System.Drawing.Point(72, 66);
             this.To_Slot_23.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_23.Name = "To_Slot_23";
-            this.To_Slot_23.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_23.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_23.TabIndex = 16;
             this.To_Slot_23.Tag = "1";
             this.To_Slot_23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_23.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label138
             // 
@@ -1982,10 +2040,10 @@
             this.label138.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label138.ForeColor = System.Drawing.Color.White;
             this.label138.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label138.Location = new System.Drawing.Point(4, 58);
+            this.label138.Location = new System.Drawing.Point(4, 66);
             this.label138.Margin = new System.Windows.Forms.Padding(3);
             this.label138.Name = "label138";
-            this.label138.Size = new System.Drawing.Size(61, 20);
+            this.label138.Size = new System.Drawing.Size(61, 24);
             this.label138.TabIndex = 15;
             this.label138.Tag = "1";
             this.label138.Text = "23";
@@ -1999,13 +2057,14 @@
             this.To_Slot_24.Dock = System.Windows.Forms.DockStyle.Fill;
             this.To_Slot_24.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_Slot_24.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.To_Slot_24.Location = new System.Drawing.Point(72, 31);
+            this.To_Slot_24.Location = new System.Drawing.Point(72, 35);
             this.To_Slot_24.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_24.Name = "To_Slot_24";
-            this.To_Slot_24.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_24.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_24.TabIndex = 13;
             this.To_Slot_24.Tag = "1";
             this.To_Slot_24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_24.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label140
             // 
@@ -2015,10 +2074,10 @@
             this.label140.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label140.ForeColor = System.Drawing.Color.White;
             this.label140.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label140.Location = new System.Drawing.Point(4, 31);
+            this.label140.Location = new System.Drawing.Point(4, 35);
             this.label140.Margin = new System.Windows.Forms.Padding(3);
             this.label140.Name = "label140";
-            this.label140.Size = new System.Drawing.Size(61, 20);
+            this.label140.Size = new System.Drawing.Size(61, 24);
             this.label140.TabIndex = 12;
             this.label140.Tag = "1";
             this.label140.Text = "24";
@@ -2035,10 +2094,11 @@
             this.To_Slot_25.Location = new System.Drawing.Point(72, 4);
             this.To_Slot_25.Margin = new System.Windows.Forms.Padding(3);
             this.To_Slot_25.Name = "To_Slot_25";
-            this.To_Slot_25.Size = new System.Drawing.Size(151, 20);
+            this.To_Slot_25.Size = new System.Drawing.Size(151, 24);
             this.To_Slot_25.TabIndex = 10;
             this.To_Slot_25.Tag = "1";
             this.To_Slot_25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.To_Slot_25.Click += new System.EventHandler(this.SlotSelect);
             // 
             // label142
             // 
@@ -2051,7 +2111,7 @@
             this.label142.Location = new System.Drawing.Point(4, 4);
             this.label142.Margin = new System.Windows.Forms.Padding(3);
             this.label142.Name = "label142";
-            this.label142.Size = new System.Drawing.Size(61, 20);
+            this.label142.Size = new System.Drawing.Size(61, 24);
             this.label142.TabIndex = 9;
             this.label142.Tag = "1";
             this.label142.Text = "25";
@@ -2070,6 +2130,7 @@
             this.Source_cb.Name = "Source_cb";
             this.Source_cb.Size = new System.Drawing.Size(136, 27);
             this.Source_cb.TabIndex = 175;
+            this.Source_cb.SelectedIndexChanged += new System.EventHandler(this.Source_cb_SelectedIndexChanged);
             // 
             // groupBox1
             // 
@@ -2092,7 +2153,6 @@
             this.rbBottomUp.Name = "rbBottomUp";
             this.rbBottomUp.Size = new System.Drawing.Size(108, 23);
             this.rbBottomUp.TabIndex = 180;
-            this.rbBottomUp.TabStop = true;
             this.rbBottomUp.Text = "Bottom Up";
             this.rbBottomUp.UseVisualStyleBackColor = true;
             // 
@@ -2103,13 +2163,13 @@
             this.rbTopDown.Name = "rbTopDown";
             this.rbTopDown.Size = new System.Drawing.Size(99, 23);
             this.rbTopDown.TabIndex = 180;
-            this.rbTopDown.TabStop = true;
             this.rbTopDown.Text = "Top Down";
             this.rbTopDown.UseVisualStyleBackColor = true;
             // 
             // rbSlotToSlot
             // 
             this.rbSlotToSlot.AutoSize = true;
+            this.rbSlotToSlot.Checked = true;
             this.rbSlotToSlot.Location = new System.Drawing.Point(22, 25);
             this.rbSlotToSlot.Name = "rbSlotToSlot";
             this.rbSlotToSlot.Size = new System.Drawing.Size(135, 23);
@@ -2126,6 +2186,7 @@
             this.AutoAssign_btn.TabIndex = 179;
             this.AutoAssign_btn.Text = "Assign";
             this.AutoAssign_btn.UseVisualStyleBackColor = true;
+            this.AutoAssign_btn.Click += new System.EventHandler(this.AutoAssign_btn_Click);
             // 
             // label7
             // 
@@ -2149,24 +2210,15 @@
             this.To_cb.Name = "To_cb";
             this.To_cb.Size = new System.Drawing.Size(136, 27);
             this.To_cb.TabIndex = 177;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(1199, 316);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 37);
-            this.button1.TabIndex = 190;
-            this.button1.Text = "Close";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
             // FormWaferAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1620, 760);
+            this.ClientSize = new System.Drawing.Size(1190, 852);
             this.Controls.Add(this.groupBox11);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FormWaferAssign";
             this.Text = "FormWaferAssign";
             this.gbPort1.ResumeLayout(false);
@@ -2303,6 +2355,6 @@
         private System.Windows.Forms.RadioButton rbBottomUp;
         private System.Windows.Forms.RadioButton rbTopDown;
         private System.Windows.Forms.RadioButton rbSlotToSlot;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Excute_btn;
     }
 }

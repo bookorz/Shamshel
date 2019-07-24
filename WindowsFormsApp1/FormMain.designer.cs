@@ -110,6 +110,7 @@ namespace Adam
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaintence = new System.Controls.SplitButton();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.ManualTranfer_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -209,6 +210,7 @@ namespace Adam
             // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.ManualTranfer_btn);
             this.groupBox5.Controls.Add(this.CDAAlarm_Signal);
             this.groupBox5.Controls.Add(this.EQP_State);
             this.groupBox5.Controls.Add(this.Stop_btn);
@@ -799,6 +801,14 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
+            // ManualTranfer_btn
+            // 
+            resources.ApplyResources(this.ManualTranfer_btn, "ManualTranfer_btn");
+            this.ManualTranfer_btn.BackColor = System.Drawing.Color.DimGray;
+            this.ManualTranfer_btn.Name = "ManualTranfer_btn";
+            this.ManualTranfer_btn.UseVisualStyleBackColor = false;
+            this.ManualTranfer_btn.Click += new System.EventHandler(this.ManualTranfer_btn_Click);
+            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -918,6 +928,7 @@ namespace Adam
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnChangeRecipe;
         private System.Windows.Forms.Button SystemLog_btn;
+        private System.Windows.Forms.Button ManualTranfer_btn;
     }
 }
 

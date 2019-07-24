@@ -15,5 +15,6 @@
   "AdminPassword": "0192023A7BBD73250516F069DF18B500",
   "CurrentRecipe": "default",
   "EquipmentID": "SORT",
-  "FoupTxfLogPath": "D:/log/foup"
+  "FoupTxfLogPath": "D:/log/foup",
+  "MappingDataCheck": true
 }

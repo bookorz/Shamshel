@@ -18,7 +18,7 @@ namespace Adam.UI_Update.IO
         static int currentY_I = 15;
         static int currentY_O = 15;
 
-        public static void UpdateDIO(string Parameter, string Value,string Type)
+        public static void UpdateDIO(string Parameter, string Value, string Type)
         {
             try
             {
@@ -26,8 +26,9 @@ namespace Adam.UI_Update.IO
 
                 if (form == null)
                     return;
+                Label lb;
 
-                Label lb = form.Controls.Find(Parameter+"_"+ Type, true).FirstOrDefault() as Label;
+                lb = form.Controls.Find(Parameter + "_" + Type, true).FirstOrDefault() as Label;
 
                 if (lb == null)
                 {
@@ -54,7 +55,7 @@ namespace Adam.UI_Update.IO
                     {
                         lb.ForeColor = Color.Red;
                     }
-                   
+
                 }
 
 
@@ -92,7 +93,7 @@ namespace Adam.UI_Update.IO
             {
 
 
-                
+
 
                 value.Name = Name + "_" + Type;
                 value.Text = "■";//"●"

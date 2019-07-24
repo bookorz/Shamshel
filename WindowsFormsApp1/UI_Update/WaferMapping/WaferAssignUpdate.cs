@@ -20,12 +20,12 @@ namespace Adam.UI_Update.WaferMapping
         delegate void UpdatePortMapping(string PortName);
         delegate void UpdatePortUsed(string PortName, bool Used);
         delegate void UpdateAssign(string PortName, string Mapping, bool Enable);
-        delegate void UpdateForSlot(Node Port, string Slot);
+        delegate void UpdateForSlot(string Type,Node Port, string Slot);
         public static void ButtonEnabled(string Name, bool Enabled)
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferAssign"];
                 Button W;
                 if (form == null)
                     return;
@@ -54,7 +54,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferAssign"];
                 TextBox W;
                 if (form == null)
                     return;
@@ -83,7 +83,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferAssign"];
                 Button btn;
                 if (form == null)
                     return;
@@ -145,7 +145,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferAssign"];
                 Label Port_Mode;
                 if (form == null)
                     return;
@@ -171,13 +171,13 @@ namespace Adam.UI_Update.WaferMapping
                 logger.Error("UpdateLoadPortMode: Update fail:" + e.StackTrace);
             }
         }
-        private static void UpdateSlot(Node Port, string Slot)
+        private static void UpdateSlot(string Type,Node Port, string Slot)
         {
-            Form form = Application.OpenForms["FormWaferMapping"];
+            Form form = Application.OpenForms["FormWaferAssign"];
             if (form == null)
                 return;
 
-            Label present = form.Controls.Find(Port.Name + "_Slot_" + Slot, true).FirstOrDefault() as Label;
+            Label present = form.Controls.Find(Type+"_Slot_" + Slot, true).FirstOrDefault() as Label;
             if (present == null)
             {
                 return;
@@ -185,32 +185,40 @@ namespace Adam.UI_Update.WaferMapping
             if (present.InvokeRequired)
             {
                 UpdateForSlot ph = new UpdateForSlot(UpdateSlot);
-                present.BeginInvoke(ph, Port, Slot);
+                present.BeginInvoke(ph, Type,Port, Slot);
             }
             else
             {
                 Job tmp;
-                if (Port.JobList.TryGetValue(Slot, out tmp))
+                if (Port != null)
                 {
-                    present.Text = tmp.Host_Job_Id;
-                    switch (present.Text)
+                    if (Port.JobList.TryGetValue(Slot, out tmp))
                     {
-                        case "No wafer":
-                            present.BackColor = Color.DimGray;
-                            present.ForeColor = Color.White;
-                            break;
-                        case "Crossed":
-                        case "Undefined":
-                        case "Double":
-                            present.BackColor = Color.Red;
-                            present.ForeColor = Color.White;
-                            break;
-                        default:
-                            present.BackColor = Color.Green;
-                            present.ForeColor = Color.White;
-                            break;
-                    }
+                        present.Text = tmp.Host_Job_Id;
+                        switch (present.Text)
+                        {
+                            case "No wafer":
+                                present.BackColor = Color.DimGray;
+                                present.ForeColor = Color.White;
+                                break;
+                            case "Crossed":
+                            case "Undefined":
+                            case "Double":
+                                present.BackColor = Color.Red;
+                                present.ForeColor = Color.White;
+                                break;
+                            default:
+                                present.BackColor = Color.Green;
+                                present.ForeColor = Color.White;
+                                break;
+                        }
 
+                    }
+                    else
+                    {
+                        present.Text = "";
+                        present.BackColor = Color.White;
+                    }
                 }
                 else
                 {
@@ -219,12 +227,12 @@ namespace Adam.UI_Update.WaferMapping
                 }
             }
         }
-        public static void UpdateNodesJob(string NodeName)
+        public static void UpdateNodesJob(string NodeName,string Type)
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
-                TextBox Mode;
+                Form form = Application.OpenForms["FormWaferAssign"];
+             
 
                 if (form == null)
                     return;
@@ -236,9 +244,19 @@ namespace Adam.UI_Update.WaferMapping
                 //Mode.Text = node.Mode;
                 //if (node.IsMapping)
                 //{
-                for (int i = 1; i <= Tools.GetSlotCount(node.Type); i++)
+                if (node == null)
                 {
-                    UpdateSlot(node, i.ToString());
+                    for (int i = 1; i <= 25; i++)
+                    {
+                        UpdateSlot(Type,null, i.ToString());
+                    }
+                }
+                else
+                {
+                    for (int i = 1; i <= Tools.GetSlotCount(node.Type); i++)
+                    {
+                        UpdateSlot(Type,node, i.ToString());
+                    }
                 }
                 //}
 
@@ -255,7 +273,7 @@ namespace Adam.UI_Update.WaferMapping
         {
             try
             {
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferAssign"];
                 TextBox tb;
 
                 if (form == null)
