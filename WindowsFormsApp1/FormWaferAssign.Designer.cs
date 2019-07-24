@@ -145,12 +145,33 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
+            this.gbOCR = new System.Windows.Forms.GroupBox();
+            this.tbOcrT7 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cbUseOcrT7 = new System.Windows.Forms.CheckBox();
+            this.tbOcrM12 = new System.Windows.Forms.TextBox();
+            this.cbUseOcrM12 = new System.Windows.Forms.CheckBox();
+            this.tbOcrTTL = new System.Windows.Forms.TextBox();
+            this.cbOcrCheckRule = new System.Windows.Forms.ComboBox();
+            this.cbUseOcrTTL = new System.Windows.Forms.CheckBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.gbA1 = new System.Windows.Forms.GroupBox();
+            this.tbA1_speed = new System.Windows.Forms.TextBox();
+            this.cbUseA1 = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.gbA2 = new System.Windows.Forms.GroupBox();
+            this.tbA2_speed = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbUseA2 = new System.Windows.Forms.CheckBox();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.gbPort3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.gbOCR.SuspendLayout();
+            this.gbA1.SuspendLayout();
+            this.gbA2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPort1
@@ -1118,6 +1139,9 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.gbOCR);
+            this.groupBox11.Controls.Add(this.gbA2);
+            this.groupBox11.Controls.Add(this.gbA1);
             this.groupBox11.Controls.Add(this.Excute_btn);
             this.groupBox11.Controls.Add(this.label1);
             this.groupBox11.Controls.Add(this.gbPort3);
@@ -1136,7 +1160,7 @@
             // 
             // Excute_btn
             // 
-            this.Excute_btn.Location = new System.Drawing.Point(1001, 630);
+            this.Excute_btn.Location = new System.Drawing.Point(1016, 633);
             this.Excute_btn.Name = "Excute_btn";
             this.Excute_btn.Size = new System.Drawing.Size(141, 74);
             this.Excute_btn.TabIndex = 190;
@@ -1157,7 +1181,7 @@
             // 
             this.gbPort3.Controls.Add(this.TO_FOUPID);
             this.gbPort3.Controls.Add(this.tableLayoutPanel2);
-            this.gbPort3.Location = new System.Drawing.Point(700, 12);
+            this.gbPort3.Location = new System.Drawing.Point(742, 15);
             this.gbPort3.Name = "gbPort3";
             this.gbPort3.Size = new System.Drawing.Size(240, 836);
             this.gbPort3.TabIndex = 189;
@@ -2191,7 +2215,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(946, 23);
+            this.label7.Location = new System.Drawing.Point(988, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 19);
             this.label7.TabIndex = 178;
@@ -2206,11 +2230,212 @@
             "LOADPORT02",
             "LOADPORT03",
             "LOADPORT04"});
-            this.To_cb.Location = new System.Drawing.Point(950, 52);
+            this.To_cb.Location = new System.Drawing.Point(992, 55);
             this.To_cb.Name = "To_cb";
             this.To_cb.Size = new System.Drawing.Size(136, 27);
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
+            // 
+            // gbOCR
+            // 
+            this.gbOCR.Controls.Add(this.tbOcrT7);
+            this.gbOCR.Controls.Add(this.label39);
+            this.gbOCR.Controls.Add(this.cbUseOcrT7);
+            this.gbOCR.Controls.Add(this.tbOcrM12);
+            this.gbOCR.Controls.Add(this.cbUseOcrM12);
+            this.gbOCR.Controls.Add(this.tbOcrTTL);
+            this.gbOCR.Controls.Add(this.cbOcrCheckRule);
+            this.gbOCR.Controls.Add(this.cbUseOcrTTL);
+            this.gbOCR.Controls.Add(this.label36);
+            this.gbOCR.Location = new System.Drawing.Point(479, 509);
+            this.gbOCR.Name = "gbOCR";
+            this.gbOCR.Size = new System.Drawing.Size(251, 263);
+            this.gbOCR.TabIndex = 191;
+            this.gbOCR.TabStop = false;
+            this.gbOCR.Text = "OCR Config";
+            // 
+            // tbOcrT7
+            // 
+            this.tbOcrT7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrT7.Location = new System.Drawing.Point(5, 139);
+            this.tbOcrT7.Name = "tbOcrT7";
+            this.tbOcrT7.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrT7.TabIndex = 1;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("標楷體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label39.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label39.Location = new System.Drawing.Point(12, 219);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(129, 19);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "辨識結果檢查";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbUseOcrT7
+            // 
+            this.cbUseOcrT7.AutoSize = true;
+            this.cbUseOcrT7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrT7.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrT7.Location = new System.Drawing.Point(5, 118);
+            this.cbUseOcrT7.Name = "cbUseOcrT7";
+            this.cbUseOcrT7.Size = new System.Drawing.Size(94, 24);
+            this.cbUseOcrT7.TabIndex = 4;
+            this.cbUseOcrT7.Text = "T7設定檔";
+            this.cbUseOcrT7.UseVisualStyleBackColor = true;
+            // 
+            // tbOcrM12
+            // 
+            this.tbOcrM12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrM12.Location = new System.Drawing.Point(5, 93);
+            this.tbOcrM12.Name = "tbOcrM12";
+            this.tbOcrM12.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrM12.TabIndex = 1;
+            // 
+            // cbUseOcrM12
+            // 
+            this.cbUseOcrM12.AutoSize = true;
+            this.cbUseOcrM12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrM12.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrM12.Location = new System.Drawing.Point(5, 72);
+            this.cbUseOcrM12.Name = "cbUseOcrM12";
+            this.cbUseOcrM12.Size = new System.Drawing.Size(109, 24);
+            this.cbUseOcrM12.TabIndex = 4;
+            this.cbUseOcrM12.Text = "M12設定檔";
+            this.cbUseOcrM12.UseVisualStyleBackColor = true;
+            // 
+            // tbOcrTTL
+            // 
+            this.tbOcrTTL.Enabled = false;
+            this.tbOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrTTL.Location = new System.Drawing.Point(5, 47);
+            this.tbOcrTTL.Name = "tbOcrTTL";
+            this.tbOcrTTL.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrTTL.TabIndex = 1;
+            // 
+            // cbOcrCheckRule
+            // 
+            this.cbOcrCheckRule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOcrCheckRule.FormattingEnabled = true;
+            this.cbOcrCheckRule.Location = new System.Drawing.Point(142, 216);
+            this.cbOcrCheckRule.Name = "cbOcrCheckRule";
+            this.cbOcrCheckRule.Size = new System.Drawing.Size(102, 27);
+            this.cbOcrCheckRule.TabIndex = 2;
+            // 
+            // cbUseOcrTTL
+            // 
+            this.cbUseOcrTTL.AutoSize = true;
+            this.cbUseOcrTTL.Enabled = false;
+            this.cbUseOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrTTL.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrTTL.Location = new System.Drawing.Point(5, 27);
+            this.cbUseOcrTTL.Name = "cbUseOcrTTL";
+            this.cbUseOcrTTL.Size = new System.Drawing.Size(108, 24);
+            this.cbUseOcrTTL.TabIndex = 4;
+            this.cbUseOcrTTL.Text = "所有設定檔";
+            this.cbUseOcrTTL.UseVisualStyleBackColor = true;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label36.ForeColor = System.Drawing.Color.Brown;
+            this.label36.Location = new System.Drawing.Point(4, 167);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(241, 40);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "設定檔以數字表示，以逗號區分\r\n例如: 0,1,2,3,4,5,6,7,8,9,10,11,12";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // gbA1
+            // 
+            this.gbA1.Controls.Add(this.tbA1_speed);
+            this.gbA1.Controls.Add(this.label2);
+            this.gbA1.Controls.Add(this.cbUseA1);
+            this.gbA1.Location = new System.Drawing.Point(479, 255);
+            this.gbA1.Name = "gbA1";
+            this.gbA1.Size = new System.Drawing.Size(244, 102);
+            this.gbA1.TabIndex = 192;
+            this.gbA1.TabStop = false;
+            this.gbA1.Text = "Aligner1";
+            // 
+            // tbA1_speed
+            // 
+            this.tbA1_speed.Location = new System.Drawing.Point(93, 62);
+            this.tbA1_speed.Name = "tbA1_speed";
+            this.tbA1_speed.Size = new System.Drawing.Size(73, 26);
+            this.tbA1_speed.TabIndex = 1;
+            this.tbA1_speed.Text = "100";
+            // 
+            // cbUseA1
+            // 
+            this.cbUseA1.AutoSize = true;
+            this.cbUseA1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseA1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.cbUseA1.Location = new System.Drawing.Point(9, 28);
+            this.cbUseA1.Name = "cbUseA1";
+            this.cbUseA1.Size = new System.Drawing.Size(144, 28);
+            this.cbUseA1.TabIndex = 4;
+            this.cbUseA1.Text = "Use Aligner1";
+            this.cbUseA1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label2.Location = new System.Drawing.Point(26, 66);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 22);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Speed";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // gbA2
+            // 
+            this.gbA2.Controls.Add(this.tbA2_speed);
+            this.gbA2.Controls.Add(this.label3);
+            this.gbA2.Controls.Add(this.cbUseA2);
+            this.gbA2.Location = new System.Drawing.Point(479, 373);
+            this.gbA2.Name = "gbA2";
+            this.gbA2.Size = new System.Drawing.Size(244, 102);
+            this.gbA2.TabIndex = 192;
+            this.gbA2.TabStop = false;
+            this.gbA2.Text = "Aligner2";
+            // 
+            // tbA2_speed
+            // 
+            this.tbA2_speed.Location = new System.Drawing.Point(93, 62);
+            this.tbA2_speed.Name = "tbA2_speed";
+            this.tbA2_speed.Size = new System.Drawing.Size(73, 26);
+            this.tbA2_speed.TabIndex = 1;
+            this.tbA2_speed.Text = "100";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label3.Location = new System.Drawing.Point(26, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 22);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Speed";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbUseA2
+            // 
+            this.cbUseA2.AutoSize = true;
+            this.cbUseA2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseA2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.cbUseA2.Location = new System.Drawing.Point(9, 28);
+            this.cbUseA2.Name = "cbUseA2";
+            this.cbUseA2.Size = new System.Drawing.Size(144, 28);
+            this.cbUseA2.TabIndex = 4;
+            this.cbUseA2.Text = "Use Aligner2";
+            this.cbUseA2.UseVisualStyleBackColor = true;
             // 
             // FormWaferAssign
             // 
@@ -2233,6 +2458,12 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.gbOCR.ResumeLayout(false);
+            this.gbOCR.PerformLayout();
+            this.gbA1.ResumeLayout(false);
+            this.gbA1.PerformLayout();
+            this.gbA2.ResumeLayout(false);
+            this.gbA2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -2356,5 +2587,23 @@
         private System.Windows.Forms.RadioButton rbTopDown;
         private System.Windows.Forms.RadioButton rbSlotToSlot;
         private System.Windows.Forms.Button Excute_btn;
+        private System.Windows.Forms.GroupBox gbOCR;
+        private System.Windows.Forms.TextBox tbOcrT7;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.CheckBox cbUseOcrT7;
+        private System.Windows.Forms.TextBox tbOcrM12;
+        private System.Windows.Forms.CheckBox cbUseOcrM12;
+        private System.Windows.Forms.TextBox tbOcrTTL;
+        private System.Windows.Forms.ComboBox cbOcrCheckRule;
+        private System.Windows.Forms.CheckBox cbUseOcrTTL;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.GroupBox gbA2;
+        private System.Windows.Forms.TextBox tbA2_speed;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox cbUseA2;
+        private System.Windows.Forms.GroupBox gbA1;
+        private System.Windows.Forms.TextBox tbA1_speed;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.CheckBox cbUseA1;
     }
 }
