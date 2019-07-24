@@ -27,6 +27,7 @@ namespace Adam.UI_Update.Layout
 
                 if (lblRecipe == null)
                     return;
+                Recipe.updateDBConfig(Value);//更新DB資料
                 if (lblRecipe.InvokeRequired)
                 {
                     UpdateValue ph = new UpdateValue(UpdateRecipe);
@@ -35,8 +36,8 @@ namespace Adam.UI_Update.Layout
                 else
                 {
                     lblRecipe.Text = Value;
-                    updateLoadPortConfig(Recipe.Get(Value));
-                    Recipe.updateDBConfig(Value);//更新DB資料
+                   
+                    
                 }
             }
             catch (Exception e)
@@ -81,57 +82,6 @@ namespace Adam.UI_Update.Layout
             return result;
         }
 
-        private static void updateLoadPortConfig(Recipe recipe)
-        {
-            Boolean result = false;
-            try
-            {
-                foreach(Node node in NodeManagement.GetList())
-                {
-                    switch (node.Name.ToUpper())
-                    {
-                        case "LOADPORT01":
-                            node.CarrierType = recipe.port1_carrier_type;
-                            node.Mode = getPortType(recipe.port1_type);
-                            node.Enable = getEnable(recipe.port1_type) == 1 ? true : false;
-                            node.OrgSearchComplete = false;
-                            break;
-                        case "LOADPORT02":
-                            node.CarrierType = recipe.port2_carrier_type;
-                            node.Mode = getPortType(recipe.port2_type);
-                            node.Enable = getEnable(recipe.port2_type) == 1 ? true : false;
-                            node.OrgSearchComplete = false;
-                            break;
-                        case "LOADPORT03":
-                            node.CarrierType = recipe.port3_carrier_type;
-                            node.Mode = getPortType(recipe.port3_type);
-                            node.Enable = getEnable(recipe.port3_type) == 1 ? true : false;
-                            node.OrgSearchComplete = false;
-                            break;
-                        case "LOADPORT04":
-                            node.CarrierType = recipe.port4_carrier_type;
-                            node.Mode = getPortType(recipe.port4_type);
-                            node.Enable = getEnable(recipe.port4_type) == 1 ? true : false;
-                            node.OrgSearchComplete = false;
-                            break;
-                        case "ROBOT01":
-                            node.RArmActive = recipe.is_use_r_arm;
-                            node.LArmActive = recipe.is_use_l_arm;
-                            node.DoubleArmActive = recipe.is_use_double_arm;
-                            break;
-                        case "ALIGNER01":
-                            node.ByPass = !recipe.is_use_aligner1;
-                            break;
-                        case "ALIGNER02":
-                            node.ByPass = !recipe.is_use_aligner2;
-                            break;
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Update load port 資訊失敗! " + ex.StackTrace);
-            }
-        }
+        
     }
 }

@@ -645,6 +645,9 @@
     <None Include="recipe\default.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Include="recipe\template.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="recipe\test 12O 34F.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

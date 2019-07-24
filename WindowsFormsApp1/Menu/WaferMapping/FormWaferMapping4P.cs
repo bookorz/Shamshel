@@ -13,11 +13,11 @@ using TransferControl.Operation;
 
 namespace Adam.Menu.WaferMapping4P
 {
-    public partial class FormWaferMapping : Adam.Menu.FormFrame
+    public partial class FormWaferMapping4P : Adam.Menu.FormFrame
     {
-        static ILog logger = LogManager.GetLogger(typeof(FormWaferMapping));
+        static ILog logger = LogManager.GetLogger(typeof(FormWaferMapping4P));
 
-        public FormWaferMapping()
+        public FormWaferMapping4P()
         {
             InitializeComponent();
         }
@@ -204,7 +204,7 @@ namespace Adam.Menu.WaferMapping4P
                         fromPort = "";
                         fromSlot = "";
 
-                        Form form = Application.OpenForms["FormWaferMapping"];
+                        Form form = Application.OpenForms["FormWaferMapping4P"];
                         foreach (Node p in NodeManagement.GetLoadPortList())//更新所有目的地slot被選的狀態
                         {
                             if (p.Enable && p.IsMapping)
@@ -235,7 +235,7 @@ namespace Adam.Menu.WaferMapping4P
                     }
                     else
                     {// 選擇來源
-                        Form form = Application.OpenForms["FormWaferMapping"];
+                        Form form = Application.OpenForms["FormWaferMapping4P"];
                         Job lastSlot;
                         if (!bypass)
                         {
@@ -347,7 +347,7 @@ namespace Adam.Menu.WaferMapping4P
              //判斷可不可以選
                 Job lastSlot;
 
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferMapping4P"];
                 if (!bypass)
                 {
                     Node pt = NodeManagement.Get(PortName);
@@ -522,7 +522,7 @@ namespace Adam.Menu.WaferMapping4P
             {//已經選完來源根目的後，點另一個來源
              //reset all from slot 
                 Job lastSlot;
-                Form form = Application.OpenForms["FormWaferMapping"];
+                Form form = Application.OpenForms["FormWaferMapping4P"];
                 if (!bypass)
                 {
                     //判斷能不能選
@@ -612,7 +612,7 @@ namespace Adam.Menu.WaferMapping4P
                                             Job nextSlot;
                                             if (p.JobList.TryGetValue((Convert.ToInt16(eachSlot.Slot) - 1).ToString(), out nextSlot))
                                             {
-                                                Form tform = Application.OpenForms["FormWaferMapping"];
+                                                Form tform = Application.OpenForms["FormWaferMapping4P"];
                                                 //Label tpresent = form.Controls.Find(p.Name + "_Slot_" + nextSlot.Slot, true).FirstOrDefault() as Label;
                                                 if (!nextSlot.ReservePort.Equals("") && !bypass)
                                                 {//下層slot已被綁定
@@ -688,7 +688,7 @@ namespace Adam.Menu.WaferMapping4P
                                     {
                                         if (eachSlot.ReservePort.Equals("") && eachSlot.ReserveSlot.Equals(""))
                                         {//該slot還沒被綁定
-                                            Form tform = Application.OpenForms["FormWaferMapping"];
+                                            Form tform = Application.OpenForms["FormWaferMapping4P"];
                                             Label tpresent = form.Controls.Find(p.Name + "_Slot_" + (Convert.ToInt16(eachSlot.Slot) + 1).ToString(), true).FirstOrDefault() as Label;
                                             Job tSlot;
                                             if (p.JobList.TryGetValue(toSlot, out tSlot) && !bypass)
