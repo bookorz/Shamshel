@@ -591,6 +591,9 @@
   <data name="DifferentialPressureAlarm2_Signal.Text" xml:space="preserve">
     <value>Differential Manometer2</value>
   </data>
+  <data name="DifferentialPressureAlarm2_Signal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Name" xml:space="preserve">
     <value>DifferentialPressureAlarm2_Signal</value>
   </data>
@@ -623,6 +626,9 @@
   </data>
   <data name="DifferentialPressureAlarm1_Signal.Text" xml:space="preserve">
     <value>Differential Manometer1</value>
+  </data>
+  <data name="DifferentialPressureAlarm1_Signal.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Name" xml:space="preserve">
     <value>DifferentialPressureAlarm1_Signal</value>
