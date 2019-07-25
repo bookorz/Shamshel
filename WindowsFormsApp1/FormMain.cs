@@ -2625,8 +2625,8 @@ namespace Adam
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
             using (var form = new FormWaferAssign())
             {
-                var result = form.ShowDialog();
-
+                form.StartPosition = FormStartPosition.CenterParent;
+                var result = form.ShowDialog(this);
             }
         }
 
@@ -2918,8 +2918,8 @@ namespace Adam
         {
             using (var form = new FormWaferAssign())
             {
-                var result = form.ShowDialog();
-                
+                form.StartPosition = FormStartPosition.CenterParent;
+                var result = form.ShowDialog(this);
             }
         }
     }

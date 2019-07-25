@@ -82,6 +82,9 @@
             this.From_Slot_25 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbR1_speed = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbOCR = new System.Windows.Forms.GroupBox();
             this.tbOcrT7 = new System.Windows.Forms.TextBox();
             this.label39 = new System.Windows.Forms.Label();
@@ -163,26 +166,30 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.tbR1_speed = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.gbOCR.SuspendLayout();
             this.gbA2.SuspendLayout();
             this.gbA1.SuspendLayout();
             this.gbPort3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPort1
             // 
             this.gbPort1.Controls.Add(this.From_FOUPID);
             this.gbPort1.Controls.Add(this.TblPanel_A);
-            this.gbPort1.Location = new System.Drawing.Point(218, 12);
+            this.gbPort1.Location = new System.Drawing.Point(184, 12);
             this.gbPort1.Name = "gbPort1";
             this.gbPort1.Size = new System.Drawing.Size(240, 836);
             this.gbPort1.TabIndex = 187;
@@ -1143,6 +1150,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.groupBox3);
             this.groupBox11.Controls.Add(this.groupBox2);
             this.groupBox11.Controls.Add(this.gbOCR);
             this.groupBox11.Controls.Add(this.gbA2);
@@ -1163,6 +1171,37 @@
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.tbR1_speed);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(445, 226);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(244, 65);
+            this.groupBox2.TabIndex = 193;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Robot";
+            // 
+            // tbR1_speed
+            // 
+            this.tbR1_speed.Location = new System.Drawing.Point(93, 25);
+            this.tbR1_speed.Name = "tbR1_speed";
+            this.tbR1_speed.Size = new System.Drawing.Size(73, 26);
+            this.tbR1_speed.TabIndex = 1;
+            this.tbR1_speed.Text = "100";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label4.Location = new System.Drawing.Point(26, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 22);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Speed";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // gbOCR
             // 
             this.gbOCR.Controls.Add(this.tbOcrT7);
@@ -1174,7 +1213,7 @@
             this.gbOCR.Controls.Add(this.cbOcrCheckRule);
             this.gbOCR.Controls.Add(this.cbUseOcrTTL);
             this.gbOCR.Controls.Add(this.label36);
-            this.gbOCR.Location = new System.Drawing.Point(479, 557);
+            this.gbOCR.Location = new System.Drawing.Point(445, 557);
             this.gbOCR.Name = "gbOCR";
             this.gbOCR.Size = new System.Drawing.Size(251, 263);
             this.gbOCR.TabIndex = 191;
@@ -1283,7 +1322,7 @@
             this.gbA2.Controls.Add(this.tbA2_speed);
             this.gbA2.Controls.Add(this.label3);
             this.gbA2.Controls.Add(this.cbUseA2);
-            this.gbA2.Location = new System.Drawing.Point(479, 421);
+            this.gbA2.Location = new System.Drawing.Point(445, 421);
             this.gbA2.Name = "gbA2";
             this.gbA2.Size = new System.Drawing.Size(244, 102);
             this.gbA2.TabIndex = 192;
@@ -1327,7 +1366,7 @@
             this.gbA1.Controls.Add(this.tbA1_speed);
             this.gbA1.Controls.Add(this.label2);
             this.gbA1.Controls.Add(this.cbUseA1);
-            this.gbA1.Location = new System.Drawing.Point(479, 303);
+            this.gbA1.Location = new System.Drawing.Point(445, 303);
             this.gbA1.Name = "gbA1";
             this.gbA1.Size = new System.Drawing.Size(244, 102);
             this.gbA1.TabIndex = 192;
@@ -1368,18 +1407,20 @@
             // 
             // Excute_btn
             // 
-            this.Excute_btn.Location = new System.Drawing.Point(1016, 633);
+            this.Excute_btn.BackColor = System.Drawing.Color.Gold;
+            this.Excute_btn.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Excute_btn.Location = new System.Drawing.Point(998, 369);
             this.Excute_btn.Name = "Excute_btn";
             this.Excute_btn.Size = new System.Drawing.Size(141, 74);
             this.Excute_btn.TabIndex = 190;
             this.Excute_btn.Text = "Excute";
-            this.Excute_btn.UseVisualStyleBackColor = true;
+            this.Excute_btn.UseVisualStyleBackColor = false;
             this.Excute_btn.Click += new System.EventHandler(this.Excute_btn_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(72, 23);
+            this.label1.Location = new System.Drawing.Point(13, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(126, 19);
             this.label1.TabIndex = 176;
@@ -1389,7 +1430,7 @@
             // 
             this.gbPort3.Controls.Add(this.TO_FOUPID);
             this.gbPort3.Controls.Add(this.tableLayoutPanel2);
-            this.gbPort3.Location = new System.Drawing.Point(742, 15);
+            this.gbPort3.Location = new System.Drawing.Point(708, 15);
             this.gbPort3.Name = "gbPort3";
             this.gbPort3.Size = new System.Drawing.Size(240, 836);
             this.gbPort3.TabIndex = 189;
@@ -2352,15 +2393,16 @@
             // Source_cb
             // 
             this.Source_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Source_cb.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Source_cb.FormattingEnabled = true;
             this.Source_cb.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
             "LOADPORT03",
             "LOADPORT04"});
-            this.Source_cb.Location = new System.Drawing.Point(76, 52);
+            this.Source_cb.Location = new System.Drawing.Point(17, 52);
             this.Source_cb.Name = "Source_cb";
-            this.Source_cb.Size = new System.Drawing.Size(136, 27);
+            this.Source_cb.Size = new System.Drawing.Size(160, 32);
             this.Source_cb.TabIndex = 175;
             this.Source_cb.SelectedIndexChanged += new System.EventHandler(this.Source_cb_SelectedIndexChanged);
             // 
@@ -2371,7 +2413,7 @@
             this.groupBox1.Controls.Add(this.rbSlotToSlot);
             this.groupBox1.Controls.Add(this.AutoAssign_btn);
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(488, 19);
+            this.groupBox1.Location = new System.Drawing.Point(475, 23);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(180, 172);
             this.groupBox1.TabIndex = 180;
@@ -2412,18 +2454,20 @@
             // 
             // AutoAssign_btn
             // 
+            this.AutoAssign_btn.BackColor = System.Drawing.Color.Gold;
+            this.AutoAssign_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AutoAssign_btn.Location = new System.Drawing.Point(21, 119);
             this.AutoAssign_btn.Name = "AutoAssign_btn";
             this.AutoAssign_btn.Size = new System.Drawing.Size(136, 30);
             this.AutoAssign_btn.TabIndex = 179;
             this.AutoAssign_btn.Text = "Assign";
-            this.AutoAssign_btn.UseVisualStyleBackColor = true;
+            this.AutoAssign_btn.UseVisualStyleBackColor = false;
             this.AutoAssign_btn.Click += new System.EventHandler(this.AutoAssign_btn_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(988, 26);
+            this.label7.Location = new System.Drawing.Point(954, 26);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 19);
             this.label7.TabIndex = 178;
@@ -2432,48 +2476,92 @@
             // To_cb
             // 
             this.To_cb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.To_cb.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.To_cb.FormattingEnabled = true;
             this.To_cb.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
             "LOADPORT03",
             "LOADPORT04"});
-            this.To_cb.Location = new System.Drawing.Point(992, 55);
+            this.To_cb.Location = new System.Drawing.Point(958, 55);
             this.To_cb.Name = "To_cb";
-            this.To_cb.Size = new System.Drawing.Size(136, 27);
+            this.To_cb.Size = new System.Drawing.Size(160, 32);
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
-            // groupBox2
+            // label5
             // 
-            this.groupBox2.Controls.Add(this.tbR1_speed);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(479, 226);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(244, 65);
-            this.groupBox2.TabIndex = 193;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Robot";
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(9, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.TabIndex = 194;
+            this.label5.Text = "No Mapping";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tbR1_speed
+            // label6
             // 
-            this.tbR1_speed.Location = new System.Drawing.Point(93, 25);
-            this.tbR1_speed.Name = "tbR1_speed";
-            this.tbR1_speed.Size = new System.Drawing.Size(73, 26);
-            this.tbR1_speed.TabIndex = 1;
-            this.tbR1_speed.Text = "100";
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 25);
+            this.label6.TabIndex = 194;
+            this.label6.Text = "Wafer(not assign)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // label8
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label4.Location = new System.Drawing.Point(26, 29);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Speed";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label8.BackColor = System.Drawing.Color.DimGray;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(9, 79);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 25);
+            this.label8.TabIndex = 194;
+            this.label8.Text = "No Wafer";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Brown;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(9, 109);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 25);
+            this.label9.TabIndex = 194;
+            this.label9.Text = "Wafer(assigned)";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 25);
+            this.label10.TabIndex = 194;
+            this.label10.Text = "Destination";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(1025, 677);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(159, 171);
+            this.groupBox3.TabIndex = 195;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Slot State";
             // 
             // FormWaferAssign
             // 
@@ -2491,6 +2579,8 @@
             this.TblPanel_A.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.gbOCR.ResumeLayout(false);
             this.gbOCR.PerformLayout();
             this.gbA2.ResumeLayout(false);
@@ -2503,8 +2593,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2649,5 +2738,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox tbR1_speed;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }
