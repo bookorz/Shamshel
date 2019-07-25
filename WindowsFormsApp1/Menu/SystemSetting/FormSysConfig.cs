@@ -39,6 +39,7 @@ namespace Adam.Menu.SystemSetting
             tbTxfLogPath.Text = config.FoupTxfLogPath;
             cbChkBypass.Checked = config.SaftyCheckByPass;
             cbFakeData.Checked = config.FakeData;
+            cbMappingDataCheck.Checked = config.MappingDataCheck;
             cbRecipe.SelectedItem = config.CurrentRecipe;
             cbNoticeInitFin.SelectedItem = config.NoticeInitFin;
             cbNoticeProcFin.SelectedItem = config.NoticeProcFin;
