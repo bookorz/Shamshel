@@ -80,6 +80,13 @@ namespace Adam.Menu.SystemSetting
                 MessageBox.Show("Recipe Name or recipe id should not be empty.", "Data check error");
                 return;
             }
+            //檔名只能英文
+            System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"^[A-Za-z0-9]+$");
+            if (!reg1.IsMatch(tbRecipeID.Text))
+            {
+                MessageBox.Show("RecipeID must be english or numbers!");
+                return;
+            }
             //權限檢查
             using (var form = new FormConfirm("確認是否儲存 Recipe:" + tbRecipeID.Text))
             {
