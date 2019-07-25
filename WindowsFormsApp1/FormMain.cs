@@ -1754,7 +1754,7 @@ namespace Adam
                 //XfeCrossZone.Stop();
                 //if (Task.Id.IndexOf("FormManual") != -1)
                 //{
-                
+
                 //}
                 if (!ReportType.Equals("On_Command_Error"))
                 {
@@ -1821,9 +1821,25 @@ namespace Adam
 
                     Initial = true;
                     Initializing = false;
-                    RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
+                    string Buzzer = "";
+                    switch (SystemConfig.Get().NoticeInitFin)
+                    {
+                        case "4":
+                            Buzzer = "BUZZER1";
+                            break;
+                        case "5":
+                            Buzzer = "BUZZER2";
+                            break;
+                    }
+                    if (!Buzzer.Equals(""))
+                    {
+                        RouteControl.Instance.DIO.SetIO(Buzzer, "True");
+                    }
                     MessageBox.Show("Initial finished!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    RouteControl.Instance.DIO.SetIO("BUZZER1", "False");
+                    if (!Buzzer.Equals(""))
+                    {
+                        RouteControl.Instance.DIO.SetIO(Buzzer, "False");
+                    }
 
                     break;
                 case "LOADPORT_OPEN":
@@ -2214,9 +2230,26 @@ namespace Adam
             else
             {
                 NodeStatusUpdate.UpdateCurrentState("IDLE");
-                RouteControl.Instance.DIO.SetIO("BUZZER1", "True");
+
+                string Buzzer = "";
+                switch (SystemConfig.Get().NoticeProcFin)
+                {
+                    case "4":
+                        Buzzer = "BUZZER1";
+                        break;
+                    case "5":
+                        Buzzer = "BUZZER2";
+                        break;
+                }
+                if (!Buzzer.Equals(""))
+                {
+                    RouteControl.Instance.DIO.SetIO(Buzzer, "True");
+                }
                 MessageBox.Show("All job finished!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                RouteControl.Instance.DIO.SetIO("BUZZER1", "False");
+                if (!Buzzer.Equals(""))
+                {
+                    RouteControl.Instance.DIO.SetIO(Buzzer, "False");
+                }
             }
 
             WaferAssignUpdate.UpdateEnabled("FORM", true);
@@ -2625,8 +2658,8 @@ namespace Adam
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
             using (var form = new FormWaferAssign())
             {
-                form.StartPosition = FormStartPosition.CenterParent;
-                var result = form.ShowDialog(this);
+                var result = form.ShowDialog();
+
             }
         }
 
@@ -2764,7 +2797,7 @@ namespace Adam
             //if (tbcMain.SelectedTab.Text.ToUpper().Equals("MONITORING"))
             //{
 
-                RunMode = "FULLAUTO";
+            RunMode = "FULLAUTO";
             //}
             //else
             //{
@@ -2918,8 +2951,8 @@ namespace Adam
         {
             using (var form = new FormWaferAssign())
             {
-                form.StartPosition = FormStartPosition.CenterParent;
-                var result = form.ShowDialog(this);
+                var result = form.ShowDialog();
+
             }
         }
     }
