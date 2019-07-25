@@ -96,10 +96,17 @@ namespace Adam.UI_Update.Layout
                             Signal.BackColor = Color.YellowGreen;
                             break;
                     }
-                    
+                    if (Name.Equals("ALL_INIT_btn"))
+                    {
+                        Signal.Enabled = false;
+                    }
                 }
                 else
                 {
+                    if (Name.Equals("ALL_INIT_btn"))
+                    {
+                        Signal.Enabled = false;
+                    }
                     Signal.Enabled = false;
                     Signal.BackColor = Color.DimGray;
                 }

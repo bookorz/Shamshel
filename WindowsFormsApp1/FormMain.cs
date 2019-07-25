@@ -1714,12 +1714,19 @@ namespace Adam
 
         public void On_TaskJob_Aborted(TaskJobManagment.CurrentProceedTask Task, string NodeName, string ReportType, string Message)
         {
-            switch (Task.ProceedTask.TaskName)
+            if (Task != null)
             {
-                case "SORTER_INIT":
+                if (Task.ProceedTask != null)
+                {
+                    switch (Task.ProceedTask.TaskName)
+                    {
+                        case "SORTER_INIT":
 
-                    Initializing = false;
-                    break;
+                            Initializing = false;
+                            break;
+                    }
+                }
+
             }
             ManualPortStatusUpdate.LockUI(false);
             if (ReportType.ToUpper().Equals("CAN"))
@@ -2779,9 +2786,10 @@ namespace Adam
             }
             else
             {
-                DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
+                //DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
                 DIOUpdate.UpdateControlButton("Mode_btn", false);
                 ALL_INIT_btn.BackColor = Color.Yellow;
+                ALL_INIT_btn.Enabled = false;
                 Initializing = true;
             }
         }
