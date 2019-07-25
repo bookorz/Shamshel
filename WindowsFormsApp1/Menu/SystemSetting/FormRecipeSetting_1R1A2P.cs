@@ -277,20 +277,25 @@ namespace Adam.Menu.SystemSetting
         private void refreshList()
         {
             trvRecipe.Nodes.Clear();
+            string RecID = SystemConfig.Get().CurrentRecipe;
             DirectoryInfo d = new DirectoryInfo(@".\recipe");
             FileInfo[] Files = d.GetFiles("*.json"); //Getting Json files
-            TreeNode firstNode = null;
+            TreeNode defaultNode = null;
             foreach (FileInfo file in Files)
             {
                 string recipeId = file.Name.Replace(".json", "");
                 TreeNode tmp = new TreeNode(recipeId);
+                if (recipeId.Equals("template"))
+                    continue;//template 不顯示於清單中
                 trvRecipe.Nodes.Add(tmp);
-                if (firstNode == null)
-                    firstNode = tmp;
+                if (defaultNode == null)
+                    defaultNode = tmp;//預防沒 current recipe
+                else if(recipeId.Equals(RecID))
+                    defaultNode = tmp;
             }
             trvRecipe.ExpandAll();
-            if (firstNode != null)
-                trvRecipe.SelectedNode = firstNode;
+            if (defaultNode != null)
+                trvRecipe.SelectedNode = defaultNode;
             //if(trvRecipe.Nodes.Count>0)
             //    trvRecipe.Nodes.
         }
