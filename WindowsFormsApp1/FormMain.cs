@@ -1486,29 +1486,29 @@ namespace Adam
                 }
 
             }
-            else if (RunMode.ToUpper().Equals("SEMIAUTO") && !tbcMain.SelectedTab.Name.Equals("tabWaferAssign"))
-            {
+            //else if (RunMode.ToUpper().Equals("SEMIAUTO") && !tbcMain.SelectedTab.Name.Equals("tabWaferAssign"))
+            //{
 
-                if (Start)
-                {
-                    tbcMain.SelectTab("tabWaferAssign");
-                    MessageBox.Show("Please switch to STOP");
-                }
-                else if (XfeCrossZone.Running)
-                {
-                    tbcMain.SelectTab("tabWaferAssign");
-                    MessageBox.Show("Please wait for STOP");
-                }
-                else
-                {
-                    foreach (Job j in JobManagement.GetJobList())
-                    {
-                        j.IsAssigned = false;
-                        j.UnAssignPort();
-                    }
-                }
+            //    if (Start)
+            //    {
+            //        tbcMain.SelectTab("tabWaferAssign");
+            //        MessageBox.Show("Please switch to STOP");
+            //    }
+            //    else if (XfeCrossZone.Running)
+            //    {
+            //        tbcMain.SelectTab("tabWaferAssign");
+            //        MessageBox.Show("Please wait for STOP");
+            //    }
+            //    else
+            //    {
+            //        foreach (Job j in JobManagement.GetJobList())
+            //        {
+            //            j.IsAssigned = false;
+            //            j.UnAssignPort();
+            //        }
+            //    }
 
-            }
+            //}
 
 
 
@@ -1563,96 +1563,96 @@ namespace Adam
 
                 }
             }
-            else if (tbcMain.SelectedTab.Text.Equals("Wafer Assign"))
-            {
-                if (Mode_btn.Text.Equals("Auto-Mode") && !Global.currentUser.Equals(""))
-                {
-                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
-                    DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
-                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", Initial && !Start);
-                }
-                FormWaferMapping4P.fromPort = "";
-                FormWaferMapping4P.fromSlot = "";
-                FormWaferMapping4P.toPort = "";
-                FormWaferMapping4P.toSlot = "";
-                Form form = Application.OpenForms["FormWaferMapping4P"];
-                foreach (Node p in NodeManagement.GetLoadPortList())//更新所有目的地slot被選的狀態
-                {
-                    if (p.Enable && p.IsMapping)
-                    {
-                        foreach (Job eachSlot in p.JobList.Values)
-                        {
-                            if (!eachSlot.MapFlag && !eachSlot.ErrPosition)//找到空slot
-                            {
+            //else if (tbcMain.SelectedTab.Text.Equals("Wafer Assign"))
+            //{
+            //    if (Mode_btn.Text.Equals("Auto-Mode") && !Global.currentUser.Equals(""))
+            //    {
+            //        DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
+            //        DIOUpdate.UpdateControlButton("Start_btn", Initial && !Start);
+            //        DIOUpdate.UpdateControlButton("ManualTranfer_btn", Initial && !Start);
+            //    }
+            //    FormWaferMapping4P.fromPort = "";
+            //    FormWaferMapping4P.fromSlot = "";
+            //    FormWaferMapping4P.toPort = "";
+            //    FormWaferMapping4P.toSlot = "";
+            //    Form form = Application.OpenForms["FormWaferMapping4P"];
+            //    foreach (Node p in NodeManagement.GetLoadPortList())//更新所有目的地slot被選的狀態
+            //    {
+            //        if (p.Enable && p.IsMapping)
+            //        {
+            //            foreach (Job eachSlot in p.JobList.Values)
+            //            {
+            //                if (!eachSlot.MapFlag && !eachSlot.ErrPosition)//找到空slot
+            //                {
 
-                                Label present = form.Controls.Find(p.Name + "_Slot_" + eachSlot.Slot, true).FirstOrDefault() as Label;
-                                if (present != null)
-                                {
-                                    if (eachSlot.ReservePort.Equals("") && eachSlot.ReserveSlot.Equals(""))
-                                    {//沒被選
-                                        present.BackColor = Color.DimGray;
-                                        present.ForeColor = Color.White;
-                                    }
-                                    else
-                                    {//已被選
-                                        present.BackColor = Color.Brown;
-                                        present.ForeColor = Color.White;
-                                    }
-                                }
-                            }
-                            if (eachSlot.MapFlag && !eachSlot.ErrPosition)//找到wafer
-                            {
-                                Label present = form.Controls.Find(p.Name + "_Slot_" + eachSlot.Slot, true).FirstOrDefault() as Label;
-                                if (present != null)
-                                {
-                                    if (!eachSlot.Destination.Equals("") && !eachSlot.DestinationSlot.Equals("") /*&& (!eachSlot.Destination.Equals(eachSlot.Position) && !eachSlot.DestinationSlot.Equals(eachSlot.Slot))*/)
-                                    {//已被選
-                                        present.BackColor = Color.Brown;
-                                        present.ForeColor = Color.White;
-                                    }
-                                    else
-                                    {//沒被選
-                                        present.BackColor = Color.Green;
-                                        present.ForeColor = Color.White;
-                                    }
+            //                    Label present = form.Controls.Find(p.Name + "_Slot_" + eachSlot.Slot, true).FirstOrDefault() as Label;
+            //                    if (present != null)
+            //                    {
+            //                        if (eachSlot.ReservePort.Equals("") && eachSlot.ReserveSlot.Equals(""))
+            //                        {//沒被選
+            //                            present.BackColor = Color.DimGray;
+            //                            present.ForeColor = Color.White;
+            //                        }
+            //                        else
+            //                        {//已被選
+            //                            present.BackColor = Color.Brown;
+            //                            present.ForeColor = Color.White;
+            //                        }
+            //                    }
+            //                }
+            //                if (eachSlot.MapFlag && !eachSlot.ErrPosition)//找到wafer
+            //                {
+            //                    Label present = form.Controls.Find(p.Name + "_Slot_" + eachSlot.Slot, true).FirstOrDefault() as Label;
+            //                    if (present != null)
+            //                    {
+            //                        if (!eachSlot.Destination.Equals("") && !eachSlot.DestinationSlot.Equals("") /*&& (!eachSlot.Destination.Equals(eachSlot.Position) && !eachSlot.DestinationSlot.Equals(eachSlot.Slot))*/)
+            //                        {//已被選
+            //                            present.BackColor = Color.Brown;
+            //                            present.ForeColor = Color.White;
+            //                        }
+            //                        else
+            //                        {//沒被選
+            //                            present.BackColor = Color.Green;
+            //                            present.ForeColor = Color.White;
+            //                        }
 
-                                }
-                            }
-                        }
-                    }
-                }
-                foreach (Node port in NodeManagement.GetLoadPortList())
-                {
+            //                    }
+            //                }
+            //            }
+            //        }
+            //    }
+            //    foreach (Node port in NodeManagement.GetLoadPortList())
+            //    {
 
-                    for (int i = 1; i <= 25; i++)
-                    {
-                        Label present = form.Controls.Find(port.Name + "_Slot_" + i.ToString(), true).FirstOrDefault() as Label;
-                        if (present != null)
-                        {
-                            switch (port.CarrierType.ToUpper())
-                            {
-                                case "FOSB":
-                                case "FOUP":
-                                    present.Visible = true;
-                                    break;
-                                case "OPEN":
-                                    if (i > 13)
-                                    {
-                                        present.Visible = false;
-                                    }
-                                    else
-                                    {
-                                        present.Visible = true;
-                                    }
-                                    break;
-                            }
+            //        for (int i = 1; i <= 25; i++)
+            //        {
+            //            Label present = form.Controls.Find(port.Name + "_Slot_" + i.ToString(), true).FirstOrDefault() as Label;
+            //            if (present != null)
+            //            {
+            //                switch (port.CarrierType.ToUpper())
+            //                {
+            //                    case "FOSB":
+            //                    case "FOUP":
+            //                        present.Visible = true;
+            //                        break;
+            //                    case "OPEN":
+            //                        if (i > 13)
+            //                        {
+            //                            present.Visible = false;
+            //                        }
+            //                        else
+            //                        {
+            //                            present.Visible = true;
+            //                        }
+            //                        break;
+            //                }
 
-                        }
-                    }
+            //            }
+            //        }
 
 
-                }
-            }
+            //    }
+            //}
             else
             {
 
@@ -2761,16 +2761,16 @@ namespace Adam
             DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
             DIOUpdate.UpdateControlButton("Mode_btn", false);
             Start = true;
-            if (tbcMain.SelectedTab.Text.ToUpper().Equals("MONITORING"))
-            {
+            //if (tbcMain.SelectedTab.Text.ToUpper().Equals("MONITORING"))
+            //{
 
                 RunMode = "FULLAUTO";
-            }
-            else
-            {
-                RunMode = "SEMIAUTO";
+            //}
+            //else
+            //{
+            //    RunMode = "SEMIAUTO";
 
-            }
+            //}
             foreach (Job j in JobManagement.GetJobList())
             {
                 j.AbortProcess = false;

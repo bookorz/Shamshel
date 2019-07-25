@@ -134,6 +134,7 @@ namespace Adam
                 MessageBox.Show("Error: still runnung.");
                 return;
             }
+            FormMain.RunMode = "SEMIAUTO";
             DIOUpdate.UpdateControlButton("Start_btn", false);
             DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             DIOUpdate.UpdateControlButton("Stop_btn", true);
