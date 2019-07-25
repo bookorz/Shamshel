@@ -42,6 +42,7 @@ namespace Adam
             this.Connection_btn = new System.Windows.Forms.Button();
             this.button27 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.ManualTranfer_btn = new System.Windows.Forms.Button();
             this.CDAAlarm_Signal = new System.Windows.Forms.Button();
             this.EQP_State = new System.Windows.Forms.Button();
             this.Stop_btn = new System.Windows.Forms.Button();
@@ -80,7 +81,6 @@ namespace Adam
             this.RED_Signal = new System.Windows.Forms.Button();
             this.tbcMain = new System.Windows.Forms.TabControl();
             this.tabMonitor = new System.Windows.Forms.TabPage();
-            this.tabWaferAssign = new System.Windows.Forms.TabPage();
             this.tabRunning = new System.Windows.Forms.TabPage();
             this.tabDIO = new System.Windows.Forms.TabPage();
             this.tabNewSetting = new System.Windows.Forms.TabPage();
@@ -110,7 +110,6 @@ namespace Adam
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.btnMaintence = new System.Controls.SplitButton();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
-            this.ManualTranfer_btn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer13)).BeginInit();
             this.splitContainer13.Panel1.SuspendLayout();
             this.splitContainer13.Panel2.SuspendLayout();
@@ -226,6 +225,14 @@ namespace Adam
             resources.ApplyResources(this.groupBox5, "groupBox5");
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.TabStop = false;
+            // 
+            // ManualTranfer_btn
+            // 
+            resources.ApplyResources(this.ManualTranfer_btn, "ManualTranfer_btn");
+            this.ManualTranfer_btn.BackColor = System.Drawing.Color.DimGray;
+            this.ManualTranfer_btn.Name = "ManualTranfer_btn";
+            this.ManualTranfer_btn.UseVisualStyleBackColor = false;
+            this.ManualTranfer_btn.Click += new System.EventHandler(this.ManualTranfer_btn_Click);
             // 
             // CDAAlarm_Signal
             // 
@@ -519,7 +526,6 @@ namespace Adam
             // tbcMain
             // 
             this.tbcMain.Controls.Add(this.tabMonitor);
-            this.tbcMain.Controls.Add(this.tabWaferAssign);
             this.tbcMain.Controls.Add(this.tabRunning);
             this.tbcMain.Controls.Add(this.tabDIO);
             this.tbcMain.Controls.Add(this.tabNewSetting);
@@ -541,13 +547,6 @@ namespace Adam
             this.tabMonitor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabMonitor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabMonitor.Name = "tabMonitor";
-            // 
-            // tabWaferAssign
-            // 
-            this.tabWaferAssign.BackColor = System.Drawing.SystemColors.Control;
-            this.tabWaferAssign.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            resources.ApplyResources(this.tabWaferAssign, "tabWaferAssign");
-            this.tabWaferAssign.Name = "tabWaferAssign";
             // 
             // tabRunning
             // 
@@ -801,14 +800,6 @@ namespace Adam
             this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
             this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
             // 
-            // ManualTranfer_btn
-            // 
-            resources.ApplyResources(this.ManualTranfer_btn, "ManualTranfer_btn");
-            this.ManualTranfer_btn.BackColor = System.Drawing.Color.DimGray;
-            this.ManualTranfer_btn.Name = "ManualTranfer_btn";
-            this.ManualTranfer_btn.UseVisualStyleBackColor = false;
-            this.ManualTranfer_btn.Click += new System.EventHandler(this.ManualTranfer_btn_Click);
-            // 
             // FormMain
             // 
             resources.ApplyResources(this, "$this");
@@ -857,7 +848,6 @@ namespace Adam
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TabPage tabWaferAssign;
         private System.Windows.Forms.TabPage tabSetting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btnHelp;

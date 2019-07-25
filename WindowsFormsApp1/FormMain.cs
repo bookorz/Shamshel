@@ -44,7 +44,7 @@ namespace Adam
         FormFoupID BarcodeForm = new FormFoupID();
         private Menu.Monitoring.FormMonitoring4P formMonitoring = new Menu.Monitoring.FormMonitoring4P();
         private Menu.IO.FormIO formIO = new Menu.IO.FormIO();
-        private Menu.WaferMapping4P.FormWaferMapping4P formWaferAssign = new Menu.WaferMapping4P.FormWaferMapping4P();
+        //private Menu.WaferMapping4P.FormWaferMapping4P formWaferAssign = new Menu.WaferMapping4P.FormWaferMapping4P();
         //private Menu.Status.FormStatus formStatus = new Menu.Status.FormStatus();//20190529 取消
         //private Menu.OCR.FormOCR formOCR = new Menu.OCR.FormOCR();
         //private Menu.SystemSetting.FormSECSSet formSecs = new Menu.SystemSetting.FormSECSSet();
@@ -132,7 +132,7 @@ namespace Adam
             //Control[] ctrlForm = new Control[] { formMonitoring, formIO, formWafer, formStatus, formTestMode, WaferForm, formSystem, formSystemNew };
             //20190529 取消 formStatus, formStatus          Control[] ctrlForm = new Control[] { formMonitoring, formWaferAssign, formIO,  formSystemNew, formTestMode }; //WaferForm 和 壓差監控之後再開放  , formTestMode
             //tbcMain 的各 tab page 由下方程式法塞FORM(tabRunning,tabDIO,tabNewSetting,tbDiffMonitor)
-            Control[] ctrlForm = new Control[] { formMonitoring, formWaferAssign, formRun, formIO, formSystemNew, formTestMode }; //WaferForm 和 壓差監控之後再開放  , formTestMode
+            Control[] ctrlForm = new Control[] { formMonitoring, formRun, formIO, formSystemNew, formTestMode }; //WaferForm 和 壓差監控之後再開放  , formTestMode
 
 
             try
@@ -2623,7 +2623,11 @@ namespace Adam
             MonitoringUpdate.UpdateNodesJob("LOADPORT02");
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT03");
             //WaferAssignUpdate.UpdateNodesJob("LOADPORT04");
+            using (var form = new FormWaferAssign())
+            {
+                var result = form.ShowDialog();
 
+            }
         }
 
         private void fakeData(string name, string Mapping)

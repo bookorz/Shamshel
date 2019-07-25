@@ -621,9 +621,6 @@
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="config\Script\Normal.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Include="config\SystemConfig.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

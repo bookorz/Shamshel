@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Config;
 using TransferControl.Management;
 using TransferControl.Operation;
 
@@ -112,7 +113,7 @@ namespace Adam
 
                             Label DstSlot = this.Controls.Find("To_Slot_" + emptySlot.Slot, true).FirstOrDefault() as Label;
                             DstSlot.Text = wafer.Host_Job_Id;
-                            DstSlot.BackColor = Color.Brown;
+                            DstSlot.BackColor = Color.DarkGoldenrod;
                             AssignInfo newAssign = new AssignInfo();
                             newAssign.FromPort = wafer.Position;
                             newAssign.FromSlot = wafer.Slot;
@@ -145,7 +146,21 @@ namespace Adam
                     Node LD = NodeManagement.Get(each.FromPort);
                     LD.JobList[each.FromSlot].AssignPort(each.ToPort, each.ToSlot);
                 }
-                if (!FormMain.xfe.Start(Source_cb.Text))
+                //tmp change config
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed = tbR1_speed.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_aligner1 = cbUseA1.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_aligner2 = cbUseA2.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed = tbA1_speed.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner2_speed = tbA2_speed.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl = cbUseOcrTTL.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12= cbUseOcrM12.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_t7 = cbUseOcrT7.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_ttl_config = tbOcrTTL.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_m12_config = tbOcrM12.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_t7_config = tbOcrT7.Text;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule = cbOcrCheckRule.Text;
+
+                if (!FormMain.xfe.Start(Source_cb.Text,true))
                 {
                     MessageBox.Show("xfe.Start fail!");
                 }
@@ -153,18 +168,54 @@ namespace Adam
             this.Close();
         }
 
+        private void RenderSourceAssign()
+        {
+            foreach(AssignInfo each in AssignInfo.GetAssignList())
+            {
+                if (each.FromPort.Equals(Source_cb.Text))
+                {
+                    Label SrcSlot = this.Controls.Find("From_Slot_" + each.FromSlot, true).FirstOrDefault() as Label;
+                    SrcSlot.BackColor = Color.Brown;
+                }
+                if (each.ToPort.Equals(Source_cb.Text))
+                {
+                    Label SrcSlot = this.Controls.Find("From_Slot_" + each.ToSlot, true).FirstOrDefault() as Label;
+                    SrcSlot.BackColor = Color.DarkGoldenrod;
+                    SrcSlot.Text = NodeManagement.Get(each.FromPort).JobList[each.FromSlot].Host_Job_Id;
+                }
+            }
+        }
+        private void RenderToAssign()
+        {
+            foreach (AssignInfo each in AssignInfo.GetAssignList())
+            {
+                if (each.ToPort.Equals(To_cb.Text))
+                {
+                    Label DstSlot = this.Controls.Find("To_Slot_" + each.ToSlot, true).FirstOrDefault() as Label;
+                    DstSlot.BackColor = Color.DarkGoldenrod;
+                    DstSlot.Text = NodeManagement.Get(each.FromPort).JobList[each.FromSlot].Host_Job_Id;
+                }
+                if (each.FromPort.Equals(To_cb.Text))
+                {
+                    Label DstSlot = this.Controls.Find("To_Slot_" + each.FromSlot, true).FirstOrDefault() as Label;
+                    DstSlot.BackColor = Color.Brown;
+                }
+            }
+        }
+
         private void Source_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
             WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
-            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
-            AssignInfo.ClearList();
+            RenderSourceAssign();
+
+
         }
 
         private void To_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+           
             WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
-            AssignInfo.ClearList();
+            RenderToAssign();
         }
         Job slotDataSrc = null;
 
@@ -198,11 +249,13 @@ namespace Adam
                                 AssignInfo assignData = AssignInfo.SearchByFrom(slotData.Position, slotData.Slot);
                                 if (assignData != null)
                                 {//取消選擇已選的Slot                   
-                                    DstSlot = this.Controls.Find("To_Slot_" + assignData.ToSlot, true).FirstOrDefault() as Label;
-                                    DstSlot.Text = "No wafer";
-                                    DstSlot.BackColor = Color.DimGray;
-                                    DstSlot.ForeColor = Color.White;
-
+                                    if (To_cb.Text.Equals(assignData.ToPort))
+                                    {
+                                        DstSlot = this.Controls.Find("To_Slot_" + assignData.ToSlot, true).FirstOrDefault() as Label;
+                                        DstSlot.Text = "No wafer";
+                                        DstSlot.BackColor = Color.DimGray;
+                                        DstSlot.ForeColor = Color.White;
+                                    }
                                     ((Label)sender).BackColor = Color.Green;
                                     ((Label)sender).ForeColor = Color.White;
                                     assignData.RemoveFromList();
@@ -249,9 +302,12 @@ namespace Adam
                                     ((Label)sender).Text = "No wafer";
                                     ((Label)sender).BackColor = Color.DimGray;
                                     ((Label)sender).ForeColor = Color.White;
-                                    SrcSlot = this.Controls.Find("From_Slot_" + assignData.FromSlot, true).FirstOrDefault() as Label;
-                                    SrcSlot.BackColor = Color.Green;
-                                    SrcSlot.ForeColor = Color.White;
+                                    if (Source_cb.Text.Equals(assignData.FromPort))
+                                    {
+                                        SrcSlot = this.Controls.Find("From_Slot_" + assignData.FromSlot, true).FirstOrDefault() as Label;
+                                        SrcSlot.BackColor = Color.Green;
+                                        SrcSlot.ForeColor = Color.White;
+                                    }
                                     assignData.RemoveFromList();
                                 }
                                 else
@@ -260,7 +316,7 @@ namespace Adam
                                     {//來源已選                                    
                                      //選取目的
                                         ((Label)sender).Text = slotDataSrc.Host_Job_Id;
-                                        ((Label)sender).BackColor = Color.Brown;
+                                        ((Label)sender).BackColor = Color.DarkGoldenrod;
                                         AssignInfo newAssign = new AssignInfo();
                                         newAssign.FromPort = slotDataSrc.Position;
                                         newAssign.FromSlot = slotDataSrc.Slot;
@@ -276,6 +332,48 @@ namespace Adam
                     }
                 }
 
+            }
+        }
+
+        private void FormWaferAssign_Load(object sender, EventArgs e)
+        {
+            AssignInfo.ClearList();
+            Node Target;
+            if ((Target = NodeManagement.Get("ROBOT01")) != null)
+            {
+                tbR1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed;
+            }
+            if ((Target=NodeManagement.Get("ALIGNER01")) != null)
+            {
+                cbUseA1.Checked = !Target.ByPass;
+                tbA1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed;
+            }
+            else
+            {
+                gbA1.Visible = false;
+            }
+            if ((Target = NodeManagement.Get("ALIGNER02")) != null)
+            {
+                cbUseA2.Checked = !Target.ByPass;
+                tbA2_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner2_speed;
+            }
+            else
+            {
+                gbA2.Visible = false;
+            }
+            if(NodeManagement.Get("OCR01")!=null && NodeManagement.Get("OCR02") != null)
+            {
+                cbUseOcrTTL.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl;
+                cbUseOcrM12.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12;
+                cbUseOcrT7.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_t7;
+                tbOcrTTL.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_ttl_config;
+                tbOcrM12.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_m12_config;
+                tbOcrT7.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_t7_config;
+                cbOcrCheckRule.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule;
+            }
+            else
+            {
+                gbOCR.Visible = false;
             }
         }
     }

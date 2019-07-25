@@ -1747,30 +1747,6 @@
   <data name="&gt;&gt;tabMonitor.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="tabWaferAssign.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 44</value>
-  </data>
-  <data name="tabWaferAssign.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1626, 764</value>
-  </data>
-  <data name="tabWaferAssign.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tabWaferAssign.Text" xml:space="preserve">
-    <value>Wafer Assign</value>
-  </data>
-  <data name="&gt;&gt;tabWaferAssign.Name" xml:space="preserve">
-    <value>tabWaferAssign</value>
-  </data>
-  <data name="&gt;&gt;tabWaferAssign.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabWaferAssign.Parent" xml:space="preserve">
-    <value>tbcMain</value>
-  </data>
-  <data name="&gt;&gt;tabWaferAssign.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="tabRunning.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
   </data>
@@ -1793,7 +1769,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabRunning.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>1</value>
   </data>
   <data name="tabDIO.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1823,7 +1799,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabDIO.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>2</value>
   </data>
   <data name="tabNewSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1847,7 +1823,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabNewSetting.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>3</value>
   </data>
   <data name="tbDiffMonitor.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1871,7 +1847,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tbDiffMonitor.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>4</value>
   </data>
   <data name="tabWafer.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1895,7 +1871,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabWafer.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>5</value>
   </data>
   <data name="tabStatus.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1919,7 +1895,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabStatus.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>6</value>
   </data>
   <data name="tabSetting.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 44</value>
@@ -1946,7 +1922,7 @@
     <value>tbcMain</value>
   </data>
   <data name="&gt;&gt;tabSetting.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="tbcMain.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
