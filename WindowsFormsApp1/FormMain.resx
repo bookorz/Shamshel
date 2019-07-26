@@ -570,77 +570,38 @@
   <data name="&gt;&gt;ALL_INIT_btn.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="DifferentialPressureAlarm2_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+  <data name="IonizerAirAlarm_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
   </data>
-  <data name="DifferentialPressureAlarm2_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="IonizerAirAlarm_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="DifferentialPressureAlarm2_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+  <data name="IonizerAirAlarm_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
-  <data name="DifferentialPressureAlarm2_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 551</value>
-  </data>
-  <data name="DifferentialPressureAlarm2_Signal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
-  </data>
-  <data name="DifferentialPressureAlarm2_Signal.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="DifferentialPressureAlarm2_Signal.Text" xml:space="preserve">
-    <value>Differential Manometer2</value>
-  </data>
-  <data name="DifferentialPressureAlarm2_Signal.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Name" xml:space="preserve">
-    <value>DifferentialPressureAlarm2_Signal</value>
-  </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.Parent" xml:space="preserve">
-    <value>groupBox5</value>
-  </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm2_Signal.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="DifferentialPressureAlarm1_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Left, Right</value>
-  </data>
-  <data name="DifferentialPressureAlarm1_Signal.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="DifferentialPressureAlarm1_Signal.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="DifferentialPressureAlarm1_Signal.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="IonizerAirAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 510</value>
   </data>
-  <data name="DifferentialPressureAlarm1_Signal.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="IonizerAirAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
   </data>
-  <data name="DifferentialPressureAlarm1_Signal.TabIndex" type="System.Int32, mscorlib">
+  <data name="IonizerAirAlarm_Signal.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="DifferentialPressureAlarm1_Signal.Text" xml:space="preserve">
-    <value>Differential Manometer1</value>
+  <data name="IonizerAirAlarm_Signal.Text" xml:space="preserve">
+    <value>IonizerAirAlarm</value>
   </data>
-  <data name="DifferentialPressureAlarm1_Signal.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="&gt;&gt;IonizerAirAlarm_Signal.Name" xml:space="preserve">
+    <value>IonizerAirAlarm_Signal</value>
   </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Name" xml:space="preserve">
-    <value>DifferentialPressureAlarm1_Signal</value>
-  </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Type" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAirAlarm_Signal.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;IonizerAirAlarm_Signal.Parent" xml:space="preserve">
     <value>groupBox5</value>
   </data>
-  <data name="&gt;&gt;DifferentialPressureAlarm1_Signal.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="&gt;&gt;IonizerAirAlarm_Signal.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
   <data name="SafetyRelay_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -676,7 +637,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;SafetyRelay_Signal.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>7</value>
   </data>
   <data name="IonizerAlarm_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -709,7 +670,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;IonizerAlarm_Signal.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>8</value>
   </data>
   <data name="FFUAlarm_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -742,7 +703,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;FFUAlarm_Signal.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>9</value>
   </data>
   <data name="Vacuum_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -775,7 +736,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;Vacuum_Signal.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>10</value>
   </data>
   <data name="DoorSwitch_Signal.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Left, Right</value>
@@ -808,7 +769,7 @@
     <value>groupBox5</value>
   </data>
   <data name="&gt;&gt;DoorSwitch_Signal.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>11</value>
   </data>
   <data name="groupBox5.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
