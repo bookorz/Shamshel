@@ -2771,6 +2771,9 @@ namespace Adam
                 MessageBox.Show("請先停止搬運");
                 return;
             }
+            ALL_INIT_btn.BackColor = Color.Yellow;
+            ALL_INIT_btn.Enabled = false;
+            DIOUpdate.UpdateControlButton("Mode_btn", false);
             DIOUpdate.UpdateControlButton("Start_btn", false);
             DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             Recipe recipe = Recipe.Get(SystemConfig.Get().CurrentRecipe);
@@ -2781,18 +2784,12 @@ namespace Adam
             param.Add("@AlingerSpeed", recipe.aligner1_speed);
             param.Add("@RobotSpeed", recipe.robot1_speed);
             RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
-            if (Task == null)
-            {
-                MessageBox.Show("上一個動作執行中!");
-            }
-            else
-            {
-                //DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
-                DIOUpdate.UpdateControlButton("Mode_btn", false);
-                ALL_INIT_btn.BackColor = Color.Yellow;
-                ALL_INIT_btn.Enabled = false;
-                Initializing = true;
-            }
+
+            //DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
+            
+
+            Initializing = true;
+
         }
 
         private void Start_btn_Click(object sender, EventArgs e)

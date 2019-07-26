@@ -84,7 +84,7 @@ namespace Adam.Menu.SystemSetting
             System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"^[A-Za-z0-9]+$");
             if (!reg1.IsMatch(tbRecipeID.Text))
             {
-                MessageBox.Show("RecipeID must be english or numbers!");
+                MessageBox.Show("RecipeID must be english or numbers! and it doesn't accept spaces!");
                 return;
             }
             //權限檢查

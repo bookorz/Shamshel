@@ -114,6 +114,19 @@
             this.tlpAccount.SuspendLayout();
             this.SuspendLayout();
             // 
+            // lblMode
+            // 
+            this.lblMode.AutoSize = true;
+            this.lblMode.BackColor = System.Drawing.Color.Yellow;
+            this.lblMode.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblMode.ForeColor = System.Drawing.Color.Red;
+            this.lblMode.Location = new System.Drawing.Point(431, 496);
+            this.lblMode.Name = "lblMode";
+            this.lblMode.Size = new System.Drawing.Size(110, 31);
+            this.lblMode.TabIndex = 0;
+            this.lblMode.Text = "瀏覽模式";
+            this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // trvRecipe
             // 
             this.trvRecipe.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -575,10 +588,10 @@
             this.label35.ForeColor = System.Drawing.Color.Brown;
             this.label35.Location = new System.Drawing.Point(282, 19);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(199, 180);
+            this.label35.Size = new System.Drawing.Size(199, 160);
             this.label35.TabIndex = 0;
             this.label35.Text = "Port type\r\nL: Load port\r\nU: Unload port\r\nN: No use\r\n\r\nCarrier Type\r\nFOUP: 前開式晶圓傳送" +
-    "盒\r\nFOSB: 前開式出貨盒\r\nADAPT: Cassette Adapter";
+    "盒\r\nADAPT: Cassette Adapter";
             this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbP1LoadType
@@ -602,7 +615,6 @@
             this.cbP2CstType.FormattingEnabled = true;
             this.cbP2CstType.Items.AddRange(new object[] {
             "FOUP",
-            "FOSB",
             "ADAPT"});
             this.cbP2CstType.Location = new System.Drawing.Point(142, 97);
             this.cbP2CstType.Name = "cbP2CstType";
@@ -617,7 +629,6 @@
             this.cbP1CstType.FormattingEnabled = true;
             this.cbP1CstType.Items.AddRange(new object[] {
             "FOUP",
-            "FOSB",
             "ADAPT"});
             this.cbP1CstType.Location = new System.Drawing.Point(142, 57);
             this.cbP1CstType.Name = "cbP1CstType";
@@ -647,19 +658,6 @@
             this.label12.TabIndex = 0;
             this.label12.Text = "Port1";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblMode
-            // 
-            this.lblMode.AutoSize = true;
-            this.lblMode.BackColor = System.Drawing.Color.Yellow;
-            this.lblMode.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblMode.ForeColor = System.Drawing.Color.Red;
-            this.lblMode.Location = new System.Drawing.Point(431, 496);
-            this.lblMode.Name = "lblMode";
-            this.lblMode.Size = new System.Drawing.Size(110, 31);
-            this.lblMode.TabIndex = 0;
-            this.lblMode.Text = "瀏覽模式";
-            this.lblMode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // cbUseBurnIn
             // 
@@ -782,6 +780,7 @@
             // cbUserBothArm
             // 
             this.cbUserBothArm.AutoSize = true;
+            this.cbUserBothArm.Enabled = false;
             this.cbUserBothArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUserBothArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUserBothArm.Location = new System.Drawing.Point(193, 66);
@@ -797,6 +796,7 @@
             // cbUseLArm
             // 
             this.cbUseLArm.AutoSize = true;
+            this.cbUseLArm.Enabled = false;
             this.cbUseLArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseLArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseLArm.Location = new System.Drawing.Point(102, 66);
