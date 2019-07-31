@@ -96,10 +96,13 @@ namespace Adam.Menu.SystemSetting
             switch (eqpType)
             {
                 case "1R1A1O4P":
-                    AddForm(new FormRecipeSetting_1R1A1O4P());//FormRecipeSetting_1R1A1O4P
+                    AddForm(new FormRecipeSetting_1R1A1O4P());
+                    break;
+                case "1R2A2O4P":
+                    AddForm(new FormRecipeSetting_1R2A2O4P());
                     break;
                 case "1R1A2P":
-                    AddForm(new FormRecipeSetting_1R1A2P());//FormRecipeSetting_1R1A2P
+                    AddForm(new FormRecipeSetting_1R1A2P());
                     break;
                 default:
                     MessageBox.Show(sysMode + " Recipe 設定不支援");
