@@ -41,6 +41,54 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.gbRecipeBody = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.tbFFUCloseRpm = new System.Windows.Forms.TextBox();
+            this.tbFFUOpenRpm = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.cbP4LoadType = new System.Windows.Forms.ComboBox();
+            this.cbP3LoadType = new System.Windows.Forms.ComboBox();
+            this.tbNotch_angle = new System.Windows.Forms.TextBox();
+            this.cbP2LoadType = new System.Windows.Forms.ComboBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.cbP1LoadType = new System.Windows.Forms.ComboBox();
+            this.cbP4Seq = new System.Windows.Forms.ComboBox();
+            this.cbP3Seq = new System.Windows.Forms.ComboBox();
+            this.cbP2Seq = new System.Windows.Forms.ComboBox();
+            this.cbP1Seq = new System.Windows.Forms.ComboBox();
+            this.cbP4CstType = new System.Windows.Forms.ComboBox();
+            this.cbP3CstType = new System.Windows.Forms.ComboBox();
+            this.cbP2CstType = new System.Windows.Forms.ComboBox();
+            this.cbP1CstType = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tbOcrT7 = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.cbUseOcrT7 = new System.Windows.Forms.CheckBox();
+            this.tbOcrM12 = new System.Windows.Forms.TextBox();
+            this.cbUseOcrM12 = new System.Windows.Forms.CheckBox();
+            this.tbOcrTTL = new System.Windows.Forms.TextBox();
+            this.cbOcrCheckRule = new System.Windows.Forms.ComboBox();
+            this.cbUseOcrTTL = new System.Windows.Forms.CheckBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbA2_speed = new System.Windows.Forms.TextBox();
+            this.tbA1_speed = new System.Windows.Forms.TextBox();
+            this.tbA2_angle = new System.Windows.Forms.TextBox();
+            this.cbUseA2 = new System.Windows.Forms.CheckBox();
+            this.cbUseA1 = new System.Windows.Forms.CheckBox();
+            this.tbA1_angle = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -80,59 +128,15 @@
             this.btnDeleteRecipe = new System.Windows.Forms.Button();
             this.palContainer = new System.Windows.Forms.Panel();
             this.tlpAccount = new System.Windows.Forms.TableLayoutPanel();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbA2_speed = new System.Windows.Forms.TextBox();
-            this.tbA1_speed = new System.Windows.Forms.TextBox();
-            this.tbA2_angle = new System.Windows.Forms.TextBox();
-            this.cbUseA2 = new System.Windows.Forms.CheckBox();
-            this.cbUseA1 = new System.Windows.Forms.CheckBox();
-            this.tbA1_angle = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tbOcrT7 = new System.Windows.Forms.TextBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.cbUseOcrT7 = new System.Windows.Forms.CheckBox();
-            this.tbOcrM12 = new System.Windows.Forms.TextBox();
-            this.cbUseOcrM12 = new System.Windows.Forms.CheckBox();
-            this.tbOcrTTL = new System.Windows.Forms.TextBox();
-            this.cbOcrCheckRule = new System.Windows.Forms.ComboBox();
-            this.cbUseOcrTTL = new System.Windows.Forms.CheckBox();
-            this.label36 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.cbP4LoadType = new System.Windows.Forms.ComboBox();
-            this.cbP3LoadType = new System.Windows.Forms.ComboBox();
-            this.tbNotch_angle = new System.Windows.Forms.TextBox();
-            this.cbP2LoadType = new System.Windows.Forms.ComboBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.cbP1LoadType = new System.Windows.Forms.ComboBox();
-            this.cbP4Seq = new System.Windows.Forms.ComboBox();
-            this.cbP3Seq = new System.Windows.Forms.ComboBox();
-            this.cbP2Seq = new System.Windows.Forms.ComboBox();
-            this.cbP1Seq = new System.Windows.Forms.ComboBox();
-            this.cbP4CstType = new System.Windows.Forms.ComboBox();
-            this.cbP3CstType = new System.Windows.Forms.ComboBox();
-            this.cbP2CstType = new System.Windows.Forms.ComboBox();
-            this.cbP1CstType = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.tbFFUCloseRpm = new System.Windows.Forms.TextBox();
-            this.tbFFUOpenRpm = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
             this.gbAccountCondition.SuspendLayout();
             this.tlpAccountCreate.SuspendLayout();
             this.gbRecipe.SuspendLayout();
             this.gbRecipeHeader.SuspendLayout();
             this.gbRecipeBody.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
@@ -142,10 +146,6 @@
             this.tlpAccountMenu.SuspendLayout();
             this.palContainer.SuspendLayout();
             this.tlpAccount.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblMode
@@ -302,6 +302,637 @@
             this.gbRecipeBody.Size = new System.Drawing.Size(1247, 551);
             this.gbRecipeBody.TabIndex = 8;
             this.gbRecipeBody.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.tbFFUCloseRpm);
+            this.groupBox5.Controls.Add(this.tbFFUOpenRpm);
+            this.groupBox5.Controls.Add(this.label33);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Location = new System.Drawing.Point(652, 16);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(270, 168);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "FFU";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label23.Location = new System.Drawing.Point(157, 30);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(48, 24);
+            this.label23.TabIndex = 0;
+            this.label23.Text = "轉速";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbFFUCloseRpm
+            // 
+            this.tbFFUCloseRpm.Location = new System.Drawing.Point(129, 101);
+            this.tbFFUCloseRpm.Name = "tbFFUCloseRpm";
+            this.tbFFUCloseRpm.Size = new System.Drawing.Size(109, 33);
+            this.tbFFUCloseRpm.TabIndex = 1;
+            this.tbFFUCloseRpm.Text = "0";
+            this.tbFFUCloseRpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFFUCloseRpm.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // tbFFUOpenRpm
+            // 
+            this.tbFFUOpenRpm.Location = new System.Drawing.Point(129, 59);
+            this.tbFFUOpenRpm.Name = "tbFFUOpenRpm";
+            this.tbFFUOpenRpm.Size = new System.Drawing.Size(109, 33);
+            this.tbFFUOpenRpm.TabIndex = 1;
+            this.tbFFUOpenRpm.Text = "0";
+            this.tbFFUOpenRpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbFFUOpenRpm.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label33.Location = new System.Drawing.Point(37, 104);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(86, 24);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "開門狀況";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label28.Location = new System.Drawing.Point(37, 62);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(86, 24);
+            this.label28.TabIndex = 0;
+            this.label28.Text = "一般狀況";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label29);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label26);
+            this.groupBox2.Controls.Add(this.cbP4LoadType);
+            this.groupBox2.Controls.Add(this.cbP3LoadType);
+            this.groupBox2.Controls.Add(this.tbNotch_angle);
+            this.groupBox2.Controls.Add(this.cbP2LoadType);
+            this.groupBox2.Controls.Add(this.label35);
+            this.groupBox2.Controls.Add(this.cbP1LoadType);
+            this.groupBox2.Controls.Add(this.cbP4Seq);
+            this.groupBox2.Controls.Add(this.cbP3Seq);
+            this.groupBox2.Controls.Add(this.cbP2Seq);
+            this.groupBox2.Controls.Add(this.cbP1Seq);
+            this.groupBox2.Controls.Add(this.cbP4CstType);
+            this.groupBox2.Controls.Add(this.cbP3CstType);
+            this.groupBox2.Controls.Add(this.cbP2CstType);
+            this.groupBox2.Controls.Add(this.cbP1CstType);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Location = new System.Drawing.Point(6, 15);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(637, 218);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Area 1 Port Setting";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Chocolate;
+            this.label3.Location = new System.Drawing.Point(75, 29);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 24);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Type";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label29.Location = new System.Drawing.Point(263, 27);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(123, 24);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "Notch Angle";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.ForeColor = System.Drawing.Color.Chocolate;
+            this.label7.Location = new System.Drawing.Point(553, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 24);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Priority";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label26.ForeColor = System.Drawing.Color.Chocolate;
+            this.label26.Location = new System.Drawing.Point(138, 29);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(119, 24);
+            this.label26.TabIndex = 0;
+            this.label26.Text = "Carrier Type";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbP4LoadType
+            // 
+            this.cbP4LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4LoadType.FormattingEnabled = true;
+            this.cbP4LoadType.Items.AddRange(new object[] {
+            "L",
+            "U",
+            "N"});
+            this.cbP4LoadType.Location = new System.Drawing.Point(77, 177);
+            this.cbP4LoadType.Name = "cbP4LoadType";
+            this.cbP4LoadType.Size = new System.Drawing.Size(52, 32);
+            this.cbP4LoadType.TabIndex = 2;
+            this.cbP4LoadType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP3LoadType
+            // 
+            this.cbP3LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP3LoadType.FormattingEnabled = true;
+            this.cbP3LoadType.Items.AddRange(new object[] {
+            "L",
+            "U",
+            "N"});
+            this.cbP3LoadType.Location = new System.Drawing.Point(77, 137);
+            this.cbP3LoadType.Name = "cbP3LoadType";
+            this.cbP3LoadType.Size = new System.Drawing.Size(52, 32);
+            this.cbP3LoadType.TabIndex = 2;
+            this.cbP3LoadType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // tbNotch_angle
+            // 
+            this.tbNotch_angle.Location = new System.Drawing.Point(267, 57);
+            this.tbNotch_angle.Name = "tbNotch_angle";
+            this.tbNotch_angle.Size = new System.Drawing.Size(109, 33);
+            this.tbNotch_angle.TabIndex = 1;
+            this.tbNotch_angle.Text = "0";
+            this.tbNotch_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbNotch_angle.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP2LoadType
+            // 
+            this.cbP2LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP2LoadType.FormattingEnabled = true;
+            this.cbP2LoadType.Items.AddRange(new object[] {
+            "L",
+            "U",
+            "N"});
+            this.cbP2LoadType.Location = new System.Drawing.Point(77, 97);
+            this.cbP2LoadType.Name = "cbP2LoadType";
+            this.cbP2LoadType.Size = new System.Drawing.Size(52, 32);
+            this.cbP2LoadType.TabIndex = 2;
+            this.cbP2LoadType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label35.ForeColor = System.Drawing.Color.Brown;
+            this.label35.Location = new System.Drawing.Point(397, 29);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(161, 170);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Port type\r\nL: Load port\r\nU: Unload port\r\nN: No use\r\n\r\nCarrier Type\r\nFOUP: 前開式晶圓傳送" +
+    "盒\r\nFOSB: 晶圓出貨盒\r\nOPEN: Open Cassette\r\nADAPT: Cassette Adapter\r\n";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // cbP1LoadType
+            // 
+            this.cbP1LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP1LoadType.FormattingEnabled = true;
+            this.cbP1LoadType.Items.AddRange(new object[] {
+            "L",
+            "U",
+            "N"});
+            this.cbP1LoadType.Location = new System.Drawing.Point(77, 57);
+            this.cbP1LoadType.Name = "cbP1LoadType";
+            this.cbP1LoadType.Size = new System.Drawing.Size(52, 32);
+            this.cbP1LoadType.TabIndex = 2;
+            this.cbP1LoadType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP4Seq
+            // 
+            this.cbP4Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4Seq.FormattingEnabled = true;
+            this.cbP4Seq.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbP4Seq.Location = new System.Drawing.Point(564, 177);
+            this.cbP4Seq.Name = "cbP4Seq";
+            this.cbP4Seq.Size = new System.Drawing.Size(49, 32);
+            this.cbP4Seq.TabIndex = 2;
+            this.cbP4Seq.Visible = false;
+            // 
+            // cbP3Seq
+            // 
+            this.cbP3Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP3Seq.FormattingEnabled = true;
+            this.cbP3Seq.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbP3Seq.Location = new System.Drawing.Point(564, 137);
+            this.cbP3Seq.Name = "cbP3Seq";
+            this.cbP3Seq.Size = new System.Drawing.Size(49, 32);
+            this.cbP3Seq.TabIndex = 2;
+            this.cbP3Seq.Visible = false;
+            // 
+            // cbP2Seq
+            // 
+            this.cbP2Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP2Seq.FormattingEnabled = true;
+            this.cbP2Seq.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbP2Seq.Location = new System.Drawing.Point(564, 97);
+            this.cbP2Seq.Name = "cbP2Seq";
+            this.cbP2Seq.Size = new System.Drawing.Size(49, 32);
+            this.cbP2Seq.TabIndex = 2;
+            this.cbP2Seq.Visible = false;
+            // 
+            // cbP1Seq
+            // 
+            this.cbP1Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP1Seq.FormattingEnabled = true;
+            this.cbP1Seq.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"});
+            this.cbP1Seq.Location = new System.Drawing.Point(564, 57);
+            this.cbP1Seq.Name = "cbP1Seq";
+            this.cbP1Seq.Size = new System.Drawing.Size(49, 32);
+            this.cbP1Seq.TabIndex = 2;
+            this.cbP1Seq.Visible = false;
+            // 
+            // cbP4CstType
+            // 
+            this.cbP4CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4CstType.FormattingEnabled = true;
+            this.cbP4CstType.Items.AddRange(new object[] {
+            "FOSB",
+            "FOUP",
+            "OPEN",
+            "ADAPT"});
+            this.cbP4CstType.Location = new System.Drawing.Point(142, 177);
+            this.cbP4CstType.Name = "cbP4CstType";
+            this.cbP4CstType.Size = new System.Drawing.Size(86, 32);
+            this.cbP4CstType.TabIndex = 2;
+            this.cbP4CstType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP3CstType
+            // 
+            this.cbP3CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP3CstType.FormattingEnabled = true;
+            this.cbP3CstType.Items.AddRange(new object[] {
+            "FOSB",
+            "FOUP",
+            "OPEN",
+            "ADAPT"});
+            this.cbP3CstType.Location = new System.Drawing.Point(142, 137);
+            this.cbP3CstType.Name = "cbP3CstType";
+            this.cbP3CstType.Size = new System.Drawing.Size(86, 32);
+            this.cbP3CstType.TabIndex = 2;
+            this.cbP3CstType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP2CstType
+            // 
+            this.cbP2CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP2CstType.FormattingEnabled = true;
+            this.cbP2CstType.Items.AddRange(new object[] {
+            "FOSB",
+            "FOUP",
+            "OPEN",
+            "ADAPT"});
+            this.cbP2CstType.Location = new System.Drawing.Point(142, 97);
+            this.cbP2CstType.Name = "cbP2CstType";
+            this.cbP2CstType.Size = new System.Drawing.Size(86, 32);
+            this.cbP2CstType.TabIndex = 2;
+            this.cbP2CstType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbP1CstType
+            // 
+            this.cbP1CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP1CstType.FormattingEnabled = true;
+            this.cbP1CstType.Items.AddRange(new object[] {
+            "FOSB",
+            "FOUP",
+            "OPEN",
+            "ADAPT"});
+            this.cbP1CstType.Location = new System.Drawing.Point(142, 57);
+            this.cbP1CstType.Name = "cbP1CstType";
+            this.cbP1CstType.Size = new System.Drawing.Size(86, 32);
+            this.cbP1CstType.TabIndex = 2;
+            this.cbP1CstType.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label15.Location = new System.Drawing.Point(9, 180);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 24);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Port4";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label14.Location = new System.Drawing.Point(9, 140);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 24);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Port3";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label13.Location = new System.Drawing.Point(9, 100);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(58, 24);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Port2";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label12.Location = new System.Drawing.Point(9, 60);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(58, 24);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Port1";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.tbOcrT7);
+            this.groupBox1.Controls.Add(this.label39);
+            this.groupBox1.Controls.Add(this.cbUseOcrT7);
+            this.groupBox1.Controls.Add(this.tbOcrM12);
+            this.groupBox1.Controls.Add(this.cbUseOcrM12);
+            this.groupBox1.Controls.Add(this.tbOcrTTL);
+            this.groupBox1.Controls.Add(this.cbOcrCheckRule);
+            this.groupBox1.Controls.Add(this.cbUseOcrTTL);
+            this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Location = new System.Drawing.Point(300, 247);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(251, 263);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "OCR Config";
+            // 
+            // tbOcrT7
+            // 
+            this.tbOcrT7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrT7.Location = new System.Drawing.Point(5, 139);
+            this.tbOcrT7.Name = "tbOcrT7";
+            this.tbOcrT7.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrT7.TabIndex = 1;
+            this.tbOcrT7.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label39.Location = new System.Drawing.Point(12, 219);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(124, 24);
+            this.label39.TabIndex = 0;
+            this.label39.Text = "辨識結果檢查";
+            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // cbUseOcrT7
+            // 
+            this.cbUseOcrT7.AutoSize = true;
+            this.cbUseOcrT7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrT7.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrT7.Location = new System.Drawing.Point(5, 118);
+            this.cbUseOcrT7.Name = "cbUseOcrT7";
+            this.cbUseOcrT7.Size = new System.Drawing.Size(94, 24);
+            this.cbUseOcrT7.TabIndex = 4;
+            this.cbUseOcrT7.Text = "T7設定檔";
+            this.cbUseOcrT7.UseVisualStyleBackColor = true;
+            this.cbUseOcrT7.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // tbOcrM12
+            // 
+            this.tbOcrM12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrM12.Location = new System.Drawing.Point(5, 93);
+            this.tbOcrM12.Name = "tbOcrM12";
+            this.tbOcrM12.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrM12.TabIndex = 1;
+            this.tbOcrM12.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // cbUseOcrM12
+            // 
+            this.cbUseOcrM12.AutoSize = true;
+            this.cbUseOcrM12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrM12.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrM12.Location = new System.Drawing.Point(5, 72);
+            this.cbUseOcrM12.Name = "cbUseOcrM12";
+            this.cbUseOcrM12.Size = new System.Drawing.Size(109, 24);
+            this.cbUseOcrM12.TabIndex = 4;
+            this.cbUseOcrM12.Text = "M12設定檔";
+            this.cbUseOcrM12.UseVisualStyleBackColor = true;
+            this.cbUseOcrM12.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // tbOcrTTL
+            // 
+            this.tbOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.tbOcrTTL.Location = new System.Drawing.Point(5, 47);
+            this.tbOcrTTL.Name = "tbOcrTTL";
+            this.tbOcrTTL.Size = new System.Drawing.Size(239, 25);
+            this.tbOcrTTL.TabIndex = 1;
+            this.tbOcrTTL.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // cbOcrCheckRule
+            // 
+            this.cbOcrCheckRule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbOcrCheckRule.FormattingEnabled = true;
+            this.cbOcrCheckRule.Items.AddRange(new object[] {
+            "BOTH",
+            "EITHER",
+            "T7",
+            "M12",
+            "NA"});
+            this.cbOcrCheckRule.Location = new System.Drawing.Point(142, 216);
+            this.cbOcrCheckRule.Name = "cbOcrCheckRule";
+            this.cbOcrCheckRule.Size = new System.Drawing.Size(102, 32);
+            this.cbOcrCheckRule.TabIndex = 2;
+            this.cbOcrCheckRule.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbUseOcrTTL
+            // 
+            this.cbUseOcrTTL.AutoSize = true;
+            this.cbUseOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseOcrTTL.ForeColor = System.Drawing.Color.Black;
+            this.cbUseOcrTTL.Location = new System.Drawing.Point(5, 27);
+            this.cbUseOcrTTL.Name = "cbUseOcrTTL";
+            this.cbUseOcrTTL.Size = new System.Drawing.Size(108, 24);
+            this.cbUseOcrTTL.TabIndex = 4;
+            this.cbUseOcrTTL.Text = "所有設定檔";
+            this.cbUseOcrTTL.UseVisualStyleBackColor = true;
+            this.cbUseOcrTTL.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label36.ForeColor = System.Drawing.Color.Brown;
+            this.label36.Location = new System.Drawing.Point(4, 167);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(241, 40);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "設定檔以數字表示，以逗號區分\r\n例如: 0,1,2,3,4,5,6,7,8,9,10,11,12";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.tbA2_speed);
+            this.groupBox4.Controls.Add(this.tbA1_speed);
+            this.groupBox4.Controls.Add(this.tbA2_angle);
+            this.groupBox4.Controls.Add(this.cbUseA2);
+            this.groupBox4.Controls.Add(this.cbUseA1);
+            this.groupBox4.Controls.Add(this.tbA1_angle);
+            this.groupBox4.Location = new System.Drawing.Point(6, 420);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(288, 131);
+            this.groupBox4.TabIndex = 8;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Aligner Setting";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.Location = new System.Drawing.Point(99, 27);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 24);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Speed";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.Location = new System.Drawing.Point(172, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 24);
+            this.label8.TabIndex = 0;
+            this.label8.Text = " OCR Angle";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tbA2_speed
+            // 
+            this.tbA2_speed.Location = new System.Drawing.Point(111, 95);
+            this.tbA2_speed.Name = "tbA2_speed";
+            this.tbA2_speed.Size = new System.Drawing.Size(46, 33);
+            this.tbA2_speed.TabIndex = 1;
+            this.tbA2_speed.Text = "100";
+            this.tbA2_speed.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // tbA1_speed
+            // 
+            this.tbA1_speed.Location = new System.Drawing.Point(111, 54);
+            this.tbA1_speed.Name = "tbA1_speed";
+            this.tbA1_speed.Size = new System.Drawing.Size(46, 33);
+            this.tbA1_speed.TabIndex = 1;
+            this.tbA1_speed.Text = "100";
+            this.tbA1_speed.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // tbA2_angle
+            // 
+            this.tbA2_angle.Location = new System.Drawing.Point(176, 95);
+            this.tbA2_angle.Name = "tbA2_angle";
+            this.tbA2_angle.Size = new System.Drawing.Size(95, 33);
+            this.tbA2_angle.TabIndex = 1;
+            this.tbA2_angle.Text = "0";
+            this.tbA2_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbA2_angle.TextChanged += new System.EventHandler(this.modeCheck);
+            // 
+            // cbUseA2
+            // 
+            this.cbUseA2.AutoSize = true;
+            this.cbUseA2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseA2.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.cbUseA2.Location = new System.Drawing.Point(5, 98);
+            this.cbUseA2.Name = "cbUseA2";
+            this.cbUseA2.Size = new System.Drawing.Size(105, 28);
+            this.cbUseA2.TabIndex = 4;
+            this.cbUseA2.Text = "Aligner2";
+            this.cbUseA2.UseVisualStyleBackColor = true;
+            this.cbUseA2.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // cbUseA1
+            // 
+            this.cbUseA1.AutoSize = true;
+            this.cbUseA1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cbUseA1.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.cbUseA1.Location = new System.Drawing.Point(6, 61);
+            this.cbUseA1.Name = "cbUseA1";
+            this.cbUseA1.Size = new System.Drawing.Size(105, 28);
+            this.cbUseA1.TabIndex = 4;
+            this.cbUseA1.Text = "Aligner1";
+            this.cbUseA1.UseVisualStyleBackColor = true;
+            this.cbUseA1.Click += new System.EventHandler(this.modeCheck);
+            // 
+            // tbA1_angle
+            // 
+            this.tbA1_angle.Location = new System.Drawing.Point(176, 57);
+            this.tbA1_angle.Name = "tbA1_angle";
+            this.tbA1_angle.Size = new System.Drawing.Size(95, 33);
+            this.tbA1_angle.TabIndex = 1;
+            this.tbA1_angle.Text = "0";
+            this.tbA1_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbA1_angle.TextChanged += new System.EventHandler(this.modeCheck);
             // 
             // label6
             // 
@@ -662,7 +1293,6 @@
             // cbUserBothArm
             // 
             this.cbUserBothArm.AutoSize = true;
-            this.cbUserBothArm.Enabled = false;
             this.cbUserBothArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUserBothArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUserBothArm.Location = new System.Drawing.Point(193, 66);
@@ -678,7 +1308,6 @@
             // cbUseLArm
             // 
             this.cbUseLArm.AutoSize = true;
-            this.cbUseLArm.Enabled = false;
             this.cbUseLArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseLArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseLArm.Location = new System.Drawing.Point(102, 66);
@@ -837,637 +1466,6 @@
             this.tlpAccount.Size = new System.Drawing.Size(1432, 752);
             this.tlpAccount.TabIndex = 23;
             // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Controls.Add(this.tbA2_speed);
-            this.groupBox4.Controls.Add(this.tbA1_speed);
-            this.groupBox4.Controls.Add(this.tbA2_angle);
-            this.groupBox4.Controls.Add(this.cbUseA2);
-            this.groupBox4.Controls.Add(this.cbUseA1);
-            this.groupBox4.Controls.Add(this.tbA1_angle);
-            this.groupBox4.Location = new System.Drawing.Point(6, 420);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(288, 131);
-            this.groupBox4.TabIndex = 8;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Aligner Setting";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.Location = new System.Drawing.Point(99, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 24);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Speed";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.Location = new System.Drawing.Point(172, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 24);
-            this.label8.TabIndex = 0;
-            this.label8.Text = " OCR Angle";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tbA2_speed
-            // 
-            this.tbA2_speed.Location = new System.Drawing.Point(111, 95);
-            this.tbA2_speed.Name = "tbA2_speed";
-            this.tbA2_speed.Size = new System.Drawing.Size(46, 33);
-            this.tbA2_speed.TabIndex = 1;
-            this.tbA2_speed.Text = "100";
-            this.tbA2_speed.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // tbA1_speed
-            // 
-            this.tbA1_speed.Location = new System.Drawing.Point(111, 54);
-            this.tbA1_speed.Name = "tbA1_speed";
-            this.tbA1_speed.Size = new System.Drawing.Size(46, 33);
-            this.tbA1_speed.TabIndex = 1;
-            this.tbA1_speed.Text = "100";
-            this.tbA1_speed.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // tbA2_angle
-            // 
-            this.tbA2_angle.Location = new System.Drawing.Point(176, 95);
-            this.tbA2_angle.Name = "tbA2_angle";
-            this.tbA2_angle.Size = new System.Drawing.Size(95, 33);
-            this.tbA2_angle.TabIndex = 1;
-            this.tbA2_angle.Text = "0";
-            this.tbA2_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbA2_angle.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // cbUseA2
-            // 
-            this.cbUseA2.AutoSize = true;
-            this.cbUseA2.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbUseA2.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cbUseA2.Location = new System.Drawing.Point(5, 98);
-            this.cbUseA2.Name = "cbUseA2";
-            this.cbUseA2.Size = new System.Drawing.Size(105, 28);
-            this.cbUseA2.TabIndex = 4;
-            this.cbUseA2.Text = "Aligner2";
-            this.cbUseA2.UseVisualStyleBackColor = true;
-            this.cbUseA2.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbUseA1
-            // 
-            this.cbUseA1.AutoSize = true;
-            this.cbUseA1.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbUseA1.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.cbUseA1.Location = new System.Drawing.Point(6, 61);
-            this.cbUseA1.Name = "cbUseA1";
-            this.cbUseA1.Size = new System.Drawing.Size(105, 28);
-            this.cbUseA1.TabIndex = 4;
-            this.cbUseA1.Text = "Aligner1";
-            this.cbUseA1.UseVisualStyleBackColor = true;
-            this.cbUseA1.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // tbA1_angle
-            // 
-            this.tbA1_angle.Location = new System.Drawing.Point(176, 57);
-            this.tbA1_angle.Name = "tbA1_angle";
-            this.tbA1_angle.Size = new System.Drawing.Size(95, 33);
-            this.tbA1_angle.TabIndex = 1;
-            this.tbA1_angle.Text = "0";
-            this.tbA1_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbA1_angle.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.tbOcrT7);
-            this.groupBox1.Controls.Add(this.label39);
-            this.groupBox1.Controls.Add(this.cbUseOcrT7);
-            this.groupBox1.Controls.Add(this.tbOcrM12);
-            this.groupBox1.Controls.Add(this.cbUseOcrM12);
-            this.groupBox1.Controls.Add(this.tbOcrTTL);
-            this.groupBox1.Controls.Add(this.cbOcrCheckRule);
-            this.groupBox1.Controls.Add(this.cbUseOcrTTL);
-            this.groupBox1.Controls.Add(this.label36);
-            this.groupBox1.Location = new System.Drawing.Point(300, 247);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(251, 263);
-            this.groupBox1.TabIndex = 9;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "OCR Config";
-            // 
-            // tbOcrT7
-            // 
-            this.tbOcrT7.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbOcrT7.Location = new System.Drawing.Point(5, 139);
-            this.tbOcrT7.Name = "tbOcrT7";
-            this.tbOcrT7.Size = new System.Drawing.Size(239, 25);
-            this.tbOcrT7.TabIndex = 1;
-            this.tbOcrT7.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label39.Location = new System.Drawing.Point(12, 219);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(124, 24);
-            this.label39.TabIndex = 0;
-            this.label39.Text = "辨識結果檢查";
-            this.label39.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbUseOcrT7
-            // 
-            this.cbUseOcrT7.AutoSize = true;
-            this.cbUseOcrT7.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbUseOcrT7.ForeColor = System.Drawing.Color.Black;
-            this.cbUseOcrT7.Location = new System.Drawing.Point(5, 118);
-            this.cbUseOcrT7.Name = "cbUseOcrT7";
-            this.cbUseOcrT7.Size = new System.Drawing.Size(94, 24);
-            this.cbUseOcrT7.TabIndex = 4;
-            this.cbUseOcrT7.Text = "T7設定檔";
-            this.cbUseOcrT7.UseVisualStyleBackColor = true;
-            this.cbUseOcrT7.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // tbOcrM12
-            // 
-            this.tbOcrM12.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbOcrM12.Location = new System.Drawing.Point(5, 93);
-            this.tbOcrM12.Name = "tbOcrM12";
-            this.tbOcrM12.Size = new System.Drawing.Size(239, 25);
-            this.tbOcrM12.TabIndex = 1;
-            this.tbOcrM12.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // cbUseOcrM12
-            // 
-            this.cbUseOcrM12.AutoSize = true;
-            this.cbUseOcrM12.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbUseOcrM12.ForeColor = System.Drawing.Color.Black;
-            this.cbUseOcrM12.Location = new System.Drawing.Point(5, 72);
-            this.cbUseOcrM12.Name = "cbUseOcrM12";
-            this.cbUseOcrM12.Size = new System.Drawing.Size(109, 24);
-            this.cbUseOcrM12.TabIndex = 4;
-            this.cbUseOcrM12.Text = "M12設定檔";
-            this.cbUseOcrM12.UseVisualStyleBackColor = true;
-            this.cbUseOcrM12.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // tbOcrTTL
-            // 
-            this.tbOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.tbOcrTTL.Location = new System.Drawing.Point(5, 47);
-            this.tbOcrTTL.Name = "tbOcrTTL";
-            this.tbOcrTTL.Size = new System.Drawing.Size(239, 25);
-            this.tbOcrTTL.TabIndex = 1;
-            this.tbOcrTTL.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // cbOcrCheckRule
-            // 
-            this.cbOcrCheckRule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbOcrCheckRule.FormattingEnabled = true;
-            this.cbOcrCheckRule.Items.AddRange(new object[] {
-            "BOTH",
-            "EITHER",
-            "T7",
-            "M12",
-            "NA"});
-            this.cbOcrCheckRule.Location = new System.Drawing.Point(142, 216);
-            this.cbOcrCheckRule.Name = "cbOcrCheckRule";
-            this.cbOcrCheckRule.Size = new System.Drawing.Size(102, 32);
-            this.cbOcrCheckRule.TabIndex = 2;
-            this.cbOcrCheckRule.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbUseOcrTTL
-            // 
-            this.cbUseOcrTTL.AutoSize = true;
-            this.cbUseOcrTTL.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cbUseOcrTTL.ForeColor = System.Drawing.Color.Black;
-            this.cbUseOcrTTL.Location = new System.Drawing.Point(5, 27);
-            this.cbUseOcrTTL.Name = "cbUseOcrTTL";
-            this.cbUseOcrTTL.Size = new System.Drawing.Size(108, 24);
-            this.cbUseOcrTTL.TabIndex = 4;
-            this.cbUseOcrTTL.Text = "所有設定檔";
-            this.cbUseOcrTTL.UseVisualStyleBackColor = true;
-            this.cbUseOcrTTL.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label36.ForeColor = System.Drawing.Color.Brown;
-            this.label36.Location = new System.Drawing.Point(4, 167);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(241, 40);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "設定檔以數字表示，以逗號區分\r\n例如: 0,1,2,3,4,5,6,7,8,9,10,11,12";
-            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label26);
-            this.groupBox2.Controls.Add(this.cbP4LoadType);
-            this.groupBox2.Controls.Add(this.cbP3LoadType);
-            this.groupBox2.Controls.Add(this.tbNotch_angle);
-            this.groupBox2.Controls.Add(this.cbP2LoadType);
-            this.groupBox2.Controls.Add(this.label35);
-            this.groupBox2.Controls.Add(this.cbP1LoadType);
-            this.groupBox2.Controls.Add(this.cbP4Seq);
-            this.groupBox2.Controls.Add(this.cbP3Seq);
-            this.groupBox2.Controls.Add(this.cbP2Seq);
-            this.groupBox2.Controls.Add(this.cbP1Seq);
-            this.groupBox2.Controls.Add(this.cbP4CstType);
-            this.groupBox2.Controls.Add(this.cbP3CstType);
-            this.groupBox2.Controls.Add(this.cbP2CstType);
-            this.groupBox2.Controls.Add(this.cbP1CstType);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Location = new System.Drawing.Point(6, 15);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(637, 218);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Area 1 Port Setting";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label3.ForeColor = System.Drawing.Color.Chocolate;
-            this.label3.Location = new System.Drawing.Point(75, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 24);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Type";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label29.Location = new System.Drawing.Point(263, 27);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(123, 24);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "Notch Angle";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.ForeColor = System.Drawing.Color.Chocolate;
-            this.label7.Location = new System.Drawing.Point(553, 29);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 24);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Priority";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label7.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label26.ForeColor = System.Drawing.Color.Chocolate;
-            this.label26.Location = new System.Drawing.Point(138, 29);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(119, 24);
-            this.label26.TabIndex = 0;
-            this.label26.Text = "Carrier Type";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // cbP4LoadType
-            // 
-            this.cbP4LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP4LoadType.FormattingEnabled = true;
-            this.cbP4LoadType.Items.AddRange(new object[] {
-            "L",
-            "U",
-            "N"});
-            this.cbP4LoadType.Location = new System.Drawing.Point(77, 177);
-            this.cbP4LoadType.Name = "cbP4LoadType";
-            this.cbP4LoadType.Size = new System.Drawing.Size(52, 32);
-            this.cbP4LoadType.TabIndex = 2;
-            this.cbP4LoadType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP3LoadType
-            // 
-            this.cbP3LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP3LoadType.FormattingEnabled = true;
-            this.cbP3LoadType.Items.AddRange(new object[] {
-            "L",
-            "U",
-            "N"});
-            this.cbP3LoadType.Location = new System.Drawing.Point(77, 137);
-            this.cbP3LoadType.Name = "cbP3LoadType";
-            this.cbP3LoadType.Size = new System.Drawing.Size(52, 32);
-            this.cbP3LoadType.TabIndex = 2;
-            this.cbP3LoadType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // tbNotch_angle
-            // 
-            this.tbNotch_angle.Location = new System.Drawing.Point(267, 57);
-            this.tbNotch_angle.Name = "tbNotch_angle";
-            this.tbNotch_angle.Size = new System.Drawing.Size(109, 33);
-            this.tbNotch_angle.TabIndex = 1;
-            this.tbNotch_angle.Text = "0";
-            this.tbNotch_angle.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbNotch_angle.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP2LoadType
-            // 
-            this.cbP2LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP2LoadType.FormattingEnabled = true;
-            this.cbP2LoadType.Items.AddRange(new object[] {
-            "L",
-            "U",
-            "N"});
-            this.cbP2LoadType.Location = new System.Drawing.Point(77, 97);
-            this.cbP2LoadType.Name = "cbP2LoadType";
-            this.cbP2LoadType.Size = new System.Drawing.Size(52, 32);
-            this.cbP2LoadType.TabIndex = 2;
-            this.cbP2LoadType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("微軟正黑體", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label35.ForeColor = System.Drawing.Color.Brown;
-            this.label35.Location = new System.Drawing.Point(397, 29);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(161, 170);
-            this.label35.TabIndex = 0;
-            this.label35.Text = "Port type\r\nL: Load port\r\nU: Unload port\r\nN: No use\r\n\r\nCarrier Type\r\nFOUP: 前開式晶圓傳送" +
-    "盒\r\nFOSB: 晶圓出貨盒\r\nOPEN: Open Cassette\r\nADAPT: Cassette Adapter\r\n";
-            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // cbP1LoadType
-            // 
-            this.cbP1LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP1LoadType.FormattingEnabled = true;
-            this.cbP1LoadType.Items.AddRange(new object[] {
-            "L",
-            "U",
-            "N"});
-            this.cbP1LoadType.Location = new System.Drawing.Point(77, 57);
-            this.cbP1LoadType.Name = "cbP1LoadType";
-            this.cbP1LoadType.Size = new System.Drawing.Size(52, 32);
-            this.cbP1LoadType.TabIndex = 2;
-            this.cbP1LoadType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP4Seq
-            // 
-            this.cbP4Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP4Seq.FormattingEnabled = true;
-            this.cbP4Seq.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbP4Seq.Location = new System.Drawing.Point(564, 177);
-            this.cbP4Seq.Name = "cbP4Seq";
-            this.cbP4Seq.Size = new System.Drawing.Size(49, 32);
-            this.cbP4Seq.TabIndex = 2;
-            this.cbP4Seq.Visible = false;
-            // 
-            // cbP3Seq
-            // 
-            this.cbP3Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP3Seq.FormattingEnabled = true;
-            this.cbP3Seq.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbP3Seq.Location = new System.Drawing.Point(564, 137);
-            this.cbP3Seq.Name = "cbP3Seq";
-            this.cbP3Seq.Size = new System.Drawing.Size(49, 32);
-            this.cbP3Seq.TabIndex = 2;
-            this.cbP3Seq.Visible = false;
-            // 
-            // cbP2Seq
-            // 
-            this.cbP2Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP2Seq.FormattingEnabled = true;
-            this.cbP2Seq.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbP2Seq.Location = new System.Drawing.Point(564, 97);
-            this.cbP2Seq.Name = "cbP2Seq";
-            this.cbP2Seq.Size = new System.Drawing.Size(49, 32);
-            this.cbP2Seq.TabIndex = 2;
-            this.cbP2Seq.Visible = false;
-            // 
-            // cbP1Seq
-            // 
-            this.cbP1Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP1Seq.FormattingEnabled = true;
-            this.cbP1Seq.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8"});
-            this.cbP1Seq.Location = new System.Drawing.Point(564, 57);
-            this.cbP1Seq.Name = "cbP1Seq";
-            this.cbP1Seq.Size = new System.Drawing.Size(49, 32);
-            this.cbP1Seq.TabIndex = 2;
-            this.cbP1Seq.Visible = false;
-            // 
-            // cbP4CstType
-            // 
-            this.cbP4CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP4CstType.FormattingEnabled = true;
-            this.cbP4CstType.Items.AddRange(new object[] {
-            "FOSB",
-            "FOUP",
-            "OPEN",
-            "ADAPT"});
-            this.cbP4CstType.Location = new System.Drawing.Point(142, 177);
-            this.cbP4CstType.Name = "cbP4CstType";
-            this.cbP4CstType.Size = new System.Drawing.Size(86, 32);
-            this.cbP4CstType.TabIndex = 2;
-            this.cbP4CstType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP3CstType
-            // 
-            this.cbP3CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP3CstType.FormattingEnabled = true;
-            this.cbP3CstType.Items.AddRange(new object[] {
-            "FOSB",
-            "FOUP",
-            "OPEN",
-            "ADAPT"});
-            this.cbP3CstType.Location = new System.Drawing.Point(142, 137);
-            this.cbP3CstType.Name = "cbP3CstType";
-            this.cbP3CstType.Size = new System.Drawing.Size(86, 32);
-            this.cbP3CstType.TabIndex = 2;
-            this.cbP3CstType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP2CstType
-            // 
-            this.cbP2CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP2CstType.FormattingEnabled = true;
-            this.cbP2CstType.Items.AddRange(new object[] {
-            "FOSB",
-            "FOUP",
-            "OPEN",
-            "ADAPT"});
-            this.cbP2CstType.Location = new System.Drawing.Point(142, 97);
-            this.cbP2CstType.Name = "cbP2CstType";
-            this.cbP2CstType.Size = new System.Drawing.Size(86, 32);
-            this.cbP2CstType.TabIndex = 2;
-            this.cbP2CstType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // cbP1CstType
-            // 
-            this.cbP1CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbP1CstType.FormattingEnabled = true;
-            this.cbP1CstType.Items.AddRange(new object[] {
-            "FOSB",
-            "FOUP",
-            "OPEN",
-            "ADAPT"});
-            this.cbP1CstType.Location = new System.Drawing.Point(142, 57);
-            this.cbP1CstType.Name = "cbP1CstType";
-            this.cbP1CstType.Size = new System.Drawing.Size(86, 32);
-            this.cbP1CstType.TabIndex = 2;
-            this.cbP1CstType.Click += new System.EventHandler(this.modeCheck);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label15.Location = new System.Drawing.Point(9, 180);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(58, 24);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Port4";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label14.Location = new System.Drawing.Point(9, 140);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 24);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Port3";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label13.Location = new System.Drawing.Point(9, 100);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(58, 24);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Port2";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label12.Location = new System.Drawing.Point(9, 60);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 24);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Port1";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label23);
-            this.groupBox5.Controls.Add(this.tbFFUCloseRpm);
-            this.groupBox5.Controls.Add(this.tbFFUOpenRpm);
-            this.groupBox5.Controls.Add(this.label33);
-            this.groupBox5.Controls.Add(this.label28);
-            this.groupBox5.Location = new System.Drawing.Point(652, 16);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(270, 168);
-            this.groupBox5.TabIndex = 10;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "FFU";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label23.Location = new System.Drawing.Point(157, 30);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(48, 24);
-            this.label23.TabIndex = 0;
-            this.label23.Text = "轉速";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tbFFUCloseRpm
-            // 
-            this.tbFFUCloseRpm.Location = new System.Drawing.Point(129, 101);
-            this.tbFFUCloseRpm.Name = "tbFFUCloseRpm";
-            this.tbFFUCloseRpm.Size = new System.Drawing.Size(109, 33);
-            this.tbFFUCloseRpm.TabIndex = 1;
-            this.tbFFUCloseRpm.Text = "0";
-            this.tbFFUCloseRpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbFFUCloseRpm.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // tbFFUOpenRpm
-            // 
-            this.tbFFUOpenRpm.Location = new System.Drawing.Point(129, 59);
-            this.tbFFUOpenRpm.Name = "tbFFUOpenRpm";
-            this.tbFFUOpenRpm.Size = new System.Drawing.Size(109, 33);
-            this.tbFFUOpenRpm.TabIndex = 1;
-            this.tbFFUOpenRpm.Text = "0";
-            this.tbFFUOpenRpm.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbFFUOpenRpm.TextChanged += new System.EventHandler(this.modeCheck);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label33.Location = new System.Drawing.Point(37, 104);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(86, 24);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "開門狀況";
-            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label28.Location = new System.Drawing.Point(37, 62);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(86, 24);
-            this.label28.TabIndex = 0;
-            this.label28.Text = "一般狀況";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // FormRecipeSetting_1R2A2O4P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -1487,6 +1485,14 @@
             this.gbRecipeHeader.PerformLayout();
             this.gbRecipeBody.ResumeLayout(false);
             this.gbRecipeBody.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -1500,14 +1506,6 @@
             this.tlpAccountMenu.ResumeLayout(false);
             this.palContainer.ResumeLayout(false);
             this.tlpAccount.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }

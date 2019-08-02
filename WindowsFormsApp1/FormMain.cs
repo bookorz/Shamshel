@@ -692,8 +692,8 @@ namespace Adam
                                 case Transaction.Command.LoadPortType.DoorUp:
                                 case Transaction.Command.LoadPortType.InitialPos:
                                 case Transaction.Command.LoadPortType.ForceInitialPos:
-                                    MonitoringUpdate.UpdateFoupID(Node.Name, "");
-                                    WaferAssignUpdate.UpdateFoupID(Node.Name, "");
+                                    MonitoringUpdate.UpdateFoupID(Node.Name, "Click for load");
+                                    //WaferAssignUpdate.UpdateFoupID(Node.Name, "");
                                     break;
                             }
                             break;
@@ -2781,7 +2781,8 @@ namespace Adam
             string Message = "";
             TaskJobManagment.CurrentProceedTask Task;
             Dictionary<string, string> param = new Dictionary<string, string>();
-            param.Add("@AlingerSpeed", recipe.aligner1_speed);
+            param.Add("@Alinger1Speed", recipe.aligner1_speed);
+            param.Add("@Alinger2Speed", recipe.aligner2_speed);
             param.Add("@RobotSpeed", recipe.robot1_speed);
             RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
 
@@ -2955,6 +2956,11 @@ namespace Adam
 
         private void ManualTranfer_btn_Click(object sender, EventArgs e)
         {
+            if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
+            {
+                MessageBox.Show("Not surpport in burn in mode.");
+                return;
+            }
             using (var form = new FormWaferAssign())
             {
                 form.StartPosition = FormStartPosition.CenterScreen;

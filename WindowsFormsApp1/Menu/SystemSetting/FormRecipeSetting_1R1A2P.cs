@@ -71,9 +71,7 @@ namespace Adam.Menu.SystemSetting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            DIOUpdate.UpdateControlButton("Start_btn", false);
-            DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
-            DIOUpdate.UpdateControlButton("Stop_btn", false);
+            FormMain.Initial = false;
             //檢查資料
             if (tbRecipeID.Text.Trim().Equals("") || tbRecipeName.Text.Trim().Equals(""))
             {

@@ -208,8 +208,14 @@ namespace Adam
         {
             WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
             RenderSourceAssign();
-
-
+            Node port = NodeManagement.Get(Source_cb.Text);
+            if (port == null) {
+                From_FOUPID.Text = "";
+            }
+            else
+            {
+                From_FOUPID.Text = port.FoupID;
+            }
         }
 
         private void To_cb_SelectedIndexChanged(object sender, EventArgs e)
@@ -217,6 +223,15 @@ namespace Adam
            
             WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             RenderToAssign();
+            Node port = NodeManagement.Get(To_cb.Text);
+            if (port == null)
+            {
+                TO_FOUPID.Text = "";
+            }
+            else
+            {
+                TO_FOUPID.Text = port.FoupID;
+            }
         }
         Job slotDataSrc = null;
 
