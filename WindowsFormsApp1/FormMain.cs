@@ -1693,6 +1693,20 @@ namespace Adam
                 CurrentAlarm.IsStop = Detail.IsStop;
                 if (CurrentAlarm.IsStop)
                 {
+                    DIOUpdate.UpdateControlButton("Start_btn", false);
+                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
+                    DIOUpdate.UpdateControlButton("Stop_btn", false);
+                    if (Mode_btn.Text.Equals("Auto-Mode"))
+                    {
+                        DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
+                    }
+                    else
+                    {
+                        DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
+                    }
+                    DIOUpdate.UpdateControlButton("Mode_btn", true);
+                    
+                    RunMode = "";
                     Start = false;
                     Initial = false;
                     XfeCrossZone.Stop();
@@ -1743,21 +1757,8 @@ namespace Adam
             }
             else
             {
-                DIOUpdate.UpdateControlButton("Start_btn", false);
-                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
-                DIOUpdate.UpdateControlButton("Stop_btn", false);
-                if (Mode_btn.Text.Equals("Auto-Mode"))
-                {
-                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
-                }
-                else
-                {
-                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
-                }
-                DIOUpdate.UpdateControlButton("Mode_btn", true);
-                Start = false;
-                RunMode = "";
-                WaferAssignUpdate.UpdateEnabled("FORM", true);
+                
+                //WaferAssignUpdate.UpdateEnabled("FORM", true);
                 //XfeCrossZone.Stop();
                 //if (Task.Id.IndexOf("FormManual") != -1)
                 //{
