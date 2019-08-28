@@ -4671,7 +4671,7 @@
             this.gbOCR2.Controls.Add(this.OCR02Read_Tb);
             this.gbOCR2.Controls.Add(this.OCR02ReadT7_Tb);
             this.gbOCR2.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOCR2.Location = new System.Drawing.Point(1154, 7);
+            this.gbOCR2.Location = new System.Drawing.Point(1154, 10);
             this.gbOCR2.Name = "gbOCR2";
             this.gbOCR2.Size = new System.Drawing.Size(427, 373);
             this.gbOCR2.TabIndex = 177;

@@ -96,6 +96,7 @@ namespace Adam.Menu.SystemSetting
             switch (eqpType)
             {
                 case "1R1A1O4P":
+                case "1R1A3P1L":
                     AddForm(new FormRecipeSetting_1R1A1O4P());
                     break;
                 case "1R2A2O4P":

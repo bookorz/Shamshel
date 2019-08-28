@@ -555,9 +555,13 @@ namespace Adam
                                 case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSV:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
+                                    if (Node.Brand.ToUpper().Equals("KAWASAKI") && Txn.Method.Equals(Transaction.Command.RobotType.GetStatus))
+                                    {
+                                        ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
+                                    }
                                     break;
                                 case Transaction.Command.RobotType.GetCombineStatus:
-                                    ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
+
                                     break;
                                 case Transaction.Command.RobotType.GetMapping:
                                     ManualPortStatusUpdate.UpdateMapping(Node.CurrentPosition, Msg.Value.Replace(",", "").Substring(1));
@@ -918,7 +922,7 @@ namespace Adam
             string TaskName = "";
             string Message = "";
 
-            TaskJobManagment.CurrentProceedTask Task;
+            TaskFlowManagement.CurrentProcessTask Task;
             try
             {
                 Transaction txn = new Transaction();
@@ -950,12 +954,11 @@ namespace Adam
                                 if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("UnloadComplete") && !Node.IsLoad)
                                 {
                                     Node.CurrentStatus = "UnloadComplete";
-                                    TaskName = "LOADPORT_UNLOADCOMPLETE";
-                                    Message = "";
+
                                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                                     param1.Add("@Target", Node.Name);
 
-                                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param1);
+                                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_UNLOADCOMPLETE, param1);
                                 }
                                 if (Node.IsLoad)
                                 {
@@ -967,12 +970,11 @@ namespace Adam
                                 if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("ReadyToLoad") && !Node.IsLoad)
                                 {
                                     Node.CurrentStatus = "ReadyToLoad";
-                                    TaskName = "LOADPORT_READYTOLOAD";
-                                    Message = "";
+
                                     Dictionary<string, string> param2 = new Dictionary<string, string>();
                                     param2.Add("@Target", Node.Name);
 
-                                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param2);
+                                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_READYTOLOAD, param2);
                                 }
                                 break;
                             case "ABNST":
@@ -1150,13 +1152,13 @@ namespace Adam
                             }
                             break;
                         case "DOORSWITCH":
-                            string TaskName = "FFU_SET_SPEED";
+
                             //RouteControl.Instance.TaskJob.ForceFinishTask(TaskName);
 
                             Node ffu = NodeManagement.Get("FFU01");
                             if (ffu != null)
                             {
-                                string Message = "";
+
                                 Dictionary<string, string> param1 = new Dictionary<string, string>();
                                 param1.Add("@Target", ffu.Name);
                                 if (Value.ToUpper().Equals("TRUE"))
@@ -1169,8 +1171,8 @@ namespace Adam
                                     param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
                                     DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
                                 }
-                                TaskJobManagment.CurrentProceedTask tmpTask;
-                                RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+                                TaskFlowManagement.CurrentProcessTask tmpTask;
+                                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
                             }
                             break;
                     }
@@ -1705,7 +1707,7 @@ namespace Adam
                         DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
                     }
                     DIOUpdate.UpdateControlButton("Mode_btn", true);
-                    
+
                     RunMode = "";
                     Start = false;
                     Initial = false;
@@ -1726,21 +1728,17 @@ namespace Adam
             }
         }
 
-        public void On_TaskJob_Aborted(TaskJobManagment.CurrentProceedTask Task, string NodeName, string ReportType, string Message)
+        public void On_TaskJob_Aborted(TaskFlowManagement.CurrentProcessTask Task, string NodeName, string ReportType, string Message)
         {
             if (Task != null)
             {
-                if (Task.ProceedTask != null)
+                switch (Task.TaskName)
                 {
-                    switch (Task.ProceedTask.TaskName)
-                    {
-                        case "SORTER_INIT":
+                    case TaskFlowManagement.Command.ALL_INIT:
 
-                            Initializing = false;
-                            break;
-                    }
+                        Initializing = false;
+                        break;
                 }
-
             }
             ManualPortStatusUpdate.LockUI(false);
             if (ReportType.ToUpper().Equals("CAN"))
@@ -1757,7 +1755,7 @@ namespace Adam
             }
             else
             {
-                
+
                 //WaferAssignUpdate.UpdateEnabled("FORM", true);
                 //XfeCrossZone.Stop();
                 //if (Task.Id.IndexOf("FormManual") != -1)
@@ -1771,16 +1769,16 @@ namespace Adam
             }
         }
 
-        public void On_TaskJob_Finished(TaskJobManagment.CurrentProceedTask Task)
+        public void On_TaskJob_Finished(TaskFlowManagement.CurrentProcessTask Task)
         {
 
             //if (Task.Id.IndexOf("FormManual") != -1)
             //{
             ManualPortStatusUpdate.LockUI(false);
             //}
-            switch (Task.ProceedTask.TaskName)
+            switch (Task.TaskName)
             {
-                case "SORTER_INIT":
+                case  TaskFlowManagement.Command.ALL_INIT:
 
 
                     if (CurrentMode.Equals("AUTO"))
@@ -1850,8 +1848,8 @@ namespace Adam
                     }
 
                     break;
-                case "LOADPORT_OPEN":
-                case "LOADPORT_REOPEN":
+                case TaskFlowManagement.Command.LOADPORT_OPEN:
+                case TaskFlowManagement.Command.LOADPORT_REOPEN:
                     Node currentPort = NodeManagement.Get(Task.Params["@Target"]);
                     if (Start)
                     {
@@ -1893,7 +1891,7 @@ namespace Adam
                     WaferAssignUpdate.ButtonEnabled(Task.Params["@Target"].ToUpper() + "_Unload_btn", true);
                     //}
                     break;
-                case "LOADPORT_CLOSE_NOMAP":
+                case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
 
                     ////test mode
                     //Node p = NodeManagement.Get(Task.Params["@Target"]);
@@ -2215,10 +2213,7 @@ namespace Adam
         }
 
 
-        private bool checkTask(TaskJobManagment.CurrentProceedTask Task1, TaskJobManagment.CurrentProceedTask Task2)
-        {
-            return Task1.Finished && Task2.Finished;
-        }
+       
         public static bool cycleRun = false;
         public void On_Transfer_Complete(XfeCrossZone xfe)
         {
@@ -2282,13 +2277,9 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-                    //string TaskName = "LOADPORT_REOPEN";
-                    string TaskName = "LOADPORT_CLOSE_NOMAP";
-                    string Message = "";
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
-                    TaskJobManagment.CurrentProceedTask tmpTask;
-                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
                     return;
                 }
                 var AvailableSlots = from eachSlot in Port.JobList.Values.ToList()
@@ -2445,12 +2436,10 @@ namespace Adam
                     }
                     MonitoringUpdate.ButtonEnabled(Port.Name.ToUpper() + "_Unload_btn", false);
                     WaferAssignUpdate.ButtonEnabled(Port.Name.ToUpper() + "_Unload_btn", false);
-                    string TaskName = "LOADPORT_CLOSE_NOMAP";
-                    string Message = "";
+
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
-                    TaskJobManagment.CurrentProceedTask tmpTask;
-                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
                 }
             }
             catch (Exception e)
@@ -2466,12 +2455,10 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-                    string TaskName = "LOADPORT_CLOSE_NOMAP";
-                    string Message = "";
+
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
-                    TaskJobManagment.CurrentProceedTask tmpTask;
-                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+                    TaskFlowManagement.CurrentProcessTask tmpTask= TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
 
                     SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
 
@@ -2479,13 +2466,9 @@ namespace Adam
                     {
                         if (port.Enable && !port.IsMapping)
                         {
-                            TaskName = "LOADPORT_OPEN";
-                            Message = "";
                             param1 = new Dictionary<string, string>();
                             param1.Add("@Target", port.Name);
-
-                            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
-
+                            tmpTask=TaskFlowManagement.Excute(Guid.NewGuid().ToString(),  TaskFlowManagement.Command.LOADPORT_OPEN, param1);
                             SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
                         }
                     }
@@ -2632,12 +2615,9 @@ namespace Adam
 
                         }
                     }
-                    string TaskName = "LOADPORT_CLOSE_NOMAP";
-                    string Message = "";
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
-                    TaskJobManagment.CurrentProceedTask tmpTask;
-                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
+                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
                 }
                 else
                 {
@@ -2778,17 +2758,14 @@ namespace Adam
             DIOUpdate.UpdateControlButton("Start_btn", false);
             DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
             Recipe recipe = Recipe.Get(SystemConfig.Get().CurrentRecipe);
-            string TaskName = "SORTER_INIT";
-            string Message = "";
-            TaskJobManagment.CurrentProceedTask Task;
             Dictionary<string, string> param = new Dictionary<string, string>();
             param.Add("@Alinger1Speed", recipe.aligner1_speed);
             param.Add("@Alinger2Speed", recipe.aligner2_speed);
             param.Add("@RobotSpeed", recipe.robot1_speed);
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.ALL_INIT, param);
 
             //DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
-            
+
 
             Initializing = true;
 
@@ -2935,7 +2912,7 @@ namespace Adam
 
 
 
-        public void On_TaskJob_Ack(TaskJobManagment.CurrentProceedTask Task)
+        public void On_TaskJob_Ack(TaskFlowManagement.CurrentProcessTask Task)
         {
 
         }

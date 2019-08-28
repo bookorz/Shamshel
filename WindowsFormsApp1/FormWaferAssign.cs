@@ -145,7 +145,18 @@ namespace Adam
                 foreach(AssignInfo each in AssignInfo.GetAssignList())
                 {
                     Node LD = NodeManagement.Get(each.FromPort);
-                    LD.JobList[each.FromSlot].AssignPort(each.ToPort, each.ToSlot);
+                    Job j = LD.JobList[each.FromSlot];
+                    j.AssignPort(each.ToPort, each.ToSlot);
+                    FoupInfo tmp = FoupInfo.Get(each.FromPort);
+                    if (tmp == null)
+                    {
+                        tmp = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, LD.FoupID);
+                    }
+                    int slot = Convert.ToInt16(j.Slot);
+                    Node ULD = NodeManagement.Get(j.Destination);
+                    tmp.record[slot - 1] = new Adam.waferInfo(LD.Name, LD.FoupID, j.Slot, j.FromPort, LD.FoupID, j.FromPortSlot, j.Destination, ULD.FoupID, j.DestinationSlot);
+                    tmp.record[slot - 1].SetLoadTime(LD.LoadTime);
+                    tmp.SaveTmp(LD.Name);
                 }
                 //tmp change config
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed = tbR1_speed.Text;
@@ -160,6 +171,7 @@ namespace Adam
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_m12_config = tbOcrM12.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_t7_config = tbOcrT7.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule = cbOcrCheckRule.Text;
+
 
                 if (!FormMain.xfe.Start(Source_cb.Text,true))
                 {

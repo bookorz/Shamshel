@@ -58,11 +58,11 @@ namespace Adam.Menu.RunningScreen
                         port.ManaulControl = false;
                         string TaskName = "LOADPORT_UNLOADCOMPLETE";
                         string Message = "";
-                        TaskJobManagment.CurrentProceedTask CurrTask;
+                        
                         Dictionary<string, string> param1 = new Dictionary<string, string>();
                         param1.Add("@Target", port.Name);
 
-                        RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out CurrTask, TaskName, param1);
+                        TaskFlowManagement.CurrentProcessTask CurrTask= TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param1);
                         SpinWait.SpinUntil(() => CurrTask.Finished, 99999999);
                         if (CurrTask.HasError)
                         {
@@ -329,7 +329,7 @@ namespace Adam.Menu.RunningScreen
             bool result = true;
             string Message = "";
 
-            TaskJobManagment.CurrentProceedTask CurrTask;
+            
             Dictionary<string, string> param = new Dictionary<string, string>();
            
            
@@ -353,7 +353,7 @@ namespace Adam.Menu.RunningScreen
             {
                 param.Add("@Value", Value);
             }
-            RouteControl.Instance.TaskJob.Excute("RunningScreen", out Message, out CurrTask, TaskName, param);
+            TaskFlowManagement.CurrentProcessTask CurrTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             SpinWait.SpinUntil(() => CurrTask.Finished, 99999999);
             if (CurrTask.HasError)
             {
@@ -370,11 +370,11 @@ namespace Adam.Menu.RunningScreen
             if (MessageBox.Show(strMsg, "ChangeSpeed", MessageBoxButtons.OKCancel, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1) == DialogResult.OK)
             {
                 string Message = "";
-                TaskJobManagment.CurrentProceedTask CurrTask;
+               
                 Dictionary<string, string> param = new Dictionary<string, string>();
                 string TaskName = "SORTER_SPEED";
                 param.Add("@Value", RunningSpeed_cb.Text.Replace("%", ""));
-                RouteControl.Instance.TaskJob.Excute("RunningScreen2", out Message, out CurrTask, TaskName, param);
+                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             }
         }
 

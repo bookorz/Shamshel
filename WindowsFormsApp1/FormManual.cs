@@ -30,7 +30,7 @@ namespace GUI
 
         private void FormManual_Load(object sender, EventArgs e)
         {
-            RouteControl.Instance.TaskJob.Clear();
+            TaskFlowManagement.Clear();
 
             Initialize();
             Update_Manual_Status();
@@ -229,8 +229,8 @@ namespace GUI
             {
                 ManualPortStatusUpdate.LockUI(true);
                 //port.SendCommand(txn, out Message);
-                TaskJobManagment.CurrentProceedTask Task;
-                RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+
+                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             }
             else
             {
@@ -436,8 +436,8 @@ namespace GUI
             }
 
             ManualPortStatusUpdate.LockUI(true);
-            TaskJobManagment.CurrentProceedTask Task;
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             // setAlignerStatus();
         }
 
@@ -487,8 +487,7 @@ namespace GUI
                     param.Add("@Target", nodeName);
                     break;
             }
-            TaskJobManagment.CurrentProceedTask Task;
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             ManualPortStatusUpdate.LockUI(false);
             //SetFormEnable(true);
             //Node node = NodeManagement.Get(nodeName);
@@ -830,8 +829,7 @@ namespace GUI
                     break;
             }
             ManualPortStatusUpdate.LockUI(true);
-            TaskJobManagment.CurrentProceedTask Task;
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
 
             //switch (btn.Name)
             //{
@@ -1096,8 +1094,7 @@ namespace GUI
             Dictionary<string, string> param = new Dictionary<string, string>();
             string TaskName = "ROBOT_Init";
             param.Add("@Target", nodeName);
-            TaskJobManagment.CurrentProceedTask Task;
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
         }
 
         private void setLoadportStatus()
@@ -1109,8 +1106,7 @@ namespace GUI
             Dictionary<string, string> param = new Dictionary<string, string>();
             string TaskName = "LOADPORT_INIT";
             param.Add("@Target", nodeName);
-            TaskJobManagment.CurrentProceedTask Task;
-            RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+            TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
         }
         private void setAlignerStatus()
         {
@@ -1142,16 +1138,16 @@ namespace GUI
             string TaskName = "ALIGNER_INIT";
             param.Add("@Target", "ALIGNER01");
 
-            TaskJobManagment.CurrentProceedTask Task;
+            
             if (aligner1 != null)
             {
-                RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             }
             param = new Dictionary<string, string>();
             param.Add("@Target", "ALIGNER02");
             if (aligner2 != null)
             {
-                RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
             }
         }
 
@@ -1340,6 +1336,7 @@ namespace GUI
             switch (node.Type.ToUpper())
             {
                 case "ALIGNER":
+                case "LOADLOCK":
                     cbRA1Slot.Items.Clear();
                     cbRA1Slot.Items.Add("1");
                     break;
@@ -1374,6 +1371,7 @@ namespace GUI
             switch (node.Type.ToUpper())
             {
                 case "ALIGNER":
+                case "LOADLOCK":
                     cbRA2Slot.Items.Clear();
                     cbRA2Slot.Items.Add("1");
                     break;

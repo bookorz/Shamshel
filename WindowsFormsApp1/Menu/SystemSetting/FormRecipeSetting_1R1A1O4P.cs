@@ -122,7 +122,7 @@ namespace Adam.Menu.SystemSetting
             recipe.aligner1_speed = tbA1_speed.Text.Equals("") ? "20" : Int32.Parse(tbA1_speed.Text).ToString();
             recipe.aligner2_angle = tbA2_speed.Text.Equals("") ? "0" : Int32.Parse(tbA2_angle.Text).ToString();
             recipe.aligner2_speed = tbA2_angle.Text.Equals("") ? "20" : Int32.Parse(tbA2_speed.Text).ToString();
-
+            recipe.wafer_size = "300";
             recipe.is_use_aligner1 = cbUseA1.Checked;
             recipe.is_use_aligner2 = cbUseA2.Checked;
             recipe.is_use_ocr_ttl = cbUseOcrTTL.Checked;

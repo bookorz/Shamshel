@@ -84,7 +84,7 @@ namespace Adam
                     foupID = FoupID_Read_tb.Text;
                 }
 
-                TaskJobManagment.CurrentProceedTask Task;
+               
                 Node port = NodeManagement.Get(LoadportName_lb.Text);
                 if (port != null)
                 {
@@ -97,7 +97,7 @@ namespace Adam
                     Dictionary<string, string> param = new Dictionary<string, string>();
                     param.Add("@Target", port.Name);
 
-                    RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
                     this.Hide();
                 }
                 else
