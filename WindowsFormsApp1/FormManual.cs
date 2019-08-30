@@ -659,7 +659,7 @@ namespace GUI
                 //    }
                 //    break;
                 case "btnRInit":
-                    TaskName = "ROBOT_Init";
+                    TaskName = "ROBOT_INIT";
                     param.Add("@Target", nodeName);
                     break;
                 case "btnRMoveDown":
@@ -794,22 +794,22 @@ namespace GUI
                     param.Add("@Value", nudRSpeed.Text);
                     break;
                 case "btnRRVacuOn":
-                    TaskName = "SET_CLAMP_ON";
+                    TaskName = "ROBOT_WAFER_HOLD";
                     param.Add("@Target", nodeName);
                     param.Add("@Arm", "1");
                     break;
                 case "btnRRVacuOff":
-                    TaskName = "SET_CLAMP_OFF";
+                    TaskName = "ROBOT_WAFER_RELEASE";
                     param.Add("@Target", nodeName);
                     param.Add("@Arm", "1");
                     break;
                 case "btnRLVacuOn":
-                    TaskName = "SET_CLAMP_ON";
+                    TaskName = "ROBOT_WAFER_HOLD";
                     param.Add("@Target", nodeName);
                     param.Add("@Arm", "2");
                     break;
                 case "btnRLVacuOff":
-                    TaskName = "SET_CLAMP_OFF";
+                    TaskName = "ROBOT_WAFER_RELEASE";
                     param.Add("@Target", nodeName);
                     param.Add("@Arm", "2");
                     break;
@@ -819,7 +819,7 @@ namespace GUI
                         MessageBox.Show(" Insufficient information, please select mode!", "Invalid Mode");
                         return;
                     }
-                    TaskName = "SET_MODE";
+                    TaskName = "ROBOT_MODE";
                     param.Add("@Target", nodeName);
                     param.Add("@Value", Convert.ToString(cbRMode.SelectedIndex));
                     break;

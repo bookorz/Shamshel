@@ -1711,7 +1711,10 @@ namespace Adam
                     RunMode = "";
                     Start = false;
                     Initial = false;
-                    XfeCrossZone.Stop();
+                    if (XfeCrossZone.Running)
+                    {
+                        XfeCrossZone.Stop();
+                    }
                 }
                 CurrentAlarm.TimeStamp = DateTime.Now;
 

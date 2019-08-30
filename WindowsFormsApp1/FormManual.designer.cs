@@ -1266,8 +1266,9 @@
             // 
             // tbRServo
             // 
-            this.tbRServo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRServo.BackColor = System.Drawing.Color.LimeGreen;
             this.tbRServo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRServo.ForeColor = System.Drawing.Color.Transparent;
             this.tbRServo.Location = new System.Drawing.Point(224, 249);
             this.tbRServo.Name = "tbRServo";
             this.tbRServo.ReadOnly = true;
@@ -1335,6 +1336,7 @@
             this.btnRReset.TabIndex = 108;
             this.btnRReset.Text = "Reset";
             this.btnRReset.UseVisualStyleBackColor = false;
+            this.btnRReset.Visible = false;
             this.btnRReset.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
             // nudRSpeed
