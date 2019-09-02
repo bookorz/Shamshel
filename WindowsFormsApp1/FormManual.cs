@@ -700,7 +700,7 @@ namespace GUI
                     param.Add("@Target", nodeName);
                     break;
                 case "btnRGet":
-                    TaskName = "LOAD";
+                    TaskName = "ROBOT_GET";
                     if (cbRA1Point.Text.Equals(""))
                     {
                         MessageBox.Show("Point is empty!");
@@ -718,7 +718,7 @@ namespace GUI
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA1Arm.Text));
                     break;
                 case "btnRPut":
-                    TaskName = "UNLOAD";
+                    TaskName = "ROBOT_PUT";
                     if (cbRA2Point.Text.Equals(""))
                     {
                         MessageBox.Show("Point is empty!");
@@ -736,7 +736,7 @@ namespace GUI
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA2Arm.Text));
                     break;
                 case "btnRGetWait":
-                    TaskName = "DOWN_GOTO";
+                    TaskName = "ROBOT_GETWAIT";
                     if (cbRA1Point.Text.Equals(""))
                     {
                         MessageBox.Show("Point is empty!");
@@ -753,7 +753,7 @@ namespace GUI
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA1Arm.Text));
                     break;
                 case "btnRPutWait":
-                    TaskName = "UP_GOTO";
+                    TaskName = "ROBOT_PUTWAIT";
                     if (cbRA2Point.Text.Equals(""))
                     {
                         MessageBox.Show("Point is empty!");
@@ -789,7 +789,7 @@ namespace GUI
                     param.Add("@Value", "0");
                     break;
                 case "btnRChgSpeed":
-                    TaskName = "SPEED";
+                    TaskName = "ROBOT_SPEED";
                     param.Add("@Target", nodeName);
                     param.Add("@Value", nudRSpeed.Text);
                     break;
@@ -1092,7 +1092,7 @@ namespace GUI
             //robot.ExcuteScript(script_name, "FormManual", out Message);
 
             Dictionary<string, string> param = new Dictionary<string, string>();
-            string TaskName = "ROBOT_Init";
+            string TaskName = "ROBOT_INIT";
             param.Add("@Target", nodeName);
             TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param);
         }

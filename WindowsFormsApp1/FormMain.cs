@@ -387,10 +387,7 @@ namespace Adam
 
             Transaction SendTxn = new Transaction();
 
-            if (Txn.Method == Transaction.Command.LoadPortType.Reset)
-            {
-                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-            }
+            
 
 
 
@@ -400,6 +397,7 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.LoadPortType.GetMapping:
+                        case Transaction.Command.LoadPortType.GetMappingDummy:
                         case Transaction.Command.LoadPortType.Unload:
                         case Transaction.Command.LoadPortType.MappingUnload:
                         case Transaction.Command.LoadPortType.DoorUp:
@@ -525,6 +523,7 @@ namespace Adam
 
                                     break;
                                 case Transaction.Command.LoadPortType.GetMapping:
+                                case Transaction.Command.LoadPortType.GetMappingDummy:
                                     ManualPortStatusUpdate.UpdateMapping(Node.Name, Msg.Value);
                                     break;
                             }
@@ -1781,6 +1780,11 @@ namespace Adam
             //}
             switch (Task.TaskName)
             {
+                case TaskFlowManagement.Command.ROBOT_RESET:
+                case TaskFlowManagement.Command.ALIGNER_RESET:
+                case TaskFlowManagement.Command.LOADPORT_RESET:
+                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());            
+                    break;
                 case  TaskFlowManagement.Command.ALL_INIT:
 
 

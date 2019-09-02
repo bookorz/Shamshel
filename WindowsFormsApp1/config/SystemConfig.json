@@ -11,7 +11,7 @@
   "MappingData": "111111111111111111111111",
   "EFEMInterfaceConn": null,
   "EFEMInterfaceConn_Port": 0,
-  "SaftyCheckByPass": false,
+  "SaftyCheckByPass": true,
   "FakeData": false,
   "AdminPassword": "0192023A7BBD73250516F069DF18B500",
   "CurrentRecipe": "default",
