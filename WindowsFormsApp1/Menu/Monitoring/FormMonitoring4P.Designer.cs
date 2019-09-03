@@ -263,7 +263,7 @@
             this.gbA2 = new System.Windows.Forms.GroupBox();
             this.Aligner02_State = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Aligner02_Slot_1 = new System.Windows.Forms.Label();
+            this.LOADLOCK01_Slot_1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.gbA1 = new System.Windows.Forms.GroupBox();
             this.Aligner01_State = new System.Windows.Forms.TextBox();
@@ -4478,7 +4478,7 @@
             this.gbA2.Size = new System.Drawing.Size(295, 84);
             this.gbA2.TabIndex = 179;
             this.gbA2.TabStop = false;
-            this.gbA2.Text = "Aligner2";
+            this.gbA2.Text = "BUFFER01";
             // 
             // Aligner02_State
             // 
@@ -4492,31 +4492,32 @@
             this.Aligner02_State.TabIndex = 147;
             this.Aligner02_State.Text = "Idle";
             this.Aligner02_State.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Aligner02_State.Visible = false;
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.Aligner02_Slot_1);
+            this.panel1.Controls.Add(this.LOADLOCK01_Slot_1);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Location = new System.Drawing.Point(72, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(177, 39);
             this.panel1.TabIndex = 149;
             // 
-            // Aligner02_Slot_1
+            // LOADLOCK01_Slot_1
             // 
-            this.Aligner02_Slot_1.BackColor = System.Drawing.Color.White;
-            this.Aligner02_Slot_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Aligner02_Slot_1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aligner02_Slot_1.ForeColor = System.Drawing.Color.White;
-            this.Aligner02_Slot_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.Aligner02_Slot_1.Location = new System.Drawing.Point(63, 10);
-            this.Aligner02_Slot_1.Margin = new System.Windows.Forms.Padding(3);
-            this.Aligner02_Slot_1.Name = "Aligner02_Slot_1";
-            this.Aligner02_Slot_1.Size = new System.Drawing.Size(104, 18);
-            this.Aligner02_Slot_1.TabIndex = 11;
-            this.Aligner02_Slot_1.Tag = "1";
-            this.Aligner02_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LOADLOCK01_Slot_1.BackColor = System.Drawing.Color.White;
+            this.LOADLOCK01_Slot_1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LOADLOCK01_Slot_1.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LOADLOCK01_Slot_1.ForeColor = System.Drawing.Color.White;
+            this.LOADLOCK01_Slot_1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.LOADLOCK01_Slot_1.Location = new System.Drawing.Point(63, 10);
+            this.LOADLOCK01_Slot_1.Margin = new System.Windows.Forms.Padding(3);
+            this.LOADLOCK01_Slot_1.Name = "LOADLOCK01_Slot_1";
+            this.LOADLOCK01_Slot_1.Size = new System.Drawing.Size(104, 18);
+            this.LOADLOCK01_Slot_1.TabIndex = 11;
+            this.LOADLOCK01_Slot_1.Tag = "1";
+            this.LOADLOCK01_Slot_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label13
             // 
@@ -4531,7 +4532,7 @@
             this.label13.Size = new System.Drawing.Size(48, 18);
             this.label13.TabIndex = 10;
             this.label13.Tag = "1";
-            this.label13.Text = "R";
+            this.label13.Text = "1";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gbA1
@@ -5048,7 +5049,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        internal System.Windows.Forms.Label Aligner02_Slot_1;
+        internal System.Windows.Forms.Label LOADLOCK01_Slot_1;
         internal System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox Aligner02_State;
         private System.Windows.Forms.Label label10;
