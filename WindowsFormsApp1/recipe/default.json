@@ -40,7 +40,7 @@
   "is_use_ocr_m12": false,
   "is_use_aligner1": true,
   "is_use_aligner2": false,
-  "is_use_exchange": true,
+  "is_use_exchange": false,
   "is_use_burnin": true,
   "ocr_type": null,
   "ocr_check_Rule": "NA",
@@ -63,5 +63,5 @@
   "ffu_rpm_close": "0",
   "is_use_double_arm": false,
   "is_use_r_arm": true,
-  "is_use_l_arm": true
+  "is_use_l_arm": false
 }

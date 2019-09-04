@@ -1336,7 +1336,6 @@
             this.btnRReset.TabIndex = 108;
             this.btnRReset.Text = "Reset";
             this.btnRReset.UseVisualStyleBackColor = false;
-            this.btnRReset.Visible = false;
             this.btnRReset.Click += new System.EventHandler(this.RobotFunction_Click);
             // 
             // nudRSpeed

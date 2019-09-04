@@ -1856,7 +1856,7 @@ namespace Adam
 
                     break;
                 case TaskFlowManagement.Command.LOADPORT_OPEN:
-                case TaskFlowManagement.Command.LOADPORT_REOPEN:
+                
                     Node currentPort = NodeManagement.Get(Task.Params["@Target"]);
                     if (Start)
                     {
