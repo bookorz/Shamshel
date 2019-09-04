@@ -245,6 +245,7 @@ namespace Adam
             this.EQP_State.BackColor = System.Drawing.Color.CornflowerBlue;
             this.EQP_State.Name = "EQP_State";
             this.EQP_State.UseVisualStyleBackColor = false;
+            this.EQP_State.Click += new System.EventHandler(this.EQP_State_Click);
             // 
             // Stop_btn
             // 

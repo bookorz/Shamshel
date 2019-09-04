@@ -387,7 +387,7 @@ namespace Adam
 
             Transaction SendTxn = new Transaction();
 
-            
+
 
 
 
@@ -1170,8 +1170,8 @@ namespace Adam
                                     param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
                                     DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
                                 }
-                                TaskFlowManagement.CurrentProcessTask tmpTask;
-                                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
+                                
+                                //TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
                             }
                             break;
                     }
@@ -1783,9 +1783,9 @@ namespace Adam
                 case TaskFlowManagement.Command.ROBOT_RESET:
                 case TaskFlowManagement.Command.ALIGNER_RESET:
                 case TaskFlowManagement.Command.LOADPORT_RESET:
-                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());            
+                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
                     break;
-                case  TaskFlowManagement.Command.ALL_INIT:
+                case TaskFlowManagement.Command.ALL_INIT:
 
 
                     if (CurrentMode.Equals("AUTO"))
@@ -1855,24 +1855,37 @@ namespace Adam
                     }
 
                     break;
+                case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
+                    if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
+                    {
+                        var AvailableOPENs = (from OPEN in NodeManagement.GetLoadPortList()
+                                              where OPEN.Enable && OPEN.Foup_Placement
+                                              select OPEN
+                                            ).OrderBy(x => x.LoadTime).ThenBy(x => x.Name);
+                        if (AvailableOPENs.Count() != 0)
+                        {
+                            Node port = AvailableOPENs.First();
+                            Dictionary<string, string> param1 = new Dictionary<string, string>();
+                            param1.Add("@Target", port.Name);
+                            TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+
+                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                        }
+                    }
+                    break;
                 case TaskFlowManagement.Command.LOADPORT_OPEN:
-                case TaskFlowManagement.Command.LOADPORT_REOPEN:
                     Node currentPort = NodeManagement.Get(Task.Params["@Target"]);
                     if (Start)
                     {
                         if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                         {
-                            //var Slots = from slot in currentPort.JobList.Values
-                            //            where slot.MapFlag && !slot.ErrPosition
-                            //            select slot;
-                            //if (Slots.Count() != 0)
+
+                            //Node ld = SearchLoadport();
+                            //if (ld != null)
                             //{
-                            Node ld = SearchLoadport();
-                            if (ld != null)
-                            {
-                                AssignWafer(ld);
-                            }
+                                AssignWafer(currentPort);
                             //}
+
                         }
                         else
                         {
@@ -1898,18 +1911,7 @@ namespace Adam
                     WaferAssignUpdate.ButtonEnabled(Task.Params["@Target"].ToUpper() + "_Unload_btn", true);
                     //}
                     break;
-                case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
-
-                    ////test mode
-                    //Node p = NodeManagement.Get(Task.Params["@Target"]);
-                    //TaskName = "LOADPORT_OPEN";
-                    //Message = "";
-                    //Dictionary<string, string> param1 = new Dictionary<string, string>();
-                    //param1.Add("@Target", p.Name);
-
-                    //RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
-
-                    break;
+               
             }
 
         }
@@ -2016,101 +2018,108 @@ namespace Adam
                     {//找到能放的FOSB
                         if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                         {
-                            var Jobs = from Slot in fosb.JobList.Values
-                                       where Slot.MapFlag && !Slot.ErrPosition
-                                       select Slot;
-                            if (Jobs.Count() != 0)
-                            {//有片就不選他當作uld
-                                continue;
-                            }
+                            //var Jobs = from Slot in fosb.JobList.Values
+                            //           where Slot.MapFlag && !Slot.ErrPosition
+                            //           select Slot;
+                            //if (Jobs.Count() != 0)
+                            //{//有片就不選他當作uld
+                            //    continue;
+                            //}
                         }
-                        var ULD_Jobs = (from Slot in fosb.JobList.Values
-                                        where !Slot.MapFlag && !Slot.ErrPosition && !Slot.IsAssigned
-                                        select Slot).OrderByDescending(x => Convert.ToInt16(x.Slot));
-                        if (Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("BOTTOM_UP"))
-                        {
-                            ULD_Jobs = (from Slot in fosb.JobList.Values
-                                        where !Slot.MapFlag && !Slot.ErrPosition && !Slot.IsAssigned
-                                        select Slot).OrderBy(x => Convert.ToInt16(x.Slot));
-                        }
+                        //var ULD_Jobs = (from Slot in fosb.JobList.Values
+                        //                where !Slot.MapFlag && !Slot.ErrPosition && !Slot.IsAssigned
+                        //                select Slot).OrderByDescending(x => Convert.ToInt16(x.Slot));
+                        //if (Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("BOTTOM_UP"))
+                        //{
+                        //    ULD_Jobs = (from Slot in fosb.JobList.Values
+                        //                where !Slot.MapFlag && !Slot.ErrPosition && !Slot.IsAssigned
+                        //                select Slot).OrderBy(x => Convert.ToInt16(x.Slot));
+                        //}
                         foreach (Job wafer in LD_Jobs)
                         {//檢查LD的所有WAFER
+                            wafer.NeedProcess = true;
+                            wafer.ProcessFlag = false;
+                            wafer.AlignerFlag = false;
+                            wafer.AssignPort(fosb.Name, wafer.Slot);
+                            isAssign = true;
+                            isAssign2 = true;
+                            wafer.IsAssigned = true;
+                            logger.Debug("Assign booktest from " + Loadport.Name + " slot:" + wafer.Slot + " to " + fosb.Name + " slot:" + wafer.Slot);
+                            //isAssign = false;
+                            //foreach (Job Slot in ULD_Jobs)
+                            //{//搜尋所有FOSB Slot 找到能放的     
+                            //    if (Recipe.Get(SystemConfig.Get().CurrentRecipe).auto_put_constrict.Equals("1") && fosb.CheckPreviousPresence(Slot.Slot) && Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("TOP_DOWN"))
+                            //    {//下一層有片所以不能放
+                            //        Slot.Locked = true;
+                            //    }
+                            //    else if (Recipe.Get(SystemConfig.Get().CurrentRecipe).auto_put_constrict.Equals("2") && fosb.CheckForwardPresence(Slot.Slot) && Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("TOP_DOWN"))
+                            //    {//下方所有都不能有片
+                            //        Slot.Locked = true;
+                            //    }
+                            //    else
+                            //    {
+                            //        wafer.NeedProcess = true;
+                            //        wafer.ProcessFlag = false;
+                            //        wafer.AlignerFlag = false;
+                            //        wafer.AssignPort(fosb.Name, Slot.Slot);
+                            //        isAssign = true;
+                            //        isAssign2 = true;
+                            //        Slot.IsAssigned = true;
+                            //        logger.Debug("Assign booktest from " + Loadport.Name + " slot:" + wafer.Slot + " to " + fosb.Name + " slot:" + Slot.Slot);
 
-                            isAssign = false;
-                            foreach (Job Slot in ULD_Jobs)
-                            {//搜尋所有FOSB Slot 找到能放的     
-                                if (Recipe.Get(SystemConfig.Get().CurrentRecipe).auto_put_constrict.Equals("1") && fosb.CheckPreviousPresence(Slot.Slot) && Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("TOP_DOWN"))
-                                {//下一層有片所以不能放
-                                    Slot.Locked = true;
-                                }
-                                else if (Recipe.Get(SystemConfig.Get().CurrentRecipe).auto_put_constrict.Equals("2") && fosb.CheckForwardPresence(Slot.Slot) && Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals("TOP_DOWN"))
-                                {//下方所有都不能有片
-                                    Slot.Locked = true;
-                                }
-                                else
-                                {
-                                    wafer.NeedProcess = true;
-                                    wafer.ProcessFlag = false;
-                                    wafer.AlignerFlag = false;
-                                    wafer.AssignPort(fosb.Name, Slot.Slot);
-                                    isAssign = true;
-                                    isAssign2 = true;
-                                    Slot.IsAssigned = true;
-                                    logger.Debug("Assign booktest from " + Loadport.Name + " slot:" + wafer.Slot + " to " + fosb.Name + " slot:" + Slot.Slot);
-
-                                    break;
-                                }
-                            }
-                            if (!isAssign)
-                            {
-                                break;
-                            }
+                            //        break;
+                            //    }
+                            //}
+                            //if (!isAssign)
+                            //{
+                            //    break;
+                            //}
                         }
                         if (isAssign2)
                         {//已經指派過的話就跳脫
                             break;
                         }
                     }
-                    LD_Jobs = (from wafer in Loadport.JobList.Values
-                               where wafer.NeedProcess && !wafer.IsReversed
-                               select wafer).OrderByDescending(x => Convert.ToInt16(x.Slot));
-                    if (Recipe.Get(SystemConfig.Get().CurrentRecipe).get_slot_order.Equals("BOTTOM_UP"))
-                    {
-                        LD_Jobs = (from wafer in Loadport.JobList.Values
-                                   where wafer.NeedProcess && !wafer.IsReversed
-                                   select wafer).OrderBy(x => Convert.ToInt16(x.Slot));
-                    }
-                    Node Rbt = NodeManagement.Get("ROBOT01");
-                    if (!Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals(Recipe.Get(SystemConfig.Get().CurrentRecipe).get_slot_order))
-                    {
-                        if (Rbt.RArmActive && Rbt.LArmActive && Rbt.DoubleArmActive)
-                        {
-                            for (int i = 1; i < LD_Jobs.Count(); i = i + 2)
-                            {//重新排序目的地for雙Arm
-                                Job upper = LD_Jobs.ToList()[i];
-                                Job lower = LD_Jobs.ToList()[i - 1];
-                                if (upper.Destination.Equals(lower.Destination) && upper.NeedProcess && lower.NeedProcess)
-                                {
-                                    string swapDes = upper.Destination;
-                                    string swapSlot = upper.DestinationSlot;
-                                    upper.AssignPort(lower.Destination, lower.DestinationSlot);
-                                    lower.AssignPort(swapDes, swapSlot);
-                                    logger.Debug("Reverse booktest from " + Loadport.Name + " slot:" + upper.Slot + " to " + upper.Destination + " slot:" + upper.DestinationSlot);
-                                    logger.Debug("Reverse booktest from " + Loadport.Name + " slot:" + lower.Slot + " to " + upper.Destination + " slot:" + lower.DestinationSlot);
-                                    logger.Debug("Reverse booktest ---------- ");
+                    //LD_Jobs = (from wafer in Loadport.JobList.Values
+                    //           where wafer.NeedProcess && !wafer.IsReversed
+                    //           select wafer).OrderByDescending(x => Convert.ToInt16(x.Slot));
+                    //if (Recipe.Get(SystemConfig.Get().CurrentRecipe).get_slot_order.Equals("BOTTOM_UP"))
+                    //{
+                    //    LD_Jobs = (from wafer in Loadport.JobList.Values
+                    //               where wafer.NeedProcess && !wafer.IsReversed
+                    //               select wafer).OrderBy(x => Convert.ToInt16(x.Slot));
+                    //}
+                    //Node Rbt = NodeManagement.Get("ROBOT01");
+                    //if (!Recipe.Get(SystemConfig.Get().CurrentRecipe).put_slot_order.Equals(Recipe.Get(SystemConfig.Get().CurrentRecipe).get_slot_order))
+                    //{
+                    //    if (Rbt.RArmActive && Rbt.LArmActive && Rbt.DoubleArmActive)
+                    //    {
+                    //        for (int i = 1; i < LD_Jobs.Count(); i = i + 2)
+                    //        {//重新排序目的地for雙Arm
+                    //            Job upper = LD_Jobs.ToList()[i];
+                    //            Job lower = LD_Jobs.ToList()[i - 1];
+                    //            if (upper.Destination.Equals(lower.Destination) && upper.NeedProcess && lower.NeedProcess)
+                    //            {
+                    //                string swapDes = upper.Destination;
+                    //                string swapSlot = upper.DestinationSlot;
+                    //                upper.AssignPort(lower.Destination, lower.DestinationSlot);
+                    //                lower.AssignPort(swapDes, swapSlot);
+                    //                logger.Debug("Reverse booktest from " + Loadport.Name + " slot:" + upper.Slot + " to " + upper.Destination + " slot:" + upper.DestinationSlot);
+                    //                logger.Debug("Reverse booktest from " + Loadport.Name + " slot:" + lower.Slot + " to " + upper.Destination + " slot:" + lower.DestinationSlot);
+                    //                logger.Debug("Reverse booktest ---------- ");
 
-                                }
-                            }
+                    //            }
+                    //        }
 
-                            foreach (Job each in Loadport.JobList.Values)
-                            {
-                                if (!each.Destination.Equals(""))
-                                {
-                                    each.IsReversed = true;
-                                }
-                            }
-                        }
-                    }
+                    //        foreach (Job each in Loadport.JobList.Values)
+                    //        {
+                    //            if (!each.Destination.Equals(""))
+                    //            {
+                    //                each.IsReversed = true;
+                    //            }
+                    //        }
+                    //    }
+                    //}
                     var NeedProcessSlot = from wafer in Loadport.JobList.Values
                                           where wafer.NeedProcess
                                           select wafer;
@@ -2220,7 +2229,7 @@ namespace Adam
         }
 
 
-       
+
         public static bool cycleRun = false;
         public void On_Transfer_Complete(XfeCrossZone xfe)
         {
@@ -2284,9 +2293,9 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-                    Dictionary<string, string> param1 = new Dictionary<string, string>();
-                    param1.Add("@Target", Port.Name);
-                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
+                    //Dictionary<string, string> param1 = new Dictionary<string, string>();
+                    //param1.Add("@Target", Port.Name);
+                    //TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
                     return;
                 }
                 var AvailableSlots = from eachSlot in Port.JobList.Values.ToList()
@@ -2462,23 +2471,29 @@ namespace Adam
             {
                 if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                 {
-
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
-                    param1.Add("@Target", Port.Name);
-                    TaskFlowManagement.CurrentProcessTask tmpTask= TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
+                    param1.Add("@Target", Port.Associated_Node);
+                    TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.ROBOT_RETRACT, param1);
 
                     SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
 
-                    foreach (Node port in NodeManagement.GetLoadPortList())
-                    {
-                        if (port.Enable && !port.IsMapping)
-                        {
-                            param1 = new Dictionary<string, string>();
-                            param1.Add("@Target", port.Name);
-                            tmpTask=TaskFlowManagement.Excute(Guid.NewGuid().ToString(),  TaskFlowManagement.Command.LOADPORT_OPEN, param1);
-                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
-                        }
-                    }
+                    param1 = new Dictionary<string, string>();
+                    param1.Add("@Target", Port.Name);
+                    tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
+
+                    SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+
+                    
+                    //foreach (Node port in NodeManagement.GetLoadPortList())
+                    //{
+                    //    if (port.Enable && !port.IsMapping)
+                    //    {
+                    //        param1 = new Dictionary<string, string>();
+                    //        param1.Add("@Target", port.Name);
+                    //        tmpTask=TaskFlowManagement.Excute(Guid.NewGuid().ToString(),  TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+                    //        SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                    //    }
+                    //}
                     return;
                 }
                 var Available = from each in Port.JobList.Values
@@ -2801,37 +2816,53 @@ namespace Adam
                 j.AbortProcess = false;
 
             }
-            if (DemoMode)
+            if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
             {
-                var AvailableFoups = from Foup in NodeManagement.GetLoadPortList()
-                                     orderby Foup.Name
-                                     from wafer in Foup.JobList.Values
-                                     where wafer.MapFlag && !wafer.ErrPosition && !wafer.AbortProcess
-                                     select Foup;
-                if (AvailableFoups.Count() != 0)
+                var AvailableOPENs = (from OPEN in NodeManagement.GetLoadPortList()
+                                      where OPEN.Enable && OPEN.Foup_Placement
+                                      select OPEN
+                                    ).OrderBy(x => x.LoadTime).ThenBy(x => x.Name);
+                if (AvailableOPENs.Count() != 0)
                 {
-                    foreach (Node port in NodeManagement.GetLoadPortList())
-                    {
-                        if (port.Enable)
-                        {
-                            if (port.Name.ToUpper().Equals(AvailableFoups.First().Name.ToUpper()))
-                            {
-                                port.Mode = "LD";
-                                DemoLD = port.Name;
-                            }
-                            else
-                            {
-                                port.Mode = "ULD";
-                            }
-                        }
-                    }
+                    Node port = AvailableOPENs.First();
+                    Dictionary<string, string> param1 = new Dictionary<string, string>();
+                    param1.Add("@Target", port.Name);
+                    TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+
+                    SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
                 }
             }
-            Node ld = SearchLoadport();
-            if (ld != null)
-            {
-                AssignWafer(ld);
-            }
+            //if (DemoMode)
+            //{
+            //    var AvailableFoups = from Foup in NodeManagement.GetLoadPortList()
+            //                         orderby Foup.Name
+            //                         from wafer in Foup.JobList.Values
+            //                         where wafer.MapFlag && !wafer.ErrPosition && !wafer.AbortProcess
+            //                         select Foup;
+            //    if (AvailableFoups.Count() != 0)
+            //    {
+            //        foreach (Node port in NodeManagement.GetLoadPortList())
+            //        {
+            //            if (port.Enable)
+            //            {
+            //                if (port.Name.ToUpper().Equals(AvailableFoups.First().Name.ToUpper()))
+            //                {
+            //                    port.Mode = "LD";
+            //                    DemoLD = port.Name;
+            //                }
+            //                else
+            //                {
+            //                    port.Mode = "ULD";
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+            //Node ld = SearchLoadport();
+            //if (ld != null)
+            //{
+            //    AssignWafer(ld);
+            //}
         }
 
         private void Stop_btn_Click(object sender, EventArgs e)
@@ -2951,6 +2982,11 @@ namespace Adam
                 form.StartPosition = FormStartPosition.CenterScreen;
                 var result = form.ShowDialog();
             }
+        }
+
+        private void EQP_State_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,5 +19,8 @@
   "FoupTxfLogPath": "D:/log/foup",
   "MappingDataCheck": false,
   "DummyMappingData": true,
-  "TaskFlow": "KAWASAKI_3P_EFEM"
+  "TaskFlow": "KAWASAKI_3P_EFEM",
+  "FakeDataP1": "0101010101010101010101010",
+  "FakeDataP2": "0101010101010101010101010",
+  "FakeDataP3": "0101010101010101010101010"
 }

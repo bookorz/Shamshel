@@ -317,6 +317,7 @@
             this.groupBox5.Controls.Add(this.tbFFUOpenRpm);
             this.groupBox5.Controls.Add(this.label33);
             this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Enabled = false;
             this.groupBox5.Location = new System.Drawing.Point(962, 68);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(270, 168);
@@ -966,6 +967,7 @@
             // cbP4LoadType
             // 
             this.cbP4LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4LoadType.Enabled = false;
             this.cbP4LoadType.FormattingEnabled = true;
             this.cbP4LoadType.Items.AddRange(new object[] {
             "L",
@@ -1050,6 +1052,7 @@
             // cbP4Seq
             // 
             this.cbP4Seq.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4Seq.Enabled = false;
             this.cbP4Seq.FormattingEnabled = true;
             this.cbP4Seq.Items.AddRange(new object[] {
             "1",
@@ -1134,6 +1137,7 @@
             // cbP4CstType
             // 
             this.cbP4CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbP4CstType.Enabled = false;
             this.cbP4CstType.FormattingEnabled = true;
             this.cbP4CstType.Items.AddRange(new object[] {
             "FOSB",
@@ -1272,6 +1276,7 @@
             this.groupBox1.Controls.Add(this.cbOcrCheckRule);
             this.groupBox1.Controls.Add(this.cbUseOcrTTL);
             this.groupBox1.Controls.Add(this.label36);
+            this.groupBox1.Enabled = false;
             this.groupBox1.Location = new System.Drawing.Point(300, 237);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(251, 263);
@@ -1499,6 +1504,7 @@
             this.cbUserBothArm.TabIndex = 4;
             this.cbUserBothArm.Text = "上+下";
             this.cbUserBothArm.UseVisualStyleBackColor = true;
+            this.cbUserBothArm.Visible = false;
             this.cbUserBothArm.CheckedChanged += new System.EventHandler(this.cbUserBothArm_CheckedChanged);
             this.cbUserBothArm.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbUserBothArm.Click += new System.EventHandler(this.modeCheck);
@@ -1536,6 +1542,7 @@
             // cbUseExchange
             // 
             this.cbUseExchange.AutoSize = true;
+            this.cbUseExchange.Enabled = false;
             this.cbUseExchange.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseExchange.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseExchange.Location = new System.Drawing.Point(1065, 500);
@@ -1665,6 +1672,7 @@
             // 
             // tbA1_angle
             // 
+            this.tbA1_angle.Enabled = false;
             this.tbA1_angle.Location = new System.Drawing.Point(176, 57);
             this.tbA1_angle.Name = "tbA1_angle";
             this.tbA1_angle.Size = new System.Drawing.Size(95, 33);
@@ -1790,7 +1798,7 @@
             this.tlpAccount.Size = new System.Drawing.Size(1432, 752);
             this.tlpAccount.TabIndex = 23;
             // 
-            // FormRecipeSetting
+            // FormRecipeSetting_1R1A1O4P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1799,7 +1807,7 @@
             this.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "FormRecipeSetting";
+            this.Name = "FormRecipeSetting_1R1A1O4P";
             this.Text = "FormRecipeSetting";
             this.Load += new System.EventHandler(this.FormRecipeSetting_Load);
             this.gbAccountCondition.ResumeLayout(false);
