@@ -1856,6 +1856,16 @@ namespace Adam
 
                     break;
                 case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
+                    foreach(Node port in NodeManagement.GetLoadPortList())
+                    {
+                        if (port.Enable)
+                        {
+                            Dictionary<string, string> param1 = new Dictionary<string, string>();
+                            param1.Add("@Target", port.Name);
+                            TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_INIT, param1);
+                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                        }
+                    }
                     if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                     {
                         var AvailableOPENs = (from OPEN in NodeManagement.GetLoadPortList()
