@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using TransferControl.Config;
 using TransferControl.Management;
 using TransferControl.Operation;
+using System.IO;
 
 namespace Adam
 {
@@ -376,6 +377,112 @@ namespace Adam
             {
                 gbOCR.Visible = false;
             }
+            if (!Directory.Exists("assign_recipe"))
+            {
+                Directory.CreateDirectory("assign_recipe");
+            }
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+        }
+
+        private void AssignRecipe_Save_Click(object sender, EventArgs e)
+        {
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Name is empty","Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Directory.Exists("assign_recipe"))
+            {
+                Directory.CreateDirectory("assign_recipe");
+            }
+            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
+            SysCfg.WriteFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
+            AssignRecipe_cb.Items.Clear();
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+            MessageBox.Show("ok", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void AssignRecipe_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                return;
+            }
+            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
+            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+            AssignInfo.ClearList();
+            Node Src = NodeManagement.Get(Source_cb.Text);
+            Node Dst = NodeManagement.Get(To_cb.Text);
+            if (Src == null)
+            {
+                MessageBox.Show("Source port is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Dst == null)
+            {
+                MessageBox.Show("Destination port is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
+            foreach (AssignInfo each in Content)
+            {
+                if(!Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].MapFlag || Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].ErrPosition)
+                {
+                    MessageBox.Show("Source slot "+each.FromSlot+" is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].MapFlag || Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].ErrPosition)
+                {
+                    MessageBox.Show("Destination slot " + each.ToSlot + " is not empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            foreach (AssignInfo each in Content)
+            {
+                Label SrcSlot = this.Controls.Find("From_Slot_" + each.FromSlot, true).FirstOrDefault() as Label;
+                SrcSlot.BackColor = Color.Brown;
+                SrcSlot.ForeColor = Color.White;
+                
+                Label DstSlot = this.Controls.Find("To_Slot_" + each.ToSlot, true).FirstOrDefault() as Label;
+                DstSlot.BackColor = Color.DarkGoldenrod;
+                DstSlot.ForeColor = Color.White;
+                DstSlot.Text = Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].Host_Job_Id;
+                each.AddToList();
+            }
+        }
+
+        private void AssignRecipe_Delete_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure?","Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            File.Delete("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+
+            AssignRecipe_cb.Items.Clear();
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+            AssignInfo.ClearList();
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
+            MessageBox.Show("ok", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
