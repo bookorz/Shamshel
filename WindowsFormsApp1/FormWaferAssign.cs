@@ -339,7 +339,13 @@ namespace Adam
 
         private void FormWaferAssign_Load(object sender, EventArgs e)
         {
-            AssignInfo.ClearList();
+            if (Global.userGroup.Equals("OP"))
+            {
+                tbR1_speed.Enabled = false;
+                tbA1_speed.Enabled = false;
+                tbA2_speed.Enabled = false;
+            }
+                AssignInfo.ClearList();
             Node Target;
             if ((Target = NodeManagement.Get("ROBOT01")) != null)
             {

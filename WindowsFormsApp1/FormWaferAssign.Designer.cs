@@ -1264,7 +1264,6 @@
             // 
             // tbR1_speed
             // 
-            this.tbR1_speed.Enabled = false;
             this.tbR1_speed.Location = new System.Drawing.Point(93, 25);
             this.tbR1_speed.Name = "tbR1_speed";
             this.tbR1_speed.Size = new System.Drawing.Size(73, 26);
@@ -1412,7 +1411,6 @@
             // 
             // tbA2_speed
             // 
-            this.tbA2_speed.Enabled = false;
             this.tbA2_speed.Location = new System.Drawing.Point(93, 62);
             this.tbA2_speed.Name = "tbA2_speed";
             this.tbA2_speed.Size = new System.Drawing.Size(73, 26);
@@ -1457,7 +1455,6 @@
             // 
             // tbA1_speed
             // 
-            this.tbA1_speed.Enabled = false;
             this.tbA1_speed.Location = new System.Drawing.Point(93, 62);
             this.tbA1_speed.Name = "tbA1_speed";
             this.tbA1_speed.Size = new System.Drawing.Size(73, 26);
