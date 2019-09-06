@@ -1856,30 +1856,33 @@ namespace Adam
 
                     break;
                 case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
-                    foreach(Node port in NodeManagement.GetLoadPortList())
+                    if (Start)
                     {
-                        if (port.Enable)
+                        foreach (Node port in NodeManagement.GetLoadPortList())
                         {
-                            Dictionary<string, string> param1 = new Dictionary<string, string>();
-                            param1.Add("@Target", port.Name);
-                            TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_INIT, param1);
-                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                            if (port.Enable)
+                            {
+                                Dictionary<string, string> param1 = new Dictionary<string, string>();
+                                param1.Add("@Target", port.Name);
+                                TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_INIT, param1);
+                                SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                            }
                         }
-                    }
-                    if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
-                    {
-                        var AvailableOPENs = (from OPEN in NodeManagement.GetLoadPortList()
-                                              where OPEN.Enable && OPEN.Foup_Placement
-                                              select OPEN
-                                            ).OrderBy(x => x.LoadTime).ThenBy(x => x.Name);
-                        if (AvailableOPENs.Count() != 0)
+                        if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
                         {
-                            Node port = AvailableOPENs.First();
-                            Dictionary<string, string> param1 = new Dictionary<string, string>();
-                            param1.Add("@Target", port.Name);
-                            TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+                            var AvailableOPENs = (from OPEN in NodeManagement.GetLoadPortList()
+                                                  where OPEN.Enable && OPEN.Foup_Placement
+                                                  select OPEN
+                                                ).OrderBy(x => x.LoadTime).ThenBy(x => x.Name);
+                            if (AvailableOPENs.Count() != 0)
+                            {
+                                Node port = AvailableOPENs.First();
+                                Dictionary<string, string> param1 = new Dictionary<string, string>();
+                                param1.Add("@Target", port.Name);
+                                TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
 
-                            SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                                SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+                            }
                         }
                     }
                     break;
@@ -2835,9 +2838,16 @@ namespace Adam
                 if (AvailableOPENs.Count() != 0)
                 {
                     Node port = AvailableOPENs.First();
+
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", port.Name);
-                    TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+                    TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_FORCE_ORGSH, param1);
+
+                    SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
+
+                    param1 = new Dictionary<string, string>();
+                    param1.Add("@Target", port.Name);
+                    tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
 
                     SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
                 }
