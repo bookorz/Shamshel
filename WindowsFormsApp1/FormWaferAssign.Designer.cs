@@ -82,6 +82,10 @@
             this.From_Slot_25 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.AssignRecipe_cb = new System.Windows.Forms.ComboBox();
+            this.AssignRecipe_Delete = new System.Windows.Forms.Button();
+            this.AssignRecipe_Save = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -172,13 +176,10 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.AssignRecipe_cb = new System.Windows.Forms.ComboBox();
-            this.AssignRecipe_Save = new System.Windows.Forms.Button();
-            this.AssignRecipe_Delete = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbOCR.SuspendLayout();
@@ -187,7 +188,6 @@
             this.gbPort3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPort1
@@ -1177,6 +1177,51 @@
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.AssignRecipe_cb);
+            this.groupBox4.Controls.Add(this.AssignRecipe_Delete);
+            this.groupBox4.Controls.Add(this.AssignRecipe_Save);
+            this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(17, 269);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(152, 193);
+            this.groupBox4.TabIndex = 181;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Assign Recipe";
+            // 
+            // AssignRecipe_cb
+            // 
+            this.AssignRecipe_cb.FormattingEnabled = true;
+            this.AssignRecipe_cb.Location = new System.Drawing.Point(15, 42);
+            this.AssignRecipe_cb.Name = "AssignRecipe_cb";
+            this.AssignRecipe_cb.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_cb.TabIndex = 196;
+            this.AssignRecipe_cb.SelectedIndexChanged += new System.EventHandler(this.AssignRecipe_cb_SelectedIndexChanged);
+            // 
+            // AssignRecipe_Delete
+            // 
+            this.AssignRecipe_Delete.BackColor = System.Drawing.Color.Brown;
+            this.AssignRecipe_Delete.ForeColor = System.Drawing.Color.White;
+            this.AssignRecipe_Delete.Location = new System.Drawing.Point(15, 134);
+            this.AssignRecipe_Delete.Name = "AssignRecipe_Delete";
+            this.AssignRecipe_Delete.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_Delete.TabIndex = 198;
+            this.AssignRecipe_Delete.Text = "Delete";
+            this.AssignRecipe_Delete.UseVisualStyleBackColor = false;
+            this.AssignRecipe_Delete.Click += new System.EventHandler(this.AssignRecipe_Delete_Click);
+            // 
+            // AssignRecipe_Save
+            // 
+            this.AssignRecipe_Save.BackColor = System.Drawing.Color.Gold;
+            this.AssignRecipe_Save.Location = new System.Drawing.Point(15, 88);
+            this.AssignRecipe_Save.Name = "AssignRecipe_Save";
+            this.AssignRecipe_Save.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_Save.TabIndex = 197;
+            this.AssignRecipe_Save.Text = "Save";
+            this.AssignRecipe_Save.UseVisualStyleBackColor = false;
+            this.AssignRecipe_Save.Click += new System.EventHandler(this.AssignRecipe_Save_Click);
+            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
@@ -1493,7 +1538,7 @@
             this.Excute_btn.Name = "Excute_btn";
             this.Excute_btn.Size = new System.Drawing.Size(141, 74);
             this.Excute_btn.TabIndex = 190;
-            this.Excute_btn.Text = "Excute";
+            this.Excute_btn.Text = "Execute";
             this.Excute_btn.UseVisualStyleBackColor = false;
             this.Excute_btn.Click += new System.EventHandler(this.Excute_btn_Click);
             // 
@@ -2569,51 +2614,6 @@
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
-            // AssignRecipe_cb
-            // 
-            this.AssignRecipe_cb.FormattingEnabled = true;
-            this.AssignRecipe_cb.Location = new System.Drawing.Point(15, 42);
-            this.AssignRecipe_cb.Name = "AssignRecipe_cb";
-            this.AssignRecipe_cb.Size = new System.Drawing.Size(121, 27);
-            this.AssignRecipe_cb.TabIndex = 196;
-            this.AssignRecipe_cb.SelectedIndexChanged += new System.EventHandler(this.AssignRecipe_cb_SelectedIndexChanged);
-            // 
-            // AssignRecipe_Save
-            // 
-            this.AssignRecipe_Save.BackColor = System.Drawing.Color.Gold;
-            this.AssignRecipe_Save.Location = new System.Drawing.Point(15, 88);
-            this.AssignRecipe_Save.Name = "AssignRecipe_Save";
-            this.AssignRecipe_Save.Size = new System.Drawing.Size(121, 27);
-            this.AssignRecipe_Save.TabIndex = 197;
-            this.AssignRecipe_Save.Text = "Save";
-            this.AssignRecipe_Save.UseVisualStyleBackColor = false;
-            this.AssignRecipe_Save.Click += new System.EventHandler(this.AssignRecipe_Save_Click);
-            // 
-            // AssignRecipe_Delete
-            // 
-            this.AssignRecipe_Delete.BackColor = System.Drawing.Color.Brown;
-            this.AssignRecipe_Delete.ForeColor = System.Drawing.Color.White;
-            this.AssignRecipe_Delete.Location = new System.Drawing.Point(15, 134);
-            this.AssignRecipe_Delete.Name = "AssignRecipe_Delete";
-            this.AssignRecipe_Delete.Size = new System.Drawing.Size(121, 27);
-            this.AssignRecipe_Delete.TabIndex = 198;
-            this.AssignRecipe_Delete.Text = "Delete";
-            this.AssignRecipe_Delete.UseVisualStyleBackColor = false;
-            this.AssignRecipe_Delete.Click += new System.EventHandler(this.AssignRecipe_Delete_Click);
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.AssignRecipe_cb);
-            this.groupBox4.Controls.Add(this.AssignRecipe_Delete);
-            this.groupBox4.Controls.Add(this.AssignRecipe_Save);
-            this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(17, 269);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(152, 193);
-            this.groupBox4.TabIndex = 181;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Assign Recipe";
-            // 
             // FormWaferAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2630,6 +2630,7 @@
             this.TblPanel_A.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -2645,7 +2646,6 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
