@@ -207,7 +207,10 @@ namespace Adam
 
         private void Source_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            AssignInfo.ClearList();
+            AssignRecipe_cb.Text = "";
             WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             RenderSourceAssign();
 
 
@@ -215,7 +218,9 @@ namespace Adam
 
         private void To_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            AssignInfo.ClearList();
+            AssignRecipe_cb.Text = "";
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
             WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             RenderToAssign();
         }
