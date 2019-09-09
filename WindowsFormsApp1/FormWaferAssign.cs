@@ -349,6 +349,8 @@ namespace Adam
                 tbR1_speed.Enabled = false;
                 tbA1_speed.Enabled = false;
                 tbA2_speed.Enabled = false;
+                AssignRecipe_Save.Visible = false;
+                AssignRecipe_Delete.Visible = false;
             }
                 AssignInfo.ClearList();
             Node Target;
@@ -394,9 +396,13 @@ namespace Adam
             }
             foreach (string each in Directory.GetFiles("assign_recipe"))
             {
-                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+                if (Path.GetFileNameWithoutExtension(each).Substring(0, Path.GetFileNameWithoutExtension(each).IndexOf("_")).Equals(Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size))
+                {
+                    AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each).Substring(Path.GetFileNameWithoutExtension(each).IndexOf("_") + 1));
+                }
             }
             AssignRecipe_cb.Text = "";
+            WaferSize_tb.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size;
         }
 
         private void AssignRecipe_Save_Click(object sender, EventArgs e)
@@ -406,16 +412,27 @@ namespace Adam
                 MessageBox.Show("Name is empty","Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //檔名只能英文
+            System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"[\u4e00-\u9fa5]");
+            if (reg1.IsMatch(AssignRecipe_cb.Text))
+            {
+                MessageBox.Show("Recipe name must be english or numbers! and it doesn't accept spaces!");
+                return;
+            }
+
             if (!Directory.Exists("assign_recipe"))
             {
                 Directory.CreateDirectory("assign_recipe");
             }
             ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            SysCfg.WriteFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
+            SysCfg.WriteFileByList("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
             AssignRecipe_cb.Items.Clear();
             foreach (string each in Directory.GetFiles("assign_recipe"))
             {
-                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+                if (Path.GetFileNameWithoutExtension(each).Substring(0, Path.GetFileNameWithoutExtension(each).IndexOf("_")).Equals(Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size))
+                {
+                    AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each).Substring(Path.GetFileNameWithoutExtension(each).IndexOf("_") + 1));
+                }
             }
             AssignRecipe_cb.Text = "";
             MessageBox.Show("ok", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -428,7 +445,7 @@ namespace Adam
                 return;
             }
             ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
             AssignInfo.ClearList();
             Node Src = NodeManagement.Get(Source_cb.Text);
             Node Dst = NodeManagement.Get(To_cb.Text);
@@ -482,12 +499,15 @@ namespace Adam
                 MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            File.Delete("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+            File.Delete("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
 
             AssignRecipe_cb.Items.Clear();
             foreach (string each in Directory.GetFiles("assign_recipe"))
             {
-                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+                if (Path.GetFileNameWithoutExtension(each).Substring(0, Path.GetFileNameWithoutExtension(each).IndexOf("_")).Equals(Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size))
+                {
+                    AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each).Substring(Path.GetFileNameWithoutExtension(each).IndexOf("_") + 1));
+                }
             }
             AssignRecipe_cb.Text = "";
             AssignInfo.ClearList();

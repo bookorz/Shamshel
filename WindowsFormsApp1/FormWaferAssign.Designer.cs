@@ -176,6 +176,8 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
+            this.WaferSize_tb = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -1179,13 +1181,15 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.WaferSize_tb);
             this.groupBox4.Controls.Add(this.AssignRecipe_cb);
             this.groupBox4.Controls.Add(this.AssignRecipe_Delete);
             this.groupBox4.Controls.Add(this.AssignRecipe_Save);
             this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(17, 269);
+            this.groupBox4.Location = new System.Drawing.Point(17, 249);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(152, 193);
+            this.groupBox4.Size = new System.Drawing.Size(152, 259);
             this.groupBox4.TabIndex = 181;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Assign Recipe";
@@ -1193,7 +1197,7 @@
             // AssignRecipe_cb
             // 
             this.AssignRecipe_cb.FormattingEnabled = true;
-            this.AssignRecipe_cb.Location = new System.Drawing.Point(15, 42);
+            this.AssignRecipe_cb.Location = new System.Drawing.Point(16, 115);
             this.AssignRecipe_cb.Name = "AssignRecipe_cb";
             this.AssignRecipe_cb.Size = new System.Drawing.Size(121, 27);
             this.AssignRecipe_cb.TabIndex = 196;
@@ -1203,7 +1207,7 @@
             // 
             this.AssignRecipe_Delete.BackColor = System.Drawing.Color.Brown;
             this.AssignRecipe_Delete.ForeColor = System.Drawing.Color.White;
-            this.AssignRecipe_Delete.Location = new System.Drawing.Point(15, 134);
+            this.AssignRecipe_Delete.Location = new System.Drawing.Point(16, 207);
             this.AssignRecipe_Delete.Name = "AssignRecipe_Delete";
             this.AssignRecipe_Delete.Size = new System.Drawing.Size(121, 27);
             this.AssignRecipe_Delete.TabIndex = 198;
@@ -1214,7 +1218,7 @@
             // AssignRecipe_Save
             // 
             this.AssignRecipe_Save.BackColor = System.Drawing.Color.Gold;
-            this.AssignRecipe_Save.Location = new System.Drawing.Point(15, 88);
+            this.AssignRecipe_Save.Location = new System.Drawing.Point(16, 161);
             this.AssignRecipe_Save.Name = "AssignRecipe_Save";
             this.AssignRecipe_Save.Size = new System.Drawing.Size(121, 27);
             this.AssignRecipe_Save.TabIndex = 197;
@@ -2614,6 +2618,24 @@
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
+            // WaferSize_tb
+            // 
+            this.WaferSize_tb.Enabled = false;
+            this.WaferSize_tb.Location = new System.Drawing.Point(16, 65);
+            this.WaferSize_tb.Name = "WaferSize_tb";
+            this.WaferSize_tb.Size = new System.Drawing.Size(121, 26);
+            this.WaferSize_tb.TabIndex = 199;
+            this.WaferSize_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(23, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 19);
+            this.label11.TabIndex = 200;
+            this.label11.Text = "Wafer Size";
+            // 
             // FormWaferAssign
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2631,6 +2653,7 @@
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -2800,5 +2823,7 @@
         private System.Windows.Forms.ComboBox AssignRecipe_cb;
         private System.Windows.Forms.Button AssignRecipe_Delete;
         private System.Windows.Forms.Button AssignRecipe_Save;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox WaferSize_tb;
     }
 }
