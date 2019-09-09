@@ -12,6 +12,8 @@ using System.Windows.Forms;
 using TransferControl.Config;
 using TransferControl.Management;
 using TransferControl.Operation;
+using System.IO;
+using TransferControl.Digital_IO.Config;
 
 namespace Adam
 {
@@ -142,21 +144,10 @@ namespace Adam
             DIOUpdate.UpdateControlButton("Mode_btn", false);
             if (AssignInfo.GetAssignList().Count != 0)
             {
-                foreach(AssignInfo each in AssignInfo.GetAssignList())
+                foreach (AssignInfo each in AssignInfo.GetAssignList())
                 {
                     Node LD = NodeManagement.Get(each.FromPort);
-                    Job j = LD.JobList[each.FromSlot];
-                    j.AssignPort(each.ToPort, each.ToSlot);
-                    FoupInfo tmp = FoupInfo.Get(each.FromPort);
-                    if (tmp == null)
-                    {
-                        tmp = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, LD.FoupID);
-                    }
-                    int slot = Convert.ToInt16(j.Slot);
-                    Node ULD = NodeManagement.Get(j.Destination);
-                    tmp.record[slot - 1] = new Adam.waferInfo(LD.Name, LD.FoupID, j.Slot, j.FromPort, LD.FoupID, j.FromPortSlot, j.Destination, ULD.FoupID, j.DestinationSlot);
-                    tmp.record[slot - 1].SetLoadTime(LD.LoadTime);
-                    tmp.SaveTmp(LD.Name);
+                    LD.JobList[each.FromSlot].AssignPort(each.ToPort, each.ToSlot);
                 }
                 //tmp change config
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed = tbR1_speed.Text;
@@ -165,15 +156,14 @@ namespace Adam
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed = tbA1_speed.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner2_speed = tbA2_speed.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl = cbUseOcrTTL.Checked;
-                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12= cbUseOcrM12.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12 = cbUseOcrM12.Checked;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_t7 = cbUseOcrT7.Checked;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_ttl_config = tbOcrTTL.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_m12_config = tbOcrM12.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_t7_config = tbOcrT7.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule = cbOcrCheckRule.Text;
 
-
-                if (!FormMain.xfe.Start(Source_cb.Text,true))
+                if (!FormMain.xfe.Start(Source_cb.Text, true))
                 {
                     MessageBox.Show("xfe.Start fail!");
                 }
@@ -183,7 +173,7 @@ namespace Adam
 
         private void RenderSourceAssign()
         {
-            foreach(AssignInfo each in AssignInfo.GetAssignList())
+            foreach (AssignInfo each in AssignInfo.GetAssignList())
             {
                 if (each.FromPort.Equals(Source_cb.Text))
                 {
@@ -218,32 +208,22 @@ namespace Adam
 
         private void Source_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
+            AssignInfo.ClearList();
+            AssignRecipe_cb.Text = "";
             WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             RenderSourceAssign();
-            Node port = NodeManagement.Get(Source_cb.Text);
-            if (port == null) {
-                From_FOUPID.Text = "";
-            }
-            else
-            {
-                From_FOUPID.Text = port.FoupID;
-            }
+
+
         }
 
         private void To_cb_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            AssignInfo.ClearList();
+            AssignRecipe_cb.Text = "";
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
             WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             RenderToAssign();
-            Node port = NodeManagement.Get(To_cb.Text);
-            if (port == null)
-            {
-                TO_FOUPID.Text = "";
-            }
-            else
-            {
-                TO_FOUPID.Text = port.FoupID;
-            }
         }
         Job slotDataSrc = null;
 
@@ -365,13 +345,19 @@ namespace Adam
 
         private void FormWaferAssign_Load(object sender, EventArgs e)
         {
+            if (Global.userGroup.Equals("OP"))
+            {
+                tbR1_speed.Enabled = false;
+                tbA1_speed.Enabled = false;
+                tbA2_speed.Enabled = false;
+            }
             AssignInfo.ClearList();
             Node Target;
             if ((Target = NodeManagement.Get("ROBOT01")) != null)
             {
                 tbR1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed;
             }
-            if ((Target=NodeManagement.Get("ALIGNER01")) != null)
+            if ((Target = NodeManagement.Get("ALIGNER01")) != null)
             {
                 cbUseA1.Checked = !Target.ByPass;
                 tbA1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed;
@@ -389,7 +375,7 @@ namespace Adam
             {
                 gbA2.Visible = false;
             }
-            if(NodeManagement.Get("OCR01")!=null && NodeManagement.Get("OCR02") != null)
+            if (NodeManagement.Get("OCR01") != null && NodeManagement.Get("OCR02") != null)
             {
                 cbUseOcrTTL.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl;
                 cbUseOcrM12.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12;
@@ -403,6 +389,112 @@ namespace Adam
             {
                 gbOCR.Visible = false;
             }
+            if (!Directory.Exists("assign_recipe"))
+            {
+                Directory.CreateDirectory("assign_recipe");
+            }
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+        }
+
+        private void AssignRecipe_Save_Click(object sender, EventArgs e)
+        {
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (!Directory.Exists("assign_recipe"))
+            {
+                Directory.CreateDirectory("assign_recipe");
+            }
+            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
+            SysCfg.WriteFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
+            AssignRecipe_cb.Items.Clear();
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+            MessageBox.Show("ok", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void AssignRecipe_cb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                return;
+            }
+            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
+            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+            AssignInfo.ClearList();
+            Node Src = NodeManagement.Get(Source_cb.Text);
+            Node Dst = NodeManagement.Get(To_cb.Text);
+            if (Src == null)
+            {
+                MessageBox.Show("Source port is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (Dst == null)
+            {
+                MessageBox.Show("Destination port is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
+            foreach (AssignInfo each in Content)
+            {
+                if (!Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].MapFlag || Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].ErrPosition)
+                {
+                    MessageBox.Show("Source slot " + each.FromSlot + " is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].MapFlag || Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].ErrPosition)
+                {
+                    MessageBox.Show("Destination slot " + each.ToSlot + " is not empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
+            foreach (AssignInfo each in Content)
+            {
+                Label SrcSlot = this.Controls.Find("From_Slot_" + each.FromSlot, true).FirstOrDefault() as Label;
+                SrcSlot.BackColor = Color.Brown;
+                SrcSlot.ForeColor = Color.White;
+
+                Label DstSlot = this.Controls.Find("To_Slot_" + each.ToSlot, true).FirstOrDefault() as Label;
+                DstSlot.BackColor = Color.DarkGoldenrod;
+                DstSlot.ForeColor = Color.White;
+                DstSlot.Text = Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].Host_Job_Id;
+                each.AddToList();
+            }
+        }
+
+        private void AssignRecipe_Delete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            {
+                return;
+            }
+            if (AssignRecipe_cb.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            File.Delete("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+
+            AssignRecipe_cb.Items.Clear();
+            foreach (string each in Directory.GetFiles("assign_recipe"))
+            {
+                AssignRecipe_cb.Items.Add(Path.GetFileNameWithoutExtension(each));
+            }
+            AssignRecipe_cb.Text = "";
+            AssignInfo.ClearList();
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
+            MessageBox.Show("ok", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

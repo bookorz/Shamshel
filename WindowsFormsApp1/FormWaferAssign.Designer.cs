@@ -82,6 +82,12 @@
             this.From_Slot_25 = new System.Windows.Forms.Label();
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.tbR1_speed = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -166,15 +172,14 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.AssignRecipe_cb = new System.Windows.Forms.ComboBox();
+            this.AssignRecipe_Save = new System.Windows.Forms.Button();
+            this.AssignRecipe_Delete = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.gbOCR.SuspendLayout();
             this.gbA2.SuspendLayout();
@@ -182,7 +187,7 @@
             this.gbPort3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbPort1
@@ -1150,6 +1155,7 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.groupBox4);
             this.groupBox11.Controls.Add(this.groupBox3);
             this.groupBox11.Controls.Add(this.groupBox2);
             this.groupBox11.Controls.Add(this.gbOCR);
@@ -1170,6 +1176,80 @@
             this.groupBox11.Size = new System.Drawing.Size(1190, 852);
             this.groupBox11.TabIndex = 2;
             this.groupBox11.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.label8);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(1025, 677);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(159, 171);
+            this.groupBox3.TabIndex = 195;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Slot State";
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(9, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(138, 25);
+            this.label5.TabIndex = 194;
+            this.label5.Text = "No Mapping";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.DimGray;
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(9, 79);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(138, 25);
+            this.label8.TabIndex = 194;
+            this.label8.Text = "No Wafer";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Green;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(9, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(138, 25);
+            this.label6.TabIndex = 194;
+            this.label6.Text = "Wafer(not assign)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BackColor = System.Drawing.Color.DarkGoldenrod;
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(9, 139);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(138, 25);
+            this.label10.TabIndex = 194;
+            this.label10.Text = "Destination";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Brown;
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(9, 109);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(138, 25);
+            this.label9.TabIndex = 194;
+            this.label9.Text = "Wafer(assigned)";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
@@ -2397,9 +2477,7 @@
             this.Source_cb.FormattingEnabled = true;
             this.Source_cb.Items.AddRange(new object[] {
             "LOADPORT01",
-            "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04"});
+            "LOADPORT02"});
             this.Source_cb.Location = new System.Drawing.Point(17, 52);
             this.Source_cb.Name = "Source_cb";
             this.Source_cb.Size = new System.Drawing.Size(160, 32);
@@ -2423,22 +2501,26 @@
             // rbBottomUp
             // 
             this.rbBottomUp.AutoSize = true;
+            this.rbBottomUp.Enabled = false;
             this.rbBottomUp.Location = new System.Drawing.Point(22, 83);
             this.rbBottomUp.Name = "rbBottomUp";
             this.rbBottomUp.Size = new System.Drawing.Size(108, 23);
             this.rbBottomUp.TabIndex = 180;
             this.rbBottomUp.Text = "Bottom Up";
             this.rbBottomUp.UseVisualStyleBackColor = true;
+            this.rbBottomUp.Visible = false;
             // 
             // rbTopDown
             // 
             this.rbTopDown.AutoSize = true;
+            this.rbTopDown.Enabled = false;
             this.rbTopDown.Location = new System.Drawing.Point(22, 54);
             this.rbTopDown.Name = "rbTopDown";
             this.rbTopDown.Size = new System.Drawing.Size(99, 23);
             this.rbTopDown.TabIndex = 180;
             this.rbTopDown.Text = "Top Down";
             this.rbTopDown.UseVisualStyleBackColor = true;
+            this.rbTopDown.Visible = false;
             // 
             // rbSlotToSlot
             // 
@@ -2480,88 +2562,57 @@
             this.To_cb.FormattingEnabled = true;
             this.To_cb.Items.AddRange(new object[] {
             "LOADPORT01",
-            "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04"});
+            "LOADPORT02"});
             this.To_cb.Location = new System.Drawing.Point(958, 55);
             this.To_cb.Name = "To_cb";
             this.To_cb.Size = new System.Drawing.Size(160, 32);
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
-            // label5
+            // AssignRecipe_cb
             // 
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(9, 19);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(138, 25);
-            this.label5.TabIndex = 194;
-            this.label5.Text = "No Mapping";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AssignRecipe_cb.FormattingEnabled = true;
+            this.AssignRecipe_cb.Location = new System.Drawing.Point(15, 42);
+            this.AssignRecipe_cb.Name = "AssignRecipe_cb";
+            this.AssignRecipe_cb.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_cb.TabIndex = 196;
+            this.AssignRecipe_cb.SelectedIndexChanged += new System.EventHandler(this.AssignRecipe_cb_SelectedIndexChanged);
             // 
-            // label6
+            // AssignRecipe_Save
             // 
-            this.label6.BackColor = System.Drawing.Color.Green;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(9, 49);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(138, 25);
-            this.label6.TabIndex = 194;
-            this.label6.Text = "Wafer(not assign)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AssignRecipe_Save.BackColor = System.Drawing.Color.Gold;
+            this.AssignRecipe_Save.Location = new System.Drawing.Point(15, 88);
+            this.AssignRecipe_Save.Name = "AssignRecipe_Save";
+            this.AssignRecipe_Save.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_Save.TabIndex = 197;
+            this.AssignRecipe_Save.Text = "Save";
+            this.AssignRecipe_Save.UseVisualStyleBackColor = false;
+            this.AssignRecipe_Save.Click += new System.EventHandler(this.AssignRecipe_Save_Click);
             // 
-            // label8
+            // AssignRecipe_Delete
             // 
-            this.label8.BackColor = System.Drawing.Color.DimGray;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(9, 79);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 25);
-            this.label8.TabIndex = 194;
-            this.label8.Text = "No Wafer";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.AssignRecipe_Delete.BackColor = System.Drawing.Color.Brown;
+            this.AssignRecipe_Delete.ForeColor = System.Drawing.Color.White;
+            this.AssignRecipe_Delete.Location = new System.Drawing.Point(15, 134);
+            this.AssignRecipe_Delete.Name = "AssignRecipe_Delete";
+            this.AssignRecipe_Delete.Size = new System.Drawing.Size(121, 27);
+            this.AssignRecipe_Delete.TabIndex = 198;
+            this.AssignRecipe_Delete.Text = "Delete";
+            this.AssignRecipe_Delete.UseVisualStyleBackColor = false;
+            this.AssignRecipe_Delete.Click += new System.EventHandler(this.AssignRecipe_Delete_Click);
             // 
-            // label9
+            // groupBox4
             // 
-            this.label9.BackColor = System.Drawing.Color.Brown;
-            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(9, 109);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 25);
-            this.label9.TabIndex = 194;
-            this.label9.Text = "Wafer(assigned)";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label10
-            // 
-            this.label10.BackColor = System.Drawing.Color.DarkGoldenrod;
-            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(9, 139);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(138, 25);
-            this.label10.TabIndex = 194;
-            this.label10.Text = "Destination";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label9);
-            this.groupBox3.Font = new System.Drawing.Font("Consolas", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(1025, 677);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(159, 171);
-            this.groupBox3.TabIndex = 195;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Slot State";
+            this.groupBox4.Controls.Add(this.AssignRecipe_cb);
+            this.groupBox4.Controls.Add(this.AssignRecipe_Delete);
+            this.groupBox4.Controls.Add(this.AssignRecipe_Save);
+            this.groupBox4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(17, 269);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(152, 193);
+            this.groupBox4.TabIndex = 181;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Assign Recipe";
             // 
             // FormWaferAssign
             // 
@@ -2579,6 +2630,7 @@
             this.TblPanel_A.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.gbOCR.ResumeLayout(false);
@@ -2593,7 +2645,7 @@
             this.tableLayoutPanel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2744,5 +2796,9 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox AssignRecipe_cb;
+        private System.Windows.Forms.Button AssignRecipe_Delete;
+        private System.Windows.Forms.Button AssignRecipe_Save;
     }
 }
