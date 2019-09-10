@@ -413,10 +413,11 @@ namespace Adam
                 return;
             }
             //檔名只能英文
-            System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"[\u4e00-\u9fa5]");
-            if (reg1.IsMatch(AssignRecipe_cb.Text))
+            //System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"[\u4e00-\u9fa5]");
+            System.Text.RegularExpressions.Regex reg1 = new System.Text.RegularExpressions.Regex(@"^[A-Za-z0-9~!@#$%^&()_ ]+$");
+            if (!reg1.IsMatch(AssignRecipe_cb.Text))
             {
-                MessageBox.Show("Recipe name must be english or numbers! and it doesn't accept spaces!");
+                MessageBox.Show("Recipe name must be english or numbers!", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
