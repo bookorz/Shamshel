@@ -966,7 +966,7 @@ namespace Adam
                                 break;
                             case "PODON":
                                 //Foup Arrived
-                                if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("ReadyToLoad") && !Node.IsLoad)
+                                if (Node.OrgSearchComplete && Node.Foup_Placement)
                                 {
                                     Node.CurrentStatus = "ReadyToLoad";
 

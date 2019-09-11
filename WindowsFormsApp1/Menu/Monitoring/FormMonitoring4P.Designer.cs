@@ -370,6 +370,7 @@
             this.LOADPORT01_FID.TabIndex = 60;
             this.LOADPORT01_FID.Text = "Click for load";
             this.LOADPORT01_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT01_FID.Visible = false;
             this.LOADPORT01_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // TblPanel_A
@@ -1327,6 +1328,7 @@
             this.LoadPort01_Mode.TabIndex = 155;
             this.LoadPort01_Mode.Tag = "1";
             this.LoadPort01_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort01_Mode.Visible = false;
             // 
             // LOADPORT01_Unload_btn
             // 
@@ -1338,6 +1340,7 @@
             this.LOADPORT01_Unload_btn.TabIndex = 171;
             this.LOADPORT01_Unload_btn.Text = "Uuload";
             this.LOADPORT01_Unload_btn.UseVisualStyleBackColor = true;
+            this.LOADPORT01_Unload_btn.Visible = false;
             this.LOADPORT01_Unload_btn.Click += new System.EventHandler(this.Unload_btn);
             // 
             // gbPort2
@@ -1380,6 +1383,7 @@
             this.LOADPORT02_FID.TabIndex = 108;
             this.LOADPORT02_FID.Text = "Click for load";
             this.LOADPORT02_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT02_FID.Visible = false;
             this.LOADPORT02_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // tableLayoutPanel1
@@ -2336,6 +2340,7 @@
             this.LoadPort02_Mode.TabIndex = 157;
             this.LoadPort02_Mode.Tag = "1";
             this.LoadPort02_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort02_Mode.Visible = false;
             // 
             // LOADPORT02_Unload_btn
             // 
@@ -2347,6 +2352,7 @@
             this.LOADPORT02_Unload_btn.TabIndex = 174;
             this.LOADPORT02_Unload_btn.Text = "Uuload";
             this.LOADPORT02_Unload_btn.UseVisualStyleBackColor = true;
+            this.LOADPORT02_Unload_btn.Visible = false;
             this.LOADPORT02_Unload_btn.Click += new System.EventHandler(this.Unload_btn);
             // 
             // gbPort3
@@ -2389,6 +2395,7 @@
             this.LOADPORT03_FID.TabIndex = 111;
             this.LOADPORT03_FID.Text = "Click for load";
             this.LOADPORT03_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT03_FID.Visible = false;
             this.LOADPORT03_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // LoadPort03_Mode
@@ -2405,6 +2412,7 @@
             this.LoadPort03_Mode.TabIndex = 159;
             this.LoadPort03_Mode.Tag = "1";
             this.LoadPort03_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort03_Mode.Visible = false;
             // 
             // LOADPORT03_Unload_btn
             // 
@@ -2416,6 +2424,7 @@
             this.LOADPORT03_Unload_btn.TabIndex = 173;
             this.LOADPORT03_Unload_btn.Text = "Uuload";
             this.LOADPORT03_Unload_btn.UseVisualStyleBackColor = true;
+            this.LOADPORT03_Unload_btn.Visible = false;
             this.LOADPORT03_Unload_btn.Click += new System.EventHandler(this.Unload_btn);
             // 
             // tableLayoutPanel2
@@ -3399,6 +3408,7 @@
             this.LOADPORT04_FID.TabIndex = 114;
             this.LOADPORT04_FID.Text = "Click for load";
             this.LOADPORT04_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT04_FID.Visible = false;
             this.LOADPORT04_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // tableLayoutPanel3
@@ -4356,6 +4366,7 @@
             this.LoadPort04_Mode.TabIndex = 161;
             this.LoadPort04_Mode.Tag = "1";
             this.LoadPort04_Mode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LoadPort04_Mode.Visible = false;
             // 
             // LOADPORT04_Unload_btn
             // 
@@ -4367,6 +4378,7 @@
             this.LOADPORT04_Unload_btn.TabIndex = 172;
             this.LOADPORT04_Unload_btn.Text = "Uuload";
             this.LOADPORT04_Unload_btn.UseVisualStyleBackColor = true;
+            this.LOADPORT04_Unload_btn.Visible = false;
             this.LOADPORT04_Unload_btn.Click += new System.EventHandler(this.Unload_btn);
             // 
             // gbRobot1

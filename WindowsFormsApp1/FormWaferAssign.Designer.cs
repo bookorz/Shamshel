@@ -1487,7 +1487,7 @@
             this.Excute_btn.Name = "Excute_btn";
             this.Excute_btn.Size = new System.Drawing.Size(141, 74);
             this.Excute_btn.TabIndex = 190;
-            this.Excute_btn.Text = "Excute";
+            this.Excute_btn.Text = "Execute";
             this.Excute_btn.UseVisualStyleBackColor = false;
             this.Excute_btn.Click += new System.EventHandler(this.Excute_btn_Click);
             // 
