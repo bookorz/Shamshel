@@ -84,7 +84,7 @@
             this.cbUseLArm = new System.Windows.Forms.CheckBox();
             this.cbUseRArm = new System.Windows.Forms.CheckBox();
             this.cbActive = new System.Windows.Forms.CheckBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.Aligner_gb = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.tbA1_speed = new System.Windows.Forms.TextBox();
             this.cbUseA1 = new System.Windows.Forms.CheckBox();
@@ -106,7 +106,7 @@
             this.groupBox7.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.Aligner_gb.SuspendLayout();
             this.gbAccount.SuspendLayout();
             this.palMenu.SuspendLayout();
             this.tlpAccountMenu.SuspendLayout();
@@ -260,7 +260,7 @@
             this.gbRecipeBody.Controls.Add(this.cbWaferSize);
             this.gbRecipeBody.Controls.Add(this.groupBox3);
             this.gbRecipeBody.Controls.Add(this.cbActive);
-            this.gbRecipeBody.Controls.Add(this.groupBox4);
+            this.gbRecipeBody.Controls.Add(this.Aligner_gb);
             this.gbRecipeBody.Location = new System.Drawing.Point(6, 81);
             this.gbRecipeBody.Name = "gbRecipeBody";
             this.gbRecipeBody.Size = new System.Drawing.Size(1247, 551);
@@ -780,7 +780,6 @@
             // cbUserBothArm
             // 
             this.cbUserBothArm.AutoSize = true;
-            this.cbUserBothArm.Enabled = false;
             this.cbUserBothArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUserBothArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUserBothArm.Location = new System.Drawing.Point(193, 66);
@@ -796,7 +795,6 @@
             // cbUseLArm
             // 
             this.cbUseLArm.AutoSize = true;
-            this.cbUseLArm.Enabled = false;
             this.cbUseLArm.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.cbUseLArm.ForeColor = System.Drawing.Color.DodgerBlue;
             this.cbUseLArm.Location = new System.Drawing.Point(102, 66);
@@ -840,17 +838,17 @@
             this.cbActive.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbActive.Click += new System.EventHandler(this.modeCheck);
             // 
-            // groupBox4
+            // Aligner_gb
             // 
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.tbA1_speed);
-            this.groupBox4.Controls.Add(this.cbUseA1);
-            this.groupBox4.Location = new System.Drawing.Point(6, 423);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(288, 104);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Aligner Setting";
+            this.Aligner_gb.Controls.Add(this.label9);
+            this.Aligner_gb.Controls.Add(this.tbA1_speed);
+            this.Aligner_gb.Controls.Add(this.cbUseA1);
+            this.Aligner_gb.Location = new System.Drawing.Point(6, 423);
+            this.Aligner_gb.Name = "Aligner_gb";
+            this.Aligner_gb.Size = new System.Drawing.Size(288, 104);
+            this.Aligner_gb.TabIndex = 3;
+            this.Aligner_gb.TabStop = false;
+            this.Aligner_gb.Text = "Aligner Setting";
             // 
             // label9
             // 
@@ -1032,8 +1030,8 @@
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
+            this.Aligner_gb.ResumeLayout(false);
+            this.Aligner_gb.PerformLayout();
             this.gbAccount.ResumeLayout(false);
             this.palMenu.ResumeLayout(false);
             this.tlpAccountMenu.ResumeLayout(false);
@@ -1092,7 +1090,7 @@
         private System.Windows.Forms.CheckBox cbUseLArm;
         private System.Windows.Forms.CheckBox cbUseRArm;
         private System.Windows.Forms.CheckBox cbActive;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox Aligner_gb;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbA1_speed;
         private System.Windows.Forms.CheckBox cbUseA1;

@@ -265,6 +265,10 @@ namespace Adam.Menu.SystemSetting
         {
             refreshList();
             lblMode.Text = "瀏覽模式";
+            if (NodeManagement.GetAlignerList().Count == 0)
+            {
+                Aligner_gb.Visible = false;
+            }
             if (Global.currentUser.Equals("SANWA"))
                 cbUseBurnIn.Visible = true;
             else

@@ -37,7 +37,7 @@ namespace Adam
             _EMO = EMO;
             if (!EMO)
             {
-                countDownSecs = 30;
+                countDownSecs = 5;
                 NotifyUpdate(false);
             }
             else

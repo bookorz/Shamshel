@@ -424,7 +424,7 @@ namespace Adam
                     switch (Txn.Method)
                     {
                         case Transaction.Command.FFUType.GetStatus:
-                            DifferentialMonitorUpdate.UpdateFFU(Msg.Value);
+                            DifferentialMonitorUpdate.UpdateFFU(Node.Speed);
                             break;
                     }
                     break;
@@ -1154,25 +1154,26 @@ namespace Adam
 
                             //RouteControl.Instance.TaskJob.ForceFinishTask(TaskName);
 
-                            Node ffu = NodeManagement.Get("FFU01");
-                            if (ffu != null)
-                            {
-
-                                Dictionary<string, string> param1 = new Dictionary<string, string>();
-                                param1.Add("@Target", ffu.Name);
-                                if (Value.ToUpper().Equals("TRUE"))
-                                {
-                                    param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
-                                    DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
-                                }
-                                else
-                                {
-                                    param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
-                                    DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
-                                }
-                                TaskFlowManagement.CurrentProcessTask tmpTask;
-                                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
-                            }
+                            //Node ffu = NodeManagement.Get("FFU01");
+                            //if (ffu != null)
+                            //{
+                            //    if (ffu.Enable)
+                            //    {
+                            //        Dictionary<string, string> param1 = new Dictionary<string, string>();
+                            //        param1.Add("@Target", ffu.Name);
+                            //        if (Value.ToUpper().Equals("TRUE"))
+                            //        {
+                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
+                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
+                            //        }
+                            //        else
+                            //        {
+                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
+                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
+                            //        }
+                            //        TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
+                            //    }
+                            //}
                             break;
                     }
                     break;

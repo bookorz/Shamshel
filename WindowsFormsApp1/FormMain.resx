@@ -829,7 +829,7 @@
     <value>0</value>
   </data>
   <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>338, 29</value>
+    <value>316, 31</value>
   </data>
   <data name="button1.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>

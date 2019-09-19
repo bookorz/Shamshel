@@ -103,6 +103,7 @@ namespace Adam.Menu.SystemSetting
                     AddForm(new FormRecipeSetting_1R2A2O4P());
                     break;
                 case "1R1A2P":
+                case "1R2P":
                     AddForm(new FormRecipeSetting_1R1A2P());
                     break;
                 default:
