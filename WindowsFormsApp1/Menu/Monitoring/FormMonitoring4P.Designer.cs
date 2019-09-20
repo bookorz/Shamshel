@@ -370,6 +370,7 @@
             this.LOADPORT01_FID.TabIndex = 60;
             this.LOADPORT01_FID.Text = "Click for load";
             this.LOADPORT01_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT01_FID.Visible = false;
             this.LOADPORT01_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // TblPanel_A
@@ -1380,6 +1381,7 @@
             this.LOADPORT02_FID.TabIndex = 108;
             this.LOADPORT02_FID.Text = "Click for load";
             this.LOADPORT02_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT02_FID.Visible = false;
             this.LOADPORT02_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // tableLayoutPanel1
@@ -2389,6 +2391,7 @@
             this.LOADPORT03_FID.TabIndex = 111;
             this.LOADPORT03_FID.Text = "Click for load";
             this.LOADPORT03_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT03_FID.Visible = false;
             this.LOADPORT03_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // LoadPort03_Mode
@@ -3399,6 +3402,7 @@
             this.LOADPORT04_FID.TabIndex = 114;
             this.LOADPORT04_FID.Text = "Click for load";
             this.LOADPORT04_FID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.LOADPORT04_FID.Visible = false;
             this.LOADPORT04_FID.Click += new System.EventHandler(this.FoupID_Click);
             // 
             // tableLayoutPanel3

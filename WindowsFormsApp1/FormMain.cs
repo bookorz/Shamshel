@@ -406,7 +406,7 @@ namespace Adam
                             //WaferAssignUpdate.RefreshMapping(Node.Name);
                             MonitoringUpdate.UpdateNodesJob(Node.Name);
                             //WaferAssignUpdate.UpdateNodesJob(Node.Name);
-                            RunningUpdate.UpdateNodesJob(Node.Name);
+                            //RunningUpdate.UpdateNodesJob(Node.Name);
                             break;
                     }
                     break;
@@ -933,24 +933,19 @@ namespace Adam
                             case "MANSW":
                                 if (Node.OPACCESS)
                                 {
-                                    Barcodeupdate.UpdateLoadport(Node.Name, true);
-                                    //Node.OPACCESS = false;
-                                    //TaskName = "LOADPORT_OPEN";
-                                    //Message = "";
-                                    //Dictionary<string, string> param = new Dictionary<string, string>();
-                                    //param.Add("@Target", Node.Name);
+                                   // Barcodeupdate.UpdateLoadport(Node.Name, true);
 
-                                    //RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param);
+                                    Dictionary<string, string> param1 = new Dictionary<string, string>();
+                                    param1.Add("@Target", Node.Name);
+
+                                    TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
                                 }
                                 break;
                             case "MANOF":
 
                                 break;
                             case "SMTON":
-
-                                break;
-                            case "PODOF":
-                                if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("UnloadComplete") && !Node.IsLoad)
+                                if (Node.OrgSearchComplete)
                                 {
                                     Node.CurrentStatus = "UnloadComplete";
 
@@ -959,14 +954,18 @@ namespace Adam
 
                                     TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_UNLOADCOMPLETE, param1);
                                 }
-                                if (Node.IsLoad)
-                                {
-                                    ShowAlarm("SYSTEM", "S0300182", Node.Name);
-                                }
+                                //if (Node.IsLoad)
+                                //{
+                                //    ShowAlarm("SYSTEM", "S0300182", Node.Name);
+                                //}
+                                MonitoringUpdate.UpdateNodesJob(Node.Name);
+                                break;
+                            case "PODOF":
+                               
                                 break;
                             case "PODON":
                                 //Foup Arrived
-                                if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("ReadyToLoad") && !Node.IsLoad)
+                                if (Node.OrgSearchComplete && !Node.OPACCESS)
                                 {
                                     Node.CurrentStatus = "ReadyToLoad";
 
@@ -1900,7 +1899,7 @@ namespace Adam
                     //}
                     break;
                 case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
-
+                
                     ////test mode
                     //Node p = NodeManagement.Get(Task.Params["@Target"]);
                     //TaskName = "LOADPORT_OPEN";
@@ -1909,7 +1908,7 @@ namespace Adam
                     //param1.Add("@Target", p.Name);
 
                     //RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out tmpTask, TaskName, param1);
-
+                    MonitoringUpdate.UpdateNodesJob(Task.Params["@Target"]);
                     break;
             }
 

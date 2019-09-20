@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using TransferControl.Config;
 using TransferControl.Engine;
@@ -306,13 +307,19 @@ namespace Adam.Menu.Monitoring
                     }
                 }
                 foup.Save();
-
-                ((Button)sender).Enabled = false;
-                string TaskName = "LOADPORT_CLOSE_NOMAP";
-                string Message = "";
-                Dictionary<string, string> param1 = new Dictionary<string, string>();
-                param1.Add("@Target", port.Name);
-                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param1);
+                if (port.Foup_Placement)
+                {
+                    ((Button)sender).Enabled = false;
+                    string TaskName = "LOADPORT_CLOSE_NOMAP";
+                    string Message = "";
+                    Dictionary<string, string> param1 = new Dictionary<string, string>();
+                    param1.Add("@Target", port.Name);
+                    TaskFlowManagement.CurrentProcessTask task = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), (TaskFlowManagement.Command)Enum.Parse(typeof(TaskFlowManagement.Command), TaskName), param1);
+                }
+                else
+                {
+                    MessageBox.Show("No cassette detected!");
+                }
             }
             else
             {
