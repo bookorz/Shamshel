@@ -18,9 +18,10 @@ namespace Adam.UI_Update.Alarm
         delegate void UpdateSignal(string Name, string Signal);
         delegate void UpdateMsg(string Msg);
 
-       
+        delegate void ShowForm();
 
-        
+
+
 
         public static void UpdateAlarmList(List<AlarmInfo> AlarmList)
         {
@@ -108,6 +109,40 @@ namespace Adam.UI_Update.Alarm
                     //Conn_gv.Refresh();
                     AlarmList_gv.ClearSelection();
                     AlarmList_gv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateAlarmHistory: Update fail." + e.Message + "\n" + e.StackTrace);
+            }
+
+        }
+        public static void ShowAlarmHistory()
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormAlarmHis"];
+                DataGridView AlarmList_gv;
+
+                if (form == null)
+                    return;
+
+
+                AlarmList_gv = form.Controls.Find("dg1", true).FirstOrDefault() as DataGridView;
+                if (AlarmList_gv == null)
+                    return;
+
+                if (AlarmList_gv.InvokeRequired)
+                {
+                    ShowForm ph = new ShowForm(ShowAlarmHistory);
+                    AlarmList_gv.BeginInvoke(ph);
+                }
+                else
+                {
+
+                   
                 }
 
 

@@ -256,16 +256,27 @@ namespace Adam
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            FormAlarmHis form4 = new FormAlarmHis();
-            form4.Text = "Message History";
-            form4.label21.Text = "Message History";
-            form4.Show();
+           
+                FormAlarmHis form4 = new FormAlarmHis();
+                form4.Text = "Message History";
+                form4.label21.Text = "Message History";
+                form4.Show();
+            
         }
 
         private void bBBToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormAlarmHis form4 = new FormAlarmHis();
-            form4.Show();
+            Form form = Application.OpenForms["FormAlarmHis"];
+            if (form == null)
+            {
+                FormAlarmHis form4 = new FormAlarmHis();
+                form4.Show();
+            }
+            else
+            {
+                form.WindowState = FormWindowState.Normal;
+                form.Focus();
+            }
         }
 
         private void toolStripMenuItem4_Click(object sender, EventArgs e)
@@ -961,11 +972,11 @@ namespace Adam
                                 MonitoringUpdate.UpdateNodesJob(Node.Name);
                                 break;
                             case "PODOF":
-                               
+                                MonitoringUpdate.ButtonEnabled(Node.Name.ToUpper() + "_Unload_btn", false);
                                 break;
                             case "PODON":
                                 //Foup Arrived
-                                if (Node.OrgSearchComplete && !Node.OPACCESS)
+                                if (Node.OrgSearchComplete && !Node.OPACCESS && !CurrentMode.Equals("MANUAL"))
                                 {
                                     Node.CurrentStatus = "ReadyToLoad";
 
@@ -1342,6 +1353,10 @@ namespace Adam
                 {
                     formManual.Close();
                 }
+                foreach(Node n in NodeManagement.GetList())
+                {
+                    n.OrgSearchComplete = false;
+                }
             }
             else
             {
@@ -1372,6 +1387,7 @@ namespace Adam
                 CurrentMode = "MANUAL";
                 //tbcMian.Enabled = true;
                 AuthorityUpdate.UpdateFuncGroupEnable(lbl_login_group.Text);//20190529 add 依照權限開放權限
+                TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.DISABLE_OPACCESS);
                 //}
                 //else
                 //{
@@ -2118,30 +2134,30 @@ namespace Adam
                     if (!XfeCrossZone.Running && NeedProcessSlot.Count() != 0)
                     {
                         //in port log
-                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
-                        foreach (Job j in Loadport.JobList.Values)
-                        {
-                            if (j.MapFlag && !j.ErrPosition)
-                            {
-                                int slot = Convert.ToInt16(j.Slot);
-                                Node ULD = NodeManagement.Get(j.Destination);
-                                string ULD_Foup = "";
-                                if (ULD != null)
-                                {
-                                    ULD_Foup = ULD.FoupID;
-                                }
-                                foup.record[slot - 1] = new Adam.waferInfo(Loadport.Name, Loadport.FoupID, j.Slot, j.FromPort, Loadport.FoupID, j.FromPortSlot, j.Destination, ULD_Foup, j.DestinationSlot);
-                                //foup.record[slot - 1].SetStartTime(j.StartTime);
-                                //foup.record[slot - 1].setM12(j.OCR_M12_Result);
-                                //foup.record[slot - 1].setT7(j.OCR_T7_Result);
-                                //foup.record[slot - 1].SetEndTime(j.EndTime);
-                                foup.record[slot - 1].SetLoadTime(Loadport.LoadTime);
-                                //foup.record[slot - 1].SetUnloadTime(DateTime.Now);
-                                //foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
-                                //foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
-                            }
-                        }
-                        foup.SaveTmp(Loadport.Name);
+                        //FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
+                        //foreach (Job j in Loadport.JobList.Values)
+                        //{
+                        //    if (j.MapFlag && !j.ErrPosition)
+                        //    {
+                        //        int slot = Convert.ToInt16(j.Slot);
+                        //        Node ULD = NodeManagement.Get(j.Destination);
+                        //        string ULD_Foup = "";
+                        //        if (ULD != null)
+                        //        {
+                        //            ULD_Foup = ULD.FoupID;
+                        //        }
+                        //        foup.record[slot - 1] = new Adam.waferInfo(Loadport.Name, Loadport.FoupID, j.Slot, j.FromPort, Loadport.FoupID, j.FromPortSlot, j.Destination, ULD_Foup, j.DestinationSlot);
+                        //        //foup.record[slot - 1].SetStartTime(j.StartTime);
+                        //        //foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                        //        //foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                        //        //foup.record[slot - 1].SetEndTime(j.EndTime);
+                        //        foup.record[slot - 1].SetLoadTime(Loadport.LoadTime);
+                        //        //foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                        //        //foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                        //        //foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                        //    }
+                        //}
+                        //foup.SaveTmp(Loadport.Name);
                         if (!xfe.Start(Loadport.Name))
                         {
                             MessageBox.Show("xfe.Start fail!");
@@ -2159,31 +2175,31 @@ namespace Adam
                     if (!XfeCrossZone.Running && NeedProcessSlot.Count() != 0)
                     {
                         //in port log
-                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
-                        foreach (Job j in Loadport.JobList.Values)
-                        {
-                            if (j.MapFlag && !j.ErrPosition)
-                            {
-                                int slot = Convert.ToInt16(j.Slot);
-                                Node ULD = NodeManagement.Get(j.Destination);
-                                string ULD_Foup = "";
-                                if (ULD != null)
-                                {
-                                    ULD_Foup = ULD.FoupID;
-                                }
+                        //FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
+                        //foreach (Job j in Loadport.JobList.Values)
+                        //{
+                        //    if (j.MapFlag && !j.ErrPosition)
+                        //    {
+                        //        int slot = Convert.ToInt16(j.Slot);
+                        //        Node ULD = NodeManagement.Get(j.Destination);
+                        //        string ULD_Foup = "";
+                        //        if (ULD != null)
+                        //        {
+                        //            ULD_Foup = ULD.FoupID;
+                        //        }
 
-                                foup.record[slot - 1] = new Adam.waferInfo(Loadport.Name, Loadport.FoupID, j.Slot, j.FromPort, Loadport.FoupID, j.FromPortSlot, j.Destination, ULD_Foup, j.DestinationSlot);
-                                //foup.record[slot - 1].SetStartTime(j.StartTime);
-                                //foup.record[slot - 1].setM12(j.OCR_M12_Result);
-                                //foup.record[slot - 1].setT7(j.OCR_T7_Result);
-                                //foup.record[slot - 1].SetEndTime(j.EndTime);
-                                foup.record[slot - 1].SetLoadTime(Loadport.LoadTime);
-                                //foup.record[slot - 1].SetUnloadTime(DateTime.Now);
-                                //foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
-                                //foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
-                            }
-                        }
-                        foup.SaveTmp(Loadport.Name);
+                        //        foup.record[slot - 1] = new Adam.waferInfo(Loadport.Name, Loadport.FoupID, j.Slot, j.FromPort, Loadport.FoupID, j.FromPortSlot, j.Destination, ULD_Foup, j.DestinationSlot);
+                        //        //foup.record[slot - 1].SetStartTime(j.StartTime);
+                        //        //foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                        //        //foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                        //        //foup.record[slot - 1].SetEndTime(j.EndTime);
+                        //        foup.record[slot - 1].SetLoadTime(Loadport.LoadTime);
+                        //        //foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                        //        //foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                        //        //foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                        //    }
+                        //}
+                        //foup.SaveTmp(Loadport.Name);
 
 
                         if (!xfe.Start(Loadport.Name))
@@ -2300,9 +2316,9 @@ namespace Adam
                 else
                 {//滿了才退
 
-                    FoupInfo tmp = FoupInfo.Get(Port.Name);
-                    tmp.SetAllUnloadTime(DateTime.Now);
-                    tmp.Save();
+                    //FoupInfo tmp = FoupInfo.Get(Port.Name);
+                    //tmp.SetAllUnloadTime(DateTime.Now);
+                    //tmp.Save();
                     string constrict = Recipe.Get(SystemConfig.Get().CurrentRecipe).input_proc_fin;
                     string Light = "";
                     string Buzzer = "";
@@ -2487,24 +2503,24 @@ namespace Adam
                 if (Available.Count() == 0)
                 {//Unloadport 滿了 自動退
 
-                    FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID);
-                    foreach (Job j in Port.JobList.Values)
-                    {
-                        if (j.MapFlag && !j.ErrPosition)
-                        {
-                            int slot = Convert.ToInt16(j.Slot);
-                            foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
-                            foup.record[slot - 1].SetStartTime(j.StartTime);
-                            foup.record[slot - 1].setM12(j.OCR_M12_Result);
-                            foup.record[slot - 1].setT7(j.OCR_T7_Result);
-                            foup.record[slot - 1].SetEndTime(j.EndTime);
-                            foup.record[slot - 1].SetLoadTime(Port.LoadTime);
-                            foup.record[slot - 1].SetUnloadTime(DateTime.Now);
-                            foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
-                            foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
-                        }
-                    }
-                    foup.Save();
+                    //FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID);
+                    //foreach (Job j in Port.JobList.Values)
+                    //{
+                    //    if (j.MapFlag && !j.ErrPosition)
+                    //    {
+                    //        int slot = Convert.ToInt16(j.Slot);
+                    //        foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
+                    //        foup.record[slot - 1].SetStartTime(j.StartTime);
+                    //        foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                    //        foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                    //        foup.record[slot - 1].SetEndTime(j.EndTime);
+                    //        foup.record[slot - 1].SetLoadTime(Port.LoadTime);
+                    //        foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                    //        foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                    //        foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                    //    }
+                    //}
+                    //foup.Save();
                     string constrict = Recipe.Get(SystemConfig.Get().CurrentRecipe).output_proc_fin;
                     string Light = "";
                     string Buzzer = "";
@@ -2642,7 +2658,7 @@ namespace Adam
         private void button1_Click(object sender, EventArgs e)
         {
             fakeData("LOADPORT01", "1111111111111000000000000");
-            fakeData("LOADPORT02", "0000100000000000000000000");
+            //fakeData("LOADPORT02", "0000100000000000000000000");
             ////fakeData("LOADPORT02");
             ////fakeData("LOADPORT03");
             //fakeData("LOADPORT04", "0000000000000000000000000");
@@ -2951,6 +2967,11 @@ namespace Adam
                 form.StartPosition = FormStartPosition.CenterScreen;
                 var result = form.ShowDialog();
             }
+        }
+
+        private void tabMonitor_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

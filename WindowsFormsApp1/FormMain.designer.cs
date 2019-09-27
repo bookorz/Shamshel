@@ -538,6 +538,7 @@ namespace Adam
             this.tabMonitor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tabMonitor.ForeColor = System.Drawing.SystemColors.ControlText;
             this.tabMonitor.Name = "tabMonitor";
+            this.tabMonitor.Click += new System.EventHandler(this.tabMonitor_Click);
             // 
             // tabRunning
             // 

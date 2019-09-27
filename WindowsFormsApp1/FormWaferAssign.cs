@@ -246,6 +246,10 @@ namespace Adam
             }
             if (port != null)
             {
+                if (!port.JobList.ContainsKey(slot))
+                {
+                    return;
+                }
                 Job slotData = port.JobList[slot];
                 if (slotData != null)
                 {

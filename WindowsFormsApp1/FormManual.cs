@@ -214,9 +214,11 @@ namespace GUI
                     param.Add("@Target", port.Name);
                     break;
                 case "Btn_Map_A":
-                    TaskName = "LOADPORT_GET_MAPDT";
+                    //TaskName = "LOADPORT_GET_MAPDT";
 
-                    param.Add("@Target", port.Name);
+                    //param.Add("@Target", port.Name);
+                    ManualPortStatusUpdate.UpdateMapping(port.Name,port.MappingResult);
+                    return;
                     break;
                 case "Btn_ReMapping_A":
                     TaskName = "LOADPORT_RE_MAPPING";
@@ -676,7 +678,7 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA1Point.Text);
-                    param.Add("@Slot", cbRA1Slot.Text.PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA1Slot.Text);
                     break;
                 case "btnRMoveUp":
                     TaskName = "ROBOT_PUT_ARM_EXTEND";
@@ -692,7 +694,7 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA2Point.Text);
-                    param.Add("@Slot", cbRA2Slot.Text.PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA2Slot.Text);
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA2Arm.Text));
                     break;
                 case "btnRRetract":
@@ -713,8 +715,8 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA1Point.Text);
-                    param.Add("@Slot", cbRA1Slot.Text.PadLeft(2, '0'));
-                    param.Add("@S2", (Convert.ToInt32(cbRA1Slot.Text) - 1).ToString().PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA1Slot.Text);
+                    param.Add("@S2", (Convert.ToInt32(cbRA1Slot.Text) - 1).ToString());
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA1Arm.Text));
                     break;
                 case "btnRPut":
@@ -731,8 +733,8 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA2Point.Text);
-                    param.Add("@Slot", cbRA2Slot.Text.PadLeft(2, '0'));
-                    param.Add("@S2", (Convert.ToInt32(cbRA2Slot.Text) - 1).ToString().PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA2Slot.Text);
+                    param.Add("@S2", (Convert.ToInt32(cbRA2Slot.Text) - 1).ToString());
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA2Arm.Text));
                     break;
                 case "btnRGetWait":
@@ -749,7 +751,7 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA1Point.Text);
-                    param.Add("@Slot", cbRA1Slot.Text.PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA1Slot.Text);
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA1Arm.Text));
                     break;
                 case "btnRPutWait":
@@ -766,7 +768,7 @@ namespace GUI
                     }
                     param.Add("@Target", nodeName);
                     param.Add("@Position", cbRA2Point.Text);
-                    param.Add("@Slot", cbRA2Slot.Text.PadLeft(2, '0'));
+                    param.Add("@Slot", cbRA2Slot.Text);
                     param.Add("@Arm", SanwaUtil.GetArmID(cbRA2Arm.Text));
                     break;
                 case "btnROrg":

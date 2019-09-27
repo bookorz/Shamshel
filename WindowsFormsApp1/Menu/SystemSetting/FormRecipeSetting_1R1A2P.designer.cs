@@ -401,10 +401,10 @@
             this.label11.ForeColor = System.Drawing.Color.Brown;
             this.label11.Location = new System.Drawing.Point(289, 48);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(121, 140);
+            this.label11.Size = new System.Drawing.Size(171, 180);
             this.label11.TabIndex = 6;
             this.label11.Text = "0: Red light\r\n1: Orange light\r\n2: Green light\r\n3: Blue light\r\n4: Buzzer 1\r\n5: Buz" +
-    "zer 2\r\nN: 無動作";
+    "zer 2\r\nM: 只跳出提示訊息\r\nP: 暫停並跳出提示訊息\r\nN: 無動作";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // groupBox7
@@ -615,7 +615,8 @@
             this.cbP2CstType.FormattingEnabled = true;
             this.cbP2CstType.Items.AddRange(new object[] {
             "FOUP",
-            "ADAPT"});
+            "ADAPT",
+            "FOSB"});
             this.cbP2CstType.Location = new System.Drawing.Point(142, 97);
             this.cbP2CstType.Name = "cbP2CstType";
             this.cbP2CstType.Size = new System.Drawing.Size(115, 32);
@@ -629,7 +630,8 @@
             this.cbP1CstType.FormattingEnabled = true;
             this.cbP1CstType.Items.AddRange(new object[] {
             "FOUP",
-            "ADAPT"});
+            "ADAPT",
+            "FOSB"});
             this.cbP1CstType.Location = new System.Drawing.Point(142, 57);
             this.cbP1CstType.Name = "cbP1CstType";
             this.cbP1CstType.Size = new System.Drawing.Size(115, 32);

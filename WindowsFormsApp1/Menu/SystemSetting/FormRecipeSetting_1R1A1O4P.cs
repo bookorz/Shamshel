@@ -594,5 +594,10 @@ namespace Adam.Menu.SystemSetting
                 cbAutoPutRule.Enabled = true;
             }
         }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

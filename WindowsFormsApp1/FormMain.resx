@@ -133,10 +133,10 @@
     <value>False</value>
   </data>
   <data name="btnChangeRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>164, 80</value>
+    <value>164, 75</value>
   </data>
   <data name="btnChangeRecipe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 35</value>
+    <value>76, 40</value>
   </data>
   <data name="btnChangeRecipe.TabIndex" type="System.Int32, mscorlib">
     <value>19</value>
@@ -385,10 +385,10 @@
     <value>NoControl</value>
   </data>
   <data name="ManualTranfer_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 160</value>
+    <value>10, 194</value>
   </data>
   <data name="ManualTranfer_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
+    <value>230, 52</value>
   </data>
   <data name="ManualTranfer_btn.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -418,7 +418,7 @@
     <value>NoControl</value>
   </data>
   <data name="CDAAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 306</value>
+    <value>10, 351</value>
   </data>
   <data name="CDAAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -481,10 +481,10 @@
     <value>NoControl</value>
   </data>
   <data name="Stop_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 199</value>
+    <value>10, 252</value>
   </data>
   <data name="Stop_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
+    <value>230, 52</value>
   </data>
   <data name="Stop_btn.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -514,10 +514,10 @@
     <value>NoControl</value>
   </data>
   <data name="Start_btn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 119</value>
+    <value>10, 136</value>
   </data>
   <data name="Start_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
+    <value>230, 52</value>
   </data>
   <data name="Start_btn.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -550,7 +550,7 @@
     <value>10, 78</value>
   </data>
   <data name="ALL_INIT_btn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>230, 35</value>
+    <value>230, 52</value>
   </data>
   <data name="ALL_INIT_btn.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -580,7 +580,7 @@
     <value>NoControl</value>
   </data>
   <data name="IonizerAirAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 510</value>
+    <value>10, 555</value>
   </data>
   <data name="IonizerAirAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -613,7 +613,7 @@
     <value>NoControl</value>
   </data>
   <data name="SafetyRelay_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 469</value>
+    <value>10, 514</value>
   </data>
   <data name="SafetyRelay_Signal.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>0, 0, 0, 0</value>
@@ -649,7 +649,7 @@
     <value>NoControl</value>
   </data>
   <data name="IonizerAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 429</value>
+    <value>10, 474</value>
   </data>
   <data name="IonizerAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -682,7 +682,7 @@
     <value>NoControl</value>
   </data>
   <data name="FFUAlarm_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 388</value>
+    <value>10, 433</value>
   </data>
   <data name="FFUAlarm_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -715,7 +715,7 @@
     <value>NoControl</value>
   </data>
   <data name="Vacuum_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 347</value>
+    <value>10, 392</value>
   </data>
   <data name="Vacuum_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>
@@ -748,7 +748,7 @@
     <value>NoControl</value>
   </data>
   <data name="DoorSwitch_Signal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 265</value>
+    <value>10, 310</value>
   </data>
   <data name="DoorSwitch_Signal.Size" type="System.Drawing.Size, System.Drawing">
     <value>230, 35</value>

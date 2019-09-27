@@ -657,6 +657,7 @@
             this.label11.Text = "0: Red light\r\n1: Orange light\r\n2: Green light\r\n3: Blue light\r\n4: Buzzer 1\r\n5: Buz" +
     "zer 2\r\nM: 只跳出提示訊息\r\nP: 暫停並跳出提示訊息\r\nN: 無動作";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // groupBox7
             // 
@@ -1790,7 +1791,7 @@
             this.tlpAccount.Size = new System.Drawing.Size(1432, 752);
             this.tlpAccount.TabIndex = 23;
             // 
-            // FormRecipeSetting
+            // FormRecipeSetting_1R1A1O4P
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -1799,7 +1800,7 @@
             this.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(6);
-            this.Name = "FormRecipeSetting";
+            this.Name = "FormRecipeSetting_1R1A1O4P";
             this.Text = "FormRecipeSetting";
             this.Load += new System.EventHandler(this.FormRecipeSetting_Load);
             this.gbAccountCondition.ResumeLayout(false);
