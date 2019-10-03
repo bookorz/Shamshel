@@ -685,6 +685,7 @@
             this.cbWaferSize.Name = "cbWaferSize";
             this.cbWaferSize.Size = new System.Drawing.Size(160, 32);
             this.cbWaferSize.TabIndex = 2;
+            this.cbWaferSize.SelectedIndexChanged += new System.EventHandler(this.cbWaferSize_SelectedIndexChanged);
             this.cbWaferSize.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbWaferSize.Click += new System.EventHandler(this.modeCheck);
             // 

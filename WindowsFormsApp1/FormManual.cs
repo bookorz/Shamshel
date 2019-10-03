@@ -47,7 +47,7 @@ namespace GUI
                     cbRA2Point.Items.Add("ALIGNER02");
                 }
             }
-
+            tbcManual.TabPages.Remove(tabAligner);
         }
 
         public void Initialize()
@@ -1076,7 +1076,7 @@ namespace GUI
         private void setRobotStatus()
         {
             string Message = "";
-            Control[] controls = new Control[] { tbRError, tbRLVacuSolenoid, tbRRVacuSolenoid, nudRSpeed, tbRStatus };
+            Control[] controls = new Control[] { tbRError, tbRLwaferSensor, tbRRwaferSensor, nudRSpeed, tbRStatus };
             foreach (Control control in controls)
             {
                 control.Text = "";

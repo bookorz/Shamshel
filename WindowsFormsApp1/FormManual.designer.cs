@@ -78,9 +78,9 @@
             this.btnRLVacuOn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
-            this.tbRLVacuSolenoid = new System.Windows.Forms.TextBox();
+            this.tbRLwaferSensor = new System.Windows.Forms.TextBox();
             this.RobotConnection_tb = new System.Windows.Forms.TextBox();
-            this.tbRRVacuSolenoid = new System.Windows.Forms.TextBox();
+            this.tbRRwaferSensor = new System.Windows.Forms.TextBox();
             this.btnRInit = new System.Windows.Forms.Button();
             this.btnRRVacuOff = new System.Windows.Forms.Button();
             this.btnRRetract = new System.Windows.Forms.Button();
@@ -487,11 +487,7 @@
             this.cbRA1Point.FormattingEnabled = true;
             this.cbRA1Point.Items.AddRange(new object[] {
             "LOADPORT01",
-            "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
-            "ALIGNER01",
-            "LOADLOCK01"});
+            "LOADPORT02"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
             this.cbRA1Point.Size = new System.Drawing.Size(208, 38);
@@ -689,11 +685,7 @@
             this.cbRA2Point.FormattingEnabled = true;
             this.cbRA2Point.Items.AddRange(new object[] {
             "LOADPORT01",
-            "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
-            "ALIGNER01",
-            "LOADLOCK01"});
+            "LOADPORT02"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
             this.cbRA2Point.Size = new System.Drawing.Size(208, 38);
@@ -1014,9 +1006,9 @@
             this.pnlRobotStatus.Controls.Add(this.btnRLVacuOn);
             this.pnlRobotStatus.Controls.Add(this.label3);
             this.pnlRobotStatus.Controls.Add(this.label65);
-            this.pnlRobotStatus.Controls.Add(this.tbRLVacuSolenoid);
+            this.pnlRobotStatus.Controls.Add(this.tbRLwaferSensor);
             this.pnlRobotStatus.Controls.Add(this.RobotConnection_tb);
-            this.pnlRobotStatus.Controls.Add(this.tbRRVacuSolenoid);
+            this.pnlRobotStatus.Controls.Add(this.tbRRwaferSensor);
             this.pnlRobotStatus.Controls.Add(this.btnRInit);
             this.pnlRobotStatus.Controls.Add(this.btnRRVacuOff);
             this.pnlRobotStatus.Controls.Add(this.btnRRetract);
@@ -1127,16 +1119,16 @@
             this.label65.TabIndex = 3;
             this.label65.Text = "Wafer Hold";
             // 
-            // tbRLVacuSolenoid
+            // tbRLwaferSensor
             // 
-            this.tbRLVacuSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbRLVacuSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRLVacuSolenoid.Location = new System.Drawing.Point(366, 450);
-            this.tbRLVacuSolenoid.Name = "tbRLVacuSolenoid";
-            this.tbRLVacuSolenoid.ReadOnly = true;
-            this.tbRLVacuSolenoid.Size = new System.Drawing.Size(106, 32);
-            this.tbRLVacuSolenoid.TabIndex = 15;
-            this.tbRLVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbRLwaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRLwaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRLwaferSensor.Location = new System.Drawing.Point(366, 450);
+            this.tbRLwaferSensor.Name = "tbRLwaferSensor";
+            this.tbRLwaferSensor.ReadOnly = true;
+            this.tbRLwaferSensor.Size = new System.Drawing.Size(106, 32);
+            this.tbRLwaferSensor.TabIndex = 15;
+            this.tbRLwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // RobotConnection_tb
             // 
@@ -1149,16 +1141,16 @@
             this.RobotConnection_tb.TabIndex = 118;
             this.RobotConnection_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // tbRRVacuSolenoid
+            // tbRRwaferSensor
             // 
-            this.tbRRVacuSolenoid.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tbRRVacuSolenoid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.tbRRVacuSolenoid.Location = new System.Drawing.Point(224, 450);
-            this.tbRRVacuSolenoid.Name = "tbRRVacuSolenoid";
-            this.tbRRVacuSolenoid.ReadOnly = true;
-            this.tbRRVacuSolenoid.Size = new System.Drawing.Size(106, 32);
-            this.tbRRVacuSolenoid.TabIndex = 16;
-            this.tbRRVacuSolenoid.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbRRwaferSensor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tbRRwaferSensor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbRRwaferSensor.Location = new System.Drawing.Point(224, 450);
+            this.tbRRwaferSensor.Name = "tbRRwaferSensor";
+            this.tbRRwaferSensor.ReadOnly = true;
+            this.tbRRwaferSensor.Size = new System.Drawing.Size(106, 32);
+            this.tbRRwaferSensor.TabIndex = 16;
+            this.tbRRwaferSensor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnRInit
             // 
@@ -4766,9 +4758,9 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel pnlRobotStatus;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox tbRRVacuSolenoid;
+        private System.Windows.Forms.TextBox tbRRwaferSensor;
         private System.Windows.Forms.TextBox tbRStatus;
-        private System.Windows.Forms.TextBox tbRLVacuSolenoid;
+        private System.Windows.Forms.TextBox tbRLwaferSensor;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Label label67;

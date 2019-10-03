@@ -94,9 +94,9 @@
             this.FFU_rpm_lb.AutoSize = true;
             this.FFU_rpm_lb.Location = new System.Drawing.Point(1536, 142);
             this.FFU_rpm_lb.Name = "FFU_rpm_lb";
-            this.FFU_rpm_lb.Size = new System.Drawing.Size(54, 20);
+            this.FFU_rpm_lb.Size = new System.Drawing.Size(40, 20);
             this.FFU_rpm_lb.TabIndex = 3;
-            this.FFU_rpm_lb.Text = "label1";
+            this.FFU_rpm_lb.Text = "N/A";
             // 
             // FFU_RPM_tb
             // 

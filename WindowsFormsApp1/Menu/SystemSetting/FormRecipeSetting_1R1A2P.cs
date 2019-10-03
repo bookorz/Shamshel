@@ -497,5 +497,18 @@ namespace Adam.Menu.SystemSetting
         {
             modeCheck(sender, new EventArgs());
         }
+
+        private void cbWaferSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbWaferSize.Text.Equals("200"))
+            {
+                cbUserBothArm.Enabled = false;
+                cbUserBothArm.Checked = false;
+            }
+            else
+            {
+                cbUserBothArm.Enabled = true;
+            }
+        }
     }
 }

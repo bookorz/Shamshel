@@ -955,6 +955,7 @@ namespace Adam
                             case "MANOF":
 
                                 break;
+                            case "ABNST":
                             case "SMTON":
                                 if (Node.OrgSearchComplete)
                                 {
@@ -965,10 +966,11 @@ namespace Adam
 
                                     TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_UNLOADCOMPLETE, param1);
                                 }
-                                //if (Node.IsLoad)
-                                //{
-                                //    ShowAlarm("SYSTEM", "S0300182", Node.Name);
-                                //}
+                                if (Node.IsLoad)
+                                {
+                                    ShowAlarm("SYSTEM", "S0300182", Node.Name);
+                                    XfeCrossZone.Stop();
+                                }
                                 MonitoringUpdate.UpdateNodesJob(Node.Name);
                                 break;
                             case "PODOF":
@@ -986,9 +988,7 @@ namespace Adam
                                     TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_READYTOLOAD, param2);
                                 }
                                 break;
-                            case "ABNST":
 
-                                break;
                         }
                         break;
                 }
@@ -1465,8 +1465,17 @@ namespace Adam
 
         private void btnHelp_Click(object sender, EventArgs e)
         {
-            FormQuery form = new FormQuery();
-            form.Show();
+            Form form = Application.OpenForms["FormQuery"];
+            if (form == null)
+            {
+                FormQuery form4 = new FormQuery();
+                form4.Show();
+            }
+            else
+            {
+                form.WindowState = FormWindowState.Normal;
+                form.Focus();
+            }
         }
 
 
@@ -1784,6 +1793,11 @@ namespace Adam
                 {
                     ShowAlarm("SYSTEM", Message, NodeName);
                 }
+            }
+            if(Task.TaskName== TaskFlowManagement.Command.ALL_INIT)
+            {
+                DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
+                DIOUpdate.UpdateControlButton("Mode_btn", true);
             }
         }
 
