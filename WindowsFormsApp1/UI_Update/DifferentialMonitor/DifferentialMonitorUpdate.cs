@@ -80,7 +80,7 @@ namespace Adam.UI_Update.DifferentialMonitor
                             tmpDataCol.RemoveAt(0);
                         }
                         //標題 最大數值
-                        Series series1 = new Series("壓力差", 100);
+                        Series series1 = new Series("壓力差", 10);
                         series1.Color = Color.Red;
                         series1.BorderWidth = 5;
                         series1.ChartType = SeriesChartType.Line;
@@ -92,8 +92,8 @@ namespace Adam.UI_Update.DifferentialMonitor
                         }
                         chart.Series.Clear();
                         chart.Series.Add(series1);
-                        chart.ChartAreas[0].AxisY.Maximum = 60;
-                        chart.ChartAreas[0].AxisY.Minimum = -10;
+                        chart.ChartAreas[0].AxisY.Maximum = 5;
+                        chart.ChartAreas[0].AxisY.Minimum = 0;
                         
                         //chart.Titles.Add("壓差計數值");
                         Label CurrentVal = form.Controls.Find("CurrentVal_lb", true).FirstOrDefault() as Label;
