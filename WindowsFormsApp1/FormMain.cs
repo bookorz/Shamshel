@@ -36,7 +36,7 @@ namespace Adam
         public static RouteControl RouteCtrl;
         // public static SECSGEM HostControl;
         public static XfeCrossZone xfe;
-        public static AlarmMapping AlmMapping;
+
         private static readonly ILog logger = LogManager.GetLogger(typeof(FormMain));
 
         FormSystemLog sysLog = new FormSystemLog();
@@ -76,7 +76,6 @@ namespace Adam
 
 
             RouteCtrl = new RouteControl(this);
-            AlmMapping = new AlarmMapping();
 
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(-200, 0);
@@ -1709,7 +1708,7 @@ namespace Adam
             try
             {
 
-                AlarmMessage Detail = AlmMapping.Get(NodeName, CurrentAlarm.AlarmCode);
+                AlarmMessage Detail = AlarmMapping.Get(NodeName, CurrentAlarm.AlarmCode);
                 //if (!Detail.Code_Group.Equals("UNDEFINITION"))
                 //{
                 CurrentAlarm.SystemAlarmCode = Detail.CodeID;
@@ -1772,7 +1771,7 @@ namespace Adam
             {
                 try
                 {
-                    AlarmMessage Detail = AlmMapping.Get("SYSTEM", Message);
+                    AlarmMessage Detail = AlarmMapping.Get("SYSTEM", Message);
                     MessageBox.Show(Detail.Code_Cause, "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 catch
