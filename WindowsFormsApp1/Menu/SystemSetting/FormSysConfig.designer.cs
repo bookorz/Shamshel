@@ -30,6 +30,7 @@
         {
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cbMappingDataCheck = new System.Windows.Forms.CheckBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -60,7 +61,7 @@
             this.Setting_Port_lb = new System.Windows.Forms.Label();
             this.setting_Address_lb = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbMappingDataCheck = new System.Windows.Forms.CheckBox();
+            this.cbPreMapping = new System.Windows.Forms.CheckBox();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,6 +83,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.cbPreMapping);
             this.groupBox2.Controls.Add(this.cbMappingDataCheck);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
@@ -120,6 +122,20 @@
             this.groupBox2.TabIndex = 96;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "System Config";
+            // 
+            // cbMappingDataCheck
+            // 
+            this.cbMappingDataCheck.AutoSize = true;
+            this.cbMappingDataCheck.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cbMappingDataCheck.Checked = true;
+            this.cbMappingDataCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbMappingDataCheck.Enabled = false;
+            this.cbMappingDataCheck.Location = new System.Drawing.Point(548, 304);
+            this.cbMappingDataCheck.Name = "cbMappingDataCheck";
+            this.cbMappingDataCheck.Size = new System.Drawing.Size(186, 28);
+            this.cbMappingDataCheck.TabIndex = 99;
+            this.cbMappingDataCheck.Text = "Mapping結果檢查";
+            this.cbMappingDataCheck.UseVisualStyleBackColor = false;
             // 
             // label13
             // 
@@ -415,19 +431,19 @@
             this.label10.TabIndex = 6;
             this.label10.Text = "DB connect:";
             // 
-            // cbMappingDataCheck
+            // cbPreMapping
             // 
-            this.cbMappingDataCheck.AutoSize = true;
-            this.cbMappingDataCheck.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.cbMappingDataCheck.Checked = true;
-            this.cbMappingDataCheck.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbMappingDataCheck.Enabled = false;
-            this.cbMappingDataCheck.Location = new System.Drawing.Point(548, 304);
-            this.cbMappingDataCheck.Name = "cbMappingDataCheck";
-            this.cbMappingDataCheck.Size = new System.Drawing.Size(186, 28);
-            this.cbMappingDataCheck.TabIndex = 99;
-            this.cbMappingDataCheck.Text = "Mapping結果檢查";
-            this.cbMappingDataCheck.UseVisualStyleBackColor = false;
+            this.cbPreMapping.AutoSize = true;
+            this.cbPreMapping.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.cbPreMapping.Checked = true;
+            this.cbPreMapping.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbPreMapping.Enabled = false;
+            this.cbPreMapping.Location = new System.Drawing.Point(740, 304);
+            this.cbPreMapping.Name = "cbPreMapping";
+            this.cbPreMapping.Size = new System.Drawing.Size(178, 28);
+            this.cbPreMapping.TabIndex = 100;
+            this.cbPreMapping.Text = "8\"Adapt突出檢知";
+            this.cbPreMapping.UseVisualStyleBackColor = false;
             // 
             // FormSysConfig
             // 
@@ -482,5 +498,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ComboBox cbNoticeProcFin;
         private System.Windows.Forms.CheckBox cbMappingDataCheck;
+        private System.Windows.Forms.CheckBox cbPreMapping;
     }
 }

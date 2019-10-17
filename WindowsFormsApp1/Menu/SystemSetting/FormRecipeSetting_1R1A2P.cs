@@ -504,10 +504,27 @@ namespace Adam.Menu.SystemSetting
             {
                 cbUserBothArm.Enabled = false;
                 cbUserBothArm.Checked = false;
+                cbP1CstType.Items.Clear();
+                cbP1CstType.Items.Add("FOUP");
+                cbP1CstType.Items.Add("ADAPT");
+                cbP1CstType.Text = Recipe.Get(trvRecipe.SelectedNode.Text).port1_carrier_type.Equals("FOSB")?"": Recipe.Get(trvRecipe.SelectedNode.Text).port1_carrier_type;
+                cbP2CstType.Items.Clear();
+                cbP2CstType.Items.Add("FOUP");
+                cbP2CstType.Items.Add("ADAPT");
+                cbP2CstType.Text = Recipe.Get(trvRecipe.SelectedNode.Text).port2_carrier_type.Equals("FOSB") ? "" : Recipe.Get(trvRecipe.SelectedNode.Text).port2_carrier_type;
             }
-            else
+            else if (cbWaferSize.Text.Equals("300"))
             {
                 cbUserBothArm.Enabled = true;
+                cbP1CstType.Items.Clear();
+                cbP1CstType.Items.Add("FOUP");
+                cbP1CstType.Items.Add("FOSB");
+                cbP1CstType.Text = Recipe.Get(trvRecipe.SelectedNode.Text).port1_carrier_type.Equals("ADAPT") ? "" : Recipe.Get(trvRecipe.SelectedNode.Text).port1_carrier_type;
+                cbP2CstType.Items.Clear();
+                cbP2CstType.Items.Add("FOUP");
+                cbP2CstType.Items.Add("FOSB");
+               
+                cbP2CstType.Text = Recipe.Get(trvRecipe.SelectedNode.Text).port2_carrier_type.Equals("ADAPT") ? "" : Recipe.Get(trvRecipe.SelectedNode.Text).port2_carrier_type;
             }
         }
     }

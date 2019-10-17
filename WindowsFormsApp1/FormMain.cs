@@ -1764,6 +1764,12 @@ namespace Adam
 
                         Initializing = false;
                         break;
+                    case TaskFlowManagement.Command.FFU_ALARM_BYPASS:
+                    case TaskFlowManagement.Command.FFU_SET_SPEED:
+                    case TaskFlowManagement.Command.FFU_START:
+                    case TaskFlowManagement.Command.FFU_STOP:
+                        DifferentialMonitorUpdate.EnableUI(true);
+                        break;
                 }
             }
             ManualPortStatusUpdate.LockUI(false);
@@ -1809,6 +1815,12 @@ namespace Adam
             //}
             switch (Task.TaskName)
             {
+                case TaskFlowManagement.Command.FFU_ALARM_BYPASS:
+                case TaskFlowManagement.Command.FFU_SET_SPEED:
+                case TaskFlowManagement.Command.FFU_START:
+                case TaskFlowManagement.Command.FFU_STOP:
+                    DifferentialMonitorUpdate.EnableUI(true);
+                    break;
                 case TaskFlowManagement.Command.ROBOT_RESET:
                 case TaskFlowManagement.Command.ALIGNER_RESET:
                 case TaskFlowManagement.Command.LOADPORT_RESET:

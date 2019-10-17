@@ -17,8 +17,40 @@ namespace Adam.UI_Update.DifferentialMonitor
         static ILog logger = LogManager.GetLogger(typeof(DifferentialMonitorUpdate));
         delegate void UpdateDIO(string Parameter, string Value);
         delegate void UpdateValue(string Value);
+        delegate void UpdateUI(bool Enable);
         static List<double> tmpDataCol = new List<double>();
 
+        public static void EnableUI(bool Enable)
+        {
+            try
+            {
+                Form form = Application.OpenForms["FormDifferentialMonitor"];
+
+                if (form == null)
+                    return;
+
+                GroupBox ctrl = form.Controls.Find("ControlGrop", true).FirstOrDefault() as GroupBox;
+
+                if (ctrl == null)
+                    return;
+
+                if (ctrl.InvokeRequired)
+                {
+                    UpdateUI ph = new UpdateUI(EnableUI);
+                    ctrl.BeginInvoke(ph, Enable);
+                }
+                else
+                {
+                    ctrl.Enabled = Enable;
+                }
+
+
+            }
+            catch (Exception e)
+            {
+                logger.Error("UpdateFFU: Update fail. err:" + e.StackTrace);
+            }
+        }
         public static void UpdateFFU(string Value)
         {
             try

@@ -26,6 +26,7 @@ namespace Adam.Menu.DifferentialMonitor
 
         private void FFU_Start_btn_Click(object sender, EventArgs e)
         {
+            DifferentialMonitorUpdate.EnableUI(false);
             Node ffu = NodeManagement.Get("FFU01");
             if (ffu != null)
             {
@@ -41,6 +42,7 @@ namespace Adam.Menu.DifferentialMonitor
 
         private void FFU_Stop_btn_Click(object sender, EventArgs e)
         {
+            DifferentialMonitorUpdate.EnableUI(false);
             Node ffu = NodeManagement.Get("FFU01");
             if (ffu != null)
             {
@@ -56,6 +58,7 @@ namespace Adam.Menu.DifferentialMonitor
 
         private void FFU_AlarmBypass_btn_Click(object sender, EventArgs e)
         {
+            DifferentialMonitorUpdate.EnableUI(false);
             Node ffu = NodeManagement.Get("FFU01");
             if (ffu != null)
             {
@@ -71,6 +74,7 @@ namespace Adam.Menu.DifferentialMonitor
 
         private void FFU_Set_btn_Click(object sender, EventArgs e)
         {
+            DifferentialMonitorUpdate.EnableUI(false);
             int rpm = 0;
             if(!int.TryParse(FFU_RPM_tb.Text,out rpm))
             {

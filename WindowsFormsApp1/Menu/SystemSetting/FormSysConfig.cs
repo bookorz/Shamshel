@@ -43,6 +43,7 @@ namespace Adam.Menu.SystemSetting
             cbRecipe.SelectedItem = config.CurrentRecipe;
             cbNoticeInitFin.SelectedItem = config.NoticeInitFin;
             cbNoticeProcFin.SelectedItem = config.NoticeProcFin;
+            cbPreMapping.Checked = config.PreMapping;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -67,7 +68,7 @@ namespace Adam.Menu.SystemSetting
             config.CurrentRecipe = cbRecipe.SelectedItem.ToString();
             config.NoticeInitFin = cbNoticeInitFin.SelectedItem.ToString();//初始化鈴聲提示
             config.NoticeProcFin = cbNoticeProcFin.SelectedItem.ToString();//完工鈴聲提示
-
+            config.PreMapping = cbPreMapping.Checked;//8"Adapt突出檢知
             config.Save();
             MessageBox.Show("Update Completed.","Success");
             FormMainUpdate.UpdateRecipe(config.CurrentRecipe);
