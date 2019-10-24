@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using TransferControl.Comm;
+using TransferControl.Config;
 
 namespace Adam.UI_Update.Authority
 {
@@ -48,7 +49,10 @@ namespace Adam.UI_Update.Authority
                     if (lbl_login_date != null)
                         lbl_login_date.Text = System.DateTime.Now.ToString("yyyy-MM-dd HH：mm：ss");
                     Button btnLogout = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
-                    btnLogout.Text = "Logout";
+                    if(btnLogout.Text.Equals("Login"))
+                        btnLogout.Text = "Logout";
+                    if (btnLogout.Text.Equals("登录"))
+                        btnLogout.Text = "登出";
                     Button btnEdit = form.Controls.Find("btnChgPWD", true).FirstOrDefault() as Button;
                     btnEdit.Visible = true;
                     //AuthorityUpdate.UpdateFuncAssign(Group);
@@ -80,6 +84,7 @@ namespace Adam.UI_Update.Authority
                 }
                 else
                 {
+                    bool isCn = SystemConfig.Get().Language.Equals("CN");
                     ILog log = LogManager.GetLogger("Database");
                     //lbl_login_name
                     Label lbl_login_id = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
@@ -89,15 +94,18 @@ namespace Adam.UI_Update.Authority
                     string user_id = lbl_login_id.Text;
                     string user_name = lbl_login_name.Text;
                     if (lbl_login_id != null)
-                        lbl_login_id.Text = "ID";
+                        lbl_login_id.Text = isCn ? "账户" : "ID";
                     if (lbl_login_name != null)
-                        lbl_login_name.Text = "Name";
+                        lbl_login_name.Text = isCn ? "名称" : "Name";
                     if (lbl_login_group != null)
-                        lbl_login_group.Text = "Group";
+                        lbl_login_group.Text = isCn ? "群组" : "Group";
                     if (lbl_login_date != null)
                         lbl_login_date.Text = "";
                     Button btn = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
-                    btn.Text = "Login";
+                    if (btn.Text.Equals("Logout"))
+                        btn.Text = "Login";
+                    if (btn.Text.Equals("登出"))
+                        btn.Text = "登录";
                     string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Logout\"}";
                     log.Info(msg);
                     //SanwaUtil.addActionLog("Authority", "Logout", user_id);// add record to log_system_action

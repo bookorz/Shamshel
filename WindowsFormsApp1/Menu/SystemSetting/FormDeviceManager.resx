@@ -117,4 +117,886 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Setting_connectType_cb.Items" xml:space="preserve">
+    <value>Socket</value>
+  </data>
+  <data name="gbNodeManager.Text" xml:space="preserve">
+    <value>Device node manager</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 20</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_lb.Name" xml:space="preserve">
+    <value>Setting_CarrierType_lb</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeName_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeEnable_rb.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="Setting_Address_tb.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_cb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerSetting.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
+    <value>Horizontal</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_tb.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="Setting_connectType_cb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_tb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_lb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_tb.Name" xml:space="preserve">
+    <value>Setting_Port_tb</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="splitContainerSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="Setting_ControllerName_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 20</value>
+  </data>
+  <data name="lbDeviceNodeManager.Text" xml:space="preserve">
+    <value>Device node setting</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel1.Name" xml:space="preserve">
+    <value>splitContainerNode.Panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Parent" xml:space="preserve">
+    <value>splitContainerNode.Panel2</value>
+  </data>
+  <data name="&gt;&gt;Setting_connectType_cb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_NodeDisable_rb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_Address_tb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lstNodeList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>325, 684</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_ControllerName_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="Setting_CarrierType_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 166</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>lbDeviceNodeManager</value>
+  </data>
+  <data name="lstNodeList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbCondition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Node Enabled:</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Device Manager</value>
+  </data>
+  <data name="splitContainerNode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1414, 712</value>
+  </data>
+  <data name="&gt;&gt;tlpButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Setting_NodeName_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 49</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeDisable_rb.Name" xml:space="preserve">
+    <value>Setting_NodeDisable_rb</value>
+  </data>
+  <data name="Setting_Port_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 20</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Setting_ControllerName_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>189, 49</value>
+  </data>
+  <data name="&gt;&gt;label10.Name" xml:space="preserve">
+    <value>label10</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerSetting</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 740</value>
+  </data>
+  <data name="splitContainerNode.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Setting_connectType_cb.Items1" xml:space="preserve">
+    <value>Comport</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbCondition.Name" xml:space="preserve">
+    <value>gbCondition</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;gbCondition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_connectType_cb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 83</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;tlpButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_NodeType_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>169, 86</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_lb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Setting_ControllerName_lb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Controller Name:</value>
+  </data>
+  <data name="gbNodeManager.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpButton.ColumnCount" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerNode</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeType_lb.Name" xml:space="preserve">
+    <value>Setting_NodeType_lb</value>
+  </data>
+  <data name="Setting_Address_tb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 29</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Setting_CarrierType_lb.Text" xml:space="preserve">
+    <value>Carrier Type:</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 20</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_Mode_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="gbNodeManager.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;lbDeviceNodeManager.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Setting_Mode_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;setting_Address_lb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="Setting_Mode_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 20</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeType_lb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;tlpButton.Name" xml:space="preserve">
+    <value>tlpButton</value>
+  </data>
+  <data name="splitContainerSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="Setting_Port_tb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 29</value>
+  </data>
+  <data name="tlpButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel2.Name" xml:space="preserve">
+    <value>splitContainerSetting.Panel2</value>
+  </data>
+  <data name="&gt;&gt;lstNodeList.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lstNodeList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 49</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeType_lb.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeName_lb.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;gbCondition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_ControllerName_lb.Name" xml:space="preserve">
+    <value>Setting_ControllerName_lb</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Setting_NodeDisable_rb.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 121</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Items2" xml:space="preserve">
+    <value>FOUP</value>
+  </data>
+  <data name="lstNodeList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="Setting_Mode_lb.Text" xml:space="preserve">
+    <value>Mode:</value>
+  </data>
+  <data name="&gt;&gt;lstNodeList.Parent" xml:space="preserve">
+    <value>gbCondition</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeEnable_rb.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel1.Name" xml:space="preserve">
+    <value>splitContainerSetting.Panel1</value>
+  </data>
+  <data name="Setting_Port_tb.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="lbDeviceNodeManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label10.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormDeviceManager</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeType_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainerSetting.SplitterDistance" type="System.Int32, mscorlib">
+    <value>644</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="gbCondition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>331, 712</value>
+  </data>
+  <data name="Setting_NodeDisable_rb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 24</value>
+  </data>
+  <data name="&gt;&gt;gbCondition.Parent" xml:space="preserve">
+    <value>splitContainerNode.Panel1</value>
+  </data>
+  <data name="&gt;&gt;Setting_ControllerName_lb.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Setting_NodeName_lb.Text" xml:space="preserve">
+    <value>Node_Name_Display</value>
+  </data>
+  <data name="gbNodeManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="Setting_NodeEnable_rb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>78, 24</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_tb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="lstNodeList.ItemHeight" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="setting_Address_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_cb.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_Address_tb.Name" xml:space="preserve">
+    <value>Setting_Address_tb</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>lbDeviceNodeManager</value>
+  </data>
+  <data name="setting_Address_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 20</value>
+  </data>
+  <data name="Setting_NodeName_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 20</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Parent" xml:space="preserve">
+    <value>gbNodeManager</value>
+  </data>
+  <data name="&gt;&gt;setting_Address_lb.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;Setting_connectType_cb.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="Setting_CarrierType_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="splitContainerNode.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbCondition.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel2.Name" xml:space="preserve">
+    <value>splitContainerNode.Panel2</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Name" xml:space="preserve">
+    <value>splitContainerSetting</value>
+  </data>
+  <data name="&gt;&gt;gbNodeManager.Name" xml:space="preserve">
+    <value>gbNodeManager</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_Mode_cb.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="Setting_CarrierType_lb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;lbDeviceNodeManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_ControllerName_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainerNode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_lb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;Setting_connectType_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_Address_tb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 119</value>
+  </data>
+  <data name="&gt;&gt;setting_Address_lb.Name" xml:space="preserve">
+    <value>setting_Address_lb</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>tlpButton</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 32</value>
+  </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 42</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel1.Parent" xml:space="preserve">
+    <value>splitContainerNode</value>
+  </data>
+  <data name="Setting_Port_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 160</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="Setting_NodeType_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 20</value>
+  </data>
+  <data name="Setting_Mode_cb.Items1" xml:space="preserve">
+    <value>ULD</value>
+  </data>
+  <data name="label10.Text" xml:space="preserve">
+    <value>Connect Type:</value>
+  </data>
+  <data name="Setting_Port_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel2.Parent" xml:space="preserve">
+    <value>splitContainerSetting</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeDisable_rb.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 86</value>
+  </data>
+  <data name="&gt;&gt;lbDeviceNodeManager.Name" xml:space="preserve">
+    <value>lbDeviceNodeManager</value>
+  </data>
+  <data name="Setting_NodeName_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Setting_NodeEnable_rb.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_Address_tb.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label10.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="setting_Address_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Setting_Port_lb.Text" xml:space="preserve">
+    <value>Port:</value>
+  </data>
+  <data name="tlpButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="Setting_Mode_cb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Setting_connectType_cb.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="label10.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeName_lb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;gbNodeManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_ControllerName_lb.Text" xml:space="preserve">
+    <value>Controller_Name_Display</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_cb.Name" xml:space="preserve">
+    <value>Setting_CarrierType_cb</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Node Type:</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeEnable_rb.Name" xml:space="preserve">
+    <value>Setting_NodeEnable_rb</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeDisable_rb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="Setting_Mode_cb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="Setting_Mode_lb.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="Setting_NodeDisable_rb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>87, 3</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_lb.Name" xml:space="preserve">
+    <value>Setting_Mode_lb</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_lb.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSave.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeEnable_rb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Name" xml:space="preserve">
+    <value>splitContainerNode</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_lb.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="splitContainerSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 712</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="Setting_ControllerName_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 20</value>
+  </data>
+  <data name="Setting_Mode_cb.Items" xml:space="preserve">
+    <value>LD</value>
+  </data>
+  <data name="label10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 86</value>
+  </data>
+  <data name="gbNodeManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 740</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_cb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_cb.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>402, 586</value>
+  </data>
+  <data name="&gt;&gt;setting_Address_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="splitContainerSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 20</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>459, 42</value>
+  </data>
+  <data name="&gt;&gt;tlpButton.Parent" xml:space="preserve">
+    <value>splitContainerSetting.Panel2</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeDisable_rb.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gbNodeManager.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="lbDeviceNodeManager.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>863, 3</value>
+  </data>
+  <data name="tlpButton.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnSave" Row="0" RowSpan="1" Column="4" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,20,Percent,20,Percent,20,Percent,20,Percent,20" /&gt;&lt;Rows Styles="Percent,100,Absolute,20" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Node Name:</value>
+  </data>
+  <data name="Setting_NodeEnable_rb.Text" xml:space="preserve">
+    <value>Enable</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_lb.Name" xml:space="preserve">
+    <value>Setting_Port_lb</value>
+  </data>
+  <data name="setting_Address_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 125</value>
+  </data>
+  <data name="&gt;&gt;splitContainerSetting.Panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="gbCondition.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="Setting_NodeName_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;gbNodeManager.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Setting_Port_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Setting_NodeDisable_rb.Text" xml:space="preserve">
+    <value>Disable</value>
+  </data>
+  <data name="lbDeviceNodeManager.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;label10.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 163</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Items1" xml:space="preserve">
+    <value>OPEN</value>
+  </data>
+  <data name="Setting_Port_tb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 157</value>
+  </data>
+  <data name="Setting_NodeEnable_rb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="Setting_Mode_cb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>171, 204</value>
+  </data>
+  <data name="Setting_CarrierType_lb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 20</value>
+  </data>
+  <data name="&gt;&gt;Setting_connectType_cb.Name" xml:space="preserve">
+    <value>Setting_connectType_cb</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 125</value>
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Node</value>
+  </data>
+  <data name="Setting_NodeType_lb.Text" xml:space="preserve">
+    <value>Node_Type_Display</value>
+  </data>
+  <data name="&gt;&gt;Setting_CarrierType_cb.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="tlpButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 64</value>
+  </data>
+  <data name="&gt;&gt;Setting_Port_lb.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_lb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Setting_NodeType_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Setting_CarrierType_cb.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.Panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SplitterPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="lstNodeList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Setting_CarrierType_lb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbCondition.Text" xml:space="preserve">
+    <value>Device node list</value>
+  </data>
+  <data name="setting_Address_lb.Text" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="Setting_NodeType_lb.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Controller</value>
+  </data>
+  <data name="splitContainerNode.SplitterDistance" type="System.Int32, mscorlib">
+    <value>331</value>
+  </data>
+  <data name="&gt;&gt;lbDeviceNodeManager.Parent" xml:space="preserve">
+    <value>splitContainerSetting.Panel1</value>
+  </data>
+  <data name="lbDeviceNodeManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1079, 644</value>
+  </data>
+  <data name="Setting_NodeEnable_rb.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Setting_CarrierType_cb.Items" xml:space="preserve">
+    <value>FOSB</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>403, 351</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>213, 58</value>
+  </data>
+  <data name="&gt;&gt;splitContainerNode.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_Address_tb.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpButton.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 49</value>
+  </data>
+  <data name="Setting_Mode_lb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 207</value>
+  </data>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;Setting_NodeName_lb.Name" xml:space="preserve">
+    <value>Setting_NodeName_lb</value>
+  </data>
+  <data name="tlpButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;Setting_Mode_cb.Name" xml:space="preserve">
+    <value>Setting_Mode_cb</value>
+  </data>
+  <data name="&gt;&gt;lstNodeList.Name" xml:space="preserve">
+    <value>lstNodeList</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

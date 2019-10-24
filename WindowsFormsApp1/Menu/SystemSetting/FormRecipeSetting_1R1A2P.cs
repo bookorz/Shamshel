@@ -187,7 +187,11 @@ namespace Adam.Menu.SystemSetting
                 Util.SanwaUtil.addActionLog("Recipe", "Modify", Global.currentUser, "修改 Recipe:" + recipe.recipe_id);
 
             refreshList();
-            lblMode.Text = "瀏覽模式";
+            if (SystemConfig.Get().Language.Equals("CN"))
+                lblMode.Text = "浏览模式";
+            else
+                lblMode.Text = "瀏覽模式";
+
             MessageBox.Show("Execute successfully.", "Success");
         }
 
@@ -232,7 +236,11 @@ namespace Adam.Menu.SystemSetting
                 MessageBox.Show("Please select a recipe first.", "Notice");
                 return;
             }
-            lblMode.Text = "編輯模式";//往前移避免 stack overflow
+            //往前移避免 stack overflow
+            if (SystemConfig.Get().Language.Equals("CN"))
+                lblMode.Text = "编辑模式";
+            else
+                lblMode.Text = "編輯模式";
             updateInfo(trvRecipe.SelectedNode.Text);
             //gbRecipe.Enabled = true;
             //gbRecipeBody.Enabled = true;
@@ -258,13 +266,19 @@ namespace Adam.Menu.SystemSetting
             tbRecipeName.ReadOnly = true;
             tbRecipeID.ReadOnly = true;
             trvRecipe.Enabled = true;
-            lblMode.Text = "瀏覽模式";
+            if (SystemConfig.Get().Language.Equals("CN"))
+                lblMode.Text = "浏览模式";
+            else
+                lblMode.Text = "瀏覽模式";
         }
 
         private void FormRecipeSetting_Load(object sender, EventArgs e)
         {
             refreshList();
-            lblMode.Text = "瀏覽模式";
+            if (SystemConfig.Get().Language.Equals("CN"))
+                lblMode.Text = "浏览模式";
+            else
+                lblMode.Text = "瀏覽模式";
             if (NodeManagement.GetAlignerList().Count == 0)
             {
                 Aligner_gb.Visible = false;
@@ -392,7 +406,7 @@ namespace Adam.Menu.SystemSetting
         {
             
             //if (!btnSave.Enabled)
-            if (lblMode.Text.Equals("瀏覽模式"))
+            if (lblMode.Text.Equals("瀏覽模式")|| lblMode.Text.Equals("浏览模式"))
             {
                 //DialogResult myResult = MessageBox.Show
                 //("目前為瀏覽模式，是否要編輯?", "Change Mode?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);

@@ -18,6 +18,8 @@ namespace Adam.Menu.Monitoring
     {
         public FormMonitoring4P()
         {
+            //if (SystemConfig.Get().Language.Equals("CN"))
+            //    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
             InitializeComponent();
         }
 

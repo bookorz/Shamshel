@@ -58,7 +58,7 @@
             // 
             this.Ver_lb.AutoSize = true;
             this.Ver_lb.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Ver_lb.Location = new System.Drawing.Point(166, 98);
+            this.Ver_lb.Location = new System.Drawing.Point(116, 95);
             this.Ver_lb.Name = "Ver_lb";
             this.Ver_lb.Size = new System.Drawing.Size(237, 30);
             this.Ver_lb.TabIndex = 3;

@@ -12,6 +12,8 @@ namespace Adam.Menu.SystemSetting
         public TreeNode previousSelectedNode = null;
         public FormSysConfig()
         {
+            //if(SystemConfig.Get().Language.Equals("CN"))
+            //    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
             InitializeComponent();
         }
 
@@ -44,6 +46,7 @@ namespace Adam.Menu.SystemSetting
             cbNoticeInitFin.SelectedItem = config.NoticeInitFin;
             cbNoticeProcFin.SelectedItem = config.NoticeProcFin;
             cbPreMapping.Checked = config.PreMapping;
+            cbLanguage.SelectedItem = config.Language;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -66,8 +69,9 @@ namespace Adam.Menu.SystemSetting
             config.OCR2ImgToJpgPath = tbOcr2ImgBak.Text;
             config.FoupTxfLogPath = tbTxfLogPath.Text;
             config.CurrentRecipe = cbRecipe.SelectedItem.ToString();
-            config.NoticeInitFin = cbNoticeInitFin.SelectedItem.ToString();//初始化鈴聲提示
-            config.NoticeProcFin = cbNoticeProcFin.SelectedItem.ToString();//完工鈴聲提示
+            config.NoticeInitFin = cbNoticeInitFin.SelectedItem == null ? "N" : cbNoticeInitFin.SelectedItem.ToString();//初始化鈴聲提示
+            config.NoticeProcFin = cbNoticeProcFin.SelectedItem == null ? "N" : cbNoticeProcFin.SelectedItem.ToString();//完工鈴聲提示
+            config.Language = cbLanguage.SelectedItem == null ? "CN" : cbLanguage.SelectedItem.ToString();//語系
             config.PreMapping = cbPreMapping.Checked;//8"Adapt突出檢知
             config.Save();
             MessageBox.Show("Update Completed.","Success");

@@ -20,5 +20,6 @@
   "MappingDataCheck": false,
   "DummyMappingData": false,
   "PreMapping": true,
-  "TaskFlow": "SANWA_SORTER"
+  "TaskFlow": "SANWA_SORTER",
+  "Language":"CN"
 }

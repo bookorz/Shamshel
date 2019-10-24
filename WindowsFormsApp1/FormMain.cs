@@ -65,8 +65,8 @@ namespace Adam
 
         public FormMain()
         {
-
-
+            //if (SystemConfig.Get().Language.Equals("CN"))
+            //    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
             InitializeComponent();
             XmlConfigurator.Configure();
             Initialize();
@@ -210,6 +210,7 @@ namespace Adam
             switch (btnLogInOut.Text)
             {
                 case "Login":
+                case "登录":
                     //GUI.FormLogin formLogin = new GUI.FormLogin();
                     //formLogin.ShowDialog();
 
@@ -225,6 +226,7 @@ namespace Adam
                     }
                     break;
                 case "Logout":
+                case "登出":
                     btnChgPWD.Visible = false;
                     AuthorityUpdate.UpdateLogoutInfo();
                     //disable authroity function

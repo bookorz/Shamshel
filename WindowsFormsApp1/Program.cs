@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Config;
 
 namespace Adam
 {
@@ -31,6 +32,9 @@ namespace Adam
                 Application.SetCompatibleTextRenderingDefault(false);
                 //啟動畫面
                 SplashScreen.ShowSplashScreen();
+                //處理語系
+                if (SystemConfig.Get().Language.Equals("CN"))
+                    System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("zh-CN");
                 Application.Run(new FormMain());
             }
         }

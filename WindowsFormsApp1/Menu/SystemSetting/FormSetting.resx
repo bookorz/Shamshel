@@ -117,4 +117,274 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;pnlSetting.Name" xml:space="preserve">
+    <value>pnlSetting</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnRecipeSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="btnDIOSetting.Text" xml:space="preserve">
+    <value>DIO Setting</value>
+  </data>
+  <data name="btnDIOSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="btnDeviceManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnOnlineSettings.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;btnSysConfig.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAccountSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="btnSignalTtower.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="btnSignalTtower.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="pnlSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1432, 752</value>
+  </data>
+  <data name="btnAccountSetting.Text" xml:space="preserve">
+    <value>Account setting</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;btnDeviceManager.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDIOSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnRecipeSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnSECSSetting.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormSetting</value>
+  </data>
+  <data name="btnAccountSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnRecipeSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 12</value>
+  </data>
+  <data name="btnSECSSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="&gt;&gt;btnSECSSetting.Name" xml:space="preserve">
+    <value>btnSECSSetting</value>
+  </data>
+  <data name="&gt;&gt;btnRecipeSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAccountSetting.Name" xml:space="preserve">
+    <value>btnAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;btnDeviceManager.Name" xml:space="preserve">
+    <value>btnDeviceManager</value>
+  </data>
+  <data name="btnOnlineSettings.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSignalTtower.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 114</value>
+  </data>
+  <data name="&gt;&gt;btnOnlineSettings.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnOnlineSettings.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 318</value>
+  </data>
+  <data name="&gt;&gt;btnOnlineSettings.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="pnlSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="btnDIOSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="btnSECSSetting.Text" xml:space="preserve">
+    <value>SECS setting</value>
+  </data>
+  <data name="btnDIOSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>10, 20</value>
+  </data>
+  <data name="btnSECSSetting.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;pnlSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnDeviceManager.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnAccountSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="&gt;&gt;btnDeviceManager.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt</value>
+  </data>
+  <data name="&gt;&gt;btnSECSSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAccountSetting.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="btnRecipeSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnRecipeSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDIOSetting.Name" xml:space="preserve">
+    <value>btnDIOSetting</value>
+  </data>
+  <data name="btnSysConfig.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="btnSECSSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSignalTtower.Name" xml:space="preserve">
+    <value>btnSignalTtower</value>
+  </data>
+  <data name="btnDIOSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 165</value>
+  </data>
+  <data name="btnSECSSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 369</value>
+  </data>
+  <data name="btnSysConfig.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="btnOnlineSettings.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnSignalTtower.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;btnSignalTtower.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnDeviceManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 63</value>
+  </data>
+  <data name="&gt;&gt;btnOnlineSettings.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="pnlSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="btnDeviceManager.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnAccountSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnRecipeSetting.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnSignalTtower.Text" xml:space="preserve">
+    <value>Signal tower set</value>
+  </data>
+  <data name="btnSignalTtower.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnSysConfig.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnOnlineSettings.Text" xml:space="preserve">
+    <value>Online settings</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormSetting</value>
+  </data>
+  <data name="&gt;&gt;btnDeviceManager.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSysConfig.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 267</value>
+  </data>
+  <data name="btnRecipeSetting.Text" xml:space="preserve">
+    <value>Recipe Setting</value>
+  </data>
+  <data name="&gt;&gt;btnSignalTtower.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnOnlineSettings.Size" type="System.Drawing.Size, System.Drawing">
+    <value>170, 45</value>
+  </data>
+  <data name="&gt;&gt;btnRecipeSetting.Name" xml:space="preserve">
+    <value>btnRecipeSetting</value>
+  </data>
+  <data name="btnSysConfig.Text" xml:space="preserve">
+    <value>System config</value>
+  </data>
+  <data name="&gt;&gt;btnDIOSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnAccountSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnAccountSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1438, 216</value>
+  </data>
+  <data name="&gt;&gt;btnSECSSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="btnSECSSetting.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="&gt;&gt;btnSysConfig.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1620, 760</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnOnlineSettings.Name" xml:space="preserve">
+    <value>btnOnlineSettings</value>
+  </data>
+  <data name="btnDeviceManager.Text" xml:space="preserve">
+    <value>Device Manager</value>
+  </data>
+  <data name="&gt;&gt;btnSysConfig.Name" xml:space="preserve">
+    <value>btnSysConfig</value>
+  </data>
+  <data name="&gt;&gt;pnlSetting.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnSysConfig.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnDIOSetting.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

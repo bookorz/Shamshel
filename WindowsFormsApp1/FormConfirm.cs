@@ -16,6 +16,14 @@ namespace GUI
         public FormConfirm(string message)
         {
             InitializeComponent();
+            if (SystemConfig.Get().Language.Equals("CN"))
+            {
+                message = message.Replace("生產", "生产");
+                message = message.Replace("變更", "变更");
+                message = message.Replace("確認", "确认");
+                message = message.Replace("刪除", "删除");
+                message = message.Replace("儲存", "储存");
+            }
             lblMessage.Text = message;
             tbUserID.Text = Global.currentUser;
         }
