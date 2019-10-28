@@ -492,12 +492,12 @@ namespace Adam.Menu.SystemSetting
             Recipe recipe = Recipe.Get(trvRecipe.SelectedNode.Text);
             if (recipe.recipe_id.Equals("default"))
             {
-                MessageBox.Show("default recipe 不得刪除.", "Notice");
+                MessageBox.Show("default recipe can't be delete.", "Notice");
                 return;
             }
             else if (SystemConfig.Get().CurrentRecipe.Equals(recipe.recipe_id))
             {
-                MessageBox.Show("Recipe 使用中，請先切換 recipe 後再刪除.", "Notice");
+                MessageBox.Show("The recipe is active now，delete it after change the other recipe .", "Notice");
                 return;
             }
             using (var form = new FormConfirm("確認是否刪除 Recipe:" + recipe.recipe_id))

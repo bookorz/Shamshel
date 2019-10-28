@@ -47,7 +47,7 @@ namespace GUI
                 keyValues.Add("@modify_user", Global.currentUser);
                 dBUtil.ExecuteNonQuery(strSql, keyValues);
                 SanwaUtil.addActionLog("GUI.FormChgPwd", "Change password", Global.currentUser, "變更本人密碼");
-                MessageBox.Show("變更密碼成功!!", "Success");
+                MessageBox.Show("Password has been changed!!", "Success");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
