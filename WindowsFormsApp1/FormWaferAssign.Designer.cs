@@ -83,6 +83,8 @@
             this.label106 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.WaferSize_tb = new System.Windows.Forms.TextBox();
             this.AssignRecipe_cb = new System.Windows.Forms.ComboBox();
             this.AssignRecipe_Delete = new System.Windows.Forms.Button();
             this.AssignRecipe_Save = new System.Windows.Forms.Button();
@@ -176,8 +178,7 @@
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.WaferSize_tb = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
+            this.rbAuto = new System.Windows.Forms.RadioButton();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -1193,6 +1194,24 @@
             this.groupBox4.TabIndex = 181;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Assign Recipe";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(23, 36);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(99, 19);
+            this.label11.TabIndex = 200;
+            this.label11.Text = "Wafer Size";
+            // 
+            // WaferSize_tb
+            // 
+            this.WaferSize_tb.Enabled = false;
+            this.WaferSize_tb.Location = new System.Drawing.Point(16, 65);
+            this.WaferSize_tb.Name = "WaferSize_tb";
+            this.WaferSize_tb.Size = new System.Drawing.Size(121, 26);
+            this.WaferSize_tb.TabIndex = 199;
+            this.WaferSize_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AssignRecipe_cb
             // 
@@ -2535,6 +2554,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbAuto);
             this.groupBox1.Controls.Add(this.rbBottomUp);
             this.groupBox1.Controls.Add(this.rbTopDown);
             this.groupBox1.Controls.Add(this.rbSlotToSlot);
@@ -2542,7 +2562,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(475, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(180, 172);
+            this.groupBox1.Size = new System.Drawing.Size(180, 191);
             this.groupBox1.TabIndex = 180;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auto Assign";
@@ -2551,7 +2571,7 @@
             // 
             this.rbBottomUp.AutoSize = true;
             this.rbBottomUp.Enabled = false;
-            this.rbBottomUp.Location = new System.Drawing.Point(22, 83);
+            this.rbBottomUp.Location = new System.Drawing.Point(24, 114);
             this.rbBottomUp.Name = "rbBottomUp";
             this.rbBottomUp.Size = new System.Drawing.Size(108, 23);
             this.rbBottomUp.TabIndex = 180;
@@ -2563,7 +2583,7 @@
             // 
             this.rbTopDown.AutoSize = true;
             this.rbTopDown.Enabled = false;
-            this.rbTopDown.Location = new System.Drawing.Point(22, 54);
+            this.rbTopDown.Location = new System.Drawing.Point(24, 85);
             this.rbTopDown.Name = "rbTopDown";
             this.rbTopDown.Size = new System.Drawing.Size(99, 23);
             this.rbTopDown.TabIndex = 180;
@@ -2574,12 +2594,10 @@
             // rbSlotToSlot
             // 
             this.rbSlotToSlot.AutoSize = true;
-            this.rbSlotToSlot.Checked = true;
-            this.rbSlotToSlot.Location = new System.Drawing.Point(22, 25);
+            this.rbSlotToSlot.Location = new System.Drawing.Point(23, 56);
             this.rbSlotToSlot.Name = "rbSlotToSlot";
             this.rbSlotToSlot.Size = new System.Drawing.Size(135, 23);
             this.rbSlotToSlot.TabIndex = 180;
-            this.rbSlotToSlot.TabStop = true;
             this.rbSlotToSlot.Text = "Slot to Slot";
             this.rbSlotToSlot.UseVisualStyleBackColor = true;
             // 
@@ -2587,7 +2605,7 @@
             // 
             this.AutoAssign_btn.BackColor = System.Drawing.Color.Gold;
             this.AutoAssign_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AutoAssign_btn.Location = new System.Drawing.Point(21, 119);
+            this.AutoAssign_btn.Location = new System.Drawing.Point(23, 150);
             this.AutoAssign_btn.Name = "AutoAssign_btn";
             this.AutoAssign_btn.Size = new System.Drawing.Size(136, 30);
             this.AutoAssign_btn.TabIndex = 179;
@@ -2618,23 +2636,16 @@
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
-            // WaferSize_tb
+            // rbAuto
             // 
-            this.WaferSize_tb.Enabled = false;
-            this.WaferSize_tb.Location = new System.Drawing.Point(16, 65);
-            this.WaferSize_tb.Name = "WaferSize_tb";
-            this.WaferSize_tb.Size = new System.Drawing.Size(121, 26);
-            this.WaferSize_tb.TabIndex = 199;
-            this.WaferSize_tb.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(23, 36);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(99, 19);
-            this.label11.TabIndex = 200;
-            this.label11.Text = "Wafer Size";
+            this.rbAuto.AutoSize = true;
+            this.rbAuto.Checked = true;
+            this.rbAuto.Location = new System.Drawing.Point(23, 29);
+            this.rbAuto.Name = "rbAuto";
+            this.rbAuto.Size = new System.Drawing.Size(144, 23);
+            this.rbAuto.TabIndex = 181;
+            this.rbAuto.Text = "Auto Sampling";
+            this.rbAuto.UseVisualStyleBackColor = true;
             // 
             // FormWaferAssign
             // 
@@ -2825,5 +2836,6 @@
         private System.Windows.Forms.Button AssignRecipe_Save;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox WaferSize_tb;
+        private System.Windows.Forms.RadioButton rbAuto;
     }
 }

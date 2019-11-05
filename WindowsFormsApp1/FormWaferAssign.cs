@@ -78,6 +78,10 @@ namespace Adam
 
         private void AutoAssign_btn_Click(object sender, EventArgs e)
         {
+            AssignInfo.ClearList();
+            WaferAssignUpdate.UpdateNodesJob(Source_cb.Text, "From");
+            WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
+
             Node fromPort = NodeManagement.Get(Source_cb.Text);
             Node toPort = NodeManagement.Get(To_cb.Text);
             if (fromPort != null && toPort != null)
@@ -89,39 +93,124 @@ namespace Adam
                 var to_Jobs = (from wafer in toPort.JobList.Values
                                where !wafer.MapFlag && !wafer.ErrPosition
                                select wafer).OrderBy(x => Convert.ToInt16(x.Slot));
-                if (rbTopDown.Checked)
+                if (rbAuto.Checked)
                 {
-                    to_Jobs = (from wafer in toPort.JobList.Values
-                               where !wafer.MapFlag && !wafer.ErrPosition
-                               select wafer).OrderByDescending(x => Convert.ToInt16(x.Slot));
-                }
-                foreach (Job wafer in from_Jobs)
-                {
-                    if (AssignInfo.SearchByFrom(wafer.Position, wafer.Slot) != null)
+                    int cnt = from_Jobs.Count();
+                    int s_cnt = 0;//抽樣數
+                                  //設定除了最後一片外的抽樣數量
+                    if (cnt == 1)
                     {
-                        continue;
+                        s_cnt = 0;
                     }
-                    foreach (Job emptySlot in to_Jobs)
+                    else if (cnt <= 5)
                     {
-                        if (!emptySlot.Slot.Equals(wafer.Slot) && rbSlotToSlot.Checked)
+                        s_cnt = 1;
+                    }
+                    else if (cnt <= 10)
+                    {
+                        s_cnt = 2;
+                    }
+                    else if (cnt <= 15)
+                    {
+                        s_cnt = 3;
+                    }
+                    else if (cnt <= 20)
+                    {
+                        s_cnt = 5;
+                    }
+                    else if (cnt <= 25)
+                    {
+                        s_cnt = 6;
+                    }
+
+                    //取其他片的 index, wafers
+                    int idx = 1;
+                    foreach (Job wafer in from_Jobs)
+                    {
+                        if ((idx % 3 == 1) && (s_cnt > 0))
+                        {
+                            foreach (Job emptySlot in to_Jobs)
+                            {
+                                if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
+                                {
+                                    Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
+                                    SrcSlot.BackColor = Color.Brown;
+
+                                    Label DstSlot = this.Controls.Find("To_Slot_" + emptySlot.Slot, true).FirstOrDefault() as Label;
+                                    DstSlot.Text = wafer.Host_Job_Id;
+                                    DstSlot.BackColor = Color.DarkGoldenrod;
+                                    AssignInfo newAssign = new AssignInfo();
+                                    newAssign.FromPort = wafer.Position;
+                                    newAssign.FromSlot = wafer.Slot;
+                                    newAssign.ToPort = emptySlot.Position;
+                                    newAssign.ToSlot = emptySlot.Slot;
+                                    newAssign.AddToList();
+                                    break;
+                                }
+                            }
+                            s_cnt--;
+                        }
+                        else if (idx == cnt)
+                        {
+                            foreach (Job emptySlot in to_Jobs)
+                            {
+                                if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
+                                {
+                                    Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
+                                    SrcSlot.BackColor = Color.Brown;
+
+                                    Label DstSlot = this.Controls.Find("To_Slot_" + emptySlot.Slot, true).FirstOrDefault() as Label;
+                                    DstSlot.Text = wafer.Host_Job_Id;
+                                    DstSlot.BackColor = Color.DarkGoldenrod;
+                                    AssignInfo newAssign = new AssignInfo();
+                                    newAssign.FromPort = wafer.Position;
+                                    newAssign.FromSlot = wafer.Slot;
+                                    newAssign.ToPort = emptySlot.Position;
+                                    newAssign.ToSlot = emptySlot.Slot;
+                                    newAssign.AddToList();
+                                    break;
+                                }
+                            }
+                        }
+                        idx++;
+                    }
+                }
+                else
+                {
+                    if (rbTopDown.Checked)
+                    {
+                        to_Jobs = (from wafer in toPort.JobList.Values
+                                   where !wafer.MapFlag && !wafer.ErrPosition
+                                   select wafer).OrderByDescending(x => Convert.ToInt16(x.Slot));
+                    }
+                    foreach (Job wafer in from_Jobs)
+                    {
+                        if (AssignInfo.SearchByFrom(wafer.Position, wafer.Slot) != null)
                         {
                             continue;
                         }
-                        if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
+                        foreach (Job emptySlot in to_Jobs)
                         {
-                            Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
-                            SrcSlot.BackColor = Color.Brown;
+                            if (!emptySlot.Slot.Equals(wafer.Slot) && rbSlotToSlot.Checked)
+                            {
+                                continue;
+                            }
+                            if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
+                            {
+                                Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
+                                SrcSlot.BackColor = Color.Brown;
 
-                            Label DstSlot = this.Controls.Find("To_Slot_" + emptySlot.Slot, true).FirstOrDefault() as Label;
-                            DstSlot.Text = wafer.Host_Job_Id;
-                            DstSlot.BackColor = Color.DarkGoldenrod;
-                            AssignInfo newAssign = new AssignInfo();
-                            newAssign.FromPort = wafer.Position;
-                            newAssign.FromSlot = wafer.Slot;
-                            newAssign.ToPort = emptySlot.Position;
-                            newAssign.ToSlot = emptySlot.Slot;
-                            newAssign.AddToList();
-                            break;
+                                Label DstSlot = this.Controls.Find("To_Slot_" + emptySlot.Slot, true).FirstOrDefault() as Label;
+                                DstSlot.Text = wafer.Host_Job_Id;
+                                DstSlot.BackColor = Color.DarkGoldenrod;
+                                AssignInfo newAssign = new AssignInfo();
+                                newAssign.FromPort = wafer.Position;
+                                newAssign.FromSlot = wafer.Slot;
+                                newAssign.ToPort = emptySlot.Position;
+                                newAssign.ToSlot = emptySlot.Slot;
+                                newAssign.AddToList();
+                                break;
+                            }
                         }
                     }
                 }
@@ -143,7 +232,7 @@ namespace Adam
             DIOUpdate.UpdateControlButton("Mode_btn", false);
             if (AssignInfo.GetAssignList().Count != 0)
             {
-                foreach(AssignInfo each in AssignInfo.GetAssignList())
+                foreach (AssignInfo each in AssignInfo.GetAssignList())
                 {
                     Node LD = NodeManagement.Get(each.FromPort);
                     LD.JobList[each.FromSlot].AssignPort(each.ToPort, each.ToSlot);
@@ -155,14 +244,14 @@ namespace Adam
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed = tbA1_speed.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner2_speed = tbA2_speed.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl = cbUseOcrTTL.Checked;
-                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12= cbUseOcrM12.Checked;
+                Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12 = cbUseOcrM12.Checked;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_t7 = cbUseOcrT7.Checked;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_ttl_config = tbOcrTTL.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_m12_config = tbOcrM12.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_t7_config = tbOcrT7.Text;
                 Recipe.Get(SystemConfig.Get().CurrentRecipe).ocr_check_Rule = cbOcrCheckRule.Text;
 
-                if (!FormMain.xfe.Start(Source_cb.Text,true))
+                if (!FormMain.xfe.Start(Source_cb.Text, true))
                 {
                     MessageBox.Show("xfe.Start fail!");
                 }
@@ -172,7 +261,7 @@ namespace Adam
 
         private void RenderSourceAssign()
         {
-            foreach(AssignInfo each in AssignInfo.GetAssignList())
+            foreach (AssignInfo each in AssignInfo.GetAssignList())
             {
                 if (each.FromPort.Equals(Source_cb.Text))
                 {
@@ -352,13 +441,13 @@ namespace Adam
                 AssignRecipe_Save.Visible = false;
                 AssignRecipe_Delete.Visible = false;
             }
-                AssignInfo.ClearList();
+            AssignInfo.ClearList();
             Node Target;
             if ((Target = NodeManagement.Get("ROBOT01")) != null)
             {
                 tbR1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).robot1_speed;
             }
-            if ((Target=NodeManagement.Get("ALIGNER01")) != null)
+            if ((Target = NodeManagement.Get("ALIGNER01")) != null)
             {
                 cbUseA1.Checked = !Target.ByPass;
                 tbA1_speed.Text = Recipe.Get(SystemConfig.Get().CurrentRecipe).aligner1_speed;
@@ -376,7 +465,7 @@ namespace Adam
             {
                 gbA2.Visible = false;
             }
-            if(NodeManagement.Get("OCR01")!=null && NodeManagement.Get("OCR02") != null)
+            if (NodeManagement.Get("OCR01") != null && NodeManagement.Get("OCR02") != null)
             {
                 cbUseOcrTTL.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_ttl;
                 cbUseOcrM12.Checked = Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_ocr_m12;
@@ -409,7 +498,7 @@ namespace Adam
         {
             if (AssignRecipe_cb.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Name is empty","Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             //檔名只能英文
@@ -426,7 +515,7 @@ namespace Adam
                 Directory.CreateDirectory("assign_recipe");
             }
             ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            SysCfg.WriteFileByList("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
+            SysCfg.WriteFileByList("assign_recipe/" + Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
             AssignRecipe_cb.Items.Clear();
             foreach (string each in Directory.GetFiles("assign_recipe"))
             {
@@ -446,7 +535,7 @@ namespace Adam
                 return;
             }
             ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
+            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/" + Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
             AssignInfo.ClearList();
             Node Src = NodeManagement.Get(Source_cb.Text);
             Node Dst = NodeManagement.Get(To_cb.Text);
@@ -464,9 +553,9 @@ namespace Adam
             WaferAssignUpdate.UpdateNodesJob(To_cb.Text, "To");
             foreach (AssignInfo each in Content)
             {
-                if(!Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].MapFlag || Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].ErrPosition)
+                if (!Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].MapFlag || Src.JobList[Convert.ToInt16(each.FromSlot).ToString()].ErrPosition)
                 {
-                    MessageBox.Show("Source slot "+each.FromSlot+" is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Source slot " + each.FromSlot + " is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 if (Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].MapFlag || Dst.JobList[Convert.ToInt16(each.ToSlot).ToString()].ErrPosition)
@@ -480,7 +569,7 @@ namespace Adam
                 Label SrcSlot = this.Controls.Find("From_Slot_" + each.FromSlot, true).FirstOrDefault() as Label;
                 SrcSlot.BackColor = Color.Brown;
                 SrcSlot.ForeColor = Color.White;
-                
+
                 Label DstSlot = this.Controls.Find("To_Slot_" + each.ToSlot, true).FirstOrDefault() as Label;
                 DstSlot.BackColor = Color.DarkGoldenrod;
                 DstSlot.ForeColor = Color.White;
@@ -491,7 +580,7 @@ namespace Adam
 
         private void AssignRecipe_Delete_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("Are you sure?","Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Are you sure?", "Confirm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
@@ -500,7 +589,7 @@ namespace Adam
                 MessageBox.Show("Name is empty", "Alarm", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            File.Delete("assign_recipe/"+ Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
+            File.Delete("assign_recipe/" + Recipe.Get(SystemConfig.Get().CurrentRecipe).wafer_size + "_" + AssignRecipe_cb.Text.Trim() + ".json");
 
             AssignRecipe_cb.Items.Clear();
             foreach (string each in Directory.GetFiles("assign_recipe"))

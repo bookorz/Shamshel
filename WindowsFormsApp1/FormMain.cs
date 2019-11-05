@@ -2653,8 +2653,10 @@ namespace Adam
 
         private void button1_Click(object sender, EventArgs e)
         {
-            fakeData("LOADPORT01", "1111111111111000000000000");
+            //fakeData("LOADPORT01", "1111101110110111101010001");
+            fakeData("LOADPORT01", "1000101111111111111111111");
             fakeData("LOADPORT02", "0000100000000000000000000");
+            //fakeData("LOADPORT02", "1111111111111110111111110");
             ////fakeData("LOADPORT02");
             ////fakeData("LOADPORT03");
             //fakeData("LOADPORT04", "0000000000000000000000000");
