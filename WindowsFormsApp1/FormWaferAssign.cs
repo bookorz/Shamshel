@@ -95,6 +95,13 @@ namespace Adam
                                select wafer).OrderBy(x => Convert.ToInt16(x.Slot));
                 if (rbAuto.Checked)
                 {
+                    //Start:20191111 Add pre-check 如果 unload port 非空的，不做
+                    if(to_Jobs.Count() < 25)
+                    {
+                        MessageBox.Show("Auto Sampling 時，目的地 Port 必須為空!!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    //End:20191111 Add pre-check 如果 unload port 非空的，不做
                     int cnt = from_Jobs.Count();
                     int s_cnt = 0;//抽樣數
                                   //設定除了最後一片外的抽樣數量
@@ -131,6 +138,12 @@ namespace Adam
                         {
                             foreach (Job emptySlot in to_Jobs)
                             {
+                                //Start:20191111 Add 來源 Slot 必須與目的地同一Slot
+                                if(wafer.Slot != emptySlot.Slot)
+                                {
+                                    continue;//繼續下一個空SLOT
+                                }
+                                //End:20191111 Add 來源 Slot 必須與目的地同一Slot
                                 if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
                                 {
                                     Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
@@ -154,6 +167,11 @@ namespace Adam
                         {
                             foreach (Job emptySlot in to_Jobs)
                             {
+                                //Start:20191111 Add 來源 Slot 必須與目的地同一Slot
+                                if (wafer.Slot != emptySlot.Slot)
+                                {
+                                    continue;//繼續下一個空SLOT
+                                }
                                 if (AssignInfo.SearchByTo(emptySlot.Position, emptySlot.Slot) == null)
                                 {
                                     Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;

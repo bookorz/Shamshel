@@ -2655,7 +2655,9 @@ namespace Adam
         {
             //fakeData("LOADPORT01", "1111101110110111101010001");
             fakeData("LOADPORT01", "1000101111111111111111111");
-            fakeData("LOADPORT02", "0000100000000000000000000");
+            fakeData("LOADPORT01", "1000101111111111111000000");
+            fakeData("LOADPORT02", "1000000000000000000000000");
+            fakeData("LOADPORT02", "0000000000000000000000000");
             //fakeData("LOADPORT02", "1111111111111110111111110");
             ////fakeData("LOADPORT02");
             ////fakeData("LOADPORT03");
