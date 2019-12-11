@@ -944,7 +944,22 @@ namespace Adam
 
                                 break;
                             case "SMTON":
-
+                                if (Node.IsLoad)
+                                {
+                                    //2019/12/5 cst remove stop transfer
+                                    var match = from each in xfe.ULD_List
+                                                where each.Equals(Node.Name)
+                                                select each;
+                                    if (match.Count() != 0 || Node.Name.Equals(xfe.LD))
+                                    {
+                                        if (XfeCrossZone.Running)
+                                        {
+                                            XfeCrossZone.Stop();
+                                        }
+                                    }
+                                    ShowAlarm("SYSTEM", "S0300182", Node.Name);
+                                }
+                                
                                 break;
                             case "PODOF":
                                 if (Node.OrgSearchComplete && Node.ManaulControl && !Node.CurrentStatus.Equals("UnloadComplete") && !Node.IsLoad)
@@ -956,10 +971,6 @@ namespace Adam
                                     param1.Add("@Target", Node.Name);
 
                                     RouteControl.Instance.TaskJob.Excute(Guid.NewGuid().ToString(), out Message, out Task, TaskName, param1);
-                                }
-                                if (Node.IsLoad)
-                                {
-                                    ShowAlarm("SYSTEM", "S0300182", Node.Name);
                                 }
                                 break;
                             case "PODON":
@@ -2252,7 +2263,9 @@ namespace Adam
                 {
                     RouteControl.Instance.DIO.SetIO(Buzzer, "True");
                 }
+                
                 MessageBox.Show("All job finished!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+              
                 if (!Buzzer.Equals(""))
                 {
                     RouteControl.Instance.DIO.SetIO(Buzzer, "False");

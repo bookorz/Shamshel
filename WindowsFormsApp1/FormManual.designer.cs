@@ -488,8 +488,6 @@
             this.cbRA1Point.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
             "ALIGNER01"});
             this.cbRA1Point.Location = new System.Drawing.Point(129, 60);
             this.cbRA1Point.Name = "cbRA1Point";
@@ -630,9 +628,7 @@
             this.cbRA1Arm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRA1Arm.FormattingEnabled = true;
             this.cbRA1Arm.Items.AddRange(new object[] {
-            "Upper",
-            "Lower",
-            "Both"});
+            "Upper"});
             this.cbRA1Arm.Location = new System.Drawing.Point(129, 200);
             this.cbRA1Arm.Name = "cbRA1Arm";
             this.cbRA1Arm.Size = new System.Drawing.Size(208, 38);
@@ -689,8 +685,6 @@
             this.cbRA2Point.Items.AddRange(new object[] {
             "LOADPORT01",
             "LOADPORT02",
-            "LOADPORT03",
-            "LOADPORT04",
             "ALIGNER01"});
             this.cbRA2Point.Location = new System.Drawing.Point(130, 60);
             this.cbRA2Point.Name = "cbRA2Point";
@@ -831,9 +825,7 @@
             this.cbRA2Arm.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRA2Arm.FormattingEnabled = true;
             this.cbRA2Arm.Items.AddRange(new object[] {
-            "Upper",
-            "Lower",
-            "Both"});
+            "Upper"});
             this.cbRA2Arm.Location = new System.Drawing.Point(130, 200);
             this.cbRA2Arm.Name = "cbRA2Arm";
             this.cbRA2Arm.Size = new System.Drawing.Size(208, 38);

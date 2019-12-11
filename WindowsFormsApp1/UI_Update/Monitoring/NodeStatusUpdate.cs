@@ -130,7 +130,7 @@ namespace Adam.UI_Update.Monitoring
                     Dictionary<string, string> Params = new Dictionary<string, string>();
 
                     var findSetting = from Setting in SignalSetting
-                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (AlarmManagement.GetAll().Count!=0)
+                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (AlarmManagement.GetAll().Count != 0)
                                       select Setting;
 
                     if (findSetting.Count() != 0)
@@ -167,6 +167,11 @@ namespace Adam.UI_Update.Monitoring
                         else
                         {
                             RouteControl.Instance.DIO.SetBlink("ORANGE", "True");
+                        }
+                        if (each.Is_Alarm)
+                        {
+                            Params.Add("BUZZER1", each.Buzzer1);
+                            Params.Add("BUZZER2", each.Buzzer2);
                         }
 
                         RouteControl.Instance.DIO.SetIO(Params);

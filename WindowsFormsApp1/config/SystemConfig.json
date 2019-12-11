@@ -13,8 +13,10 @@
   "SaftyCheckByPass": false,
   "FakeData": false,
   "AdminPassword": "0192023A7BBD73250516F069DF18B500",
-  "CurrentRecipe": "default",
+  "CurrentRecipe": "12inchwafer",
   "EquipmentID": "SORT",
   "FoupTxfLogPath": "D:/log/foup",
-  "MappingDataCheck": true
+  "NoticeInitFin": "4",
+  "NoticeProcFin": "4",
+  "MappingDataCheck": false
 }

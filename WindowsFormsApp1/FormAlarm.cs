@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TransferControl.Engine;
 using TransferControl.Management;
 
 namespace Adam
@@ -53,6 +54,8 @@ namespace Adam
             }
             //NodeStatusUpdate.UpdateCurrentState("Idle");
             AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            RouteControl.Instance.DIO.SetIO("Buzzer1", "False");
+            RouteControl.Instance.DIO.SetIO("Buzzer2", "False");
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)
