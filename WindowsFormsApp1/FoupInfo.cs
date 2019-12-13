@@ -20,14 +20,14 @@ namespace Adam
         public waferInfo[] record;
         static Dictionary<string, FoupInfo> TmpCol = new Dictionary<string, FoupInfo>(); 
 
-        public FoupInfo(string recipe_file, string login_user, string foup_id)
+        public FoupInfo(string recipe_file, string login_user, string foup_id,string PortName)
         {
             this.recipe_file = recipe_file;
             this.login_user = login_user;
             this.foup_id = foup_id;
             string date = System.DateTime.Now.ToString("yyyyMMdd");
             string time = System.DateTime.Now.ToString("HHmmss");
-            this.file_name = SystemConfig.Get().EquipmentID + "_" + foup_id + "_" + date + "_" + time + ".csv";
+            this.file_name = SystemConfig.Get().EquipmentID + "_"+ PortName+"_" + foup_id + "_" + date + "_" + time + ".csv";
             record = new waferInfo[25];
         }
         public static FoupInfo Get(string portName)

@@ -2123,7 +2123,7 @@ namespace Adam
                     if (!XfeCrossZone.Running && NeedProcessSlot.Count() != 0)
                     {
                         //in port log
-                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
+                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID,Loadport.Name);
                         foreach (Job j in Loadport.JobList.Values)
                         {
                             if (j.MapFlag && !j.ErrPosition)
@@ -2164,7 +2164,7 @@ namespace Adam
                     if (!XfeCrossZone.Running && NeedProcessSlot.Count() != 0)
                     {
                         //in port log
-                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID);
+                        FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Loadport.FoupID, Loadport.Name);
                         foreach (Job j in Loadport.JobList.Values)
                         {
                             if (j.MapFlag && !j.ErrPosition)
@@ -2236,6 +2236,34 @@ namespace Adam
 
             MonitoringUpdate.UpdateWPH((xfe.ProcessCount / (xfe.ProcessTime / 1000.0 / 60.0 / 60.0)).ToString("f1"));
             logger.Debug("ProcessCount:" + xfe.ProcessCount.ToString() + " ProcessTime:" + xfe.ProcessTime.ToString() + " WPH:" + (xfe.ProcessCount / (xfe.ProcessTime / 1000.0 / 60.0 / 60.0)).ToString("f1"));
+            List<string> ports = new List<string>();
+            ports.Add(xfe.LD);
+            foreach(string each in xfe.ULD_List)
+            {
+                ports.Add(each);
+            }
+            foreach (string each in ports)
+            {
+                Node Port = NodeManagement.Get(each);
+                FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID, Port.Name);
+                foreach (Job j in Port.JobList.Values)
+                {
+                    if (j.MapFlag && !j.ErrPosition)
+                    {
+                        int slot = Convert.ToInt16(j.Slot);
+                        foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
+                        foup.record[slot - 1].SetStartTime(j.StartTime);
+                        foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                        foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                        foup.record[slot - 1].SetEndTime(j.EndTime);
+                        foup.record[slot - 1].SetLoadTime(Port.LoadTime);
+                        foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                        foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                        foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                    }
+                }
+                foup.Save();
+            }
             if (Recipe.Get(SystemConfig.Get().CurrentRecipe).is_use_burnin)
             {
                 return;
@@ -2274,7 +2302,37 @@ namespace Adam
 
             WaferAssignUpdate.UpdateEnabled("FORM", true);
         }
-
+        public void On_Transfer_Abort(XfeCrossZone xfe)
+        {
+            List<string> ports = new List<string>();
+            ports.Add(xfe.LD);
+            foreach (string each in xfe.ULD_List)
+            {
+                ports.Add(each);
+            }
+            foreach (string each in ports)
+            {
+                Node Port = NodeManagement.Get(each);
+                FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID, Port.Name);
+                foreach (Job j in Port.JobList.Values)
+                {
+                    if (j.MapFlag && !j.ErrPosition)
+                    {
+                        int slot = Convert.ToInt16(j.Slot);
+                        foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
+                        foup.record[slot - 1].SetStartTime(j.StartTime);
+                        foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                        foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                        foup.record[slot - 1].SetEndTime(j.EndTime);
+                        foup.record[slot - 1].SetLoadTime(Port.LoadTime);
+                        foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                        foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                        foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                    }
+                }
+                foup.Save();
+            }
+        }
         public void On_LoadPort_Selected(Node Port)
         {
             NodeStatusUpdate.UpdateCurrentState("RUN");
@@ -2314,9 +2372,9 @@ namespace Adam
                 else
                 {//滿了才退
 
-                    FoupInfo tmp = FoupInfo.Get(Port.Name);
-                    tmp.SetAllUnloadTime(DateTime.Now);
-                    tmp.Save();
+                    //FoupInfo tmp = FoupInfo.Get(Port.Name);
+                    //tmp.SetAllUnloadTime(DateTime.Now);
+                    //tmp.Save();
                     string constrict = Recipe.Get(SystemConfig.Get().CurrentRecipe).input_proc_fin;
                     string Light = "";
                     string Buzzer = "";
@@ -2509,24 +2567,24 @@ namespace Adam
                 if (Available.Count() == 0)
                 {//Unloadport 滿了 自動退
 
-                    FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID);
-                    foreach (Job j in Port.JobList.Values)
-                    {
-                        if (j.MapFlag && !j.ErrPosition)
-                        {
-                            int slot = Convert.ToInt16(j.Slot);
-                            foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
-                            foup.record[slot - 1].SetStartTime(j.StartTime);
-                            foup.record[slot - 1].setM12(j.OCR_M12_Result);
-                            foup.record[slot - 1].setT7(j.OCR_T7_Result);
-                            foup.record[slot - 1].SetEndTime(j.EndTime);
-                            foup.record[slot - 1].SetLoadTime(Port.LoadTime);
-                            foup.record[slot - 1].SetUnloadTime(DateTime.Now);
-                            foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
-                            foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
-                        }
-                    }
-                    foup.Save();
+                    //FoupInfo foup = new FoupInfo(SystemConfig.Get().CurrentRecipe, Global.currentUser, Port.FoupID);
+                    //foreach (Job j in Port.JobList.Values)
+                    //{
+                    //    if (j.MapFlag && !j.ErrPosition)
+                    //    {
+                    //        int slot = Convert.ToInt16(j.Slot);
+                    //        foup.record[slot - 1] = new Adam.waferInfo(Port.Name, Port.FoupID, j.Slot, j.FromPort, j.FromFoupID, j.FromPortSlot, j.Position, Port.FoupID, j.Slot);
+                    //        foup.record[slot - 1].SetStartTime(j.StartTime);
+                    //        foup.record[slot - 1].setM12(j.OCR_M12_Result);
+                    //        foup.record[slot - 1].setT7(j.OCR_T7_Result);
+                    //        foup.record[slot - 1].SetEndTime(j.EndTime);
+                    //        foup.record[slot - 1].SetLoadTime(Port.LoadTime);
+                    //        foup.record[slot - 1].SetUnloadTime(DateTime.Now);
+                    //        foup.record[slot - 1].setM12Score(j.OCR_M12_Score);
+                    //        foup.record[slot - 1].setT7Score(j.OCR_T7_Score);
+                    //    }
+                    //}
+                    //foup.Save();
                     string constrict = Recipe.Get(SystemConfig.Get().CurrentRecipe).output_proc_fin;
                     string Light = "";
                     string Buzzer = "";
@@ -2976,5 +3034,7 @@ namespace Adam
                 var result = form.ShowDialog();
             }
         }
+
+        
     }
 }
