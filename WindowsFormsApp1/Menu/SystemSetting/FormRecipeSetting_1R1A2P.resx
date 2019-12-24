@@ -118,48 +118,1417 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;cbP2CstType.Name" xml:space="preserve">
-    <value>cbP2CstType</value>
-  </data>
-  <data name="cbInputFin2.Items3" xml:space="preserve">
-    <value>2</value>
+  <data name="lblMode.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 156</value>
+  <data name="lblMode.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 18pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+  <data name="lblMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>431, 496</value>
+  </data>
+  <data name="lblMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 31</value>
+  </data>
+  <data name="lblMode.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="lblMode.Text" xml:space="preserve">
+    <value>瀏覽模式</value>
   </data>
-  <data name="label29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="lblMode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
-  <data name="&gt;&gt;label26.Name" xml:space="preserve">
-    <value>label26</value>
+  <data name="&gt;&gt;lblMode.Name" xml:space="preserve">
+    <value>lblMode</value>
+  </data>
+  <data name="&gt;&gt;lblMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblMode.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;lblMode.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="trvRecipe.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="trvRecipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="trvRecipe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>140, 603</value>
+  </data>
+  <data name="trvRecipe.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;trvRecipe.Name" xml:space="preserve">
+    <value>trvRecipe</value>
+  </data>
+  <data name="&gt;&gt;trvRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trvRecipe.Parent" xml:space="preserve">
+    <value>gbAccountCondition</value>
+  </data>
+  <data name="&gt;&gt;trvRecipe.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="gbAccountCondition.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbAccountCondition.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="gbAccountCondition.Size" type="System.Drawing.Size, System.Drawing">
+    <value>146, 635</value>
+  </data>
+  <data name="gbAccountCondition.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="gbAccountCondition.Text" xml:space="preserve">
+    <value>Recipe List</value>
+  </data>
+  <data name="&gt;&gt;gbAccountCondition.Name" xml:space="preserve">
+    <value>gbAccountCondition</value>
+  </data>
+  <data name="&gt;&gt;gbAccountCondition.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAccountCondition.Parent" xml:space="preserve">
+    <value>tlpAccountCreate</value>
+  </data>
+  <data name="&gt;&gt;gbAccountCondition.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccountCreate.ColumnCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Name" xml:space="preserve">
+    <value>tbRecipeID</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Name" xml:space="preserve">
+    <value>tbRecipeName</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbRecipeHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 24</value>
+  </data>
+  <data name="gbRecipeHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="gbRecipeHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>1, 1, 1, 1</value>
+  </data>
+  <data name="gbRecipeHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>761, 68</value>
+  </data>
+  <data name="gbRecipeHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeHeader.Name" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeHeader.Parent" xml:space="preserve">
+    <value>gbRecipe</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeHeader.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnCancel.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>968, 34</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
     <value>126, 38</value>
   </data>
-  <data name="cbP1LoadType.Items" xml:space="preserve">
-    <value>L</value>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="&gt;&gt;gbAccount.Parent" xml:space="preserve">
-    <value>palContainer</value>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Cancel</value>
   </data>
-  <data name="&gt;&gt;tlpAccountMenu.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>gbRecipe</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSave.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1100, 34</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 38</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>gbRecipe</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 18pt, style=Bold</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 496</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 31</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>目前模式:</value>
+  </data>
+  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>572, 78</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 24</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Wafer Size</value>
+  </data>
+  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 249</value>
+  </data>
+  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>494, 244</value>
+  </data>
+  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="groupBox9.Text" xml:space="preserve">
+    <value>完工處置</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Name" xml:space="preserve">
+    <value>tbNotch_angle</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Name" xml:space="preserve">
+    <value>cbP2LoadType</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label35.Name" xml:space="preserve">
+    <value>label35</value>
+  </data>
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;cbP1LoadType.Name" xml:space="preserve">
+    <value>cbP1LoadType</value>
+  </data>
+  <data name="&gt;&gt;cbP1LoadType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP1LoadType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP1LoadType.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;cbP2CstType.Name" xml:space="preserve">
+    <value>cbP2CstType</value>
+  </data>
+  <data name="&gt;&gt;cbP2CstType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP2CstType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP2CstType.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.Name" xml:space="preserve">
+    <value>cbP1CstType</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 18</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>545, 213</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Area 1 Port Setting</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbUseBurnIn.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseBurnIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="cbUseBurnIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1144, 517</value>
+  </data>
+  <data name="cbUseBurnIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 28</value>
+  </data>
+  <data name="cbUseBurnIn.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbUseBurnIn.Text" xml:space="preserve">
+    <value>Burn-In</value>
+  </data>
+  <data name="&gt;&gt;cbUseBurnIn.Name" xml:space="preserve">
+    <value>cbUseBurnIn</value>
+  </data>
+  <data name="&gt;&gt;cbUseBurnIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseBurnIn.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;cbUseBurnIn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbWaferSize.Items" xml:space="preserve">
+    <value>300</value>
+  </data>
+  <data name="cbWaferSize.Items1" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="cbWaferSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>682, 75</value>
+  </data>
+  <data name="cbWaferSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>160, 32</value>
+  </data>
+  <data name="cbWaferSize.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbWaferSize.Name" xml:space="preserve">
+    <value>cbWaferSize</value>
+  </data>
+  <data name="&gt;&gt;cbWaferSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbWaferSize.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;cbWaferSize.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label38.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 137</value>
+  </data>
+  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="label38.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label38.Text" xml:space="preserve">
+    <value>放片順序</value>
+  </data>
+  <data name="label38.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label38.Name" xml:space="preserve">
+    <value>label38</value>
+  </data>
+  <data name="&gt;&gt;label38.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 100</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>86, 24</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>取片順序</value>
+  </data>
+  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 32</value>
+  </data>
+  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
+    <value>143, 24</value>
+  </data>
+  <data name="label30.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>Robot 1 Speed</value>
+  </data>
+  <data name="label30.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label30.Name" xml:space="preserve">
+    <value>label30</value>
+  </data>
+  <data name="&gt;&gt;label30.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbR1Speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>154, 27</value>
+  </data>
+  <data name="tbR1Speed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 33</value>
+  </data>
+  <data name="tbR1Speed.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbR1Speed.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;tbR1Speed.Name" xml:space="preserve">
+    <value>tbR1Speed</value>
+  </data>
+  <data name="&gt;&gt;tbR1Speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbR1Speed.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;tbR1Speed.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbPutSlotOrder.Items" xml:space="preserve">
+    <value>BOTTOM_UP</value>
+  </data>
+  <data name="cbPutSlotOrder.Items1" xml:space="preserve">
+    <value>TOP_DOWN</value>
+  </data>
+  <data name="cbPutSlotOrder.Items2" xml:space="preserve">
+    <value>SLOT_TO_SLOT</value>
+  </data>
+  <data name="cbPutSlotOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 134</value>
+  </data>
+  <data name="cbPutSlotOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 32</value>
+  </data>
+  <data name="cbPutSlotOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbPutSlotOrder.Name" xml:space="preserve">
+    <value>cbPutSlotOrder</value>
+  </data>
+  <data name="&gt;&gt;cbPutSlotOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPutSlotOrder.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbPutSlotOrder.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbGetSlotOrder.Items" xml:space="preserve">
+    <value>BOTTOM_UP</value>
+  </data>
+  <data name="cbGetSlotOrder.Items1" xml:space="preserve">
+    <value>TOP_DOWN</value>
+  </data>
+  <data name="cbGetSlotOrder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>102, 97</value>
+  </data>
+  <data name="cbGetSlotOrder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 32</value>
+  </data>
+  <data name="cbGetSlotOrder.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbGetSlotOrder.Name" xml:space="preserve">
+    <value>cbGetSlotOrder</value>
+  </data>
+  <data name="&gt;&gt;cbGetSlotOrder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbGetSlotOrder.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbGetSlotOrder.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbUserBothArm.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUserBothArm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="cbUserBothArm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 66</value>
+  </data>
+  <data name="cbUserBothArm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 28</value>
+  </data>
+  <data name="cbUserBothArm.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbUserBothArm.Text" xml:space="preserve">
+    <value>上+下</value>
+  </data>
+  <data name="&gt;&gt;cbUserBothArm.Name" xml:space="preserve">
+    <value>cbUserBothArm</value>
+  </data>
+  <data name="&gt;&gt;cbUserBothArm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUserBothArm.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbUserBothArm.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cbUseLArm.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseLArm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
   </data>
   <data name="cbUseLArm.Location" type="System.Drawing.Point, System.Drawing">
     <value>102, 66</value>
+  </data>
+  <data name="cbUseLArm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 28</value>
+  </data>
+  <data name="cbUseLArm.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbUseLArm.Text" xml:space="preserve">
+    <value>下臂(L)</value>
+  </data>
+  <data name="&gt;&gt;cbUseLArm.Name" xml:space="preserve">
+    <value>cbUseLArm</value>
+  </data>
+  <data name="&gt;&gt;cbUseLArm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseLArm.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbUseLArm.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbUseRArm.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseRArm.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="cbUseRArm.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 66</value>
+  </data>
+  <data name="cbUseRArm.Size" type="System.Drawing.Size, System.Drawing">
+    <value>91, 28</value>
+  </data>
+  <data name="cbUseRArm.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbUseRArm.Text" xml:space="preserve">
+    <value>上臂(R)</value>
+  </data>
+  <data name="&gt;&gt;cbUseRArm.Name" xml:space="preserve">
+    <value>cbUseRArm</value>
+  </data>
+  <data name="&gt;&gt;cbUseRArm.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseRArm.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;cbUseRArm.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 237</value>
+  </data>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 180</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Robot  Setting</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="cbActive.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbActive.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 18pt</value>
+  </data>
+  <data name="cbActive.Location" type="System.Drawing.Point, System.Drawing">
+    <value>585, 32</value>
+  </data>
+  <data name="cbActive.Size" type="System.Drawing.Size, System.Drawing">
+    <value>176, 34</value>
+  </data>
+  <data name="cbActive.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbActive.Text" xml:space="preserve">
+    <value>生產參數生效</value>
+  </data>
+  <data name="&gt;&gt;cbActive.Name" xml:space="preserve">
+    <value>cbActive</value>
+  </data>
+  <data name="&gt;&gt;cbActive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbActive.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;cbActive.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Name" xml:space="preserve">
+    <value>tbA1_speed</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.Name" xml:space="preserve">
+    <value>cbUseA1</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="Aligner_gb.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 423</value>
+  </data>
+  <data name="Aligner_gb.Size" type="System.Drawing.Size, System.Drawing">
+    <value>288, 104</value>
+  </data>
+  <data name="Aligner_gb.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="Aligner_gb.Text" xml:space="preserve">
+    <value>Aligner Setting</value>
+  </data>
+  <data name="&gt;&gt;Aligner_gb.Name" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;Aligner_gb.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Aligner_gb.Parent" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;Aligner_gb.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="gbRecipeBody.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 81</value>
+  </data>
+  <data name="gbRecipeBody.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1247, 551</value>
+  </data>
+  <data name="gbRecipeBody.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeBody.Name" xml:space="preserve">
+    <value>gbRecipeBody</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeBody.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeBody.Parent" xml:space="preserve">
+    <value>gbRecipe</value>
+  </data>
+  <data name="&gt;&gt;gbRecipeBody.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="gbRecipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>155, 3</value>
+  </data>
+  <data name="gbRecipe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1259, 635</value>
+  </data>
+  <data name="gbRecipe.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbRecipe.Text" xml:space="preserve">
+    <value>Recipe body</value>
+  </data>
+  <data name="&gt;&gt;gbRecipe.Name" xml:space="preserve">
+    <value>gbRecipe</value>
+  </data>
+  <data name="&gt;&gt;gbRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountCreate</value>
+  </data>
+  <data name="&gt;&gt;gbRecipe.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpAccountCreate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpAccountCreate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 29</value>
+  </data>
+  <data name="tlpAccountCreate.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpAccountCreate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1420, 641</value>
+  </data>
+  <data name="tlpAccountCreate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Name" xml:space="preserve">
+    <value>tlpAccountCreate</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Parent" xml:space="preserve">
+    <value>gbAccount</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccountCreate.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbAccountCondition" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbRecipe" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,10.71429,Percent,89.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="tbRecipeID.Location" type="System.Drawing.Point, System.Drawing">
+    <value>463, 26</value>
+  </data>
+  <data name="tbRecipeID.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 33</value>
+  </data>
+  <data name="tbRecipeID.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Name" xml:space="preserve">
+    <value>tbRecipeID</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeID.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 27</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>103, 24</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Recipe ID*</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>7, 30</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>138, 24</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Recipe Name*</value>
+  </data>
+  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbRecipeName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 26</value>
+  </data>
+  <data name="tbRecipeName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 33</value>
+  </data>
+  <data name="tbRecipeName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Name" xml:space="preserve">
+    <value>tbRecipeName</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.Parent" xml:space="preserve">
+    <value>gbRecipeHeader</value>
+  </data>
+  <data name="&gt;&gt;tbRecipeName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Name" xml:space="preserve">
+    <value>cbOutputFin1</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Name" xml:space="preserve">
+    <value>cbOutputFin2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Name" xml:space="preserve">
+    <value>cbOutputFin3</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 140</value>
+  </data>
+  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 102</value>
+  </data>
+  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox6.Text" xml:space="preserve">
+    <value>單一出料口完工</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 29</value>
+  </data>
+  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="label19.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label19.Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label19.Name" xml:space="preserve">
+    <value>label19</value>
+  </data>
+  <data name="&gt;&gt;label19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="label20.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label20.Text" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label20.Name" xml:space="preserve">
+    <value>label20</value>
+  </data>
+  <data name="&gt;&gt;label20.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 29</value>
+  </data>
+  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="label21.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>Buzzer</value>
+  </data>
+  <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label21.Name" xml:space="preserve">
+    <value>label21</value>
+  </data>
+  <data name="&gt;&gt;label21.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbOutputFin1.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbOutputFin1.Items1" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="cbOutputFin1.Items2" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="cbOutputFin1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 58</value>
+  </data>
+  <data name="cbOutputFin1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 32</value>
+  </data>
+  <data name="cbOutputFin1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Name" xml:space="preserve">
+    <value>cbOutputFin1</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbOutputFin2.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbOutputFin2.Items1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbOutputFin2.Items2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbOutputFin2.Items3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbOutputFin2.Items4" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbOutputFin2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 58</value>
+  </data>
+  <data name="cbOutputFin2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 32</value>
+  </data>
+  <data name="cbOutputFin2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Name" xml:space="preserve">
+    <value>cbOutputFin2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbOutputFin3.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbOutputFin3.Items1" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbOutputFin3.Items2" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbOutputFin3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 58</value>
+  </data>
+  <data name="cbOutputFin3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 32</value>
+  </data>
+  <data name="cbOutputFin3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Name" xml:space="preserve">
+    <value>cbOutputFin3</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.Parent" xml:space="preserve">
+    <value>groupBox6</value>
+  </data>
+  <data name="&gt;&gt;cbOutputFin3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt</value>
+  </data>
+  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>289, 48</value>
+  </data>
+  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>171, 180</value>
+  </data>
+  <data name="label11.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
   <data name="label11.Text" xml:space="preserve">
     <value>0: Red light
@@ -172,8 +1541,482 @@ M: 只跳出提示訊息
 P: 暫停並跳出提示訊息
 N: 無動作</value>
   </data>
-  <data name="&gt;&gt;btnDeleteRecipe.Parent" xml:space="preserve">
-    <value>tlpAccountMenu</value>
+  <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label11.Name" xml:space="preserve">
+    <value>label11</value>
+  </data>
+  <data name="&gt;&gt;label11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Name" xml:space="preserve">
+    <value>cbInputFin1</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Name" xml:space="preserve">
+    <value>cbInputFin2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Name" xml:space="preserve">
+    <value>cbInputFin3</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
+    <value>13, 32</value>
+  </data>
+  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 102</value>
+  </data>
+  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="groupBox7.Text" xml:space="preserve">
+    <value>單一進料口完工</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
+    <value>groupBox9</value>
+  </data>
+  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 29</value>
+  </data>
+  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
+    <value>68, 24</value>
+  </data>
+  <data name="label16.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label16.Text" xml:space="preserve">
+    <value>Action</value>
+  </data>
+  <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label16.Name" xml:space="preserve">
+    <value>label16</value>
+  </data>
+  <data name="&gt;&gt;label16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>78, 29</value>
+  </data>
+  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
+    <value>56, 24</value>
+  </data>
+  <data name="label17.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label17.Text" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label17.Name" xml:space="preserve">
+    <value>label17</value>
+  </data>
+  <data name="&gt;&gt;label17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>135, 29</value>
+  </data>
+  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 24</value>
+  </data>
+  <data name="label18.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label18.Text" xml:space="preserve">
+    <value>Buzzer</value>
+  </data>
+  <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label18.Name" xml:space="preserve">
+    <value>label18</value>
+  </data>
+  <data name="&gt;&gt;label18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbInputFin1.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbInputFin1.Items1" xml:space="preserve">
+    <value>M</value>
+  </data>
+  <data name="cbInputFin1.Items2" xml:space="preserve">
+    <value>P</value>
+  </data>
+  <data name="cbInputFin1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>18, 58</value>
+  </data>
+  <data name="cbInputFin1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>42, 32</value>
+  </data>
+  <data name="cbInputFin1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Name" xml:space="preserve">
+    <value>cbInputFin1</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbInputFin2.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbInputFin2.Items1" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cbInputFin2.Items2" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbInputFin2.Items3" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbInputFin2.Items4" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbInputFin2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 58</value>
+  </data>
+  <data name="cbInputFin2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 32</value>
+  </data>
+  <data name="cbInputFin2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Name" xml:space="preserve">
+    <value>cbInputFin2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin2.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbInputFin3.Items" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbInputFin3.Items1" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="cbInputFin3.Items2" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="cbInputFin3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>148, 58</value>
+  </data>
+  <data name="cbInputFin3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>43, 32</value>
+  </data>
+  <data name="cbInputFin3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Name" xml:space="preserve">
+    <value>cbInputFin3</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.Parent" xml:space="preserve">
+    <value>groupBox7</value>
+  </data>
+  <data name="&gt;&gt;cbInputFin3.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>75, 29</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 24</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label29.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 156</value>
+  </data>
+  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 24</value>
+  </data>
+  <data name="label29.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Notch Angle</value>
+  </data>
+  <data name="label29.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label29.Name" xml:space="preserve">
+    <value>label29</value>
+  </data>
+  <data name="&gt;&gt;label29.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 29</value>
+  </data>
+  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
+    <value>119, 24</value>
+  </data>
+  <data name="label26.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Carrier Type</value>
+  </data>
+  <data name="label26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label26.Name" xml:space="preserve">
+    <value>label26</value>
+  </data>
+  <data name="&gt;&gt;label26.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="tbNotch_angle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>138, 151</value>
+  </data>
+  <data name="tbNotch_angle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>109, 33</value>
+  </data>
+  <data name="tbNotch_angle.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbNotch_angle.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbNotch_angle.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Name" xml:space="preserve">
+    <value>tbNotch_angle</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;tbNotch_angle.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="cbP2LoadType.Items" xml:space="preserve">
+    <value>L</value>
+  </data>
+  <data name="cbP2LoadType.Items1" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="cbP2LoadType.Items2" xml:space="preserve">
+    <value>N</value>
+  </data>
+  <data name="cbP2LoadType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 97</value>
+  </data>
+  <data name="cbP2LoadType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 32</value>
+  </data>
+  <data name="cbP2LoadType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Name" xml:space="preserve">
+    <value>cbP2LoadType</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP2LoadType.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label35.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label35.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 12pt</value>
+  </data>
+  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
+    <value>282, 19</value>
+  </data>
+  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
+    <value>199, 160</value>
+  </data>
+  <data name="label35.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="label35.Text" xml:space="preserve">
     <value>Port type
@@ -185,1967 +2028,574 @@ Carrier Type
 FOUP: 前開式晶圓傳送盒
 ADAPT: Cassette Adapter</value>
   </data>
-  <data name="tlpAccountMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 5</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="trvRecipe.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="cbInputFin3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 58</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>目前模式:</value>
-  </data>
-  <data name="label19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="cbP2CstType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 32</value>
-  </data>
-  <data name="label18.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;cbP2LoadType.Name" xml:space="preserve">
-    <value>cbP2LoadType</value>
-  </data>
-  <data name="cbP2LoadType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 32</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteRecipe.Name" xml:space="preserve">
-    <value>btnDeleteRecipe</value>
-  </data>
-  <data name="label26.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 29</value>
-  </data>
-  <data name="label19.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;tbNotch_angle.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1100, 34</value>
-  </data>
-  <data name="label20.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>取片順序</value>
-  </data>
-  <data name="cbUseBurnIn.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label35.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;cbUseRArm.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;tbR1Speed.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="tlpAccountMenu.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label17.Text" xml:space="preserve">
-    <value>Light</value>
-  </data>
-  <data name="&gt;&gt;cbUserBothArm.Name" xml:space="preserve">
-    <value>cbUserBothArm</value>
-  </data>
-  <data name="&gt;&gt;label13.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin3.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="tlpAccountMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>64</value>
-  </data>
-  <data name="&gt;&gt;label21.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbP1LoadType.Items2" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="&gt;&gt;cbGetSlotOrder.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label21.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tbA1_speed.Name" xml:space="preserve">
-    <value>tbA1_speed</value>
-  </data>
-  <data name="label26.Text" xml:space="preserve">
-    <value>Carrier Type</value>
-  </data>
-  <data name="&gt;&gt;tbA1_speed.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbP2CstType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>142, 97</value>
-  </data>
-  <data name="&gt;&gt;label30.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btnCreateRecipe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label18.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbGetSlotOrder.Items1" xml:space="preserve">
-    <value>TOP_DOWN</value>
-  </data>
-  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 100</value>
-  </data>
-  <data name="cbP1LoadType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 57</value>
-  </data>
-  <data name="&gt;&gt;cbP1LoadType.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="cbWaferSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
-  </data>
-  <data name="cbPutSlotOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Name" xml:space="preserve">
-    <value>lblMode</value>
-  </data>
-  <data name="cbUseRArm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>91, 28</value>
-  </data>
-  <data name="&gt;&gt;label19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Recipe Name*</value>
-  </data>
-  <data name="cbUserBothArm.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="lblMode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>431, 496</value>
-  </data>
-  <data name="cbP2LoadType.Items" xml:space="preserve">
-    <value>L</value>
-  </data>
-  <data name="&gt;&gt;label20.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 100</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>75, 29</value>
-  </data>
-  <data name="label9.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label29.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbActive.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="cbP1CstType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbActive.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbUseLArm.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="cbInputFin2.Items1" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbP1LoadType.Name" xml:space="preserve">
-    <value>cbP1LoadType</value>
-  </data>
-  <data name="btnModifyRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Recipe ID*</value>
-  </data>
-  <data name="&gt;&gt;label26.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbRecipeID.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormRecipeSetting_1R1A2P</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Wafer Size</value>
-  </data>
-  <data name="groupBox6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 140</value>
-  </data>
-  <data name="tbRecipeName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 33</value>
-  </data>
-  <data name="&gt;&gt;tbA1_speed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbAccountCondition.Name" xml:space="preserve">
-    <value>gbAccountCondition</value>
-  </data>
-  <data name="btnModifyRecipe.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="&gt;&gt;cbWaferSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label35.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbOutputFin1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 32</value>
-  </data>
-  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cbUserBothArm.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="&gt;&gt;palContainer.Name" xml:space="preserve">
-    <value>palContainer</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbP2CstType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label13.Text" xml:space="preserve">
-    <value>Port2</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbOutputFin1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 58</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label17.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="tlpAccountCreate.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbUseLArm.Name" xml:space="preserve">
-    <value>cbUseLArm</value>
-  </data>
-  <data name="cbOutputFin2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 58</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>968, 34</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbInputFin3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 32</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Type</value>
-  </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbInputFin2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 32</value>
-  </data>
-  <data name="tlpAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="lblMode.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cbOutputFin2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 32</value>
-  </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="label13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;palContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbRecipeID.Location" type="System.Drawing.Point, System.Drawing">
-    <value>463, 26</value>
-  </data>
-  <data name="cbOutputFin3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 58</value>
-  </data>
-  <data name="cbUseLArm.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Parent" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="btnSave.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="btnDeleteRecipe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 45</value>
-  </data>
-  <data name="&gt;&gt;label38.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="gbAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;label30.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cbUseRArm.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label30.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label11.Name" xml:space="preserve">
-    <value>label11</value>
-  </data>
-  <data name="tbRecipeName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label11.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label16.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label35.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label17.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label16.Name" xml:space="preserve">
-    <value>label16</value>
-  </data>
-  <data name="cbActive.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>11, 24</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbP2LoadType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>77, 97</value>
-  </data>
-  <data name="cbOutputFin1.Items2" xml:space="preserve">
-    <value>P</value>
-  </data>
-  <data name="label20.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="groupBox7.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="label19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 29</value>
-  </data>
-  <data name="&gt;&gt;cbP1CstType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblMode.Text" xml:space="preserve">
-    <value>瀏覽模式</value>
-  </data>
-  <data name="&gt;&gt;label29.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin2.Name" xml:space="preserve">
-    <value>cbOutputFin2</value>
-  </data>
-  <data name="&gt;&gt;label17.Name" xml:space="preserve">
-    <value>label17</value>
-  </data>
-  <data name="lblMode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>110, 31</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeHeader.Parent" xml:space="preserve">
-    <value>gbRecipe</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Name" xml:space="preserve">
-    <value>groupBox9</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeBody.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label11.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbUseLArm.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDeleteRecipe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin1.Name" xml:space="preserve">
-    <value>cbInputFin1</value>
-  </data>
-  <data name="gbAccountCondition.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tbR1Speed.Name" xml:space="preserve">
-    <value>tbR1Speed</value>
-  </data>
-  <data name="groupBox9.Text" xml:space="preserve">
-    <value>完工處置</value>
-  </data>
-  <data name="&gt;&gt;label20.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbOutputFin3.Items1" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeID.Parent" xml:space="preserve">
-    <value>gbRecipeHeader</value>
-  </data>
-  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;cbUseA1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tlpAccountMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1412, 53</value>
-  </data>
-  <data name="gbAccountCondition.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="cbP1LoadType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="palMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="gbRecipeHeader.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="tlpAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 24</value>
-  </data>
-  <data name="&gt;&gt;label12.Name" xml:space="preserve">
-    <value>label12</value>
-  </data>
-  <data name="tbA1_speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>111, 54</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin1.Name" xml:space="preserve">
-    <value>cbOutputFin1</value>
-  </data>
-  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;trvRecipe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="label21.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 29</value>
-  </data>
-  <data name="cbOutputFin3.Items2" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label30.Size" type="System.Drawing.Size, System.Drawing">
-    <value>143, 24</value>
-  </data>
-  <data name="cbUseBurnIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 28</value>
-  </data>
-  <data name="label19.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;label13.Name" xml:space="preserve">
-    <value>label13</value>
-  </data>
-  <data name="tlpAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;btnCreateRecipe.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tbA1_speed.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label26.Size" type="System.Drawing.Size, System.Drawing">
-    <value>119, 24</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Parent" xml:space="preserve">
-    <value>gbAccount</value>
-  </data>
-  <data name="cbActive.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label16.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="cbP1CstType.Items" xml:space="preserve">
-    <value>FOUP</value>
-  </data>
-  <data name="label30.Text" xml:space="preserve">
-    <value>Robot 1 Speed</value>
-  </data>
-  <data name="&gt;&gt;label18.Name" xml:space="preserve">
-    <value>label18</value>
-  </data>
-  <data name="cbP2CstType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;trvRecipe.Parent" xml:space="preserve">
-    <value>gbAccountCondition</value>
-  </data>
-  <data name="btnCreateRecipe.Text" xml:space="preserve">
-    <value>Create Recipe</value>
-  </data>
-  <data name="&gt;&gt;label17.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;label19.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="gbRecipe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1259, 635</value>
-  </data>
-  <data name="&gt;&gt;palMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label19.Name" xml:space="preserve">
-    <value>label19</value>
-  </data>
-  <data name="palContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;label38.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnModifyRecipe.Parent" xml:space="preserve">
-    <value>tlpAccountMenu</value>
-  </data>
-  <data name="cbOutputFin2.Items2" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbP2LoadType.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label21.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="trvRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 29</value>
-  </data>
-  <data name="cbUseBurnIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1144, 517</value>
-  </data>
-  <data name="cbOutputFin3.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="label21.Text" xml:space="preserve">
-    <value>Buzzer</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnModifyRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>204, 3</value>
-  </data>
-  <data name="btnModifyRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;label26.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>gbRecipeHeader</value>
-  </data>
-  <data name="label26.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbUseA1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 28</value>
-  </data>
-  <data name="cbGetSlotOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 97</value>
-  </data>
-  <data name="&gt;&gt;cbWaferSize.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="palMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.Name" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;cbUserBothArm.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label19.Text" xml:space="preserve">
-    <value>Action</value>
-  </data>
-  <data name="&gt;&gt;label29.Name" xml:space="preserve">
-    <value>label29</value>
-  </data>
-  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountMenu.Parent" xml:space="preserve">
-    <value>palMenu</value>
-  </data>
-  <data name="btnCancel.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;cbUserBothArm.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>gbRecipeHeader</value>
-  </data>
-  <data name="label20.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;cbUseBurnIn.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 496</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin3.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="cbInputFin1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>18, 58</value>
-  </data>
-  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="label30.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 32</value>
-  </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cbP1CstType.Items1" xml:space="preserve">
-    <value>ADAPT</value>
-  </data>
-  <data name="gbAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;cbPutSlotOrder.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="label21.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label16.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label26.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;Aligner_gb.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Area 1 Port Setting</value>
-  </data>
-  <data name="&gt;&gt;cbGetSlotOrder.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="Aligner_gb.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="cbInputFin2.Items4" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label6.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;label18.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;cbUseBurnIn.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="label18.Location" type="System.Drawing.Point, System.Drawing">
-    <value>135, 29</value>
-  </data>
-  <data name="cbWaferSize.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbR1Speed.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="groupBox7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 32</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="cbUseLArm.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="cbP2CstType.Items" xml:space="preserve">
-    <value>FOUP</value>
-  </data>
-  <data name="label13.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 29</value>
-  </data>
-  <data name="label26.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label19.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Parent" xml:space="preserve">
-    <value>tlpAccount</value>
-  </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Robot  Setting</value>
-  </data>
-  <data name="&gt;&gt;cbUseRArm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbUseA1.Name" xml:space="preserve">
-    <value>cbUseA1</value>
-  </data>
-  <data name="gbRecipe.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label18.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="palMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1426, 67</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>103, 24</value>
-  </data>
-  <data name="label35.Size" type="System.Drawing.Size, System.Drawing">
-    <value>199, 160</value>
-  </data>
-  <data name="cbInputFin2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>82, 58</value>
-  </data>
-  <data name="tbRecipeName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>148, 26</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
+  <data name="label35.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
   </data>
   <data name="&gt;&gt;label35.Name" xml:space="preserve">
     <value>label35</value>
   </data>
-  <data name="cbWaferSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>682, 75</value>
+  <data name="&gt;&gt;label35.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tlpAccountCreate.ColumnCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>9, 60</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>6, 6, 6, 6</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 24</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin2.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label18.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cbP1CstType.Items2" xml:space="preserve">
-    <value>FOSB</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;Aligner_gb.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbUseRArm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>5, 66</value>
-  </data>
-  <data name="&gt;&gt;cbUserBothArm.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblMode.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 18pt, style=Bold</value>
-  </data>
-  <data name="label4.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label18.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 24</value>
-  </data>
-  <data name="tlpAccountCreate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 29</value>
-  </data>
-  <data name="tlpAccountCreate.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbNotch_angle.TextAlign" type="System.Windows.Forms.HorizontalAlignment, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label16.Size" type="System.Drawing.Size, System.Drawing">
-    <value>68, 24</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbUseA1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbR1Speed.Text" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="groupBox9.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="label21.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 24</value>
-  </data>
-  <data name="&gt;&gt;palContainer.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="groupBox6.Text" xml:space="preserve">
-    <value>單一出料口完工</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbInputFin2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cbP1CstType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 32</value>
-  </data>
-  <data name="&gt;&gt;label29.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label35.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="Aligner_gb.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 104</value>
+  <data name="&gt;&gt;label35.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
-  <data name="&gt;&gt;cbUseA1.Parent" xml:space="preserve">
-    <value>Aligner_gb</value>
+  <data name="cbP1LoadType.Items" xml:space="preserve">
+    <value>L</value>
   </data>
-  <data name="label26.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="cbP1LoadType.Items1" xml:space="preserve">
+    <value>U</value>
   </data>
-  <data name="&gt;&gt;cbUseBurnIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbP1LoadType.Items2" xml:space="preserve">
+    <value>N</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbP1LoadType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>77, 57</value>
   </data>
-  <data name="tbRecipeID.Size" type="System.Drawing.Size, System.Drawing">
-    <value>201, 33</value>
+  <data name="cbP1LoadType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>52, 32</value>
   </data>
-  <data name="groupBox7.Text" xml:space="preserve">
-    <value>單一進料口完工</value>
+  <data name="cbP1LoadType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;label30.Name" xml:space="preserve">
-    <value>label30</value>
-  </data>
-  <data name="&gt;&gt;cbUseRArm.Name" xml:space="preserve">
-    <value>cbUseRArm</value>
-  </data>
-  <data name="gbRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>155, 3</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin3.Name" xml:space="preserve">
-    <value>cbOutputFin3</value>
-  </data>
-  <data name="&gt;&gt;cbPutSlotOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="gbAccountCondition.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbP2CstType.Items1" xml:space="preserve">
-    <value>ADAPT</value>
-  </data>
-  <data name="cbGetSlotOrder.Items" xml:space="preserve">
-    <value>BOTTOM_UP</value>
-  </data>
-  <data name="&gt;&gt;cbUseA1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tbNotch_angle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>138, 151</value>
-  </data>
-  <data name="tbA1_speed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>55, 33</value>
+  <data name="&gt;&gt;cbP1LoadType.Name" xml:space="preserve">
+    <value>cbP1LoadType</value>
   </data>
   <data name="&gt;&gt;cbP1LoadType.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeHeader.Name" xml:space="preserve">
-    <value>gbRecipeHeader</value>
-  </data>
-  <data name="label17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 24</value>
-  </data>
-  <data name="Aligner_gb.Text" xml:space="preserve">
-    <value>Aligner Setting</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+  <data name="&gt;&gt;cbP1LoadType.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="cbGetSlotOrder.Size" type="System.Drawing.Size, System.Drawing">
-    <value>160, 32</value>
+  <data name="&gt;&gt;cbP1LoadType.ZOrder" xml:space="preserve">
+    <value>6</value>
   </data>
-  <data name="gbAccount.Text" xml:space="preserve">
-    <value>Recipe  setting</value>
+  <data name="cbP2CstType.Items" xml:space="preserve">
+    <value>FOUP</value>
   </data>
-  <data name="cbUserBothArm.Text" xml:space="preserve">
-    <value>上+下</value>
-  </data>
-  <data name="cbPutSlotOrder.Location" type="System.Drawing.Point, System.Drawing">
-    <value>102, 134</value>
-  </data>
-  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="trvRecipe.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbActive.Name" xml:space="preserve">
-    <value>cbActive</value>
-  </data>
-  <data name="&gt;&gt;label20.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="gbRecipe.Text" xml:space="preserve">
-    <value>Recipe body</value>
-  </data>
-  <data name="&gt;&gt;cbGetSlotOrder.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>54, 24</value>
-  </data>
-  <data name="tlpAccount.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="palMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="palContainer" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,9.791991,Percent,90.20801" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="tlpAccount.ColumnCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label6.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 18pt, style=Bold</value>
-  </data>
-  <data name="btnDeleteRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>405, 3</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnCreateRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="gbAccountCondition.Text" xml:space="preserve">
-    <value>Recipe List</value>
+  <data name="cbP2CstType.Items1" xml:space="preserve">
+    <value>ADAPT</value>
   </data>
   <data name="cbP2CstType.Items2" xml:space="preserve">
     <value>FOSB</value>
   </data>
-  <data name="&gt;&gt;gbRecipe.Name" xml:space="preserve">
-    <value>gbRecipe</value>
+  <data name="cbP2CstType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>142, 97</value>
   </data>
-  <data name="cbUseLArm.Text" xml:space="preserve">
-    <value>下臂(L)</value>
+  <data name="cbP2CstType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 32</value>
   </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbP2CstType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="tbR1Speed.Location" type="System.Drawing.Point, System.Drawing">
-    <value>154, 27</value>
+  <data name="&gt;&gt;cbP2CstType.Name" xml:space="preserve">
+    <value>cbP2CstType</value>
   </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 31</value>
+  <data name="&gt;&gt;cbP2CstType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label2.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="gbRecipeHeader.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 24</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gbAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
-  </data>
-  <data name="&gt;&gt;trvRecipe.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbP1CstType.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cbP2CstType.Parent" xml:space="preserve">
     <value>groupBox2</value>
   </data>
-  <data name="label29.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;cbP2CstType.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
-  <data name="&gt;&gt;cbPutSlotOrder.ZOrder" xml:space="preserve">
-    <value>4</value>
+  <data name="cbP1CstType.Items" xml:space="preserve">
+    <value>FOUP</value>
   </data>
-  <data name="&gt;&gt;label9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="cbP1CstType.Items1" xml:space="preserve">
+    <value>ADAPT</value>
   </data>
-  <data name="cbGetSlotOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnCreateRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin2.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="tbNotch_angle.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cbPutSlotOrder.Name" xml:space="preserve">
-    <value>cbPutSlotOrder</value>
-  </data>
-  <data name="&gt;&gt;trvRecipe.Name" xml:space="preserve">
-    <value>trvRecipe</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="cbInputFin2.Items2" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="cbUseRArm.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tlpAccountCreate.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbAccountCondition" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbRecipe" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,10.71429,Percent,89.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="cbInputFin3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="cbUseLArm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 28</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeHeader.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tbR1Speed.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>7, 30</value>
-  </data>
-  <data name="&gt;&gt;btnModifyRecipe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label38.Name" xml:space="preserve">
-    <value>label38</value>
-  </data>
-  <data name="&gt;&gt;label30.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbP2LoadType.Items2" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="tlpAccountCreate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnDeleteRecipe.Text" xml:space="preserve">
-    <value>Delete Recipe</value>
-  </data>
-  <data name="&gt;&gt;cbWaferSize.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;cbActive.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="tbA1_speed.Text" xml:space="preserve">
-    <value>100</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="label17.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label35.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 12pt</value>
-  </data>
-  <data name="cbUseRArm.Text" xml:space="preserve">
-    <value>上臂(R)</value>
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 237</value>
-  </data>
-  <data name="label17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 29</value>
-  </data>
-  <data name="gbRecipeBody.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="label11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>171, 180</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeID.Name" xml:space="preserve">
-    <value>tbRecipeID</value>
-  </data>
-  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gbRecipeBody.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 81</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>138, 24</value>
+  <data name="cbP1CstType.Items2" xml:space="preserve">
+    <value>FOSB</value>
   </data>
   <data name="cbP1CstType.Location" type="System.Drawing.Point, System.Drawing">
     <value>142, 57</value>
   </data>
-  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="cbP1CstType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 32</value>
   </data>
-  <data name="cbUseRArm.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
+  <data name="cbP1CstType.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
-  <data name="label38.AutoSize" type="System.Boolean, mscorlib">
+  <data name="&gt;&gt;cbP1CstType.Name" xml:space="preserve">
+    <value>cbP1CstType</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;cbP1CstType.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="cbOutputFin2.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="label13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 100</value>
   </data>
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 24</value>
   </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>groupBox3</value>
+  <data name="label13.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="btnCreateRecipe.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="label13.Text" xml:space="preserve">
+    <value>Port2</value>
   </data>
-  <data name="&gt;&gt;cbUseLArm.Type" xml:space="preserve">
+  <data name="label13.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label13.Name" xml:space="preserve">
+    <value>label13</value>
+  </data>
+  <data name="&gt;&gt;label13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label13.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label13.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>9, 60</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="label12.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>Port1</value>
+  </data>
+  <data name="label12.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label12.Name" xml:space="preserve">
+    <value>label12</value>
+  </data>
+  <data name="&gt;&gt;label12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label12.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label12.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label9.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label9.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt, style=Underline</value>
+  </data>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>107, 27</value>
+  </data>
+  <data name="label9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 24</value>
+  </data>
+  <data name="label9.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="label9.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;label9.Name" xml:space="preserve">
+    <value>label9</value>
+  </data>
+  <data name="&gt;&gt;label9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tbA1_speed.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 54</value>
+  </data>
+  <data name="tbA1_speed.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 33</value>
+  </data>
+  <data name="tbA1_speed.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tbA1_speed.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Name" xml:space="preserve">
+    <value>tbA1_speed</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;tbA1_speed.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbUseA1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseA1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="cbUseA1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 61</value>
+  </data>
+  <data name="cbUseA1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>105, 28</value>
+  </data>
+  <data name="cbUseA1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="cbUseA1.Text" xml:space="preserve">
+    <value>Aligner1</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.Name" xml:space="preserve">
+    <value>cbUseA1</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.Type" xml:space="preserve">
     <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;gbAccountCondition.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;cbUseA1.Parent" xml:space="preserve">
+    <value>Aligner_gb</value>
+  </data>
+  <data name="&gt;&gt;cbUseA1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gbAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1426, 673</value>
+  </data>
+  <data name="gbAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="gbAccount.Text" xml:space="preserve">
+    <value>Recipe  setting</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Name" xml:space="preserve">
+    <value>gbAccount</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Parent" xml:space="preserve">
+    <value>palContainer</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.Name" xml:space="preserve">
+    <value>tlpAccountMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.Parent" xml:space="preserve">
+    <value>palMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccountMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnModifyRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCreateRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDeleteRecipe" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="palMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="palMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="palMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="palMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1426, 67</value>
+  </data>
+  <data name="palMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Name" xml:space="preserve">
+    <value>palMenu</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Parent" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;palMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccountMenu.ColumnCount" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;btnModifyRecipe.Name" xml:space="preserve">
+    <value>btnModifyRecipe</value>
+  </data>
+  <data name="&gt;&gt;btnModifyRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnModifyRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountMenu</value>
+  </data>
+  <data name="&gt;&gt;btnModifyRecipe.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <data name="&gt;&gt;btnCreateRecipe.Name" xml:space="preserve">
     <value>btnCreateRecipe</value>
   </data>
-  <data name="groupBox9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>494, 244</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>gbRecipe</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnModifyRecipe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>191, 45</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin3.Name" xml:space="preserve">
-    <value>cbInputFin3</value>
-  </data>
-  <data name="cbOutputFin1.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="tlpAccountMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnModifyRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCreateRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDeleteRecipe" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="label38.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="cbInputFin2.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="label38.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 24</value>
-  </data>
-  <data name="trvRecipe.Size" type="System.Drawing.Size, System.Drawing">
-    <value>140, 603</value>
-  </data>
-  <data name="cbUseBurnIn.Text" xml:space="preserve">
-    <value>Burn-In</value>
-  </data>
-  <data name="cbP1LoadType.Items1" xml:space="preserve">
-    <value>U</value>
-  </data>
-  <data name="cbUserBothArm.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 66</value>
-  </data>
-  <data name="&gt;&gt;groupBox7.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin2.Name" xml:space="preserve">
-    <value>cbInputFin2</value>
-  </data>
-  <data name="label38.Text" xml:space="preserve">
-    <value>放片順序</value>
-  </data>
-  <data name="label17.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="gbAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1426, 673</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeName.Name" xml:space="preserve">
-    <value>tbRecipeName</value>
-  </data>
-  <data name="label21.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;cbP2LoadType.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="cbActive.Location" type="System.Drawing.Point, System.Drawing">
-    <value>585, 32</value>
-  </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 27</value>
-  </data>
-  <data name="cbActive.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 18pt</value>
-  </data>
-  <data name="label38.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 137</value>
-  </data>
-  <data name="cbUserBothArm.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbOutputFin2.Items3" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="label11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 48</value>
-  </data>
-  <data name="cbUseBurnIn.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbPutSlotOrder.Items" xml:space="preserve">
-    <value>BOTTOM_UP</value>
-  </data>
-  <data name="label20.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1432, 752</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;cbP2CstType.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;gbRecipe.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbOutputFin1.Items1" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="&gt;&gt;gbRecipe.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="label29.Text" xml:space="preserve">
-    <value>Notch Angle</value>
-  </data>
-  <data name="label30.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;cbP2LoadType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbNotch_angle.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="tlpAccountCreate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1420, 641</value>
-  </data>
-  <data name="btnDeleteRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Popup</value>
-  </data>
-  <data name="gbAccountCondition.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 635</value>
-  </data>
-  <data name="palContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 76</value>
-  </data>
-  <data name="cbActive.Size" type="System.Drawing.Size, System.Drawing">
-    <value>176, 34</value>
-  </data>
-  <data name="cbWaferSize.Items1" xml:space="preserve">
-    <value>200</value>
-  </data>
-  <data name="label3.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;tbR1Speed.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label38.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbP1CstType.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="&gt;&gt;btnCreateRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnCreateRecipe.Parent" xml:space="preserve">
     <value>tlpAccountMenu</value>
   </data>
-  <data name="&gt;&gt;palContainer.Parent" xml:space="preserve">
-    <value>tlpAccount</value>
+  <data name="&gt;&gt;btnCreateRecipe.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;label9.Name" xml:space="preserve">
-    <value>label9</value>
+  <data name="&gt;&gt;btnDeleteRecipe.Name" xml:space="preserve">
+    <value>btnDeleteRecipe</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox2</value>
+  <data name="&gt;&gt;btnDeleteRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cbActive.Text" xml:space="preserve">
-    <value>生產參數生效</value>
-  </data>
-  <data name="&gt;&gt;cbP2CstType.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="gbRecipeHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>gbRecipe</value>
-  </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <data name="groupBox6.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="cbUseA1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="lblMode.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnModifyRecipe.Text" xml:space="preserve">
-    <value>Modify Recipe</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeHeader.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbGetSlotOrder.Name" xml:space="preserve">
-    <value>cbGetSlotOrder</value>
-  </data>
-  <data name="label12.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="btnDeleteRecipe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 27</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="palContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1426, 673</value>
-  </data>
-  <data name="&gt;&gt;cbUseRArm.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="cbP1LoadType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>52, 32</value>
-  </data>
-  <data name="label20.Location" type="System.Drawing.Point, System.Drawing">
-    <value>78, 29</value>
-  </data>
-  <data name="cbPutSlotOrder.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label16.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>572, 78</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeName.Parent" xml:space="preserve">
-    <value>gbRecipeHeader</value>
-  </data>
-  <data name="tbNotch_angle.Text" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label35.Location" type="System.Drawing.Point, System.Drawing">
-    <value>282, 19</value>
-  </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>545, 213</value>
-  </data>
-  <data name="label18.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="btnCreateRecipe.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="cbInputFin1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 32</value>
-  </data>
-  <data name="gbRecipeHeader.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>1, 1, 1, 1</value>
-  </data>
-  <data name="cbOutputFin2.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="label16.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="palMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="btnDeleteRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tlpAccountMenu.ColumnCount" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;groupBox9.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Name" xml:space="preserve">
-    <value>palMenu</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeBody.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>288, 180</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="tbR1Speed.Size" type="System.Drawing.Size, System.Drawing">
-    <value>61, 33</value>
-  </data>
-  <data name="cbWaferSize.Items" xml:space="preserve">
-    <value>300</value>
-  </data>
-  <data name="label18.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tlpAccount.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblMode.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="tlpAccountMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="cbUseA1.Text" xml:space="preserve">
-    <value>Aligner1</value>
-  </data>
-  <data name="label16.Text" xml:space="preserve">
-    <value>Action</value>
-  </data>
-  <data name="cbOutputFin1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label21.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tlpAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1432, 752</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label29.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 24</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.Name" xml:space="preserve">
-    <value>gbAccount</value>
-  </data>
-  <data name="&gt;&gt;cbP1CstType.Name" xml:space="preserve">
-    <value>cbP1CstType</value>
-  </data>
-  <data name="&gt;&gt;gbAccountCondition.Parent" xml:space="preserve">
-    <value>tlpAccountCreate</value>
-  </data>
-  <data name="label5.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;cbUseBurnIn.Name" xml:space="preserve">
-    <value>cbUseBurnIn</value>
+  <data name="&gt;&gt;btnDeleteRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountMenu</value>
   </data>
   <data name="&gt;&gt;btnDeleteRecipe.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="cbPutSlotOrder.Items1" xml:space="preserve">
-    <value>TOP_DOWN</value>
+  <data name="tlpAccountMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
-  <data name="cbOutputFin2.Items1" xml:space="preserve">
-    <value>0</value>
+  <data name="tlpAccountMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>5, 5</value>
   </data>
-  <data name="groupBox9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>310, 249</value>
+  <data name="tlpAccountMenu.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="cbInputFin3.Items2" xml:space="preserve">
-    <value>5</value>
+  <data name="tlpAccountMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1412, 53</value>
   </data>
-  <data name="&gt;&gt;cbWaferSize.Name" xml:space="preserve">
-    <value>cbWaferSize</value>
-  </data>
-  <data name="&gt;&gt;Aligner_gb.Name" xml:space="preserve">
-    <value>Aligner_gb</value>
-  </data>
-  <data name="&gt;&gt;lblMode.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="groupBox6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 102</value>
-  </data>
-  <data name="label35.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="label17.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="cbInputFin1.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="tlpAccountMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
   </data>
   <data name="&gt;&gt;tlpAccountMenu.Name" xml:space="preserve">
     <value>tlpAccountMenu</value>
   </data>
-  <data name="cbOutputFin3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="&gt;&gt;tlpAccountMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="cbUserBothArm.Size" type="System.Drawing.Size, System.Drawing">
-    <value>81, 28</value>
+  <data name="&gt;&gt;tlpAccountMenu.Parent" xml:space="preserve">
+    <value>palMenu</value>
   </data>
-  <data name="palContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;tlpAccountMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;cbUseLArm.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="tlpAccountMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnModifyRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCreateRecipe" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnDeleteRecipe" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="&gt;&gt;tlpAccount.Name" xml:space="preserve">
-    <value>tlpAccount</value>
-  </data>
-  <data name="groupBox7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>209, 102</value>
-  </data>
-  <data name="cbInputFin1.Items2" xml:space="preserve">
-    <value>P</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 38</value>
-  </data>
-  <data name="&gt;&gt;tbA1_speed.Parent" xml:space="preserve">
-    <value>Aligner_gb</value>
-  </data>
-  <data name="&gt;&gt;Aligner_gb.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="palMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="&gt;&gt;btnModifyRecipe.Name" xml:space="preserve">
-    <value>btnModifyRecipe</value>
-  </data>
-  <data name="label29.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt, style=Underline</value>
-  </data>
-  <data name="&gt;&gt;cbP1LoadType.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="cbUseA1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="btnModifyRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
   </data>
   <data name="btnModifyRecipe.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 14.25pt</value>
   </data>
-  <data name="label19.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="btnModifyRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
   </data>
-  <data name="&gt;&gt;cbOutputFin3.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="btnModifyRecipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>204, 3</value>
   </data>
-  <data name="cbP2LoadType.Items1" xml:space="preserve">
-    <value>U</value>
-  </data>
-  <data name="&gt;&gt;tbNotch_angle.Name" xml:space="preserve">
-    <value>tbNotch_angle</value>
-  </data>
-  <data name="cbUseBurnIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>微軟正黑體, 14.25pt</value>
-  </data>
-  <data name="btnCreateRecipe.TabIndex" type="System.Int32, mscorlib">
-    <value>50</value>
-  </data>
-  <data name="&gt;&gt;gbAccountCondition.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin3.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="lblMode.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="label38.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;label9.Parent" xml:space="preserve">
-    <value>Aligner_gb</value>
-  </data>
-  <data name="label29.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="cbInputFin3.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeBody.Parent" xml:space="preserve">
-    <value>gbRecipe</value>
-  </data>
-  <data name="&gt;&gt;groupBox6.Name" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="cbInputFin3.Items1" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="label20.Size" type="System.Drawing.Size, System.Drawing">
-    <value>56, 24</value>
-  </data>
-  <data name="&gt;&gt;cbOutputFin1.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="Aligner_gb.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 423</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin2.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;label19.Parent" xml:space="preserve">
-    <value>groupBox6</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="cbP2LoadType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;label11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="cbOutputFin2.Items4" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="label16.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="gbRecipeBody.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1247, 551</value>
-  </data>
-  <data name="label20.Text" xml:space="preserve">
-    <value>Light</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FormRecipeSetting</value>
-  </data>
-  <data name="gbRecipeHeader.Size" type="System.Drawing.Size, System.Drawing">
-    <value>761, 68</value>
-  </data>
-  <data name="cbInputFin1.Items" xml:space="preserve">
-    <value>N</value>
-  </data>
-  <data name="&gt;&gt;cbInputFin1.Parent" xml:space="preserve">
-    <value>groupBox7</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeID.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;gbRecipe.Parent" xml:space="preserve">
-    <value>tlpAccountCreate</value>
-  </data>
-  <data name="cbOutputFin3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>43, 32</value>
-  </data>
-  <data name="cbInputFin1.Items1" xml:space="preserve">
-    <value>M</value>
-  </data>
-  <data name="btnCreateRecipe.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="btnModifyRecipe.Size" type="System.Drawing.Size, System.Drawing">
     <value>191, 45</value>
   </data>
-  <data name="label12.Text" xml:space="preserve">
-    <value>Port1</value>
-  </data>
-  <data name="&gt;&gt;label16.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label20.Name" xml:space="preserve">
-    <value>label20</value>
-  </data>
-  <data name="&gt;&gt;label21.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="cbUseA1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 61</value>
-  </data>
-  <data name="label30.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label9.Text" xml:space="preserve">
-    <value>Speed</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Name" xml:space="preserve">
-    <value>tlpAccountCreate</value>
-  </data>
-  <data name="&gt;&gt;gbRecipeBody.Name" xml:space="preserve">
-    <value>gbRecipeBody</value>
-  </data>
-  <data name="label11.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="btnDeleteRecipe.TabIndex" type="System.Int32, mscorlib">
+  <data name="btnModifyRecipe.TabIndex" type="System.Int32, mscorlib">
     <value>65</value>
   </data>
-  <data name="label18.Text" xml:space="preserve">
-    <value>Buzzer</value>
+  <data name="btnModifyRecipe.Text" xml:space="preserve">
+    <value>Modify Recipe</value>
   </data>
-  <data name="tbNotch_angle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>109, 33</value>
+  <data name="&gt;&gt;btnModifyRecipe.Name" xml:space="preserve">
+    <value>btnModifyRecipe</value>
   </data>
-  <data name="&gt;&gt;label17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;btnModifyRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;label21.Name" xml:space="preserve">
-    <value>label21</value>
-  </data>
-  <data name="&gt;&gt;label26.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbRecipeName.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="&gt;&gt;btnModifyRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountMenu</value>
   </data>
   <data name="&gt;&gt;btnModifyRecipe.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;tbNotch_angle.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="btnCreateRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnCreateRecipe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="btnCreateRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCreateRecipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="btnCreateRecipe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 45</value>
+  </data>
+  <data name="btnCreateRecipe.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="btnCreateRecipe.Text" xml:space="preserve">
+    <value>Create Recipe</value>
+  </data>
+  <data name="&gt;&gt;btnCreateRecipe.Name" xml:space="preserve">
+    <value>btnCreateRecipe</value>
+  </data>
+  <data name="&gt;&gt;btnCreateRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCreateRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountMenu</value>
+  </data>
+  <data name="&gt;&gt;btnCreateRecipe.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnDeleteRecipe.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Popup</value>
+  </data>
+  <data name="btnDeleteRecipe.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="btnDeleteRecipe.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDeleteRecipe.Location" type="System.Drawing.Point, System.Drawing">
+    <value>405, 3</value>
+  </data>
+  <data name="btnDeleteRecipe.Size" type="System.Drawing.Size, System.Drawing">
+    <value>191, 45</value>
+  </data>
+  <data name="btnDeleteRecipe.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="btnDeleteRecipe.Text" xml:space="preserve">
+    <value>Delete Recipe</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRecipe.Name" xml:space="preserve">
+    <value>btnDeleteRecipe</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRecipe.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRecipe.Parent" xml:space="preserve">
+    <value>tlpAccountMenu</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteRecipe.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="palContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="palContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 76</value>
+  </data>
+  <data name="palContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1426, 673</value>
+  </data>
+  <data name="palContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Name" xml:space="preserve">
+    <value>palContainer</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Parent" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;palContainer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpAccount.ColumnCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="tlpAccount.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tlpAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1432, 752</value>
+  </data>
+  <data name="tlpAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Name" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccount.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="palMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="palContainer" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100" /&gt;&lt;Rows Styles="Percent,9.791991,Percent,90.20801" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>11, 24</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1432, 752</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>微軟正黑體, 14.25pt</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormRecipeSetting</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormRecipeSetting_1R1A2P</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

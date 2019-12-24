@@ -131,8 +131,8 @@
             // 
             // gbAccountCondition
             // 
-            resources.ApplyResources(this.gbAccountCondition, "gbAccountCondition");
             this.gbAccountCondition.Controls.Add(this.trvRecipe);
+            resources.ApplyResources(this.gbAccountCondition, "gbAccountCondition");
             this.gbAccountCondition.Name = "gbAccountCondition";
             this.gbAccountCondition.TabStop = false;
             // 
@@ -145,21 +145,21 @@
             // 
             // gbRecipe
             // 
-            resources.ApplyResources(this.gbRecipe, "gbRecipe");
             this.gbRecipe.Controls.Add(this.gbRecipeHeader);
             this.gbRecipe.Controls.Add(this.btnCancel);
             this.gbRecipe.Controls.Add(this.btnSave);
             this.gbRecipe.Controls.Add(this.gbRecipeBody);
+            resources.ApplyResources(this.gbRecipe, "gbRecipe");
             this.gbRecipe.Name = "gbRecipe";
             this.gbRecipe.TabStop = false;
             // 
             // gbRecipeHeader
             // 
-            resources.ApplyResources(this.gbRecipeHeader, "gbRecipeHeader");
             this.gbRecipeHeader.Controls.Add(this.tbRecipeID);
             this.gbRecipeHeader.Controls.Add(this.label1);
             this.gbRecipeHeader.Controls.Add(this.label2);
             this.gbRecipeHeader.Controls.Add(this.tbRecipeName);
+            resources.ApplyResources(this.gbRecipeHeader, "gbRecipeHeader");
             this.gbRecipeHeader.Name = "gbRecipeHeader";
             this.gbRecipeHeader.TabStop = false;
             // 
@@ -202,7 +202,6 @@
             // 
             // gbRecipeBody
             // 
-            resources.ApplyResources(this.gbRecipeBody, "gbRecipeBody");
             this.gbRecipeBody.Controls.Add(this.label6);
             this.gbRecipeBody.Controls.Add(this.label4);
             this.gbRecipeBody.Controls.Add(this.groupBox9);
@@ -213,6 +212,7 @@
             this.gbRecipeBody.Controls.Add(this.groupBox3);
             this.gbRecipeBody.Controls.Add(this.cbActive);
             this.gbRecipeBody.Controls.Add(this.Aligner_gb);
+            resources.ApplyResources(this.gbRecipeBody, "gbRecipeBody");
             this.gbRecipeBody.Name = "gbRecipeBody";
             this.gbRecipeBody.TabStop = false;
             // 
@@ -230,22 +230,22 @@
             // 
             // groupBox9
             // 
-            resources.ApplyResources(this.groupBox9, "groupBox9");
             this.groupBox9.Controls.Add(this.groupBox6);
             this.groupBox9.Controls.Add(this.label11);
             this.groupBox9.Controls.Add(this.groupBox7);
+            resources.ApplyResources(this.groupBox9, "groupBox9");
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.TabStop = false;
             // 
             // groupBox6
             // 
-            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Controls.Add(this.label19);
             this.groupBox6.Controls.Add(this.label20);
             this.groupBox6.Controls.Add(this.label21);
             this.groupBox6.Controls.Add(this.cbOutputFin1);
             this.groupBox6.Controls.Add(this.cbOutputFin2);
             this.groupBox6.Controls.Add(this.cbOutputFin3);
+            resources.ApplyResources(this.groupBox6, "groupBox6");
             this.groupBox6.Name = "groupBox6";
             this.groupBox6.TabStop = false;
             // 
@@ -269,18 +269,17 @@
             // 
             // cbOutputFin1
             // 
-            resources.ApplyResources(this.cbOutputFin1, "cbOutputFin1");
             this.cbOutputFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputFin1.FormattingEnabled = true;
             this.cbOutputFin1.Items.AddRange(new object[] {
             resources.GetString("cbOutputFin1.Items"),
             resources.GetString("cbOutputFin1.Items1"),
             resources.GetString("cbOutputFin1.Items2")});
+            resources.ApplyResources(this.cbOutputFin1, "cbOutputFin1");
             this.cbOutputFin1.Name = "cbOutputFin1";
             // 
             // cbOutputFin2
             // 
-            resources.ApplyResources(this.cbOutputFin2, "cbOutputFin2");
             this.cbOutputFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputFin2.FormattingEnabled = true;
             this.cbOutputFin2.Items.AddRange(new object[] {
@@ -289,17 +288,18 @@
             resources.GetString("cbOutputFin2.Items2"),
             resources.GetString("cbOutputFin2.Items3"),
             resources.GetString("cbOutputFin2.Items4")});
+            resources.ApplyResources(this.cbOutputFin2, "cbOutputFin2");
             this.cbOutputFin2.Name = "cbOutputFin2";
             // 
             // cbOutputFin3
             // 
-            resources.ApplyResources(this.cbOutputFin3, "cbOutputFin3");
             this.cbOutputFin3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbOutputFin3.FormattingEnabled = true;
             this.cbOutputFin3.Items.AddRange(new object[] {
             resources.GetString("cbOutputFin3.Items"),
             resources.GetString("cbOutputFin3.Items1"),
             resources.GetString("cbOutputFin3.Items2")});
+            resources.ApplyResources(this.cbOutputFin3, "cbOutputFin3");
             this.cbOutputFin3.Name = "cbOutputFin3";
             // 
             // label11
@@ -310,13 +310,13 @@
             // 
             // groupBox7
             // 
-            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Controls.Add(this.label16);
             this.groupBox7.Controls.Add(this.label17);
             this.groupBox7.Controls.Add(this.label18);
             this.groupBox7.Controls.Add(this.cbInputFin1);
             this.groupBox7.Controls.Add(this.cbInputFin2);
             this.groupBox7.Controls.Add(this.cbInputFin3);
+            resources.ApplyResources(this.groupBox7, "groupBox7");
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.TabStop = false;
             // 
@@ -340,18 +340,17 @@
             // 
             // cbInputFin1
             // 
-            resources.ApplyResources(this.cbInputFin1, "cbInputFin1");
             this.cbInputFin1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInputFin1.FormattingEnabled = true;
             this.cbInputFin1.Items.AddRange(new object[] {
             resources.GetString("cbInputFin1.Items"),
             resources.GetString("cbInputFin1.Items1"),
             resources.GetString("cbInputFin1.Items2")});
+            resources.ApplyResources(this.cbInputFin1, "cbInputFin1");
             this.cbInputFin1.Name = "cbInputFin1";
             // 
             // cbInputFin2
             // 
-            resources.ApplyResources(this.cbInputFin2, "cbInputFin2");
             this.cbInputFin2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInputFin2.FormattingEnabled = true;
             this.cbInputFin2.Items.AddRange(new object[] {
@@ -360,22 +359,22 @@
             resources.GetString("cbInputFin2.Items2"),
             resources.GetString("cbInputFin2.Items3"),
             resources.GetString("cbInputFin2.Items4")});
+            resources.ApplyResources(this.cbInputFin2, "cbInputFin2");
             this.cbInputFin2.Name = "cbInputFin2";
             // 
             // cbInputFin3
             // 
-            resources.ApplyResources(this.cbInputFin3, "cbInputFin3");
             this.cbInputFin3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbInputFin3.FormattingEnabled = true;
             this.cbInputFin3.Items.AddRange(new object[] {
             resources.GetString("cbInputFin3.Items"),
             resources.GetString("cbInputFin3.Items1"),
             resources.GetString("cbInputFin3.Items2")});
+            resources.ApplyResources(this.cbInputFin3, "cbInputFin3");
             this.cbInputFin3.Name = "cbInputFin3";
             // 
             // groupBox2
             // 
-            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label29);
             this.groupBox2.Controls.Add(this.label26);
@@ -387,6 +386,7 @@
             this.groupBox2.Controls.Add(this.cbP1CstType);
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label12);
+            resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
             // 
@@ -417,13 +417,13 @@
             // 
             // cbP2LoadType
             // 
-            resources.ApplyResources(this.cbP2LoadType, "cbP2LoadType");
             this.cbP2LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbP2LoadType.FormattingEnabled = true;
             this.cbP2LoadType.Items.AddRange(new object[] {
             resources.GetString("cbP2LoadType.Items"),
             resources.GetString("cbP2LoadType.Items1"),
             resources.GetString("cbP2LoadType.Items2")});
+            resources.ApplyResources(this.cbP2LoadType, "cbP2LoadType");
             this.cbP2LoadType.Name = "cbP2LoadType";
             this.cbP2LoadType.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbP2LoadType.Click += new System.EventHandler(this.modeCheck);
@@ -436,39 +436,39 @@
             // 
             // cbP1LoadType
             // 
-            resources.ApplyResources(this.cbP1LoadType, "cbP1LoadType");
             this.cbP1LoadType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbP1LoadType.FormattingEnabled = true;
             this.cbP1LoadType.Items.AddRange(new object[] {
             resources.GetString("cbP1LoadType.Items"),
             resources.GetString("cbP1LoadType.Items1"),
             resources.GetString("cbP1LoadType.Items2")});
+            resources.ApplyResources(this.cbP1LoadType, "cbP1LoadType");
             this.cbP1LoadType.Name = "cbP1LoadType";
             this.cbP1LoadType.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbP1LoadType.Click += new System.EventHandler(this.modeCheck);
             // 
             // cbP2CstType
             // 
-            resources.ApplyResources(this.cbP2CstType, "cbP2CstType");
             this.cbP2CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbP2CstType.FormattingEnabled = true;
             this.cbP2CstType.Items.AddRange(new object[] {
             resources.GetString("cbP2CstType.Items"),
             resources.GetString("cbP2CstType.Items1"),
             resources.GetString("cbP2CstType.Items2")});
+            resources.ApplyResources(this.cbP2CstType, "cbP2CstType");
             this.cbP2CstType.Name = "cbP2CstType";
             this.cbP2CstType.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbP2CstType.Click += new System.EventHandler(this.modeCheck);
             // 
             // cbP1CstType
             // 
-            resources.ApplyResources(this.cbP1CstType, "cbP1CstType");
             this.cbP1CstType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbP1CstType.FormattingEnabled = true;
             this.cbP1CstType.Items.AddRange(new object[] {
             resources.GetString("cbP1CstType.Items"),
             resources.GetString("cbP1CstType.Items1"),
             resources.GetString("cbP1CstType.Items2")});
+            resources.ApplyResources(this.cbP1CstType, "cbP1CstType");
             this.cbP1CstType.Name = "cbP1CstType";
             this.cbP1CstType.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbP1CstType.Click += new System.EventHandler(this.modeCheck);
@@ -495,12 +495,12 @@
             // 
             // cbWaferSize
             // 
-            resources.ApplyResources(this.cbWaferSize, "cbWaferSize");
             this.cbWaferSize.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbWaferSize.FormattingEnabled = true;
             this.cbWaferSize.Items.AddRange(new object[] {
             resources.GetString("cbWaferSize.Items"),
             resources.GetString("cbWaferSize.Items1")});
+            resources.ApplyResources(this.cbWaferSize, "cbWaferSize");
             this.cbWaferSize.Name = "cbWaferSize";
             this.cbWaferSize.SelectedIndexChanged += new System.EventHandler(this.cbWaferSize_SelectedIndexChanged);
             this.cbWaferSize.TextChanged += new System.EventHandler(this.modeCheck);
@@ -508,7 +508,6 @@
             // 
             // groupBox3
             // 
-            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Controls.Add(this.label38);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label30);
@@ -518,6 +517,7 @@
             this.groupBox3.Controls.Add(this.cbUserBothArm);
             this.groupBox3.Controls.Add(this.cbUseLArm);
             this.groupBox3.Controls.Add(this.cbUseRArm);
+            resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
             // 
@@ -550,24 +550,25 @@
             // 
             // cbPutSlotOrder
             // 
-            resources.ApplyResources(this.cbPutSlotOrder, "cbPutSlotOrder");
             this.cbPutSlotOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbPutSlotOrder.FormattingEnabled = true;
             this.cbPutSlotOrder.Items.AddRange(new object[] {
             resources.GetString("cbPutSlotOrder.Items"),
-            resources.GetString("cbPutSlotOrder.Items1")});
+            resources.GetString("cbPutSlotOrder.Items1"),
+            resources.GetString("cbPutSlotOrder.Items2")});
+            resources.ApplyResources(this.cbPutSlotOrder, "cbPutSlotOrder");
             this.cbPutSlotOrder.Name = "cbPutSlotOrder";
             this.cbPutSlotOrder.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbPutSlotOrder.Click += new System.EventHandler(this.modeCheck);
             // 
             // cbGetSlotOrder
             // 
-            resources.ApplyResources(this.cbGetSlotOrder, "cbGetSlotOrder");
             this.cbGetSlotOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGetSlotOrder.FormattingEnabled = true;
             this.cbGetSlotOrder.Items.AddRange(new object[] {
             resources.GetString("cbGetSlotOrder.Items"),
             resources.GetString("cbGetSlotOrder.Items1")});
+            resources.ApplyResources(this.cbGetSlotOrder, "cbGetSlotOrder");
             this.cbGetSlotOrder.Name = "cbGetSlotOrder";
             this.cbGetSlotOrder.TextChanged += new System.EventHandler(this.modeCheck);
             this.cbGetSlotOrder.Click += new System.EventHandler(this.modeCheck);
@@ -615,10 +616,10 @@
             // 
             // Aligner_gb
             // 
-            resources.ApplyResources(this.Aligner_gb, "Aligner_gb");
             this.Aligner_gb.Controls.Add(this.label9);
             this.Aligner_gb.Controls.Add(this.tbA1_speed);
             this.Aligner_gb.Controls.Add(this.cbUseA1);
+            resources.ApplyResources(this.Aligner_gb, "Aligner_gb");
             this.Aligner_gb.Name = "Aligner_gb";
             this.Aligner_gb.TabStop = false;
             // 
@@ -646,16 +647,16 @@
             // 
             // gbAccount
             // 
-            resources.ApplyResources(this.gbAccount, "gbAccount");
             this.gbAccount.Controls.Add(this.tlpAccountCreate);
+            resources.ApplyResources(this.gbAccount, "gbAccount");
             this.gbAccount.Name = "gbAccount";
             this.gbAccount.TabStop = false;
             // 
             // palMenu
             // 
-            resources.ApplyResources(this.palMenu, "palMenu");
             this.palMenu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.palMenu.Controls.Add(this.tlpAccountMenu);
+            resources.ApplyResources(this.palMenu, "palMenu");
             this.palMenu.Name = "palMenu";
             // 
             // tlpAccountMenu
@@ -668,38 +669,38 @@
             // 
             // btnModifyRecipe
             // 
-            resources.ApplyResources(this.btnModifyRecipe, "btnModifyRecipe");
             this.btnModifyRecipe.BackColor = System.Drawing.Color.Silver;
             this.btnModifyRecipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnModifyRecipe.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btnModifyRecipe, "btnModifyRecipe");
             this.btnModifyRecipe.Name = "btnModifyRecipe";
             this.btnModifyRecipe.UseVisualStyleBackColor = false;
             this.btnModifyRecipe.Click += new System.EventHandler(this.btnModifyRecipe_Click);
             // 
             // btnCreateRecipe
             // 
-            resources.ApplyResources(this.btnCreateRecipe, "btnCreateRecipe");
             this.btnCreateRecipe.BackColor = System.Drawing.Color.Silver;
             this.btnCreateRecipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnCreateRecipe.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btnCreateRecipe, "btnCreateRecipe");
             this.btnCreateRecipe.Name = "btnCreateRecipe";
             this.btnCreateRecipe.UseVisualStyleBackColor = false;
             this.btnCreateRecipe.Click += new System.EventHandler(this.btnCreateRecipe_Click);
             // 
             // btnDeleteRecipe
             // 
-            resources.ApplyResources(this.btnDeleteRecipe, "btnDeleteRecipe");
             this.btnDeleteRecipe.BackColor = System.Drawing.Color.Silver;
             this.btnDeleteRecipe.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.btnDeleteRecipe.FlatAppearance.BorderSize = 2;
+            resources.ApplyResources(this.btnDeleteRecipe, "btnDeleteRecipe");
             this.btnDeleteRecipe.Name = "btnDeleteRecipe";
             this.btnDeleteRecipe.UseVisualStyleBackColor = false;
             this.btnDeleteRecipe.Click += new System.EventHandler(this.btnDeleteRecipe_Click);
             // 
             // palContainer
             // 
-            resources.ApplyResources(this.palContainer, "palContainer");
             this.palContainer.Controls.Add(this.gbAccount);
+            resources.ApplyResources(this.palContainer, "palContainer");
             this.palContainer.Name = "palContainer";
             // 
             // tlpAccount
