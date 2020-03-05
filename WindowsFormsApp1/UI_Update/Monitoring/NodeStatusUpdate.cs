@@ -1,5 +1,4 @@
 ﻿using log4net;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -7,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using TransferControl.Comm;
+using TransferControl.Config.SignalTower;
 using TransferControl.Engine;
 using TransferControl.Management;
 
@@ -17,28 +17,18 @@ namespace Adam.UI_Update.Monitoring
         static ILog logger = LogManager.GetLogger(typeof(NodeStatusUpdate));
         delegate void UpdateNode(string Device_ID, string State);
         delegate void UpdateState(string State);
-        static List<Setting> SignalSetting;
-        class Setting
-        {
-            public string Eqp_Status { get; set; }
-            public bool Is_Alarm { get; set; }
-            public string Red { get; set; }
-            public string Orange { get; set; }
-            public string Blue { get; set; }
-            public string Green { get; set; }
-            public string Buzzer1 { get; set; }
-            public string Buzzer2 { get; set; }
-        }
+        static List<SignalTowerSetting> SignalSetting;
+        
 
         public static void InitialSetting()
         {
-            DBUtil dBUtil = new DBUtil();
+          
 
-            string Sql = @"select * from config_signal_tower";
-            DataTable dt = dBUtil.GetDataTable(Sql, null);
+            
+           
 
-            string str_json = JsonConvert.SerializeObject(dt, Formatting.Indented);
-            SignalSetting = JsonConvert.DeserializeObject<List<Setting>>(str_json);
+            
+            SignalSetting = SignalTowerSetting.GetAll();
 
         }
 
@@ -130,39 +120,39 @@ namespace Adam.UI_Update.Monitoring
                     Dictionary<string, string> Params = new Dictionary<string, string>();
 
                     var findSetting = from Setting in SignalSetting
-                                      where Setting.Eqp_Status.Equals(State.ToUpper()) && Setting.Is_Alarm == (AlarmManagement.GetAll().Count!=0)
+                                      where Setting.eqpStatus.Equals(State.ToUpper()) && Setting.hasAlarm == (AlarmManagement.GetCurrentAlarm().Count!=0)
                                       select Setting;
 
                     if (findSetting.Count() != 0)
                     {
-                        Setting each = findSetting.First();
-                        if (!each.Blue.Equals("BLINK"))
+                        SignalTowerSetting each = findSetting.First();
+                        if (!each.blue.Equals("BLINK"))
                         {
-                            Params.Add("BLUE", each.Blue);
+                            Params.Add("BLUE", each.blue);
                         }
                         else
                         {
                             RouteControl.Instance.DIO.SetBlink("BLUE", "True");
                         }
-                        if (!each.Green.Equals("BLINK"))
+                        if (!each.green.Equals("BLINK"))
                         {
-                            Params.Add("GREEN", each.Green);
+                            Params.Add("GREEN", each.green);
                         }
                         else
                         {
                             RouteControl.Instance.DIO.SetBlink("GREEN", "True");
                         }
-                        if (!each.Red.Equals("BLINK"))
+                        if (!each.red.Equals("BLINK"))
                         {
-                            Params.Add("RED", each.Red);
+                            Params.Add("RED", each.red);
                         }
                         else
                         {
                             RouteControl.Instance.DIO.SetBlink("RED", "True");
                         }
-                        if (!each.Orange.Equals("BLINK"))
+                        if (!each.orange.Equals("BLINK"))
                         {
-                            Params.Add("ORANGE", each.Orange);
+                            Params.Add("ORANGE", each.orange);
                         }
                         else
                         {

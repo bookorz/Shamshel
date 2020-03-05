@@ -14,7 +14,7 @@ namespace Adam.UI_Update.Alarm
     class AlarmUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(AlarmUpdate));
-        delegate void UpdateAlarm(List<AlarmInfo> AlarmList);
+        delegate void UpdateAlarm(List<AlarmManagement.AlarmInfo> AlarmList);
         delegate void UpdateSignal(string Name, string Signal);
         delegate void UpdateMsg(string Msg);
 
@@ -23,7 +23,7 @@ namespace Adam.UI_Update.Alarm
 
 
 
-        public static void UpdateAlarmList(List<AlarmInfo> AlarmList)
+        public static void UpdateAlarmList(List<AlarmManagement.AlarmInfo> AlarmList)
         {
             try
             {
@@ -80,7 +80,7 @@ namespace Adam.UI_Update.Alarm
 
         }
 
-        public static void UpdateAlarmHistory(List<AlarmInfo> AlarmList)
+        public static void UpdateAlarmHistory(List<AlarmManagement.AlarmInfo> AlarmList)
         { 
             try
             {

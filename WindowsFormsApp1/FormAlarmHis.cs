@@ -25,12 +25,16 @@ namespace Adam
         {
             From.Value = DateTime.Now.AddDays(-1);
             To.Value = DateTime.Now;
-            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory(From.Value, To.Value));
+            AlarmUpdate.UpdateAlarmHistory((from alm in AlarmManagement.GetHistory()
+                                           where alm.TimeStamp >= From.Value && alm.TimeStamp<= To.Value
+                                           select alm).ToList());
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory(From.Value, To.Value));
+            AlarmUpdate.UpdateAlarmHistory((from alm in AlarmManagement.GetHistory()
+                                            where alm.TimeStamp >= From.Value && alm.TimeStamp <= To.Value
+                                            select alm).ToList());
         }
     }
 }

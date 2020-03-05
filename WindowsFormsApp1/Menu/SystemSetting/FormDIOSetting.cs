@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using System.Linq;
 using TransferControl.Engine;
 using TransferControl.Comm;
+using TransferControl.Config.DIO;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -15,8 +16,8 @@ namespace Adam.Menu.SystemSetting
             InitializeComponent();
         }
 
-        private DataTable dtDIOSetting = new DataTable();
-        private DBUtil dBUtil = new DBUtil();
+
+
 
         private void FormDIOSetting_Load(object sender, EventArgs e)
         {
@@ -36,23 +37,14 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "SELECT CONCAT(dioname, '-', `type`, '-', address) AS item, dioname, address, Parameter, `type`, abnormal, error_code " +
-                    "FROM config_dio_point " +
-                    "ORDER BY dioname, `type`, address ASC ";
 
-                dtDIOSetting = dBUtil.GetDataTable(strSql, null);
 
-                if (dtDIOSetting.Rows.Count > 0)
-                {
-                    lsbCondition.DataSource = dtDIOSetting;
-                    lsbCondition.DisplayMember = "item";
-                    lsbCondition.ValueMember = "item";
-                    lsbCondition.SelectedIndex = -1;
-                }
-                else
-                {
-                    lsbCondition.DataSource = null;
-                }
+
+                lsbCondition.DataSource = DioSetting.GetAll();
+                lsbCondition.DisplayMember = "Parameter";
+                lsbCondition.ValueMember = "Parameter";
+                lsbCondition.SelectedIndex = -1;
+
 
                 txbDIOName.Text = string.Empty;
                 nudAddress.Value = 0;
@@ -73,30 +65,16 @@ namespace Adam.Menu.SystemSetting
             {
                 if (lsbCondition.SelectedIndex >= 0)
                 {
-                    var query = (from a in dtDIOSetting.AsEnumerable()
-                                 where a.Field<string>("dioname") == lsbCondition.Text.Split('-')[0].ToString()
-                                 && a.Field<string>("type") == lsbCondition.Text.Split('-')[1].ToString()
-                                 && a.Field<string>("address") == lsbCondition.Text.Split('-')[2].ToString()
-                                 select a).ToList();
 
-                    if (query.Count > 0)
-                    {
-                        txbDIOName.Text = query[0]["dioname"].ToString();
-                        nudAddress.Value = Convert.ToInt32(query[0]["address"].ToString());
-                        txbParameter.Text = query[0]["Parameter"].ToString();
-                        txbAbnormal.Text = query[0]["abnormal"].ToString();
-                        txbType.Text = query[0]["type"].ToString();
-                        txbErrorCode.Text = query[0]["error_code"].ToString();
-                    }
-                    else
-                    {
-                        txbDIOName.Text = string.Empty;
-                        nudAddress.Value = 0;
-                        txbParameter.Text = string.Empty;
-                        txbAbnormal.Text = string.Empty;
-                        txbType.Text = string.Empty;
-                        txbErrorCode.Text = string.Empty;
-                    }
+
+
+                    txbDIOName.Text = ((DioSetting)lsbCondition.SelectedItem).DeviceName;
+                    //nudAddress.Value = ((DioSetting)lsbCondition.SelectedItem).address;
+                    txbParameter.Text = ((DioSetting)lsbCondition.SelectedItem).Parameter;
+                    txbAbnormal.Text = ((DioSetting)lsbCondition.SelectedItem).abnormal;
+                    txbType.Text = ((DioSetting)lsbCondition.SelectedItem).Type;
+                    txbErrorCode.Text = ((DioSetting)lsbCondition.SelectedItem).error_code;
+
                 }
                 else
                 {
@@ -123,44 +101,19 @@ namespace Adam.Menu.SystemSetting
                 return;
             }
 
-            string strSql = string.Empty;
-            Dictionary<string, object> keyValues = new Dictionary<string, object>();
+                ((DioSetting)lsbCondition.SelectedItem).abnormal = txbAbnormal.Text.Trim();
+            ((DioSetting)lsbCondition.SelectedItem).error_code = txbErrorCode.Text.Trim();
 
-            try
-            {
-                strSql = "UPDATE config_dio_point " +
-                    "SET " +
-                    "Parameter = @Parameter, " +
-                    "abnormal = @abnormal, " +
-                    "error_code = @error_code," +
-                    "update_user = @update_user " +
-                    "WHERE dioname = @dioname " +
-                    "AND address = @address " +
-                    "AND `type` = @type ";
+            DioSetting.Update(((DioSetting)lsbCondition.SelectedItem));
 
-                Form form = Application.OpenForms["FormMain"];
-                Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
 
-                keyValues.Add("@Parameter", txbParameter.Text.Trim().ToString());
-                keyValues.Add("@abnormal", txbAbnormal.Text.Trim().ToString());
-                keyValues.Add("@error_code", txbErrorCode.Text.Trim().ToString());
-                keyValues.Add("@update_user", Signal.Text);
-                keyValues.Add("@dioname", lsbCondition.Text.Split('-')[0].ToString());
-                keyValues.Add("@address", lsbCondition.Text.Split('-')[2].ToString());
-                keyValues.Add("@type", lsbCondition.Text.Split('-')[1].ToString());
 
-                dBUtil.ExecuteNonQuery(strSql, keyValues);
-                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormDIOSetting", Signal.Text);
-                MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+            MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
-                UpdateList();
-                //改設定後套用
-                RouteControl.Instance.DIO.Initial();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.ToString());
-            }
+
+            //改設定後套用
+            RouteControl.Instance.DIO.Initial();
+
         }
     }
 }
