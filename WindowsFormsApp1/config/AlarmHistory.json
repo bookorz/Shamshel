@@ -1,0 +1,1901 @@
+﻿[
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "NMEIO",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:30:14.3689961+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802600",
+    "ErrorDesc": "ELPT2 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:52.0936051+08:00"
+  },
+  {
+    "NodeName": "ELPT1",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802500",
+    "ErrorDesc": "ELPT1 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:52.0754362+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a400,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:16:52.0280185+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a300,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:16:52.0073426+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a000,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:16:51.9881304+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.6058311+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802400",
+    "ErrorDesc": "FOUP Robot-X Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.5758228+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802300",
+    "ErrorDesc": "FOUP Robot-Z Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.555998+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802000",
+    "ErrorDesc": "FOUP Robot-R Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.5353335+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80800000",
+    "ErrorDesc": "Normal Stop(Stop Button Locked)",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.514067+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "RESET",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:16:51.4969615+08:00"
+  },
+  {
+    "NodeName": "ELPT1",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802500",
+    "ErrorDesc": "ELPT1 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:52.0754362+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80800000",
+    "ErrorDesc": "Normal Stop(Stop Button Locked)",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.514067+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:14.654332+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:14.4321849+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:14.2740948+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:14.1180514+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.9570322+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.8047884+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.6478621+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.4953981+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.3177801+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:13.1507285+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.9837899+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.8265428+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.6702805+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.5175878+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.3496993+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.1732702+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:12.0087523+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.8333324+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.6696467+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.5086263+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.3554695+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.1863043+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:11.0303827+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.8694682+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.6989411+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.5366288+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.3677595+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.2073455+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:10.0273114+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.8657488+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.7044582+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.5389447+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.3389173+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.1719977+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:09.0082073+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2020-01-02T16:16:08.8128101+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802600",
+    "ErrorDesc": "ELPT2 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:52.0936051+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9280b600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:05.0068232+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.6058311+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a400,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:04.7727531+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a300,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:04.7515482+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802400",
+    "ErrorDesc": "FOUP Robot-X Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.5758228+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a000,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:04.6831832+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:04.6624896+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802300",
+    "ErrorDesc": "FOUP Robot-Z Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.555998+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802000",
+    "ErrorDesc": "FOUP Robot-R Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2020-01-02T16:16:51.5353335+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb500",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2020-01-02T16:14:04.5351679+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "010000BB",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-31T16:23:01.2768805+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "010000BB",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-31T16:21:26.9035358+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "010000BB",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-31T16:19:52.3390469+08:00"
+  },
+  {
+    "NodeName": "ELPT1",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:17:08.4788155+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "84801000",
+    "ErrorDesc": "Command Executing",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-31T16:05:48.5740561+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:48.1922155+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:48.1663787+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "84801000",
+    "ErrorDesc": "Command Executing",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-31T16:05:48.5740561+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:42.5567265+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:42.5416753+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "84801000",
+    "ErrorDesc": "Command Executing",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-31T16:05:48.5740561+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "84801000",
+    "ErrorDesc": "Command Executing",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-31T16:05:48.5740561+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:08.2473396+08:00"
+  },
+  {
+    "NodeName": "SHELF",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T16:05:08.2246902+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "83860000",
+    "ErrorDesc": "No Tag Error",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-31T15:36:34.0411329+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T09:52:04.3259975+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T09:52:04.2929582+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T09:28:26.7003316+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-31T09:28:26.6659555+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "NMEIO",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T17:49:11.4951081+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "NMEIO",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T17:49:06.7687268+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "NMEIO",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T17:48:59.281232+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "NMEIO",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T17:48:39.0298437+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:31.1998432+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:31.1831423+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:30.7701889+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:30.7525897+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:29.2881969+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:29.2734933+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:22.5730301+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:48:22.5537601+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:47:29.2719044+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:47:29.2454169+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:38:08.012025+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:38:07.9981065+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:37:56.8635095+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:37:56.8465004+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:36:19.208145+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:36:19.1895088+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:36:19.0876326+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:36:19.0598628+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:34:31.1709129+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:34:31.1548577+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:34:31.0791601+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T17:34:31.0464963+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "0000",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:59:23.2740439+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "0000",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:59:15.9742655+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "0000",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:59:03.1696242+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "0000",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:57:55.5156192+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802600",
+    "ErrorDesc": "ELPT2 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:56:14.7516263+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9280b600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.6884727+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a400,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.4718901+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a300,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.4526249+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:56:14.4352716+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a000,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.415788+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802400",
+    "ErrorDesc": "FOUP Robot-X Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:56:14.3888796+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802300",
+    "ErrorDesc": "FOUP Robot-Z Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:56:14.3720133+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802000",
+    "ErrorDesc": "FOUP Robot-R Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:56:14.3581026+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.314596+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb500",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:56:14.2801644+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802600",
+    "ErrorDesc": "ELPT2 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.8086659+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9280b600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.794045+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a400,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.2602902+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a300,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.2437806+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a000,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.2281362+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.2135381+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802400",
+    "ErrorDesc": "FOUP Robot-X Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1990782+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802300",
+    "ErrorDesc": "FOUP Robot-Z Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1858789+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802000",
+    "ErrorDesc": "FOUP Robot-R Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1715555+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb500",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.1045271+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T16:01:00.0905992+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T15:59:20.5054535+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T15:59:20.4864352+08:00"
+  },
+  {
+    "NodeName": "ELPT2",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802600",
+    "ErrorDesc": "ELPT2 Driver Alarm",
+    "ALID": "1334",
+    "ALTX": "STOCKER ELPT 1 UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.8086659+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9280b600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.724008+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a000,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.4988899+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802000",
+    "ErrorDesc": "FOUP Robot-R Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1715555+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a400,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.4614658+08:00"
+  },
+  {
+    "NodeName": "Stocker",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.2135381+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "9281a300,PN6 13.1 M-power supply under-voltage protection(ACID)",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.4330166+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802400",
+    "ErrorDesc": "FOUP Robot-X Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1990782+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "92802300",
+    "ErrorDesc": "FOUP Robot-Z Axis Driver Alarm",
+    "ALID": "1318",
+    "ALTX": "STOCKER UNKNOWN ERROR",
+    "TimeStamp": "2019-12-27T16:01:00.1858789+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb600",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.1780941+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "960fb500",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-27T15:57:12.1532897+08:00"
+  },
+  {
+    "NodeName": "CTU_PTZ",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "80805000",
+    "ErrorDesc": "InterLock Enable",
+    "ALID": "1392",
+    "ALTX": "WTS CTU UNKNOWN_ERROR",
+    "TimeStamp": "2019-12-27T14:10:26.0352911+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:55.4859952+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:55.4743021+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:54.5033076+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:54.491601+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:53.4975196+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:53.4872796+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:52.5049065+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:52.4932294+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:51.5091047+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:51.4986741+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:50.5233225+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:50.511103+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:49.5039895+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:49.4933399+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:48.5208693+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:48.5076954+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:47.5109497+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:47.5000636+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:46.5221276+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:46.5102338+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:45.5298265+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:45.5177398+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:44.5228215+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:44.5103558+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:43.5237434+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:43.5129383+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:42.5541275+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:42.5409277+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:40.9609346+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:40.9506634+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:39.9783663+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:39.9629567+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:39.3084979+08:00"
+  },
+  {
+    "NodeName": "CTU",
+    "Controller": "CTU_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T10:10:39.2844034+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:56:09.390021+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:56:09.3739835+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:56:07.4153246+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:56:07.3994009+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:52:32.4012742+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:52:32.38737+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:52:29.9111353+08:00"
+  },
+  {
+    "NodeName": "FOUP_ROBOT",
+    "Controller": "STK_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-27T08:52:29.8816526+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:15:01.0905804+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:15:01.0776223+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:14:54.7021706+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:14:54.7021706+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:14:54.7021706+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:14:54.7021706+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:14:54.7021706+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:14:33.1585377+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:14:33.1298395+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:13:23.1765664+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:13:19.717472+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:13:19.700448+08:00"
+  },
+  {
+    "NodeName": "SYSTEM",
+    "Controller": "SYSTEM",
+    "ErrorCode": "2012",
+    "ErrorDesc": "Control mode is offline now",
+    "ALID": "2012",
+    "ALTX": "CONTROL_MODE_OFFLINE",
+    "TimeStamp": "2019-12-26T17:13:23.1765664+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:13:05.6360782+08:00"
+  },
+  {
+    "NodeName": "WHR",
+    "Controller": "WHR_CONTROLLER",
+    "ErrorCode": "ConnectionError",
+    "ErrorDesc": "Caused by abnormal connection, please check the cable to troubleshoot the problem.",
+    "ALID": null,
+    "ALTX": null,
+    "TimeStamp": "2019-12-26T17:13:05.6098968+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "The given key \u0027Value\u0027 was not present in the dictionary.",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T16:33:20.6651795+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:12:38.5161416+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:11:49.3506784+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:11:19.0249881+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:11:06.7160516+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:09:22.5278397+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T11:08:51.4402711+08:00"
+  },
+  {
+    "NodeName": "",
+    "Controller": "SYSTEM",
+    "ErrorCode": "S0300170",
+    "ErrorDesc": "Error code not exist",
+    "ALID": "",
+    "ALTX": "",
+    "TimeStamp": "2019-12-26T10:57:08.9184515+08:00"
+  }
+]

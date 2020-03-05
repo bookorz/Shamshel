@@ -1,0 +1,38 @@
+	[
+		{
+			"DeviceName": "CTU_CONTROLLER",
+			"DeviceType": "WTS",
+			"Vendor": "SANWA_MC",
+			"IPAdress": "192.168.0.129",
+			"Port": 23,
+			"BaudRate": 0,
+			"PortName": "",
+			"ConnectionType": "Socket",
+			"Enable": true,
+			"ControllerType": "ASCII"
+		},
+		{
+			"DeviceName": "STK_CONTROLLER",
+			"DeviceType": "WTS",
+			"Vendor": "SANWA_MC",
+			"IPAdress": "192.168.0.127",
+			"Port": 23,
+			"BaudRate": 0,
+			"PortName": "",
+			"ConnectionType": "Socket",
+			"Enable": true,
+			"ControllerType": "ASCII"
+		},
+		{
+			"DeviceName": "WHR_CONTROLLER",
+			"DeviceType": "WTS",
+			"Vendor": "SANWA_MC",
+			"IPAdress": "192.168.0.128",
+			"Port": 23,
+			"BaudRate": 0,
+			"PortName": "",
+			"ConnectionType": "Socket",
+			"Enable": true,
+			"ControllerType": "ASCII"
+		}
+	]
