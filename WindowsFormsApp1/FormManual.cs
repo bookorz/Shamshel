@@ -59,7 +59,7 @@ namespace GUI
                     switch (node.Type.ToUpper())
                     {
                         case "LOADPORT":
-                            if (node.Brand.ToUpper().Equals("TDK"))
+                            if (node.Vendor.ToUpper().Equals("TDK"))
                             {
                                 if (Cb_LoadPortSelect.Text.Equals(""))
                                 {

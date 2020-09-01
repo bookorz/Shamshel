@@ -6,6 +6,7 @@ using System.Linq;
 using Adam.UI_Update.Monitoring;
 using GUI;
 using TransferControl.Comm;
+using TransferControl.Config.SignalTower;
 
 namespace Adam.Menu.SystemSetting
 {
@@ -16,8 +17,7 @@ namespace Adam.Menu.SystemSetting
             InitializeComponent();
         }
 
-        private DataTable dtSignalTower = new DataTable();
-        private DBUtil dBUtil = new DBUtil();
+
 
         private void FormSignalTtower_Load(object sender, EventArgs e)
         {
@@ -28,7 +28,7 @@ namespace Adam.Menu.SystemSetting
             try
             {
                 UpdateList();
-                
+
                 lsbCondition.SelectedIndex = -1;
 
             }
@@ -40,6 +40,10 @@ namespace Adam.Menu.SystemSetting
 
         private void lsbCondition_Click(object sender, EventArgs e)
         {
+            if (lsbCondition.SelectedIndex == -1)
+            {
+                return;
+            }
             txbEqpStatus.Text = string.Empty;
             txbIsAlarm.Text = string.Empty;
             cmbBlue.SelectedIndex = -1;
@@ -51,22 +55,17 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                var query = (from a in dtSignalTower.AsEnumerable()
-                             where a.Field<string>("eqp_status") == lsbCondition.Text.Split('-')[0].ToString()
-                             && a.Field<UInt64>("is_alarm") == Convert.ToUInt64(lsbCondition.SelectedValue.ToString())
-                             select a).ToList();
+                SignalTowerSetting s = SignalTowerSetting.Get(lsbCondition.SelectedItem.ToString().Replace("-Alarm", ""), lsbCondition.SelectedItem.ToString().Contains("-Alarm"));
 
-                if (query.Count > 0)
-                {
-                    txbEqpStatus.Text = query[0]["eqp_status"].ToString();
-                    txbIsAlarm.Text = query[0]["is_alarm"].ToString();
-                    cmbBlue.SelectedItem = query[0]["blue"].ToString();
-                    cmbGreen.SelectedItem = query[0]["green"].ToString();
-                    cmbRad.SelectedItem = query[0]["red"].ToString();
-                    cmbYellow.SelectedItem = query[0]["orange"].ToString();
-                    cmbBuzzer1.SelectedItem = query[0]["buzzer1"].ToString();
-                    cmbBuzzer2.SelectedItem = query[0]["buzzer2"].ToString();
-                }
+                txbEqpStatus.Text = s.eqpStatus;
+                txbIsAlarm.Text = s.hasAlarm?"TRUE":"FALSE";
+                cmbBlue.SelectedItem = s.blue;
+                cmbGreen.SelectedItem = s.green;
+                cmbRad.SelectedItem = s.red;
+                cmbYellow.SelectedItem = s.orange;
+                cmbBuzzer1.SelectedItem = s.buzzer1;
+                cmbBuzzer2.SelectedItem = s.buzzer2;
+
             }
             catch (Exception ex)
             {
@@ -76,11 +75,7 @@ namespace Adam.Menu.SystemSetting
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if ((DataTable)lsbCondition.DataSource == null || ((DataTable)lsbCondition.DataSource).Rows.Count == 0)
-            {
-                MessageBox.Show("The grid data does not exist.", this.Name, MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
-                return;
-            }
+            
 
             if (lsbCondition.SelectedIndex < 0)
             {
@@ -104,36 +99,20 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "UPDATE config_signal_tower " +
-                    "SET red = @red, " +
-                    "orange = @orange, " +
-                    "green = @green, " +
-                    "blue = @blue, " +
-                    "buzzer1 = @buzzer1, " +
-                    "buzzer2 = @buzzer2, " +
-                    "update_user = @update_user, " +
-                    "update_time = NOW() " +
-                    "WHERE eqp_status  =  @eqp_status " +
-                    "AND is_alarm = @is_alarm ";
+                SignalTowerSetting s = SignalTowerSetting.Get(lsbCondition.SelectedItem.ToString().Replace("-Alarm", ""), lsbCondition.SelectedItem.ToString().Contains("-Alarm"));
+                s.red = cmbRad.Text.ToString();
+                s.orange = cmbYellow.Text.ToString();
+                s.green = cmbGreen.Text.ToString();
+                s.blue = cmbBlue.Text.ToString();
+                s.buzzer1 = cmbBuzzer1.Text.ToString();
+                s.buzzer2 = cmbBuzzer2.Text.ToString();
 
-                Form form = Application.OpenForms["FormMain"];
-                Label Signal = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
+                SignalTowerSetting.Update(s);
 
-                keyValues.Add("@red", cmbRad.Text.ToString());
-                keyValues.Add("@orange", cmbYellow.Text.ToString());
-                keyValues.Add("@green", cmbGreen.Text.ToString());
-                keyValues.Add("@blue", cmbBlue.Text.ToString());
-                keyValues.Add("@buzzer1", cmbBuzzer1.Text.ToString());
-                keyValues.Add("@buzzer2", cmbBuzzer2.Text.ToString());
-                keyValues.Add("@update_user", Signal.Text);
-                keyValues.Add("@eqp_status", lsbCondition.Text.Split('-')[0].ToString());
-                keyValues.Add("@is_alarm", Convert.ToUInt64(lsbCondition.SelectedValue.ToString()));
-
-                dBUtil.ExecuteNonQuery(strSql, keyValues);
 
                 MessageBox.Show("Done it.", "Save", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
 
-                Adam.Util.SanwaUtil.addActionLog("Adam.Menu.SystemSetting", "FormSignalTower", Signal.Text);
+              
 
                 UpdateList();
 
@@ -162,22 +141,13 @@ namespace Adam.Menu.SystemSetting
 
             try
             {
-                strSql = "select concat(eqp_status, '-', (case when is_alarm = 0 then 'Normal' else 'Alarm' end)) item, " +
-                            "eqp_status, is_alarm, red, orange, green, blue, buzzer1, buzzer2 " +
-                            "from config_signal_tower order by is_alarm, eqp_status asc ";
-
-                dtSignalTower = dBUtil.GetDataTable(strSql, null);
-
-                if (dtSignalTower.Rows.Count > 0)
+                lsbCondition.Items.Clear();
+                foreach (SignalTowerSetting each in SignalTowerSetting.GetAll())
                 {
-                    lsbCondition.DataSource = dtSignalTower;
-                    lsbCondition.DisplayMember = "item";
-                    lsbCondition.ValueMember = "is_alarm";
+                    lsbCondition.Items.Add(each.eqpStatus + (each.hasAlarm ? "-Alarm" : ""));
                 }
-                else
-                {
-                    lsbCondition.DataSource = null;
-                }
+
+
             }
             catch (Exception ex)
             {

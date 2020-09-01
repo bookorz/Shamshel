@@ -10,34 +10,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TransferControl.Config;
+using TransferControl.Config.DIO;
 
 namespace Adam.Menu.SystemSetting
 {
     public partial class FormSimpleSetting : Form
     {
-        public string sql;
-        MySqlDataAdapter sda;
-        DataSet ds;
-        MySqlCommand scom;
-        MySqlCommandBuilder SCB;
-        MySqlConnection conn = new MySqlConnection(SystemConfig.Get().DBConnectionString);
+        
 
-        private void UpdateConfigView(string sql)
+        private void UpdateConfigView()
         {
-            if (sql.Trim().Equals(""))
-                return;
-            dgvMysql.DataSource = null;
-            dgvMysql.Rows.Clear();
-            //conn.Close();
-            //conn.Open();
 
-            ds = new DataSet();
-            scom = new MySqlCommand(sql, conn);
-            sda = new MySqlDataAdapter();
-            sda.SelectCommand = scom;
-            ds.Clear();
-            sda.Fill(ds);
-            dgvMysql.DataSource = ds.Tables[0];
+            dgvMysql.DataSource = DioSetting.GetAll();
 
             foreach (DataGridViewColumn column in dgvMysql.Columns)
             {
@@ -62,28 +46,20 @@ namespace Adam.Menu.SystemSetting
 
         private void FormSimpleSetting_Load(object sender, EventArgs e)
         {
-            conn.Open();
-            UpdateConfigView(sql);
+           
+            UpdateConfigView();
         }
 
         private void FormSimpleSetting_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (SCB != null)
-                SCB.Dispose();
-            if (sda != null)
-                sda.Dispose();
-            if (scom != null)
-                scom.Dispose();
-            if (ds != null)
-                ds.Clear();
-            //ds.AcceptChanges();
+            
         }
         
         public FormSimpleSetting(Config_Type config_Type)
         {
-            string model_id = SystemConfig.Get().SystemMode;
+        
             InitializeComponent();
-            sql = Global.Config_sql(config_Type);
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -100,11 +76,8 @@ namespace Adam.Menu.SystemSetting
                         return;
                     }
                 }
-
-                SCB = new MySqlCommandBuilder(sda);
-                sda.Update(ds);
-                SCB.RefreshSchema();
-                SCB.Dispose();
+                DioSetting.Update((List<DioSetting>)dgvMysql.DataSource);
+                
                 MessageBox.Show("Update 成功");
             }
             catch (Exception ex)

@@ -120,7 +120,7 @@ namespace Adam.UI_Update.Monitoring
                     Dictionary<string, string> Params = new Dictionary<string, string>();
 
                     var findSetting = from Setting in SignalSetting
-                                      where Setting.eqpStatus.Equals(State.ToUpper()) && Setting.hasAlarm == (AlarmManagement.GetCurrentAlarm().Count!=0)
+                                      where Setting.eqpStatus.Equals(State.ToUpper()) && Setting.hasAlarm == (AlarmManagement.GetCurrent().Count!=0)
                                       select Setting;
 
                     if (findSetting.Count() != 0)

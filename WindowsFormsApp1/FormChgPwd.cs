@@ -6,6 +6,7 @@ using System.Text;
 using System.Windows.Forms;
 using TransferControl.Comm;
 using TransferControl.Config;
+using TransferControl.Config.Authorization;
 
 namespace GUI
 {
@@ -24,58 +25,37 @@ namespace GUI
         {
             if (tbNewPwd.Text.Trim().Equals(""))
             {
-                MessageBox.Show("New Password is empty!","Error");
-            }else if (!tbNewPwd.Text.Equals(tbConfirmPwd.Text))
+                MessageBox.Show("New Password is empty!", "Error");
+            }
+            else if (!tbNewPwd.Text.Equals(tbConfirmPwd.Text))
             {
                 MessageBox.Show("New password and confirm password does not match!", "Error");
             }
-            else if(!checkOldPwd(tbUserID.Text,tbOldPwd.Text))
+            else if (!checkOldPwd(tbUserID.Text, tbOldPwd.Text))
             {
                 MessageBox.Show("Old password do not match.", "Check Password Fail");
             }
             else
             {
-                DBUtil dBUtil = new DBUtil();
-                Dictionary<string, object> keyValues = new Dictionary<string, object>();
-                string strSql = "UPDATE account SET PASSWORD = MD5(@password), " +
-                                                "modify_user = @modify_user, " +
-                                                "modify_timestamp = NOW() " +
-                                                "WHERE user_id = @user_id ";
+                UserAccount usr = UserAccount.Get(tbUserID.Text.Trim());
+                usr.password = tbNewPwd.Text.Trim();
+                UserAccount.Update(usr);
 
-                keyValues.Add("@user_id", tbUserID.Text.Trim());
-                keyValues.Add("@password", tbNewPwd.Text.Trim());
-                keyValues.Add("@modify_user", Global.currentUser);
-                dBUtil.ExecuteNonQuery(strSql, keyValues);
-                SanwaUtil.addActionLog("GUI.FormChgPwd", "Change password", Global.currentUser, "變更本人密碼");
+                //SanwaUtil.addActionLog("GUI.FormChgPwd", "Change password", Global.currentUser, "變更本人密碼");
                 MessageBox.Show("Password has been changed!!", "Success");
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
-                
+
         }
 
         private bool checkOldPwd(string userid, string password)
         {
             Boolean result = false;
-            //set SQL
-            StringBuilder sql = new StringBuilder();
-            sql.Append("\n SELECT user_id, user_name, user_group_id");
-            sql.Append("\n   FROM account ");
-            sql.Append("\n  WHERE user_id = @user_id ");
-            sql.Append("\n    AND password = MD5(@password)");
-            //set parameter
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("@user_id", userid);
-            param.Add("@password", password);
-            //Query
-            DBUtil dBUtil = new DBUtil();
-            DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            if (rs != null)
+
+            if (UserAccount.Verification(userid, password) != null)
             {
-                while (rs.Read())
-                {
-                    result = true;
-                }
+                result = true;
             }
             return result;
         }

@@ -56,6 +56,7 @@
             this.txbPasswordNew = new System.Windows.Forms.TextBox();
             this.txbPasswordNewAgain = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.palMenu.SuspendLayout();
             this.tlpAccountMenu.SuspendLayout();
             this.tlpAccount.SuspendLayout();
@@ -154,6 +155,7 @@
             // 
             // gbAccountSetting
             // 
+            this.gbAccountSetting.Controls.Add(this.btnDelete);
             this.gbAccountSetting.Controls.Add(this.tlpAccountSetting);
             this.gbAccountSetting.Controls.Add(this.btnSave);
             resources.ApplyResources(this.gbAccountSetting, "gbAccountSetting");
@@ -260,6 +262,13 @@
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnDelete
+            // 
+            resources.ApplyResources(this.btnDelete, "btnDelete");
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormAccountSetting
             // 
             resources.ApplyResources(this, "$this");
@@ -309,5 +318,6 @@
         private System.Windows.Forms.TextBox txbPasswordNewAgain;
         private System.Windows.Forms.Button btnModifyUser;
         private System.Windows.Forms.Button btnChangePassword;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

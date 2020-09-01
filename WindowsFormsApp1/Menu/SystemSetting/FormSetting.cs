@@ -48,11 +48,7 @@ namespace Adam.Menu.SystemSetting
             AddForm(form);
         }
 
-        private void btnCommandScript_Click(object sender, EventArgs e)
-        {
-            FormCommandScript form = new FormCommandScript();
-            AddForm(form);
-        }
+      
 
         private void btnOnlineSettings_Click(object sender, EventArgs e)
         {
@@ -72,12 +68,7 @@ namespace Adam.Menu.SystemSetting
             AddForm(form);
         }
 
-        private void btnAlarmEventSet_Click(object sender, EventArgs e)
-        {
-            FormAlarmEventSet form = new FormAlarmEventSet();
-            AddForm(form);
-        }
-
+       
         private void btnCodeSetting_Click(object sender, EventArgs e)
         {
             

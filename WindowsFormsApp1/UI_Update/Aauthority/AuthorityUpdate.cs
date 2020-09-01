@@ -7,16 +7,17 @@ using System.Text;
 using System.Windows.Forms;
 using TransferControl.Comm;
 using TransferControl.Config;
+using TransferControl.Config.Authorization;
 
 namespace Adam.UI_Update.Authority
 {
     class AuthorityUpdate
     {
         static ILog logger = LogManager.GetLogger(typeof(AuthorityUpdate));
-        static DataTable dtAuthority;
+
         delegate void UpdateLogin(string Id, string Name, string Group);
         delegate void UpdateLogout();
-        delegate void UpdateFuncEnable_D(string Form, string Control, string active);
+        delegate void UpdateFuncEnable_D(string Form, string Control, bool active);
         public static Dictionary<string, TabPage> tabPages = new Dictionary<string, TabPage>();
 
         public static void UpdateLoginInfo(string Id, string Name, string Group)
@@ -27,7 +28,7 @@ namespace Adam.UI_Update.Authority
 
                 if (form == null)
                     return;
-                
+
                 if (form.InvokeRequired)
                 {
                     UpdateLogin ph = new UpdateLogin(UpdateLoginInfo);
@@ -36,7 +37,7 @@ namespace Adam.UI_Update.Authority
                 else
                 {
                     //lbl_login_name
-                    Label lbl_login_id = form.Controls.Find( "lbl_login_id", true).FirstOrDefault() as Label;
+                    Label lbl_login_id = form.Controls.Find("lbl_login_id", true).FirstOrDefault() as Label;
                     Label lbl_login_name = form.Controls.Find("lbl_login_name", true).FirstOrDefault() as Label;
                     Label lbl_login_group = form.Controls.Find("lbl_login_group", true).FirstOrDefault() as Label;
                     Label lbl_login_date = form.Controls.Find("lbl_login_date", true).FirstOrDefault() as Label;
@@ -49,7 +50,7 @@ namespace Adam.UI_Update.Authority
                     if (lbl_login_date != null)
                         lbl_login_date.Text = System.DateTime.Now.ToString("yyyy-MM-dd HH：mm：ss");
                     Button btnLogout = form.Controls.Find("btnLogInOut", true).FirstOrDefault() as Button;
-                    if(btnLogout.Text.Equals("Login"))
+                    if (btnLogout.Text.Equals("Login"))
                         btnLogout.Text = "Logout";
                     if (btnLogout.Text.Equals("登录"))
                         btnLogout.Text = "登出";
@@ -57,7 +58,7 @@ namespace Adam.UI_Update.Authority
                     btnEdit.Visible = true;
                     //AuthorityUpdate.UpdateFuncAssign(Group);
                     AuthorityUpdate.UpdateFuncGroupEnable(Group);
-                    
+
                 }
 
 
@@ -109,7 +110,7 @@ namespace Adam.UI_Update.Authority
                     string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Logout\"}";
                     log.Info(msg);
                     //SanwaUtil.addActionLog("Authority", "Logout", user_id);// add record to log_system_action
-                    SanwaUtil.addActionLog("Authority", "Logout", user_id, "使用者登出");// add record to log_system_action
+
                 }
             }
             catch
@@ -151,54 +152,20 @@ namespace Adam.UI_Update.Authority
 
         public static void UpdateFuncGroupEnable(string Group)
         {
-            if(dtAuthority == null)
-            {
-                setDtAuthority();
-            }
-            DataTable dtTemp;
-            DataView dvTemp;
-            var query = (from t in dtAuthority.AsEnumerable()
-                         where t.Field<string>("user_group_id") == Group
-                         select t).OrderBy(x => x.Field<string>("fun_ref")).ToList();
-            if (query.Count > 0)
-            {
-                dtTemp = query.CopyToDataTable();
-                dvTemp = dtTemp.DefaultView;
 
-                string fun_form = "";
-                string fun_ref = "";
-                string active = "";
-                for (int i = 0; i < dvTemp.Table.Rows.Count; i++)
-                {
-                    fun_form = (string)dvTemp.Table.Rows[i]["fun_form"];
-                    fun_ref = (string)dvTemp.Table.Rows[i]["fun_ref"];
-                    active = (string)dvTemp.Table.Rows[i]["active"];
-                    UpdateFuncAssign(fun_form, fun_ref, active);
-                }
+
+
+            foreach (UserGroupFunction each in UserGroupFunction.Get(Group))
+            {
+                FunctionGroup fg = FunctionGroup.Get(each.functionId);
+                UpdateFuncAssign(fg.form, fg.reference, each.active);
             }
+
         }
 
-        private static void setDtAuthority()
-        {
-            //set SQL
-            StringBuilder sql = new StringBuilder();
-            sql.Append("\n SELECT ugf.user_group_id, ugf.fun_id, ugf.active, f.fun_form, f.fun_ref");
-            sql.Append("\n   FROM user_group_function ugf");
-            sql.Append("\n   INNER JOIN function f");
-            sql.Append("\n     ON ugf.fun_id = f.fun_id");
-            sql.Append("\n    AND f.active = 'Y'");
-            //sql.Append("\n  WHERE user_group_id = @user_group_id ");
 
-            //set parameter
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            //param.Add("@user_group_id", Group);
 
-            //Query
-            DBUtil dBUtil = new DBUtil();
-            dtAuthority = dBUtil.GetDataTable(sql.ToString(), param);
-        }
-
-        public static void UpdateFuncAssign(string Form, string Control, string active)
+        public static void UpdateFuncAssign(string Form, string Control, bool active)
         {
             try
             {
@@ -206,7 +173,7 @@ namespace Adam.UI_Update.Authority
 
                 if (form == null)
                     return;
-                
+
                 if (form.InvokeRequired)
                 {
                     UpdateFuncEnable_D ph = new UpdateFuncEnable_D(UpdateFuncAssign);
@@ -223,16 +190,20 @@ namespace Adam.UI_Update.Authority
                         tabPages.TryGetValue(tabPageName, out TabPage foo);
                         if (control != null && foo != null)
                         {
-                            switch (active)
+                            if (active)
                             {
-                                case "Y":
-                                    if(!control.Contains(foo))
-                                        control.TabPages.Add(foo);
-                                    break;
-                                case "N":
-                                    if (control.Contains(foo))
-                                        control.TabPages.Remove(foo);
-                                    break;
+
+                                if (!control.Contains(foo))
+                                {
+                                    control.TabPages.Add(foo);
+                                }
+                            }
+                            else
+                            {
+                                if (control.Contains(foo))
+                                {
+                                    control.TabPages.Remove(foo);
+                                }
                             }
                         }
                         else
@@ -245,15 +216,10 @@ namespace Adam.UI_Update.Authority
                         Control control = form.Controls.Find(Control, true).FirstOrDefault() as Control;
                         if (control != null)
                         {
-                            switch (active)
-                            {
-                                case "Y":
-                                    control.Enabled = true;
-                                    break;
-                                case "N":
-                                    control.Enabled = false;
-                                    break;
-                            }
+                            
+                               control.Enabled = active;
+                                   
+                            
                         }
                         else
                         {
@@ -270,20 +236,6 @@ namespace Adam.UI_Update.Authority
             }
         }
 
-        public static bool getFuncEnable(string group_name, string fun_form, string fun_ref)
-        {
-            bool result = false;
-            var query = (from t in dtAuthority.AsEnumerable()
-                         where t.Field<string>("user_group_id") == group_name
-                         && t.Field<string>("fun_form") == fun_form
-                         && t.Field<string>("fun_ref") == fun_ref
-                         && t.Field<string>("active") == "Y"
-                         select t).ToList();
-            if (query.Count > 0)
-            {
-                result = true;
-            }
-            return result;
-        }
+       
     }
 }

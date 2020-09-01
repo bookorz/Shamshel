@@ -23,41 +23,25 @@ namespace Adam
 
         private void ResetAll_bt_Click(object sender, EventArgs e)
         {
-            Transaction Txn;
-
-            foreach (AlarmInfo eachA in AlarmManagement.GetAll())
+            
+            foreach (Node each in NodeManagement.GetList())
             {
-                if (!eachA.NeedReset)
+                if (each.Enable)
                 {
-                    AlarmManagement.Remove(eachA);
+                    string Message = "";
+                    Transaction Txn = new Transaction();
+                    Txn.Method = Transaction.Command.RobotType.Reset;
+                    Txn.TaskId = "";
+                    //NodeManagement.Get(group.First().NodeName).State = "Alarm";
+                    each.SendCommand(Txn, out Message);
                 }
             }
-
             
-
-            //foreach (Node node in NodeManagement.GetList())
-            //{
-            //    node.State = node.LastState;
-            //}
-
-            var NodeList = AlarmManagement.GetAll().GroupBy(t => t.NodeName);
-            foreach (var group in NodeList)
-            {
-                string Message = "";
-                Txn = new Transaction();
-                Txn.Method = Transaction.Command.RobotType.Reset;
-                Txn.TaskId = "";
-                //NodeManagement.Get(group.First().NodeName).State = "Alarm";
-                NodeManagement.Get(group.First().NodeName).SendCommand(Txn, out Message);
-                AlarmManagement.Remove(group.First().NodeName);
-            }
-            //NodeStatusUpdate.UpdateCurrentState("Idle");
-            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
         }
 
         private void AlarmFrom_Load(object sender, EventArgs e)
         {
-            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
+            AlarmUpdate.UpdateAlarmList(AlarmManagement.GetCurrent());
         }
 
         private void AlarmFrom_FormClosing(object sender, FormClosingEventArgs e)

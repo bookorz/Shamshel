@@ -117,18 +117,60 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;tlpAccountMenu.Name" xml:space="preserve">
+    <value>tlpAccountMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.Parent" xml:space="preserve">
+    <value>palMenu</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="tlpAccountMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnModifyUser" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCreateUser" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnChangePassword" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="palMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="palMenu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="palMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="palMenu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1394, 82</value>
+  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="palMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Name" xml:space="preserve">
+    <value>palMenu</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;palMenu.Parent" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;palMenu.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tlpAccountMenu.ColumnCount" type="System.Int32, mscorlib">
     <value>7</value>
   </data>
   <data name="btnModifyUser.Enabled" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnModifyUser.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Popup</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnModifyUser.Font" type="System.Drawing.Font, System.Drawing">
     <value>微軟正黑體, 14.25pt</value>
   </data>
@@ -258,50 +300,11 @@
   <data name="tlpAccountMenu.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
     <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="btnModifyUser" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnCreateUser" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="btnChangePassword" Row="0" RowSpan="1" Column="2" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571,Percent,14.28571" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
-  <data name="palMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="palMenu.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="palMenu.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="palMenu.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 82</value>
-  </data>
-  <data name="palMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Name" xml:space="preserve">
-    <value>palMenu</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;palMenu.Parent" xml:space="preserve">
-    <value>tlpAccount</value>
-  </data>
-  <data name="&gt;&gt;palMenu.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tlpAccount.ColumnCount" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
   <data name="tlpAccountCreate.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
-  </data>
-  <data name="trvAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="trvAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 25</value>
-  </data>
-  <data name="trvAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>335, 544</value>
-  </data>
-  <data name="trvAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
   </data>
   <data name="&gt;&gt;trvAccount.Name" xml:space="preserve">
     <value>trvAccount</value>
@@ -342,8 +345,425 @@
   <data name="&gt;&gt;gbAccountCondition.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnDelete.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnDelete.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnDelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDelete.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>687, 521</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 45</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>gbAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="tlpAccountSetting.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;txbPassword.Name" xml:space="preserve">
+    <value>txbPassword</value>
+  </data>
+  <data name="&gt;&gt;txbPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbPassword.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;txbPassword.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txbUserName.Name" xml:space="preserve">
+    <value>txbUserName</value>
+  </data>
+  <data name="&gt;&gt;txbUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbUserName.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;txbUserName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labUserID.Name" xml:space="preserve">
+    <value>labUserID</value>
+  </data>
+  <data name="&gt;&gt;labUserID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserID.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserID.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labUserName.Name" xml:space="preserve">
+    <value>labUserName</value>
+  </data>
+  <data name="&gt;&gt;labUserName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserName.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserName.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labUserGroup.Name" xml:space="preserve">
+    <value>labUserGroup</value>
+  </data>
+  <data name="&gt;&gt;labUserGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserGroup.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserGroup.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labUserPassword.Name" xml:space="preserve">
+    <value>labUserPassword</value>
+  </data>
+  <data name="&gt;&gt;labUserPassword.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserPassword.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserPassword.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;chbActive.Name" xml:space="preserve">
+    <value>chbActive</value>
+  </data>
+  <data name="&gt;&gt;chbActive.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;chbActive.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;chbActive.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txbUserID.Name" xml:space="preserve">
+    <value>txbUserID</value>
+  </data>
+  <data name="&gt;&gt;txbUserID.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbUserID.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;txbUserID.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;cmbGroup.Name" xml:space="preserve">
+    <value>cmbGroup</value>
+  </data>
+  <data name="&gt;&gt;cmbGroup.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cmbGroup.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;cmbGroup.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNewAgain.Name" xml:space="preserve">
+    <value>labUserPasswordNewAgain</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNewAgain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNewAgain.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNewAgain.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNew.Name" xml:space="preserve">
+    <value>labUserPasswordNew</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNew.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;labUserPasswordNew.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNew.Name" xml:space="preserve">
+    <value>txbPasswordNew</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNew.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNew.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNewAgain.Name" xml:space="preserve">
+    <value>txbPasswordNewAgain</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNewAgain.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNewAgain.Parent" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;txbPasswordNewAgain.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="tlpAccountSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="tlpAccountSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="tlpAccountSetting.RowCount" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="tlpAccountSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1029, 491</value>
+  </data>
+  <data name="tlpAccountSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountSetting.Name" xml:space="preserve">
+    <value>tlpAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountSetting.Parent" xml:space="preserve">
+    <value>gbAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpAccountSetting.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txbPassword" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUserName" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labUserID" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserName" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserGroup" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserPassword" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chbActive" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUserID" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cmbGroup" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labUserPasswordNewAgain" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserPasswordNew" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbPasswordNew" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbPasswordNewAgain" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,27,Percent,73" /&gt;&lt;Rows Styles="Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Right</value>
+  </data>
+  <data name="btnSave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>861, 521</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>168, 45</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>gbAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="gbAccountSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbAccountSetting.Location" type="System.Drawing.Point, System.Drawing">
+    <value>350, 3</value>
+  </data>
+  <data name="gbAccountSetting.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1035, 572</value>
+  </data>
+  <data name="gbAccountSetting.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="gbAccountSetting.Text" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="&gt;&gt;gbAccountSetting.Name" xml:space="preserve">
+    <value>gbAccountSetting</value>
+  </data>
+  <data name="&gt;&gt;gbAccountSetting.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAccountSetting.Parent" xml:space="preserve">
+    <value>tlpAccountCreate</value>
+  </data>
+  <data name="&gt;&gt;gbAccountSetting.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpAccountCreate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpAccountCreate.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="tlpAccountCreate.RowCount" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="tlpAccountCreate.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1388, 578</value>
+  </data>
+  <data name="tlpAccountCreate.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Name" xml:space="preserve">
+    <value>tlpAccountCreate</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.Parent" xml:space="preserve">
+    <value>gbAccount</value>
+  </data>
+  <data name="&gt;&gt;tlpAccountCreate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccountCreate.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbAccountCondition" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbAccountSetting" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,75" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="gbAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="gbAccount.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="gbAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gbAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1394, 606</value>
+  </data>
+  <data name="gbAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="gbAccount.Text" xml:space="preserve">
+    <value>Account  setting</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Name" xml:space="preserve">
+    <value>gbAccount</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.Parent" xml:space="preserve">
+    <value>palContainer</value>
+  </data>
+  <data name="&gt;&gt;gbAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="palContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="palContainer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 91</value>
+  </data>
+  <data name="palContainer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1394, 606</value>
+  </data>
+  <data name="palContainer.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Name" xml:space="preserve">
+    <value>palContainer</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;palContainer.Parent" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;palContainer.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tlpAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="tlpAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>10, 10</value>
+  </data>
+  <data name="tlpAccount.RowCount" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="tlpAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1400, 700</value>
+  </data>
+  <data name="tlpAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Name" xml:space="preserve">
+    <value>tlpAccount</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tlpAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="tlpAccount.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="palMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="palContainer" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="Percent,12.57143,Percent,87.42857" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="trvAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="trvAccount.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 25</value>
+  </data>
+  <data name="trvAccount.Size" type="System.Drawing.Size, System.Drawing">
+    <value>335, 544</value>
+  </data>
+  <data name="trvAccount.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;trvAccount.Name" xml:space="preserve">
+    <value>trvAccount</value>
+  </data>
+  <data name="&gt;&gt;trvAccount.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TreeView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;trvAccount.Parent" xml:space="preserve">
+    <value>gbAccountCondition</value>
+  </data>
+  <data name="&gt;&gt;trvAccount.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="txbPassword.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Left</value>
@@ -362,6 +782,9 @@
   </data>
   <data name="txbPassword.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="txbPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;txbPassword.Name" xml:space="preserve">
     <value>txbPassword</value>
@@ -386,6 +809,9 @@
   </data>
   <data name="txbUserName.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="txbUserName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;txbUserName.Name" xml:space="preserve">
     <value>txbUserName</value>
@@ -453,6 +879,9 @@
   <data name="labUserName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
   </data>
+  <data name="labUserName.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="&gt;&gt;labUserName.Name" xml:space="preserve">
     <value>labUserName</value>
   </data>
@@ -518,6 +947,9 @@
   </data>
   <data name="labUserPassword.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
     <value>MiddleRight</value>
+  </data>
+  <data name="labUserPassword.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
   </data>
   <data name="&gt;&gt;labUserPassword.Name" xml:space="preserve">
     <value>labUserPassword</value>
@@ -725,207 +1157,6 @@
   </data>
   <data name="&gt;&gt;txbPasswordNewAgain.ZOrder" xml:space="preserve">
     <value>12</value>
-  </data>
-  <data name="tlpAccountSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="tlpAccountSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 25</value>
-  </data>
-  <data name="tlpAccountSetting.RowCount" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="tlpAccountSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1029, 491</value>
-  </data>
-  <data name="tlpAccountSetting.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountSetting.Name" xml:space="preserve">
-    <value>tlpAccountSetting</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountSetting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountSetting.Parent" xml:space="preserve">
-    <value>gbAccountSetting</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountSetting.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tlpAccountSetting.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="txbPassword" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUserName" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labUserID" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserName" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserGroup" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserPassword" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chbActive" Row="8" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbUserID" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="cmbGroup" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="labUserPasswordNewAgain" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="labUserPasswordNew" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="txbPasswordNew" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="txbPasswordNewAgain" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,27,Percent,73" /&gt;&lt;Rows Styles="Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40,Absolute,40" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="btnSave.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Bottom, Right</value>
-  </data>
-  <data name="btnSave.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>861, 521</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>168, 45</value>
-  </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Save</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
-    <value>gbAccountSetting</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="gbAccountSetting.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="gbAccountSetting.Location" type="System.Drawing.Point, System.Drawing">
-    <value>350, 3</value>
-  </data>
-  <data name="gbAccountSetting.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1035, 572</value>
-  </data>
-  <data name="gbAccountSetting.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gbAccountSetting.Text" xml:space="preserve">
-    <value>Setting</value>
-  </data>
-  <data name="&gt;&gt;gbAccountSetting.Name" xml:space="preserve">
-    <value>gbAccountSetting</value>
-  </data>
-  <data name="&gt;&gt;gbAccountSetting.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbAccountSetting.Parent" xml:space="preserve">
-    <value>tlpAccountCreate</value>
-  </data>
-  <data name="&gt;&gt;gbAccountSetting.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlpAccountCreate.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlpAccountCreate.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 25</value>
-  </data>
-  <data name="tlpAccountCreate.RowCount" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tlpAccountCreate.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1388, 578</value>
-  </data>
-  <data name="tlpAccountCreate.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Name" xml:space="preserve">
-    <value>tlpAccountCreate</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.Parent" xml:space="preserve">
-    <value>gbAccount</value>
-  </data>
-  <data name="&gt;&gt;tlpAccountCreate.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tlpAccountCreate.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="gbAccountCondition" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="gbAccountSetting" Row="0" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,25,Percent,75" /&gt;&lt;Rows Styles="Percent,100" /&gt;&lt;/TableLayoutSettings&gt;</value>
-  </data>
-  <data name="gbAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="gbAccount.Enabled" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="gbAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="gbAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 606</value>
-  </data>
-  <data name="gbAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
-  <data name="gbAccount.Text" xml:space="preserve">
-    <value>Account  setting</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.Name" xml:space="preserve">
-    <value>gbAccount</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.Parent" xml:space="preserve">
-    <value>palContainer</value>
-  </data>
-  <data name="&gt;&gt;gbAccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="palContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="palContainer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 91</value>
-  </data>
-  <data name="palContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1394, 606</value>
-  </data>
-  <data name="palContainer.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="&gt;&gt;palContainer.Name" xml:space="preserve">
-    <value>palContainer</value>
-  </data>
-  <data name="&gt;&gt;palContainer.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;palContainer.Parent" xml:space="preserve">
-    <value>tlpAccount</value>
-  </data>
-  <data name="&gt;&gt;palContainer.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tlpAccount.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tlpAccount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 10</value>
-  </data>
-  <data name="tlpAccount.RowCount" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="tlpAccount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1400, 700</value>
-  </data>
-  <data name="tlpAccount.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.Name" xml:space="preserve">
-    <value>tlpAccount</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tlpAccount.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="tlpAccount.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="palMenu" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="palContainer" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,100,Absolute,20" /&gt;&lt;Rows Styles="Percent,12.57143,Percent,87.42857" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

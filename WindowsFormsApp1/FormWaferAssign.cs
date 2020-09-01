@@ -415,8 +415,8 @@ namespace Adam
             {
                 Directory.CreateDirectory("assign_recipe");
             }
-            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            SysCfg.WriteFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
+            ConfigTool<List<AssignInfo>> SysCfg = new ConfigTool<List<AssignInfo>>();
+            SysCfg.WriteFile("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json", AssignInfo.GetAssignList());
             AssignRecipe_cb.Items.Clear();
             foreach (string each in Directory.GetFiles("assign_recipe"))
             {
@@ -432,8 +432,8 @@ namespace Adam
             {
                 return;
             }
-            ConfigTool<AssignInfo> SysCfg = new ConfigTool<AssignInfo>();
-            List<AssignInfo> Content = SysCfg.ReadFileByList("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
+            ConfigTool<List<AssignInfo>> SysCfg = new ConfigTool<List<AssignInfo>>();
+            List<AssignInfo> Content = SysCfg.ReadFile("assign_recipe/" + AssignRecipe_cb.Text.Trim() + ".json");
             AssignInfo.ClearList();
             Node Src = NodeManagement.Get(Source_cb.Text);
             Node Dst = NodeManagement.Get(To_cb.Text);

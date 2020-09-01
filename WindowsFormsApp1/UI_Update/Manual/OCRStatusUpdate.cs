@@ -121,7 +121,7 @@ namespace Adam.UI_Update.Manual
 
                     string OCRResult = status;
 
-                        switch (OCR.Brand)
+                        switch (OCR.Vendor)
                         {
                             case "COGNEX":
                                 string[] ocrResult = OCRResult.Replace("[", "").Replace("]", "").Split(',');
@@ -218,7 +218,7 @@ namespace Adam.UI_Update.Manual
 
                     string OCRResult = status;
 
-                    switch (OCR.Brand)
+                    switch (OCR.Vendor)
                     {
                         case "COGNEX":
                             string[] ocrResult = OCRResult.Replace("[", "").Replace("]", "").Split(',');
@@ -315,7 +315,7 @@ namespace Adam.UI_Update.Manual
 
                     string OCRResult = status;
 
-                    switch (OCR.Brand)
+                    switch (OCR.Vendor)
                     {
                         case "COGNEX":
                             string[] ocrResult = OCRResult.Replace("[", "").Replace("]", "").Split(',');

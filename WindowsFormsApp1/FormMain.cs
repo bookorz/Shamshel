@@ -80,9 +80,9 @@ namespace Adam
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Location = new System.Drawing.Point(-200, 0);
 
-            SanwaUtil.addPartition();
-            SanwaUtil.dropPartition();
-            ThreadPool.QueueUserWorkItem(new WaitCallback(DBUtil.consumeSqlCmd));
+            //SanwaUtil.addPartition();
+            //SanwaUtil.dropPartition();
+            //ThreadPool.QueueUserWorkItem(new WaitCallback(DBUtil.consumeSqlCmd));
 
             xfe = new XfeCrossZone(this);
         }
@@ -107,7 +107,7 @@ namespace Adam
         {
 
             var hstOcr = from node in NodeManagement.GetList()
-                         where node.Type.ToUpper().Equals("OCR") && node.Brand.ToUpper().Equals("HST")
+                         where node.Type.ToUpper().Equals("OCR") && node.Vendor.ToUpper().Equals("HST")
                          select node;
             if (hstOcr.Count() != 0)
             {
@@ -257,12 +257,12 @@ namespace Adam
 
         private void toolStripMenuItem2_Click(object sender, EventArgs e)
         {
-           
-                FormAlarmHis form4 = new FormAlarmHis();
-                form4.Text = "Message History";
-                form4.label21.Text = "Message History";
-                form4.Show();
-            
+
+            FormAlarmHis form4 = new FormAlarmHis();
+            form4.Text = "Message History";
+            form4.label21.Text = "Message History";
+            form4.Show();
+
         }
 
         private void bBBToolStripMenuItem_Click(object sender, EventArgs e)
@@ -399,7 +399,7 @@ namespace Adam
 
             Transaction SendTxn = new Transaction();
 
-            
+
 
 
 
@@ -566,7 +566,7 @@ namespace Adam
                                 case Transaction.Command.RobotType.GetStatus:
                                 case Transaction.Command.RobotType.GetSV:
                                     ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 手動功能畫面
-                                    if (Node.Brand.ToUpper().Equals("KAWASAKI") && Txn.Method.Equals(Transaction.Command.RobotType.GetStatus))
+                                    if (Node.Vendor.ToUpper().Equals("KAWASAKI") && Txn.Method.Equals(Transaction.Command.RobotType.GetStatus))
                                     {
                                         ManualRobotStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Command);//update 手動功能畫面
                                     }
@@ -589,7 +589,7 @@ namespace Adam
                                     Thread.Sleep(500);
                                     //向Aligner 詢問狀態
                                     Node aligner = NodeManagement.Get(Node.Name);
-                                    String script_name = aligner.Brand.ToUpper().Equals("SANWA") ? "AlignerStateGet" : "AlignerStateGet(Kawasaki)";
+                                    String script_name = aligner.Vendor.ToUpper().Equals("SANWA") ? "AlignerStateGet" : "AlignerStateGet(Kawasaki)";
                                     //aligner.ExcuteScript(script_name, "FormManual", out Message);
                                     ManualAlignerStatusUpdate.UpdateGUI(Txn, Node.Name, Msg.Value);//update 
                                     break;
@@ -618,7 +618,7 @@ namespace Adam
         {
 
             logger.Debug("On_Command_Error");
-            ShowAlarm(Node.Name, Msg.Value);
+            ShowAlarm(Node.Controller, Node.AdrNo, Msg.Value);
         }
 
         public void On_Command_Finished(Node Node, Transaction Txn, CommandReturnMessage Msg)
@@ -831,7 +831,7 @@ namespace Adam
                 if (savePath != "")
                 {
 
-                    switch (OCR.Brand)
+                    switch (OCR.Vendor)
                     {
                         case "COGNEX":
 
@@ -876,7 +876,7 @@ namespace Adam
                                         if (retryCnt == 0)
                                         {
                                             logger.Error("OCR Image copy fail!");
-                                            ShowAlarm("SYSTEM", "S0300181");
+                                            ShowAlarm("SYSTEM","0", "S0300181");
                                             return;
                                         }
                                         logger.Error("OCR Image copy retry " + retryCnt.ToString());
@@ -945,7 +945,7 @@ namespace Adam
                             case "MANSW":
                                 if (Node.OPACCESS)
                                 {
-                                   // Barcodeupdate.UpdateLoadport(Node.Name, true);
+                                    // Barcodeupdate.UpdateLoadport(Node.Name, true);
 
                                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                                     param1.Add("@Target", Node.Name);
@@ -1112,90 +1112,11 @@ namespace Adam
         }
 
 
-        public void On_Data_Chnaged(string Parameter, string Value, string Type)
-        {
-            switch (Parameter.ToUpper())
-            {
-                //case "SAFETYRELAY":
-                //    if (Value.ToUpper().Equals("FALSE"))
-                //    {
-                //        FormReconnect.Show(true);
-                //    }
-                //    else
-                //    {
-                //        FormReconnect.Show(false);
-                //    }
-                //    break;
-
-                case "DIFFERENTIAL":
-                    DifferentialMonitorUpdate.UpdateChart(Parameter, Value);
-                    break;
-                case "BF1_DOOR_OPEN":
-                case "BF1_ARM_EXTEND_ENABLE":
-                case "BF2_DOOR_OPEN":
-                case "BF2_ARM_EXTEND_ENABLE":
-                case "ARM_NOT_EXTEND_BF1":
-                case "ARM_NOT_EXTEND_BF2":
-                    DIOUpdate.UpdateInterLock(Parameter, Value);
-                    break;
-                default:
-                    DIOUpdate.UpdateDIOStatus(Parameter, Value);
-                    IOUpdate.UpdateDIO(Parameter, Value, Type);
-                    //if (Parameter.ToUpper().Equals("SAFETYRELAY") && Value.ToUpper().Equals("FALSE"))
-                    //{
-                    //    FormReconnect.Show(true);
-                    //}
-                    //else if (Parameter.ToUpper().Equals("SAFETYRELAY") && Value.ToUpper().Equals("TRUE"))
-                    //{
-                    //    FormReconnect.Show(false);
-                    //}
-                    switch (Parameter.ToUpper())
-                    {
-                        case "SAFETYRELAY":
-                            if (Value.ToUpper().Equals("TRUE"))
-                            {
-                                FormReconnect.Show(false);
-                            }
-                            else if (Value.ToUpper().Equals("FALSE"))
-                            {
-                                FormReconnect.Show(true);
-                            }
-                            break;
-                        case "DOORSWITCH":
-
-                            //RouteControl.Instance.TaskJob.ForceFinishTask(TaskName);
-
-                            //Node ffu = NodeManagement.Get("FFU01");
-                            //if (ffu != null)
-                            //{
-                            //    if (ffu.Enable)
-                            //    {
-                            //        Dictionary<string, string> param1 = new Dictionary<string, string>();
-                            //        param1.Add("@Target", ffu.Name);
-                            //        if (Value.ToUpper().Equals("TRUE"))
-                            //        {
-                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
-                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
-                            //        }
-                            //        else
-                            //        {
-                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
-                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
-                            //        }
-                            //        TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
-                            //    }
-                            //}
-                            break;
-                    }
-                    break;
-            }
-
-
-        }
+       
 
         public void On_Alarm_Happen(string DIOName, string ErrorCode)
         {
-            ShowAlarm(DIOName, ErrorCode);
+            ShowAlarm(DIOName,"0", ErrorCode);
 
         }
 
@@ -1203,7 +1124,7 @@ namespace Adam
         {
             //斷線 發ALARM
             logger.Debug("On_Error_Occurred");
-            ShowAlarm(DIOName, "00200001");
+            //ShowAlarm(DIOName, "00200001");
 
         }
 
@@ -1354,7 +1275,7 @@ namespace Adam
                 {
                     formManual.Close();
                 }
-                foreach(Node n in NodeManagement.GetList())
+                foreach (Node n in NodeManagement.GetList())
                 {
                     n.OrgSearchComplete = false;
                 }
@@ -1464,20 +1385,6 @@ namespace Adam
         //    }
         //}
 
-        private void btnHelp_Click(object sender, EventArgs e)
-        {
-            Form form = Application.OpenForms["FormQuery"];
-            if (form == null)
-            {
-                FormQuery form4 = new FormQuery();
-                form4.Show();
-            }
-            else
-            {
-                form.WindowState = FormWindowState.Normal;
-                form.Focus();
-            }
-        }
 
 
         private void tbcMian_SelectedIndexChanged(object sender, EventArgs e)
@@ -1697,61 +1604,44 @@ namespace Adam
 
         }
 
-        private void ShowAlarm(string NodeName, string AlarmCode, string DisplayName = "")
+        private void ShowAlarm(string Controller, string AddressNo, string ErrorCode)
         {
-            AlarmInfo CurrentAlarm = new AlarmInfo();
-            if (DisplayName == null)
-            {
-                DisplayName = "";
-            }
-            CurrentAlarm.NodeName = DisplayName.Equals("") ? NodeName : DisplayName;
-            CurrentAlarm.AlarmCode = AlarmCode;
-            CurrentAlarm.NeedReset = false;
+
+
             try
             {
+                AlarmManagement.AddToHistory(Controller, AddressNo, ErrorCode);
 
-                AlarmMessage Detail = AlarmMapping.Get(NodeName, CurrentAlarm.AlarmCode);
-                //if (!Detail.Code_Group.Equals("UNDEFINITION"))
-                //{
-                CurrentAlarm.SystemAlarmCode = Detail.CodeID;
-                CurrentAlarm.Desc = Detail.Code_Cause;
-                CurrentAlarm.EngDesc = Detail.Code_Cause_English;
-                CurrentAlarm.Type = Detail.Code_Type;
-                CurrentAlarm.IsStop = Detail.IsStop;
-                if (CurrentAlarm.IsStop)
+                DIOUpdate.UpdateControlButton("Start_btn", false);
+                DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
+                DIOUpdate.UpdateControlButton("Stop_btn", false);
+                if (Mode_btn.Text.Equals("Auto-Mode"))
                 {
-                    DIOUpdate.UpdateControlButton("Start_btn", false);
-                    DIOUpdate.UpdateControlButton("ManualTranfer_btn", false);
-                    DIOUpdate.UpdateControlButton("Stop_btn", false);
-                    if (Mode_btn.Text.Equals("Auto-Mode"))
-                    {
-                        DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
-                    }
-                    else
-                    {
-                        DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
-                    }
-                    DIOUpdate.UpdateControlButton("Mode_btn", true);
-
-                    RunMode = "";
-                    Start = false;
-                    Initial = false;
-                    if (XfeCrossZone.Running)
-                    {
-                        XfeCrossZone.Stop();
-                    }
+                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                 }
-                CurrentAlarm.TimeStamp = DateTime.Now;
+                else
+                {
+                    DIOUpdate.UpdateControlButton("ALL_INIT_btn", false);
+                }
+                DIOUpdate.UpdateControlButton("Mode_btn", true);
 
-                AlarmManagement.Add(CurrentAlarm);
+                RunMode = "";
+                Start = false;
+                Initial = false;
+                if (XfeCrossZone.Running)
+                {
+                    XfeCrossZone.Stop();
+                }
 
-                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());
-                AlarmUpdate.UpdateAlarmHistory(AlarmManagement.GetHistory());
+
+
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetCurrent());
+
                 // }
             }
             catch (Exception e)
             {
-                CurrentAlarm.Desc = "未定義";
+
                 logger.Error("(GetAlarmMessage)" + e.Message + "\n" + e.StackTrace);
             }
         }
@@ -1775,33 +1665,8 @@ namespace Adam
                 }
             }
             ManualPortStatusUpdate.LockUI(false);
-            if (ReportType.ToUpper().Equals("CAN"))
-            {
-                try
-                {
-                    AlarmMessage Detail = AlarmMapping.Get("SYSTEM", Message);
-                    MessageBox.Show(Detail.Code_Cause, "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                catch
-                {
-                    MessageBox.Show("Error code:" + Message, "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }
-            else
-            {
-
-                //WaferAssignUpdate.UpdateEnabled("FORM", true);
-                //XfeCrossZone.Stop();
-                //if (Task.Id.IndexOf("FormManual") != -1)
-                //{
-
-                //}
-                if (!ReportType.Equals("On_Command_Error"))
-                {
-                    ShowAlarm("SYSTEM", Message, NodeName);
-                }
-            }
-            if(Task.TaskName== TaskFlowManagement.Command.ALL_INIT)
+            
+            if (Task.TaskName == TaskFlowManagement.Command.ALL_INIT)
             {
                 DIOUpdate.UpdateControlButton("ALL_INIT_btn", true);
                 DIOUpdate.UpdateControlButton("Mode_btn", true);
@@ -1823,12 +1688,8 @@ namespace Adam
                 case TaskFlowManagement.Command.FFU_STOP:
                     DifferentialMonitorUpdate.EnableUI(true);
                     break;
-                case TaskFlowManagement.Command.ROBOT_RESET:
-                case TaskFlowManagement.Command.ALIGNER_RESET:
-                case TaskFlowManagement.Command.LOADPORT_RESET:
-                    AlarmUpdate.UpdateAlarmList(AlarmManagement.GetAll());            
-                    break;
-                case  TaskFlowManagement.Command.ALL_INIT:
+                
+                case TaskFlowManagement.Command.ALL_INIT:
 
 
                     if (CurrentMode.Equals("AUTO"))
@@ -1899,7 +1760,7 @@ namespace Adam
 
                     break;
                 case TaskFlowManagement.Command.LOADPORT_OPEN:
-                
+
                     Node currentPort = NodeManagement.Get(Task.Params["@Target"]);
                     if (Start)
                     {
@@ -1942,7 +1803,7 @@ namespace Adam
                     //}
                     break;
                 case TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP:
-                
+
                     ////test mode
                     //Node p = NodeManagement.Get(Task.Params["@Target"]);
                     //TaskName = "LOADPORT_OPEN";
@@ -2085,12 +1946,12 @@ namespace Adam
                                 ULD_Jobs = (from Slot in fosb.JobList.Values
                                             where Slot.MapFlag
                                             select Slot).OrderBy(x => Convert.ToInt16(x.Slot));
-                                if (ULD_Jobs.Count()!=0)
+                                if (ULD_Jobs.Count() != 0)
                                 {
-                                    MessageBox.Show("Not Empty foup!","Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    MessageBox.Show("Not Empty foup!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                     return;
                                 }
-                                if (wafer.MapFlag && !wafer.ErrPosition&&!fosb.JobList[wafer.Slot].MapFlag && !fosb.JobList[wafer.Slot].ErrPosition)
+                                if (wafer.MapFlag && !wafer.ErrPosition && !fosb.JobList[wafer.Slot].MapFlag && !fosb.JobList[wafer.Slot].ErrPosition)
                                 {
                                     wafer.NeedProcess = true;
                                     wafer.ProcessFlag = false;
@@ -2294,7 +2155,7 @@ namespace Adam
         }
 
 
-       
+
         public static bool cycleRun = false;
         public void On_Transfer_Complete(XfeCrossZone xfe)
         {
@@ -2348,7 +2209,7 @@ namespace Adam
 
         public void On_UnLoadPort_Selected(Node Port)
         {
-           // MonitoringUpdate.ButtonEnabled(Port.Name.ToUpper() + "_Unload_btn", false);
+            // MonitoringUpdate.ButtonEnabled(Port.Name.ToUpper() + "_Unload_btn", false);
             WaferAssignUpdate.ButtonEnabled(Port.Name.ToUpper() + "_Unload_btn", false);
         }
 
@@ -2539,7 +2400,7 @@ namespace Adam
 
                     Dictionary<string, string> param1 = new Dictionary<string, string>();
                     param1.Add("@Target", Port.Name);
-                    TaskFlowManagement.CurrentProcessTask tmpTask= TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
+                    TaskFlowManagement.CurrentProcessTask tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_CLOSE_NOMAP, param1);
 
                     SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
 
@@ -2549,7 +2410,7 @@ namespace Adam
                         {
                             param1 = new Dictionary<string, string>();
                             param1.Add("@Target", port.Name);
-                            tmpTask=TaskFlowManagement.Excute(Guid.NewGuid().ToString(),  TaskFlowManagement.Command.LOADPORT_OPEN, param1);
+                            tmpTask = TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.LOADPORT_OPEN, param1);
                             SpinWait.SpinUntil(() => tmpTask.Finished, 99999999);
                         }
                     }
@@ -3030,6 +2891,107 @@ namespace Adam
         private void tabMonitor_Click(object sender, EventArgs e)
         {
 
+        }
+
+        public Node GetNode(string Name)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void NewTask(string Id, TaskFlowManagement.Command TaskName, Dictionary<string, string> param = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void On_DIO_Data_Chnaged(string Parameter, string Value, string Type)
+        {
+            switch (Parameter.ToUpper())
+            {
+                //case "SAFETYRELAY":
+                //    if (Value.ToUpper().Equals("FALSE"))
+                //    {
+                //        FormReconnect.Show(true);
+                //    }
+                //    else
+                //    {
+                //        FormReconnect.Show(false);
+                //    }
+                //    break;
+
+                case "DIFFERENTIAL":
+                    DifferentialMonitorUpdate.UpdateChart(Parameter, Value);
+                    break;
+                case "BF1_DOOR_OPEN":
+                case "BF1_ARM_EXTEND_ENABLE":
+                case "BF2_DOOR_OPEN":
+                case "BF2_ARM_EXTEND_ENABLE":
+                case "ARM_NOT_EXTEND_BF1":
+                case "ARM_NOT_EXTEND_BF2":
+                    DIOUpdate.UpdateInterLock(Parameter, Value);
+                    break;
+                default:
+                    DIOUpdate.UpdateDIOStatus(Parameter, Value);
+                    IOUpdate.UpdateDIO(Parameter, Value, Type);
+                    //if (Parameter.ToUpper().Equals("SAFETYRELAY") && Value.ToUpper().Equals("FALSE"))
+                    //{
+                    //    FormReconnect.Show(true);
+                    //}
+                    //else if (Parameter.ToUpper().Equals("SAFETYRELAY") && Value.ToUpper().Equals("TRUE"))
+                    //{
+                    //    FormReconnect.Show(false);
+                    //}
+                    switch (Parameter.ToUpper())
+                    {
+                        case "SAFETYRELAY":
+                            if (Value.ToUpper().Equals("TRUE"))
+                            {
+                                FormReconnect.Show(false);
+                            }
+                            else if (Value.ToUpper().Equals("FALSE"))
+                            {
+                                FormReconnect.Show(true);
+                            }
+                            break;
+                        case "DOORSWITCH":
+
+                            //RouteControl.Instance.TaskJob.ForceFinishTask(TaskName);
+
+                            //Node ffu = NodeManagement.Get("FFU01");
+                            //if (ffu != null)
+                            //{
+                            //    if (ffu.Enable)
+                            //    {
+                            //        Dictionary<string, string> param1 = new Dictionary<string, string>();
+                            //        param1.Add("@Target", ffu.Name);
+                            //        if (Value.ToUpper().Equals("TRUE"))
+                            //        {
+                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
+                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_close);
+                            //        }
+                            //        else
+                            //        {
+                            //            param1.Add("@Value", Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
+                            //            DifferentialMonitorUpdate.UpdateFFU(Recipe.Get(SystemConfig.Get().CurrentRecipe).ffu_rpm_open);
+                            //        }
+                            //        TaskFlowManagement.Excute(Guid.NewGuid().ToString(), TaskFlowManagement.Command.FFU_SET_SPEED, param1);
+                            //    }
+                            //}
+                            break;
+                    }
+                    break;
+            }
+        }
+
+        public void On_Alarm_Happen(AlarmManagement.AlarmInfo Alarm)
+        {
+            if (Alarm.Notify)
+            {
+                MessageBox.Show(Alarm.ErrorDesc,"Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                AlarmUpdate.UpdateAlarmList(AlarmManagement.GetCurrent());
+            }
         }
     }
 }

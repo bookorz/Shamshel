@@ -35,9 +35,11 @@
             // 
             // dgvMysql
             // 
+            this.dgvMysql.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMysql.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvMysql.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMysql.Location = new System.Drawing.Point(14, 4);
-            this.dgvMysql.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.dgvMysql.Margin = new System.Windows.Forms.Padding(5);
             this.dgvMysql.Name = "dgvMysql";
             this.dgvMysql.RowTemplate.Height = 24;
             this.dgvMysql.Size = new System.Drawing.Size(1392, 607);
@@ -47,7 +49,7 @@
             // 
             this.btnUpdate.Font = new System.Drawing.Font("微軟正黑體", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnUpdate.Location = new System.Drawing.Point(1134, 631);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(5);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(272, 75);
             this.btnUpdate.TabIndex = 6;
@@ -63,7 +65,7 @@
             this.Controls.Add(this.btnUpdate);
             this.Font = new System.Drawing.Font("微軟正黑體", 12F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "FormSimpleSetting";
             this.Text = "FormSimpleSetting";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormSimpleSetting_FormClosing);

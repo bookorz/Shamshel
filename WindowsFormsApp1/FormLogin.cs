@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using TransferControl.Comm;
 using TransferControl.Config;
+using TransferControl.Config.Authorization;
 
 namespace GUI
 {
@@ -28,53 +29,33 @@ namespace GUI
         private void btnLogin_Click(object sender, EventArgs e)
         {
             Boolean result = false;
-            //set SQL
-            StringBuilder sql = new StringBuilder();
-            sql.Append("\n SELECT user_id, user_name, user_group_id");
-            sql.Append("\n   FROM account ");
-            sql.Append("\n  WHERE user_id = @user_id ");
-            sql.Append("\n    AND password = MD5(@password)");
-            //set parameter
-            Dictionary<string, object> param = new Dictionary<string, object>();
-            param.Add("@user_id", tbUserID.Text);
-            param.Add("@password", tbPassword.Text);
-            //Query
-            DBUtil dBUtil = new DBUtil();
-            DataTableReader rs = dBUtil.GetDataReader(sql.ToString(), param);
-            if (rs != null)
+            UserAccount usr = UserAccount.Verification(tbUserID.Text, tbPassword.Text);
+            
+           
+            if (usr != null)
             {
                 //Console.Write("\n ID:" + rs["user_id"] + " Password:" + rs["password"] + " MD5:" + rs["md5"]);
 
-                string user_id = "";
-                string user_name = "";
-                string user_group_id = "";
-                while (rs.Read())
-                {
-                    user_id = (string)rs["user_id"];
-                    user_name = (string)rs["user_name"];
-                    user_group_id = (string)rs["user_group_id"];
-                    result = true;
-                }
-                rs.Close();
-                if (result)
-                {
-                    AuthorityUpdate.UpdateLoginInfo(user_id, user_name, user_group_id);
-                    string msg = "{\"user_id\": " + user_id + ", \"name\": \"" + user_name + "\", \"action\": \"Login\"}";
+               
+               
+                    AuthorityUpdate.UpdateLoginInfo(usr.userId, usr.userId, usr.groupId);
+                    string msg = "{\"user_id\": " + usr.userId + ", \"name\": \"" + usr.userId + "\", \"action\": \"Login\"}";
                     log.Info(msg);
                     //SanwaUtil.addActionLog("Authority", "Login", user_id);// add record to log_system_action
-                    SanwaUtil.addActionLog("Authority", "Login", user_id, "使用者登錄");// add record to log_system_action
-                    Global.currentUser = user_id;
+                    //SanwaUtil.addActionLog("Authority", "Login", user_id, "使用者登錄");// add record to log_system_action
+                    Global.currentUser = usr.userId;
                     this.DialogResult = DialogResult.OK;
                     //log.Debug(msg);
                     this.Close();
-                }
-                else
+                
+                
+            }
+            else
                 {
                     //this.DialogResult = DialogResult.Cancel; //不能加這行，會跳出
                     MessageBox.Show("Please check data and login again.", "Login Fail");
                     return;
                 }
-            }
 
         }
 

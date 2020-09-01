@@ -154,7 +154,7 @@ namespace Adam.UI_Update.OCR
                         }
 
                         Tb_OCRRead.Text = info;
-                        switch (OCR.Brand)
+                        switch (OCR.Vendor)
                         {
                             case "COGNEX":
 
@@ -548,7 +548,7 @@ namespace Adam.UI_Update.OCR
 
                         if (savePath != "")
                         {
-                            switch (OCR.Brand)
+                            switch (OCR.Vendor)
                             {
 
                                 case "HST":
@@ -573,10 +573,7 @@ namespace Adam.UI_Update.OCR
                                         Pic_OCR.Image = t;
                                         Pic_OCR.Tag = Job;
                                         Job.OCRImgPath = savePath;
-                                        if (Job.FromPort != null)
-                                        {
-                                            ProcessRecord.updateSubstrateOCR(NodeManagement.Get(Job.FromPort).PrID, Job);
-                                        }
+                                        
                                     }
                                     break;
                             }
@@ -637,7 +634,7 @@ namespace Adam.UI_Update.OCR
                     System.Threading.Thread.Sleep(2000);
                     foreach (Node ocr in ocrs)
                     {
-                        switch (ocr.Brand)
+                        switch (ocr.Vendor)
                         {
                             case "HST":
                                 pCnt++;

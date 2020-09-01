@@ -11,8 +11,7 @@ namespace Adam.Menu.SystemSetting
     public partial class FormSystemSetting : Form
     {
         private FormAccountSetting accountSetting = new FormAccountSetting();
-        private FormAlarmEventSet formAlarm = new FormAlarmEventSet();
-        private FormCommandScript configuration = new FormCommandScript();
+ 
         private FormDeviceManager deviceManager = new FormDeviceManager();
         private FormOnlineSettings onlineSettings = new FormOnlineSettings();
         //private FormSECSSet sECSSet = new FormSECSSet();
@@ -68,8 +67,7 @@ namespace Adam.Menu.SystemSetting
             try
             {
                 accountSetting.TopLevel = false;
-                formAlarm.TopLevel = false;
-                configuration.TopLevel = false;
+              
                 deviceManager.TopLevel = false;
                 onlineSettings.TopLevel = false;
                 //sECSSet.TopLevel = false;
@@ -78,8 +76,7 @@ namespace Adam.Menu.SystemSetting
                 formDIOSetting.TopLevel = false;
 
                 tbpAccountSetting.Controls.Add(accountSetting);
-                tbpAlarmEventSet.Controls.Add(formAlarm);
-                tbpCommandScript.Controls.Add(configuration);
+
                 tbpDeviceManager.Controls.Add(deviceManager);
                 tbpOnlineSettings.Controls.Add(onlineSettings);
                 //tbpSECSSetting.Controls.Add(sECSSet);
@@ -88,8 +85,7 @@ namespace Adam.Menu.SystemSetting
                 tbpDIOSetting.Controls.Add(formDIOSetting);
 
                 accountSetting.Show();
-                formAlarm.Show();
-                configuration.Show();
+           
                 deviceManager.Show();
                 onlineSettings.Show();
                 //sECSSet.Show();

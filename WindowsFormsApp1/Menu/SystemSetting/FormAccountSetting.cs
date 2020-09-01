@@ -15,10 +15,10 @@ namespace Adam.Menu.SystemSetting
         {
             InitializeComponent();
         }
-        
-       
 
- 
+
+
+
 
         private string strUserID = string.Empty;
         private string strUserName = string.Empty;
@@ -47,9 +47,12 @@ namespace Adam.Menu.SystemSetting
                 {
                     trvAccount.Nodes.Add(each.userId, each.userId);
                 }
-
+                cmbGroup.Items.Add("ADMIN");
+                cmbGroup.Items.Add("ENG");
+                cmbGroup.Items.Add("OP");
+                cmbGroup.Items.Add("PENG");
                 UIChange(strUserGroup);
-                    
+
             }
             catch (Exception ex)
             {
@@ -59,7 +62,11 @@ namespace Adam.Menu.SystemSetting
 
         private void trvAccount_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            
+            UserAccount usr = UserAccount.Get(trvAccount.SelectedNode.Text);
+
+            cmbGroup.Text = usr.groupId;
+            chbActive.Checked = usr.active;
+            txbUserID.Text = usr.userId;
         }
 
 
@@ -87,10 +94,124 @@ namespace Adam.Menu.SystemSetting
                 throw new Exception(ex.ToString());
             }
         }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            UserAccount usr = UserAccount.Get(txbUserID.Text);
+            if (usr != null)
+            {
+                UserAccount.Delete(usr);
+                trvAccount.Nodes.Clear();
 
+                foreach (UserAccount each in UserAccount.GetList())
+                {
+                    trvAccount.Nodes.Add(each.userId, each.userId);
+                }
+                txbUserID.Text = string.Empty;
+                txbUserID.Enabled = false;
+                txbUserID.BackColor = Color.White;
+                txbUserName.Text = string.Empty;
+                txbUserName.Enabled = true;
+                txbUserName.BackColor = Color.LemonChiffon;
+                cmbGroup.SelectedIndex = -1;
+                cmbGroup.Enabled = true;
+                cmbGroup.BackColor = Color.LemonChiffon;
+                txbPassword.Text = string.Empty;
+                txbPassword.Enabled = false;
+                txbPassword.BackColor = Color.White;
+                labUserPasswordNew.Enabled = false;
+                labUserPasswordNewAgain.Enabled = false;
+                txbPasswordNew.Text = "";
+                txbPasswordNew.Enabled = false;
+                txbPasswordNewAgain.Text = "";
+                txbPasswordNewAgain.Enabled = false;
+                txbPasswordNew.BackColor = Color.White;
+                txbPasswordNewAgain.BackColor = Color.White;
+                chbActive.Checked = false;
+                chbActive.Enabled = true;
+                chbActive.BackColor = Color.LemonChiffon;
+                MessageBox.Show("Delete success!");
+            }
+            else
+            {
+                MessageBox.Show("Please select a user id!");
+                return;
+            }
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            
+            UserAccount usr = UserAccount.Get(txbUserID.Text);
+            if (txbUserID.Enabled)
+            {
+                usr = new UserAccount();
+            }
+            if (usr != null)
+            {
+                if (txbUserID.Enabled)
+                {
+                    usr.userId = txbUserID.Text;
+                }
+                if (cmbGroup.Enabled)
+                {
+                    usr.groupId = cmbGroup.Text;
+                }
+                if (txbPasswordNew.Enabled)
+                {
+                    if (txbPasswordNew.Text.Equals(txbPasswordNewAgain.Text) && !txbPasswordNew.Text.Equals(""))
+                    {
+                        usr.password = txbPasswordNew.Text;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Password is not match!");
+                        return;
+                    }
+                }
+                if (chbActive.Enabled)
+                {
+                    usr.active = chbActive.Checked;
+                }
+                if (txbUserID.Enabled)
+                {
+                    UserAccount.Create(usr);
+                    trvAccount.Nodes.Clear();
+
+                    foreach (UserAccount each in UserAccount.GetList())
+                    {
+                        trvAccount.Nodes.Add(each.userId, each.userId);
+                    }
+                }
+                else
+                {
+                    UserAccount.Update(usr);
+                }
+                txbUserID.Text = string.Empty;
+                txbUserID.Enabled = false;
+                txbUserID.BackColor = Color.White;
+                txbUserName.Text = string.Empty;
+                txbUserName.Enabled = true;
+                txbUserName.BackColor = Color.LemonChiffon;
+                cmbGroup.SelectedIndex = -1;
+                cmbGroup.Enabled = true;
+                cmbGroup.BackColor = Color.LemonChiffon;
+                txbPassword.Text = string.Empty;
+                txbPassword.Enabled = false;
+                txbPassword.BackColor = Color.White;
+                labUserPasswordNew.Enabled = false;
+                labUserPasswordNewAgain.Enabled = false;
+                txbPasswordNew.Enabled = false;
+                txbPasswordNewAgain.Enabled = false;
+                txbPasswordNew.BackColor = Color.White;
+                txbPasswordNewAgain.BackColor = Color.White;
+                chbActive.Checked = false;
+                chbActive.Enabled = true;
+                chbActive.BackColor = Color.LemonChiffon;
+                MessageBox.Show("Save success!");
+            }
+            else
+            {
+                MessageBox.Show("Please select a user id!");
+                return;
+            }
         }
 
         private void btnCreateUser_Click(object sender, EventArgs e)
@@ -100,7 +221,7 @@ namespace Adam.Menu.SystemSetting
                 gbAccount.Enabled = true;
                 trvAccount.Enabled = false;
                 trvAccount.Refresh();
-                trvAccount.SelectedNode = trvAccount.Nodes[0];
+                trvAccount.SelectedNode = null;
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = true;
@@ -111,15 +232,21 @@ namespace Adam.Menu.SystemSetting
                 cmbGroup.SelectedIndex = -1;
                 cmbGroup.Enabled = true;
                 cmbGroup.BackColor = Color.LemonChiffon;
-                txbPassword.Text = string.Empty;
-                txbPassword.Enabled = true;
-                txbPassword.BackColor = Color.LemonChiffon;
-                labUserPasswordNew.Enabled = false;
-                labUserPasswordNewAgain.Enabled = false;
-                txbPasswordNew.Enabled = false;
-                txbPasswordNewAgain.Enabled = false;
-                txbPasswordNew.BackColor = Color.White;
-                txbPasswordNewAgain.BackColor = Color.White;
+                //txbPassword.Text = string.Empty;
+                //txbPassword.Enabled = true;
+                //txbPassword.BackColor = Color.LemonChiffon;
+                //labUserPasswordNew.Enabled = false;
+                //labUserPasswordNewAgain.Enabled = false;
+                //txbPasswordNew.Enabled = false;
+                //txbPasswordNewAgain.Enabled = false;
+                //txbPasswordNew.BackColor = Color.White;
+                //txbPasswordNewAgain.BackColor = Color.White;
+                labUserPasswordNew.Enabled = true;
+                labUserPasswordNewAgain.Enabled = true;
+                txbPasswordNew.Enabled = true;
+                txbPasswordNewAgain.Enabled = true;
+                txbPasswordNew.BackColor = Color.LemonChiffon;
+                txbPasswordNewAgain.BackColor = Color.LemonChiffon;
                 chbActive.Checked = false;
                 chbActive.Enabled = true;
                 chbActive.BackColor = Color.LemonChiffon;
@@ -127,6 +254,7 @@ namespace Adam.Menu.SystemSetting
                 btnCreateUser.BackColor = Color.RoyalBlue;
                 btnModifyUser.BackColor = Color.Silver;
                 btnChangePassword.BackColor = Color.Silver;
+                btnDelete.Enabled = false;
             }
             catch (Exception ex)
             {
@@ -140,7 +268,7 @@ namespace Adam.Menu.SystemSetting
             {
                 gbAccount.Enabled = true;
                 trvAccount.Enabled = true;
-                trvAccount.SelectedNode = trvAccount.Nodes[0];
+                trvAccount.SelectedNode = null;
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = false;
@@ -167,6 +295,7 @@ namespace Adam.Menu.SystemSetting
                 btnCreateUser.BackColor = Color.Silver;
                 btnModifyUser.BackColor = Color.RoyalBlue;
                 btnChangePassword.BackColor = Color.Silver;
+                btnDelete.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -180,7 +309,7 @@ namespace Adam.Menu.SystemSetting
             {
                 gbAccount.Enabled = true;
                 trvAccount.Enabled = true;
-                trvAccount.SelectedNode = trvAccount.Nodes[0];
+                trvAccount.SelectedNode = null;
 
                 txbUserID.Text = string.Empty;
                 txbUserID.Enabled = false;
@@ -207,11 +336,14 @@ namespace Adam.Menu.SystemSetting
                 btnCreateUser.BackColor = Color.Silver;
                 btnModifyUser.BackColor = Color.Silver;
                 btnChangePassword.BackColor = Color.RoyalBlue;
+                btnDelete.Enabled = false;
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.ToString());
             }
         }
+
+
     }
 }

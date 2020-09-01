@@ -96,7 +96,7 @@ namespace Adam.Menu.Status
                     string ctrl_status = ControllerManagement.Get(each.Controller) != null ? ControllerManagement.Get(each.Controller).GetStatus() : "";
                     if (ctrl_status.Equals("Connected") && each.ByPass == false)
                     {
-                        if (each.Brand.ToUpper().Equals("KAWASAKI"))
+                        if (each.Vendor.ToUpper().Equals("KAWASAKI"))
                         {
                         }
                         else
@@ -248,7 +248,7 @@ namespace Adam.Menu.Status
                     {
                         string seq = "";
                         Transaction txn = new Transaction();
-                        if (each.Brand.ToUpper().Equals("KAWASAKI"))
+                        if (each.Vendor.ToUpper().Equals("KAWASAKI"))
                         {
                             seq = Ctrl.GetNextSeq();
                         }

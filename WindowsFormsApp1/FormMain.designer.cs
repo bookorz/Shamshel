@@ -97,7 +97,6 @@ namespace Adam
             this.aAAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bBBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnVersion = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnTeach = new System.Windows.Forms.Button();
             this.btnSysLog = new System.Controls.SplitButton();
@@ -606,7 +605,6 @@ namespace Adam
             this.tableLayoutPanel1.Controls.Add(this.btnManual, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnAlarm, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.btnVersion, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnHelp, 3, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 
             // SystemLog_btn
@@ -678,17 +676,6 @@ namespace Adam
             this.btnVersion.Name = "btnVersion";
             this.btnVersion.UseVisualStyleBackColor = true;
             this.btnVersion.Click += new System.EventHandler(this.btnVersion_Click);
-            // 
-            // btnHelp
-            // 
-            resources.ApplyResources(this.btnHelp, "btnHelp");
-            this.btnHelp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.btnHelp.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnHelp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnHelp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.UseVisualStyleBackColor = true;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
             // 
             // panel3
             // 
@@ -842,7 +829,6 @@ namespace Adam
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage tabSetting;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btnHelp;
         private System.Windows.Forms.Button btnVersion;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
