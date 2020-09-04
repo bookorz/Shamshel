@@ -93,10 +93,46 @@ namespace Adam
                 var to_Jobs = (from wafer in toPort.JobList.Values
                                where !wafer.MapFlag && !wafer.ErrPosition
                                select wafer).OrderBy(x => Convert.ToInt16(x.Slot));
-                if (rbAuto.Checked)
+                if (rbSplit.Checked)
+                {
+                    if (to_Jobs.Count() != 25)
+                    {
+                        MessageBox.Show("目的地 Port 必須為空!!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    if (from_Jobs.Count() > 9)
+                    {
+                        MessageBox.Show("來源超過九片，無法執行", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                    int idx = 0;
+                    foreach (Job wafer in from_Jobs)
+                    {
+                         
+                            if (AssignInfo.SearchByTo(toPort.Name, (1+idx+2*idx).ToString()) == null)
+                            {
+                                Label SrcSlot = this.Controls.Find("From_Slot_" + wafer.Slot, true).FirstOrDefault() as Label;
+                                SrcSlot.BackColor = Color.Brown;
+
+                                Label DstSlot = this.Controls.Find("To_Slot_" + (1 + idx + 2 * idx).ToString(), true).FirstOrDefault() as Label;
+                                DstSlot.Text = wafer.Host_Job_Id;
+                                DstSlot.BackColor = Color.DarkGoldenrod;
+                                AssignInfo newAssign = new AssignInfo();
+                                newAssign.FromPort = wafer.Position;
+                                newAssign.FromSlot = wafer.Slot;
+                                newAssign.ToPort = toPort.Name;
+                                newAssign.ToSlot = (1 + idx + 2 * idx).ToString();
+                                newAssign.AddToList();
+                                
+                            }
+                        
+                        idx++;
+                    }
+                }
+                else if (rbAuto.Checked)
                 {
                     //Start:20191111 Add pre-check 如果 unload port 非空的，不做
-                    if(to_Jobs.Count() < 25)
+                    if (to_Jobs.Count() < 25)
                     {
                         MessageBox.Show("Auto Sampling 時，目的地 Port 必須為空!!", "Notice", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
@@ -139,7 +175,7 @@ namespace Adam
                             foreach (Job emptySlot in to_Jobs)
                             {
                                 //Start:20191111 Add 來源 Slot 必須與目的地同一Slot
-                                if(wafer.Slot != emptySlot.Slot)
+                                if (wafer.Slot != emptySlot.Slot)
                                 {
                                     continue;//繼續下一個空SLOT
                                 }

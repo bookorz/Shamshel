@@ -172,13 +172,14 @@
             this.label142 = new System.Windows.Forms.Label();
             this.Source_cb = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbAuto = new System.Windows.Forms.RadioButton();
             this.rbBottomUp = new System.Windows.Forms.RadioButton();
             this.rbTopDown = new System.Windows.Forms.RadioButton();
             this.rbSlotToSlot = new System.Windows.Forms.RadioButton();
             this.AutoAssign_btn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.To_cb = new System.Windows.Forms.ComboBox();
-            this.rbAuto = new System.Windows.Forms.RadioButton();
+            this.rbSplit = new System.Windows.Forms.RadioButton();
             this.gbPort1.SuspendLayout();
             this.TblPanel_A.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -1323,7 +1324,7 @@
             // 
             this.groupBox2.Controls.Add(this.tbR1_speed);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(445, 226);
+            this.groupBox2.Location = new System.Drawing.Point(445, 252);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(244, 65);
             this.groupBox2.TabIndex = 193;
@@ -1470,7 +1471,7 @@
             this.gbA2.Controls.Add(this.tbA2_speed);
             this.gbA2.Controls.Add(this.label3);
             this.gbA2.Controls.Add(this.cbUseA2);
-            this.gbA2.Location = new System.Drawing.Point(445, 421);
+            this.gbA2.Location = new System.Drawing.Point(445, 447);
             this.gbA2.Name = "gbA2";
             this.gbA2.Size = new System.Drawing.Size(244, 102);
             this.gbA2.TabIndex = 192;
@@ -1514,7 +1515,7 @@
             this.gbA1.Controls.Add(this.tbA1_speed);
             this.gbA1.Controls.Add(this.label2);
             this.gbA1.Controls.Add(this.cbUseA1);
-            this.gbA1.Location = new System.Drawing.Point(445, 303);
+            this.gbA1.Location = new System.Drawing.Point(445, 329);
             this.gbA1.Name = "gbA1";
             this.gbA1.Size = new System.Drawing.Size(244, 102);
             this.gbA1.TabIndex = 192;
@@ -2554,6 +2555,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.rbSplit);
             this.groupBox1.Controls.Add(this.rbAuto);
             this.groupBox1.Controls.Add(this.rbBottomUp);
             this.groupBox1.Controls.Add(this.rbTopDown);
@@ -2562,16 +2564,28 @@
             this.groupBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(475, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(180, 191);
+            this.groupBox1.Size = new System.Drawing.Size(180, 219);
             this.groupBox1.TabIndex = 180;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Auto Assign";
+            // 
+            // rbAuto
+            // 
+            this.rbAuto.AutoSize = true;
+            this.rbAuto.Checked = true;
+            this.rbAuto.Location = new System.Drawing.Point(23, 29);
+            this.rbAuto.Name = "rbAuto";
+            this.rbAuto.Size = new System.Drawing.Size(144, 23);
+            this.rbAuto.TabIndex = 181;
+            this.rbAuto.TabStop = true;
+            this.rbAuto.Text = "Auto Sampling";
+            this.rbAuto.UseVisualStyleBackColor = true;
             // 
             // rbBottomUp
             // 
             this.rbBottomUp.AutoSize = true;
             this.rbBottomUp.Enabled = false;
-            this.rbBottomUp.Location = new System.Drawing.Point(24, 114);
+            this.rbBottomUp.Location = new System.Drawing.Point(23, 143);
             this.rbBottomUp.Name = "rbBottomUp";
             this.rbBottomUp.Size = new System.Drawing.Size(108, 23);
             this.rbBottomUp.TabIndex = 180;
@@ -2583,7 +2597,7 @@
             // 
             this.rbTopDown.AutoSize = true;
             this.rbTopDown.Enabled = false;
-            this.rbTopDown.Location = new System.Drawing.Point(24, 85);
+            this.rbTopDown.Location = new System.Drawing.Point(23, 114);
             this.rbTopDown.Name = "rbTopDown";
             this.rbTopDown.Size = new System.Drawing.Size(99, 23);
             this.rbTopDown.TabIndex = 180;
@@ -2605,7 +2619,7 @@
             // 
             this.AutoAssign_btn.BackColor = System.Drawing.Color.Gold;
             this.AutoAssign_btn.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AutoAssign_btn.Location = new System.Drawing.Point(23, 150);
+            this.AutoAssign_btn.Location = new System.Drawing.Point(22, 172);
             this.AutoAssign_btn.Name = "AutoAssign_btn";
             this.AutoAssign_btn.Size = new System.Drawing.Size(136, 30);
             this.AutoAssign_btn.TabIndex = 179;
@@ -2636,16 +2650,15 @@
             this.To_cb.TabIndex = 177;
             this.To_cb.SelectedIndexChanged += new System.EventHandler(this.To_cb_SelectedIndexChanged);
             // 
-            // rbAuto
+            // rbSplit
             // 
-            this.rbAuto.AutoSize = true;
-            this.rbAuto.Checked = true;
-            this.rbAuto.Location = new System.Drawing.Point(23, 29);
-            this.rbAuto.Name = "rbAuto";
-            this.rbAuto.Size = new System.Drawing.Size(144, 23);
-            this.rbAuto.TabIndex = 181;
-            this.rbAuto.Text = "Auto Sampling";
-            this.rbAuto.UseVisualStyleBackColor = true;
+            this.rbSplit.AutoSize = true;
+            this.rbSplit.Location = new System.Drawing.Point(23, 85);
+            this.rbSplit.Name = "rbSplit";
+            this.rbSplit.Size = new System.Drawing.Size(117, 23);
+            this.rbSplit.TabIndex = 182;
+            this.rbSplit.Text = "Auto Split";
+            this.rbSplit.UseVisualStyleBackColor = true;
             // 
             // FormWaferAssign
             // 
@@ -2837,5 +2850,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox WaferSize_tb;
         private System.Windows.Forms.RadioButton rbAuto;
+        private System.Windows.Forms.RadioButton rbSplit;
     }
 }
